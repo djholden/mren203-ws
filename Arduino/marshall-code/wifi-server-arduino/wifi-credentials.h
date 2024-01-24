@@ -1,0 +1,2 @@
+#define SECRET_SSID "MREN203"
+#define SECRET_PASS "MREN203wifi"

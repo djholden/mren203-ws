@@ -12,17 +12,17 @@
 #include <Arduino_LSM6DS3.h>
 
 //desired speed and turning rate
-double Vd = 0.2;
+double Vd = 0.8;
 double Wd = 0.0;
 
-double Vd_L = 0.0;
-double Vd_R = 0.0;
+double Vd_L;
+double Vd_R;
 
-double Wd_L = 0.0;
-double Wd_R = 0.0;
+double Wd_L;
+double Wd_R;
 
 //gain variables
-double Kp = 2.0;
+double Kp = 300.0;
 
 //Right side pin assignments
 // Wheel PWM pin (must be a PWM pin)
@@ -170,7 +170,6 @@ void loop()
 {
     // Get the elapsed time [ms]
     t_now = millis();
-    double vehicle_rate = 0;
 
     if (t_now - t_last >= T)
     {
@@ -189,39 +188,37 @@ void loop()
         right_encoder_ticks = 0;
     }
 
-    if (IMU.accelerationAvailable())
-    {
-        IMU.readAcceleration(a_x, a_y, a_z);
-    }
+    // if (IMU.accelerationAvailable())
+    // {
+    //     IMU.readAcceleration(a_x, a_y, a_z);
+    // }
 
-    // Read from the gyroscope
-    if (IMU.gyroscopeAvailable())
-    {
-        IMU.readGyroscope(omega_x, omega_y, omega_z);
-    }
+    // // Read from the gyroscope
+    // if (IMU.gyroscopeAvailable())
+    // {
+    //     IMU.readGyroscope(omega_x, omega_y, omega_z);
+    // }
 
     // compute wheel speeds and input values
-    //compute_desired_wheel_speeds();
-    //compute_wheel_input_values();
-    uLeft = 100;
-    uRight =100;
+    compute_desired_wheel_speeds();
+    compute_wheel_input_values();
 
     // Select a direction
-    digitalWrite(I1, LOW);
-    digitalWrite(I2, HIGH);
+    digitalWrite(I1, HIGH);
+    digitalWrite(I2, LOW);
 
     // PWM command to the motor driver
     analogWrite(EB, uLeft);
 
     // Select a direction
-    digitalWrite(I3, HIGH);
-    digitalWrite(I4, LOW);
+    digitalWrite(I3, LOW);
+    digitalWrite(I4, HIGH);
 
     // PWM command to the motor driver
     analogWrite(EA, uRight);
 
     Serial.print("Desired speed: ");
-    Serial.print(Vd);
+    Serial.print(Vd_R);
     Serial.print("\t");
     Serial.print("Real speed: ");
     Serial.print(compute_vehicle_speed(speed_L, speed_R));
@@ -242,8 +239,6 @@ void compute_wheel_input_values()
 {
     uLeft = Kp*(Vd_L - speed_L);
     uRight = Kp*(Vd_R - speed_R);
-    Serial.print("\t");
-    Serial.print(uRight);
     if (uLeft > 255){
         uLeft = 255;
     }

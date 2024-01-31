@@ -12,7 +12,7 @@
 #include <Arduino_LSM6DS3.h>
 
 //desired speed and turning rate
-double Vd = 1.0;
+double Vd = 0.8;
 double Wd = 0.0;
 
 double Vd_L;
@@ -22,8 +22,8 @@ double Wd_L;
 double Wd_R;
 
 //gain variables
-double Kp_L = 255.0;
-double Kp_R = 255.0;
+double Kp = 255.0;
+double Ki = 127.0;
 
 //Right side pin assignments
 // Wheel PWM pin (must be a PWM pin)
@@ -244,8 +244,8 @@ void compute_desired_wheel_speeds()
 
 void compute_wheel_input_values()
 {
-    uLeft = Kp_L*(Vd_L - speed_L);
-    uRight = Kp_R*(Vd_R - speed_R);
+    uLeft = (Kp*(Vd_L - (speed_L))) + (Ki*());
+    uRight = Kp*(Vd_R - (speed_R));
     if (uLeft > 255){
         uLeft = 255;
     }
@@ -276,3 +276,5 @@ double compute_vehicle_rate(double v_L, double v_R)
     omega = 1.0 / ELL * (v_R - v_L);
     return omega;
 }
+
+

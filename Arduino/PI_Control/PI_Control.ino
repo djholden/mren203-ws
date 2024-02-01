@@ -22,8 +22,11 @@ double Wd_L;
 double Wd_R;
 
 //gain variables
-double Kp_L = 255.0;
-double Kp_R = 255.0;
+double Kp_L = 555.0;
+double Kp_R = 555.0;
+
+double Ki_L = 10.0;
+double Ki_R = 10.0;
 
 //Right side pin assignments
 // Wheel PWM pin (must be a PWM pin)
@@ -244,8 +247,15 @@ void compute_desired_wheel_speeds()
 
 void compute_wheel_input_values()
 {
-    uLeft = Kp_L*(Vd_L - speed_L/10);
-    uRight = Kp_R*(Vd_R - speed_R/10);
+
+    double error_L = Vd_L - speed_L;
+    double error_R = Vd_R - speed_R;
+
+    double error_int_L = error_int_L + (error_L * T);
+    double error_int_R = error_int_R + (error_R * T);
+
+    uLeft = Kp_L * error_L + Ki_L * error_int_L;
+    uRight = Kp_R * error_R + Ki_R * error_int_R;
     if (uLeft > 255){
         uLeft = 255;
     }

@@ -107,7 +107,7 @@ class WheelPID(MotorHandler):
     """
         Class for wheel PID properties and functions
     """
-    def __init__(self, GPIO_A, GPIO_B, radius=0.0625, period=1000, TPR=100):
+    def __init__(self, GPIO_A, GPIO_B, radius=0.0625, period=1000, TPR=3000):
         self.GPIO_A = GPIO_A
         self.GPIO_B = GPIO_B
 
@@ -123,7 +123,7 @@ class WheelPID(MotorHandler):
 
         # Create Event detector for encoder pulse
         GPIO.add_event_detect(self.GPIO_A, GPIO.RISING, 
-            callback=self.pulse_callback, bouncetime=1)
+            callback=self.pulse_callback)
         
     def pulse_callback(self, *args):
         

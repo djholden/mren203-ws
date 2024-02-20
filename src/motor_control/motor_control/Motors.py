@@ -55,10 +55,11 @@ class MotorHandler():
 
 
     def print_speed(self):
-        print("Updated...\n")
-        print("Omega: {} rad/s\n".format(self.right_wheel.omega))
-        print("Speed: {} m/s\n".format(self.right_wheel.speed))
-        print("Ticks: {}\n".format(self.right_wheel.encoder_ticks))
+        print("Updated...")
+        print("Omega: {} rad/s".format(self.right_wheel.omega))
+        print("Speed: {} m/s".format(self.right_wheel.speed))
+        print("Ticks: {}".format(self.right_wheel.encoder_ticks))
+        print("Delta Tick: {}".format(self.right_wheel.tick_change))
 
 
     def voltage_mode(self, left_cmd, right_cmd):
@@ -118,39 +119,49 @@ class WheelPID(MotorHandler):
         self.speed = 0              # In m/s
         self.omega = 0              # in rad/s
 
+        self.tick_change = 0
+
         # Create Event detector for encoder pulse
         GPIO.add_event_detect(self.GPIO_A, GPIO.RISING, 
-            callback=self.pulse_callback, bouncetime=50)
+            callback=self.test_pulse, bouncetime=5)
         
     def pulse_callback(self, *args):
         
-        #if (self.GPIO_B == LOW):
-        #    self.encoder_ticks -= 1
-        #else:
-        #    self.encoder_ticks += 1
-        
-        switch_A = GPIO.input(self.GPIO_A)
-        switch_B = GPIO.input(self.GPIO_B)
-
-        if (switch_A == 1) and (switch_B == 0):
-            self.encoder_ticks += 1
-
-            while switch_B == 0:
-                switch_B = GPIO.input(self.GPIO_B)
-
-            while switch_B == 1:
-                switch_B = GPIO.input(self.GPIO_B)
-            return
-    
-        elif (switch_A == 1) and (switch_B == 1):
+        if (self.GPIO_B == LOW):
             self.encoder_ticks -= 1
-
-            while switch_A == 1:
-                switch_A = GPIO.input(self.GPIO_A)
-            return
-        
         else:
-            return
+            self.encoder_ticks += 1
+        
+        # switch_A = GPIO.input(self.GPIO_A)
+        # switch_B = GPIO.input(self.GPIO_B)
+
+        # if (switch_A == 1) and (switch_B == 0):
+        #     self.encoder_ticks += 1
+
+        #     while switch_B == 0:
+        #         switch_B = GPIO.input(self.GPIO_B)
+
+        #     while switch_B == 1:
+        #         switch_B = GPIO.input(self.GPIO_B)
+        #     return
+    
+        # elif (switch_A == 1) and (switch_B == 1):
+        #     self.encoder_ticks -= 1
+
+        #     while switch_A == 1:
+        #         switch_A = GPIO.input(self.GPIO_A)
+        #     return
+        
+        # else:
+        #     return
+            
+    def test_pulse(self, *args):
+        print(args)
+        self.tick_change = 0
+        while (self.GPIO_B == LOW):
+            self.tick_change += 1
+        
+
             
     def update_rotational_speed(self, current_time):
         self.t_now = current_time

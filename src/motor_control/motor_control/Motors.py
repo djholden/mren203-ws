@@ -58,6 +58,7 @@ class MotorHandler():
         print("Updated...\n")
         print("Omega: {} rad/s\n".format(self.right_wheel.omega))
         print("Speed: {} m/s\n".format(self.right_wheel.speed))
+        print("Ticks: {}\n".format(self.right_wheel.encoder_ticks))
 
 
     def voltage_mode(self, left_cmd, right_cmd):
@@ -119,40 +120,42 @@ class WheelPID(MotorHandler):
 
         # Create Event detector for encoder pulse
         GPIO.add_event_detect(self.GPIO_A, GPIO.RISING, 
-            callback=self.pulse_callback, bouncetime=10)
+            callback=self.pulse_callback, bouncetime=50)
         
     def pulse_callback(self, *args):
         
-        if (self.GPIO_B == LOW):
-            self.encoder_ticks -= 1
-        else:
+        #if (self.GPIO_B == LOW):
+        #    self.encoder_ticks -= 1
+        #else:
+        #    self.encoder_ticks += 1
+        
+        switch_A = GPIO.input(self.GPIO_A)
+        switch_B = GPIO.input(self.GPIO_B)
+
+        if (switch_A == 1) and (switch_B == 0):
             self.encoder_ticks += 1
-        
 
-        # if (switch_A == 1) and (switch_B == 0):
-        #     self.encoder_ticks += 1
+            while switch_B == 0:
+                switch_B = GPIO.input(self.GPIO_B)
 
-        #     while switch_B == 0:
-        #         switch_B = GPIO.input(self.GPIO_B)
-
-        #     while switch_B == 1:
-        #         switch_B = GPIO.input(self.GPIO_B)
-        #     return
+            while switch_B == 1:
+                switch_B = GPIO.input(self.GPIO_B)
+            return
     
-        # elif (switch_A == 1) and (switch_B == 1):
-        #     self.encoder_ticks -= 1
+        elif (switch_A == 1) and (switch_B == 1):
+            self.encoder_ticks -= 1
 
-        #     while switch_A == 1:
-        #         switch_A = GPIO.input(self.GPIO_A)
-        #     return
+            while switch_A == 1:
+                switch_A = GPIO.input(self.GPIO_A)
+            return
         
-        # else:
-        #     return
+        else:
+            return
             
     def update_rotational_speed(self, current_time):
         self.t_now = current_time
         dt = (self.t_now - self.t_last) # In Milliseconds
-        print("encoder ticks: {} s".format(self.encoder_tick))
+        #print("encoder ticks: {} s".format(self.encoder_ticks))
 
         if (dt >= self.T):
             # Estimate angular velocity [rad/s]

@@ -24,7 +24,7 @@ class MotorSubscriber(Node):
         self.timer_period = 0.01
         self.timer = self.create_timer(self.timer_period, self.callaback_loop)
 
-        self.time_ms
+        self.time_ms = 0
 
     def callaback_loop(self):
         self.time_ms = self.get_clock().now().nanoseconds*(1e-6)
@@ -68,7 +68,7 @@ class MotorSubscriber(Node):
         if (a_btn > 0):
             self.motors.print_speed()
 
-        self.get_logger().info('Time: {} Left Cmd: {} & Right Cmd: {}'.format(self.time_ms, left_wheel, right_wheel))
+        #self.get_logger().info('Time: {} Left Cmd: {} & Right Cmd: {}'.format(self.time_ms, left_wheel, right_wheel))
 
 
 

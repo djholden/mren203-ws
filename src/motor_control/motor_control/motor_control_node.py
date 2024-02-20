@@ -23,14 +23,23 @@ class MotorSubscriber(Node):
 
     def callaback(self, msg):
 
-        # Receive joystick data
-        x_axis = msg.axes[0]
-        y_axis = msg.axes[1]
+        # Receive joystick data (y_axis -> +UP, x_axis -> +LEFT)
+        left_x_axis = msg.axes[0]
+        left_y_axis = msg.axes[1]
+        right_x_axis = msg.axes[3]
+        right_y_axis = msg.axes[4]
+        left_right_axis = msg.axes[6]
+        up_down_axis = msg.axes[7]
+        a_btn = msg.buttons[0]
+        b_btn = msg.buttons[1]
+        x_btn = msg.buttons[2]
+        y_btn = msg.buttons[3]
+
 
 
         # Joystick Controller
-        left_wheel = y_axis*(SPEED*sqrt(2)/2) - x_axis*(SPEED*sqrt(2)/2)
-        right_wheel = y_axis*(SPEED*sqrt(2)/2) + x_axis*(SPEED*sqrt(2)/2)
+        left_wheel = left_y_axis*(SPEED*sqrt(2)/2) - left_x_axis*(SPEED*sqrt(2)/2)
+        right_wheel = left_y_axis*(SPEED*sqrt(2)/2) + left_x_axis*(SPEED*sqrt(2)/2)
 
         # Cap max speed to 100
         if (left_wheel > 100):
@@ -43,8 +52,14 @@ class MotorSubscriber(Node):
         elif (right_wheel < 100):
             right_wheel = -100
 
+        time_ms = self.get_clock().now()*1000
+
         self.motors.voltage_mode(left_wheel, right_wheel)
-        self.get_logger().info('Left Cmd: {} & Right Cmd: {}'.format(left_wheel, right_wheel))
+
+        if (a_btn > 0):
+            self.motors.right_wheel.PID_mode(0, 0, time_ms)
+
+        self.get_logger().info('Time: {} Left Cmd: {} & Right Cmd: {}'.format(time_ms, left_wheel, right_wheel))
 
 
 

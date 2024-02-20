@@ -1,0 +1,17 @@
+[0.979s] Invoking command in '/home/dj/MREN203/mren203-ws/build/joystick_ros2': PYTHONPATH=/home/dj/MREN203/mren203-ws/build/joystick_ros2/prefix_override:/home/dj/MREN203/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/dj/MREN203/mren203-ws/build/joystick_ros2/build --no-deps install_data
+[1.174s] running develop
+[1.301s] running egg_info
+[1.301s] writing joystick_ros2.egg-info/PKG-INFO
+[1.301s] writing dependency_links to joystick_ros2.egg-info/dependency_links.txt
+[1.301s] writing entry points to joystick_ros2.egg-info/entry_points.txt
+[1.301s] writing requirements to joystick_ros2.egg-info/requires.txt
+[1.301s] writing top-level names to joystick_ros2.egg-info/top_level.txt
+[1.303s] reading manifest file 'joystick_ros2.egg-info/SOURCES.txt'
+[1.303s] writing manifest file 'joystick_ros2.egg-info/SOURCES.txt'
+[1.306s] running build_ext
+[1.306s] Creating /home/dj/MREN203/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages/joystick-ros2.egg-link (link to .)
+[1.306s] Installing joystick_ros2 script to /home/dj/MREN203/mren203-ws/install/joystick_ros2/lib/joystick_ros2
+[1.306s] 
+[1.306s] Installed /home/dj/MREN203/mren203-ws/build/joystick_ros2
+[1.306s] running install_data
+[1.379s] Invoked command in '/home/dj/MREN203/mren203-ws/build/joystick_ros2' returned '0': PYTHONPATH=/home/dj/MREN203/mren203-ws/build/joystick_ros2/prefix_override:/home/dj/MREN203/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/dj/MREN203/mren203-ws/build/joystick_ros2/build --no-deps install_data

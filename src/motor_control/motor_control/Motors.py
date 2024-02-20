@@ -51,7 +51,7 @@ class MotorHandler():
 
     def PID_mode(self, left_vel, right_vel, current_time):
         # Check for Interupt AKA a pulse
-        self.right_wheel.update_rotational_speed(current_time)
+        #self.right_wheel.update_rotational_speed(current_time)
         print("Updated...\n")
         print("Omega: {} rad/s\n".format(self.right_wheel.omega))
         print("Speed: {} m/s\n".format(self.right_wheel.speed))

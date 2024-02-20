@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="joystick" pkg="joystick_ros2" exec="joystick_ros2"></node>
+    <node name="motors" pkg="motor_control" exec="motor_driver"></node>
+</launch>

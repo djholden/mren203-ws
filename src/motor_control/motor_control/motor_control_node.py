@@ -21,6 +21,15 @@ class MotorSubscriber(Node):
         self.subscription  # prevent unused variable warning
         self.motors = MotorHandler()
 
+        self.timer_period = 0.01
+        self.timer = self.create_timer(self.timer_period, self.callaback_loop)
+
+        self.time_ms
+
+    def callaback_loop(self):
+        self.time_ms = self.get_clock().now().nanoseconds*(1e-6)
+        self.motors.PID_mode(0, 0, self.time_ms)
+
     def callaback(self, msg):
 
         # Receive joystick data (y_axis -> +UP, x_axis -> +LEFT)
@@ -52,15 +61,14 @@ class MotorSubscriber(Node):
         elif (right_wheel < -100):
             right_wheel = -100
 
-        time_ms = self.get_clock().now().nanoseconds*(1e-6)
+        
 
         self.motors.voltage_mode(left_wheel, right_wheel)
-        self.motors.PID_mode(0, 0, time_ms)
 
         if (a_btn > 0):
             self.motors.print_speed()
 
-        self.get_logger().info('Time: {} Left Cmd: {} & Right Cmd: {}'.format(time_ms, left_wheel, right_wheel))
+        self.get_logger().info('Time: {} Left Cmd: {} & Right Cmd: {}'.format(self.time_ms, left_wheel, right_wheel))
 
 
 

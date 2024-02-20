@@ -105,7 +105,7 @@ class WheelPID(MotorHandler):
     """
         Class for wheel PID properties and functions
     """
-    def __init__(self, GPIO_A, GPIO_B, radius=0.0625, period=1000, TPR=3000):
+    def __init__(self, GPIO_A, GPIO_B, radius=0.0625, period=500, TPR=100):
         self.GPIO_A = GPIO_A
         self.GPIO_B = GPIO_B
 
@@ -152,7 +152,7 @@ class WheelPID(MotorHandler):
     def update_rotational_speed(self, current_time):
         self.t_now = current_time
         dt = (self.t_now - self.t_last) # In Milliseconds
-        print("dt: {} s".format(dt))
+        print("encoder ticks: {} s".format(self.encoder_tick))
 
         if (dt >= self.T):
             # Estimate angular velocity [rad/s]

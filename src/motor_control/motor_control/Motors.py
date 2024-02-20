@@ -40,6 +40,8 @@ class MotorHandler():
         FREQ = 500
         self.left_pwm = GPIO.PWM(EB, FREQ)
         self.right_pwm = GPIO.PWM(EA, FREQ)
+        self.left_pwm.start(0)
+        self.right_pwm.start(0)
 
     def voltage_mode(self, left_cmd, right_cmd):
         MAX_DUTY_CYCLE = 100
@@ -73,9 +75,8 @@ class MotorHandler():
 
 
         # Change PWM duty cycle (aka speed)
-        self.left_pwm.ChangeDutyCycle(left_cmd)
-        self.right_pwm.ChangeDutyCycle(right_cmd)
-
+        self.left_pwm.ChangeDutyCycle(abs(left_cmd))
+        self.right_pwm.ChangeDutyCycle(abs(right_cmd))
 
 
 if __name__ == '__main__':

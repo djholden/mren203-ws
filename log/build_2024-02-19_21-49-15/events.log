@@ -1,0 +1,148 @@
+[0.000000] (-) TimerEvent: {}
+[0.002214] (joystick_ros2) JobQueued: {'identifier': 'joystick_ros2', 'dependencies': OrderedDict()}
+[0.002515] (motor_control) JobQueued: {'identifier': 'motor_control', 'dependencies': OrderedDict()}
+[0.002675] (joystick_ros2) JobStarted: {'identifier': 'joystick_ros2'}
+[0.099136] (-) TimerEvent: {}
+[0.199967] (-) TimerEvent: {}
+[0.283126] (motor_control) JobStarted: {'identifier': 'motor_control'}
+[0.300294] (-) TimerEvent: {}
+[0.401060] (-) TimerEvent: {}
+[0.501768] (-) TimerEvent: {}
+[0.602830] (-) TimerEvent: {}
+[0.703490] (-) TimerEvent: {}
+[0.804166] (-) TimerEvent: {}
+[0.904862] (-) TimerEvent: {}
+[1.005581] (-) TimerEvent: {}
+[1.106203] (-) TimerEvent: {}
+[1.207071] (-) TimerEvent: {}
+[1.307648] (-) TimerEvent: {}
+[1.408239] (-) TimerEvent: {}
+[1.508898] (-) TimerEvent: {}
+[1.609612] (-) TimerEvent: {}
+[1.710725] (-) TimerEvent: {}
+[1.811654] (-) TimerEvent: {}
+[1.912347] (-) TimerEvent: {}
+[2.013132] (-) TimerEvent: {}
+[2.114107] (-) TimerEvent: {}
+[2.214731] (-) TimerEvent: {}
+[2.315328] (-) TimerEvent: {}
+[2.415935] (-) TimerEvent: {}
+[2.516592] (-) TimerEvent: {}
+[2.617191] (-) TimerEvent: {}
+[2.717815] (-) TimerEvent: {}
+[2.818422] (-) TimerEvent: {}
+[2.919217] (-) TimerEvent: {}
+[3.020126] (-) TimerEvent: {}
+[3.120994] (-) TimerEvent: {}
+[3.221793] (-) TimerEvent: {}
+[3.322593] (-) TimerEvent: {}
+[3.423366] (-) TimerEvent: {}
+[3.524179] (-) TimerEvent: {}
+[3.625213] (-) TimerEvent: {}
+[3.725872] (-) TimerEvent: {}
+[3.826526] (-) TimerEvent: {}
+[3.927231] (-) TimerEvent: {}
+[4.027894] (-) TimerEvent: {}
+[4.128537] (-) TimerEvent: {}
+[4.229269] (-) TimerEvent: {}
+[4.329973] (-) TimerEvent: {}
+[4.430649] (-) TimerEvent: {}
+[4.531427] (-) TimerEvent: {}
+[4.632185] (-) TimerEvent: {}
+[4.733136] (-) TimerEvent: {}
+[4.833865] (-) TimerEvent: {}
+[4.934727] (-) TimerEvent: {}
+[5.035802] (-) TimerEvent: {}
+[5.136967] (-) TimerEvent: {}
+[5.238699] (-) TimerEvent: {}
+[5.330666] (motor_control) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/steve/mren203-ws/build/motor_control/build', '--no-deps', 'install_data'], 'cwd': '/home/steve/mren203-ws/build/motor_control', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'steve', 'SSH_CLIENT': '69.69.69.96 46594 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/steve', 'OLDPWD': '/home/steve/mren203-ws/src', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'humble', 'LOGNAME': 'steve', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/steve/mren203-ws/build/motor_control', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '69.69.69.96 46594 69.69.69.69 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/steve/mren203-ws/build/motor_control/prefix_override:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[5.339856] (-) TimerEvent: {}
+[5.344117] (joystick_ros2) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/steve/mren203-ws/build/joystick_ros2/build', '--no-deps', 'install_data'], 'cwd': '/home/steve/mren203-ws/build/joystick_ros2', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'steve', 'SSH_CLIENT': '69.69.69.96 46594 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/steve', 'OLDPWD': '/home/steve/mren203-ws/src', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'humble', 'LOGNAME': 'steve', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/steve/mren203-ws/build/joystick_ros2', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '69.69.69.96 46594 69.69.69.69 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/steve/mren203-ws/build/joystick_ros2/prefix_override:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[5.440053] (-) TimerEvent: {}
+[5.540810] (-) TimerEvent: {}
+[5.641495] (-) TimerEvent: {}
+[5.742362] (-) TimerEvent: {}
+[5.843072] (-) TimerEvent: {}
+[5.943743] (-) TimerEvent: {}
+[6.044484] (-) TimerEvent: {}
+[6.145169] (-) TimerEvent: {}
+[6.245838] (-) TimerEvent: {}
+[6.346561] (-) TimerEvent: {}
+[6.447281] (-) TimerEvent: {}
+[6.547911] (-) TimerEvent: {}
+[6.599003] (joystick_ros2) StdoutLine: {'line': b'running develop\n'}
+[6.600711] (motor_control) StdoutLine: {'line': b'running develop\n'}
+[6.603141] (motor_control) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[6.603861] (motor_control) StderrLine: {'line': b'  warnings.warn(\n'}
+[6.604335] (joystick_ros2) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[6.604954] (joystick_ros2) StderrLine: {'line': b'  warnings.warn(\n'}
+[6.609462] (motor_control) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[6.610150] (motor_control) StderrLine: {'line': b'  warnings.warn(\n'}
+[6.610562] (joystick_ros2) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[6.610907] (joystick_ros2) StderrLine: {'line': b'  warnings.warn(\n'}
+[6.648071] (-) TimerEvent: {}
+[6.749071] (-) TimerEvent: {}
+[6.849757] (-) TimerEvent: {}
+[6.950465] (-) TimerEvent: {}
+[7.051159] (-) TimerEvent: {}
+[7.151897] (-) TimerEvent: {}
+[7.252547] (-) TimerEvent: {}
+[7.353251] (-) TimerEvent: {}
+[7.450745] (joystick_ros2) StdoutLine: {'line': b'running egg_info\n'}
+[7.451397] (joystick_ros2) StdoutLine: {'line': b'creating joystick_ros2.egg-info\n'}
+[7.452103] (motor_control) StdoutLine: {'line': b'running egg_info\n'}
+[7.452816] (motor_control) StdoutLine: {'line': b'creating motor_control.egg-info\n'}
+[7.453548] (-) TimerEvent: {}
+[7.454026] (motor_control) StdoutLine: {'line': b'writing motor_control.egg-info/PKG-INFO\n'}
+[7.455012] (joystick_ros2) StdoutLine: {'line': b'writing joystick_ros2.egg-info/PKG-INFO\n'}
+[7.455506] (joystick_ros2) StdoutLine: {'line': b'writing dependency_links to joystick_ros2.egg-info/dependency_links.txt\n'}
+[7.456227] (motor_control) StdoutLine: {'line': b'writing dependency_links to motor_control.egg-info/dependency_links.txt\n'}
+[7.456755] (joystick_ros2) StdoutLine: {'line': b'writing entry points to joystick_ros2.egg-info/entry_points.txt\n'}
+[7.457195] (motor_control) StdoutLine: {'line': b'writing entry points to motor_control.egg-info/entry_points.txt\n'}
+[7.457658] (motor_control) StdoutLine: {'line': b'writing requirements to motor_control.egg-info/requires.txt\n'}
+[7.458040] (joystick_ros2) StdoutLine: {'line': b'writing requirements to joystick_ros2.egg-info/requires.txt\n'}
+[7.458404] (joystick_ros2) StdoutLine: {'line': b'writing top-level names to joystick_ros2.egg-info/top_level.txt\n'}
+[7.458806] (motor_control) StdoutLine: {'line': b'writing top-level names to motor_control.egg-info/top_level.txt\n'}
+[7.459219] (joystick_ros2) StdoutLine: {'line': b"writing manifest file 'joystick_ros2.egg-info/SOURCES.txt'\n"}
+[7.459661] (motor_control) StdoutLine: {'line': b"writing manifest file 'motor_control.egg-info/SOURCES.txt'\n"}
+[7.462789] (joystick_ros2) StdoutLine: {'line': b"reading manifest file 'joystick_ros2.egg-info/SOURCES.txt'\n"}
+[7.463530] (motor_control) StdoutLine: {'line': b"reading manifest file 'motor_control.egg-info/SOURCES.txt'\n"}
+[7.465617] (joystick_ros2) StdoutLine: {'line': b"writing manifest file 'joystick_ros2.egg-info/SOURCES.txt'\n"}
+[7.466315] (motor_control) StdoutLine: {'line': b"writing manifest file 'motor_control.egg-info/SOURCES.txt'\n"}
+[7.471530] (joystick_ros2) StdoutLine: {'line': b'running build_ext\n'}
+[7.472501] (motor_control) StdoutLine: {'line': b'running build_ext\n'}
+[7.473283] (joystick_ros2) StdoutLine: {'line': b'Creating /home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages/joystick-ros2.egg-link (link to .)\n'}
+[7.473926] (motor_control) StdoutLine: {'line': b'Creating /home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages/motor-control.egg-link (link to .)\n'}
+[7.476623] (joystick_ros2) StdoutLine: {'line': b'Installing joystick_ros2 script to /home/steve/mren203-ws/install/joystick_ros2/lib/joystick_ros2\n'}
+[7.477378] (motor_control) StdoutLine: {'line': b'Installing motor_driver script to /home/steve/mren203-ws/install/motor_control/lib/motor_control\n'}
+[7.478229] (motor_control) StdoutLine: {'line': b'\n'}
+[7.478960] (motor_control) StdoutLine: {'line': b'Installed /home/steve/mren203-ws/build/motor_control\n'}
+[7.479860] (joystick_ros2) StdoutLine: {'line': b'\n'}
+[7.480502] (joystick_ros2) StdoutLine: {'line': b'Installed /home/steve/mren203-ws/build/joystick_ros2\n'}
+[7.481245] (motor_control) StdoutLine: {'line': b'running install_data\n'}
+[7.482414] (joystick_ros2) StdoutLine: {'line': b'running install_data\n'}
+[7.484149] (motor_control) StdoutLine: {'line': b'creating /home/steve/mren203-ws/install/motor_control/share/ament_index\n'}
+[7.485947] (joystick_ros2) StdoutLine: {'line': b'creating /home/steve/mren203-ws/install/joystick_ros2/share/ament_index\n'}
+[7.487934] (motor_control) StdoutLine: {'line': b'creating /home/steve/mren203-ws/install/motor_control/share/ament_index/resource_index\n'}
+[7.490072] (joystick_ros2) StdoutLine: {'line': b'creating /home/steve/mren203-ws/install/joystick_ros2/share/ament_index/resource_index\n'}
+[7.492194] (joystick_ros2) StdoutLine: {'line': b'creating /home/steve/mren203-ws/install/joystick_ros2/share/ament_index/resource_index/packages\n'}
+[7.494299] (motor_control) StdoutLine: {'line': b'creating /home/steve/mren203-ws/install/motor_control/share/ament_index/resource_index/packages\n'}
+[7.496178] (joystick_ros2) StdoutLine: {'line': b'copying resource/joystick_ros2 -> /home/steve/mren203-ws/install/joystick_ros2/share/ament_index/resource_index/packages\n'}
+[7.498350] (motor_control) StdoutLine: {'line': b'copying resource/motor_control -> /home/steve/mren203-ws/install/motor_control/share/ament_index/resource_index/packages\n'}
+[7.500382] (motor_control) StdoutLine: {'line': b'copying package.xml -> /home/steve/mren203-ws/install/motor_control/share/motor_control\n'}
+[7.502552] (joystick_ros2) StdoutLine: {'line': b'creating /home/steve/mren203-ws/install/joystick_ros2/shared\n'}
+[7.504627] (joystick_ros2) StdoutLine: {'line': b'creating /home/steve/mren203-ws/install/joystick_ros2/shared/joystick_ros2\n'}
+[7.506641] (joystick_ros2) StdoutLine: {'line': b'copying package.xml -> /home/steve/mren203-ws/install/joystick_ros2/shared/joystick_ros2\n'}
+[7.553946] (-) TimerEvent: {}
+[7.655602] (-) TimerEvent: {}
+[7.688161] (motor_control) CommandEnded: {'returncode': 0}
+[7.755802] (-) TimerEvent: {}
+[7.856730] (-) TimerEvent: {}
+[7.957819] (-) TimerEvent: {}
+[7.988607] (motor_control) JobEnded: {'identifier': 'motor_control', 'rc': 0}
+[7.991991] (joystick_ros2) CommandEnded: {'returncode': 0}
+[8.057965] (-) TimerEvent: {}
+[8.158861] (-) TimerEvent: {}
+[8.259463] (-) TimerEvent: {}
+[8.298369] (joystick_ros2) JobEnded: {'identifier': 'joystick_ros2', 'rc': 0}
+[8.301044] (-) EventReactorShutdown: {}

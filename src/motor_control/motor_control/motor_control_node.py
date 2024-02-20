@@ -1,5 +1,5 @@
 #! /usr/bin/env python3
-from Motors import MotorHandler
+from .Motors import MotorHandler
 from math import sqrt
 
 import rclpy
@@ -7,7 +7,7 @@ from rclpy.node import Node
 
 from sensor_msgs.msg import Joy
 
-SPEED = 100
+SPEED = 150
 
 class MotorSubscriber(Node):
 
@@ -35,9 +35,13 @@ class MotorSubscriber(Node):
         # Cap max speed to 100
         if (left_wheel > 100):
             left_wheel = 100
+        elif (left_wheel < -100):
+            left_wheel = -100
         
         if (right_wheel > 100):
             right_wheel = 100
+        elif (right_wheel < 100):
+            right_wheell = -100
 
         self.motors.voltage_mode(left_wheel, right_wheel)
         self.get_logger().info('Left Cmd: {} & Right Cmd: {}'.format(left_wheel, right_wheel))

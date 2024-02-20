@@ -1,0 +1,12 @@
+[0.000000] (-) TimerEvent: {}
+[0.001489] (joystick_ros2) JobQueued: {'identifier': 'joystick_ros2', 'dependencies': OrderedDict()}
+[0.001614] (motor_control) JobQueued: {'identifier': 'motor_control', 'dependencies': OrderedDict()}
+[0.002398] (joystick_ros2) JobStarted: {'identifier': 'joystick_ros2'}
+[0.098996] (-) TimerEvent: {}
+[0.200025] (-) TimerEvent: {}
+[0.217572] (joystick_ros2) JobEnded: {'identifier': 'joystick_ros2', 'rc': 0}
+[0.220047] (motor_control) JobStarted: {'identifier': 'motor_control'}
+[0.300262] (-) TimerEvent: {}
+[0.401707] (-) TimerEvent: {}
+[0.413699] (motor_control) JobEnded: {'identifier': 'motor_control', 'rc': 'SIGINT'}
+[0.416284] (-) EventReactorShutdown: {}

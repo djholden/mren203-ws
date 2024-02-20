@@ -49,15 +49,15 @@ class MotorSubscriber(Node):
         
         if (right_wheel > 100):
             right_wheel = 100
-        elif (right_wheel < 100):
+        elif (right_wheel < -100):
             right_wheel = -100
 
-        time_ms = self.get_clock().now()*1000
+        time_ms = self.get_clock().now().nanoseconds*(1e-6)
 
         self.motors.voltage_mode(left_wheel, right_wheel)
 
         if (a_btn > 0):
-            self.motors.right_wheel.PID_mode(0, 0, time_ms)
+            self.motors.PID_mode(0, 0, time_ms)
 
         self.get_logger().info('Time: {} Left Cmd: {} & Right Cmd: {}'.format(time_ms, left_wheel, right_wheel))
 

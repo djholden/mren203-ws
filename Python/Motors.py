@@ -9,10 +9,10 @@ LOW = False
 class MotorHandler():
     # Pin Assignments
     # Motors
-    EA = 23 # right pwm 
-    I1 = 19 # right  
-    I2 = 21 # right
-    EB = 22 # left pwm
+    EA = 33 # right pwm 
+    I1 = 29 # right  
+    I2 = 31 # right
+    EB = 32 # left pwm
     I3 = 26 # left
     I4 = 24 # left
 
@@ -40,6 +40,8 @@ class MotorHandler():
         FREQ = 500
         self.left_PWM = GPIO.PWM(self.EB, FREQ)
         self.right_PWM = GPIO.PWM(self.EA, FREQ)
+        self.left_PWM.start(0)
+        self.right_PWM.start(0)
 
     def voltage_mode(self, left_cmd, right_cmd):
         MAX_DUTY_CYCLE = 100
@@ -71,17 +73,19 @@ class MotorHandler():
             GPIO.output(self.I1, LOW)
             GPIO.output(self.I2, HIGH)
 
-
         # Change PWM duty cycle (aka speed)
-        self.left_pwm.ChangeDutyCycle(left_cmd)
-        self.right_pwm.ChangeDutyCycle(right_cmd)
+        self.left_PWM.ChangeDutyCycle(abs(left_cmd))
+        self.right_PWM.ChangeDutyCycle(abs(right_cmd))
 
 
 
 if __name__ == '__main__':
     motors = MotorHandler()
-    motors.voltage_mode(50, 50)
+    motors.voltage_mode(50, -50)
     time.sleep(3)
-    motors.voltage_mode(0, 0)
-
+    #motors.voltage_mode(30, 30)
+    #time.sleep(3)
+    #motors.voltage_mode(0, 0)
+    GPIO.cleanup()
+    print("done")
 

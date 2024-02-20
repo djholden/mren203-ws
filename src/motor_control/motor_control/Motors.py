@@ -1,5 +1,7 @@
 #! /usr/bin/env python3
 import RPi.GPIO as GPIO
+import math
+import time
 
 HIGH = True
 LOW = False
@@ -43,6 +45,18 @@ class MotorHandler():
         self.left_pwm.start(0)
         self.right_pwm.start(0)
 
+        # Create PID Wheels
+        self.left_wheel = WheelPID(LCA, LCB)
+        self.right_wheel = WheelPID(RCA, RCB)
+
+    def PID_mode(self, left_vel, right_vel, current_time):
+        # Check for Interupt AKA a pulse
+        self.right_wheel.update_rotational_speed(current_time)
+        print("Updated...\n")
+        print("Omega: {} rad/s\n".format(self.right_wheel.omega))
+        print("Speed: {} m/s\n".format(self.right_wheel.speed))
+
+
     def voltage_mode(self, left_cmd, right_cmd):
         MAX_DUTY_CYCLE = 100
 
@@ -78,11 +92,97 @@ class MotorHandler():
         self.left_pwm.ChangeDutyCycle(abs(left_cmd))
         self.right_pwm.ChangeDutyCycle(abs(right_cmd))
 
+    def shutdown(self):
+        self.voltage_mode(0, 0)
+        GPIO.cleanup()
+        print("Motors successfully shutdown")
+
+    
+class WheelPID(MotorHandler):
+    """
+        Class for wheel PID properties and functions
+    """
+    def __init__(self, GPIO_A, GPIO_B, radius=0.0625, period=1000, TPR=3000):
+        super().__init__()
+        self.GPIO_A = GPIO_A
+        self.GPIO_B = GPIO_B
+
+        self.encoder_ticks = 0
+        self.t_last = 0             # In milliseconds
+        self.T = period             # In milliseconds
+        self.TPR = TPR              # Ticks per revolution
+        self.radius = radius        # In meters
+        self.speed = 0              # In m/s
+        self.omega = 0              # in rad/s
+
+        # Create Event detector for encoder pulse
+        GPIO.add_event_detect(self.GPIO_A, GPIO.RISING, 
+            callback=self.pulse_callback, bouncetime=10)
+        
+    def pulse_callback(self):
+        
+        if (self.GPIO_B == LOW):
+            self.encoder_ticks -= 1
+        else:
+            self.encoder_ticks += 1
+        
+
+        # if (switch_A == 1) and (switch_B == 0):
+        #     self.encoder_ticks += 1
+
+        #     while switch_B == 0:
+        #         switch_B = GPIO.input(self.GPIO_B)
+
+        #     while switch_B == 1:
+        #         switch_B = GPIO.input(self.GPIO_B)
+        #     return
+    
+        # elif (switch_A == 1) and (switch_B == 1):
+        #     self.encoder_ticks -= 1
+
+        #     while switch_A == 1:
+        #         switch_A = GPIO.input(self.GPIO_A)
+        #     return
+        
+        # else:
+        #     return
+            
+    def update_rotational_speed(self, current_time):
+        self.t_now = current_time
+        dt = (self.t_now - self.t_last) # In Milliseconds
+
+        if (dt >= self.T):
+            # Estimate angular velocity [rad/s]
+            self.omega = (2*math.pi) * (self.encoder_ticks/self.TPR) * (1000/dt)
+
+            # Convert to speed [m/s]
+            self.speed = self.omega * self.radius
+
+            # Update last time
+            self.t_last = self.t_now
+
+            # Reset encoder ticks
+            self.encoder_ticks = 0
+
+
 
 if __name__ == '__main__':
     motors = MotorHandler()
-    motors.voltage_mode(50, 50)
-    motors.voltage_mode(0, 0)
-    print("done")
+
+    try:
+        while True:
+            time.sleep(0.1)
+            ms = round(time.time()*1000)
+            motors.voltage_mode(50, 50)
+            time.sleep(3)
+            motors.PID_mode(0, 0, ms)
+            motors.voltage_mode(0, 0)
+            time.sleep(3)
+
+    except KeyboardInterrupt:
+        motors.voltage_mode(0, 0)
+        GPIO.cleanup()
+        print("done")
+
 
 

@@ -16,8 +16,8 @@ I3 = 26 # left
 I4 = 24 # left
 
 # Encoders
-RCA = 11 # right A
-RCB = 12 # right B
+RCA = 12 # right A
+RCB = 11 # right B
 LCA = 16 # left A
 LCB = 18 # left B
 
@@ -123,7 +123,7 @@ class WheelPID(MotorHandler):
 
         # Create Event detector for encoder pulse
         GPIO.add_event_detect(self.GPIO_A, GPIO.RISING, 
-            callback=self.test_pulse, bouncetime=5)
+            callback=self.test_pulse, bouncetime=200)
         
     def pulse_callback(self, *args):
         
@@ -156,11 +156,13 @@ class WheelPID(MotorHandler):
         #     return
             
     def test_pulse(self, *args):
-        print(args)
+        #print(args)
         self.tick_change = 0
-        while (self.GPIO_B == LOW):
+        if (GPIO.input(self.GPIO_B) == LOW):
             self.tick_change += 1
-        
+        elif (GPIO.input(self.GPIO_B) == HIGH):
+            self.tick_change -= 999
+        print("Tick Change: {}".format(self.tick_change))
 
             
     def update_rotational_speed(self, current_time):

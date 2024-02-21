@@ -126,46 +126,12 @@ class WheelPID(MotorHandler):
             callback=self.pulse_callback)
         
     def pulse_callback(self, *args):
+        # TODO - add pulse graph to show if they are in phase
         
-        if (GPIO.input(self.GPIO_A) > GPIO.input(self.GPIO_B)):
+        if (GPIO.input(self.GPIO_B) > 0):
             self.encoder_ticks += 1
         else:
             self.encoder_ticks -= 1
-
-        #if (GPIO.input(self.GPIO_B) == LOW):
-        #    self.encoder_ticks -= 1
-        #else:
-        #    self.encoder_ticks += 1
-        
-        #switch_A = GPIO.input(self.GPIO_A)
-        #switch_B = GPIO.input(self.GPIO_B)
-
-        #if (switch_A == 1) and (switch_B == 0):
-        #    self.encoder_ticks += 1
-
-        #    while switch_B == 0:
-        #        switch_B = GPIO.input(self.GPIO_B)
-
-        #    while switch_B == 1:
-        #        switch_B = GPIO.input(self.GPIO_B)
-        #    return
-    
-        #elif (switch_A == 1) and (switch_B == 1):
-        #    self.encoder_ticks -= 1
-
-        #    while switch_A == 1:
-        #        switch_A = GPIO.input(self.GPIO_A)
-        #    return
-        
-        #else:
-        #    return
-            
-    def test_pulse(self, *args):
-        #print(args)
-        #self.tick_change = 0
-        #while (GPIO.input(self.GPIO_B) == HIGH):
-        #    self.tick_change += 1
-        print("B: {}".format(GPIO.input(self.GPIO_B)))
 
             
     def update_rotational_speed(self, current_time):

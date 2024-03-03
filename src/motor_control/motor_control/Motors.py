@@ -18,8 +18,8 @@ I4 = 24 # left
 # Encoders
 RCA = 12 # right A
 RCB = 11 # right B
-LCA = 16 # left A
-LCB = 18 # left B
+LCA = 38 # left A (16)
+LCB = 40 # left B (18)
 
 class MotorHandler():
     
@@ -167,11 +167,15 @@ if __name__ == '__main__':
             motors.voltage_mode(0, 0)
             time.sleep(3)
 
-
     except KeyboardInterrupt:
         motors.voltage_mode(0, 0)
-        GPIO.cleanup()
         print("done")
+
+    except RuntimeError:
+        motors.voltage_mode(0, 0)
+
+    finally:
+        GPIO.cleanup()
 
 
 

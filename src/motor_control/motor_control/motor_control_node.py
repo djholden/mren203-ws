@@ -76,7 +76,8 @@ class MotorSubscriber(Node):
         # Joystick Controller
         left_wheel = left_y_axis*(SPEED*sqrt(2)/2) - left_x_axis*(SPEED*sqrt(2)/2)
         right_wheel = left_y_axis*(SPEED*sqrt(2)/2) + left_x_axis*(SPEED*sqrt(2)/2)
-
+        
+        """ 
         # Cap max speed to 100
         if (left_wheel > 100):
             left_wheel = 100
@@ -86,7 +87,7 @@ class MotorSubscriber(Node):
         if (right_wheel > 100):
             right_wheel = 100
         elif (right_wheel < -100):
-            right_wheel = -100
+            right_wheel = -100 """
 
         
 

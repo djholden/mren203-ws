@@ -21,6 +21,10 @@ RCB = 11 # right B
 LCA = 38 # left A (16)
 LCB = 40 # left B (18)
 
+TRACK_LENGTH = 0.2775
+
+KP = 5
+
 class MotorHandler():
     
 
@@ -50,19 +54,28 @@ class MotorHandler():
         self.right_wheel = WheelPID(RCA, RCB)
 
 
-    def PID_mode(self, left_vel, right_vel, current_time):
+    def PID_mode(self, vel_d, turn_rate_d, current_time):
         self.right_wheel.update_rotational_speed(current_time)
+        self.left_wheel.update_rotational_speed(current_time)
+
+        # calculate the right and left wheel velocities base on the desired vehicle velocity
+        # and desired vehicle turning rate. The 0.2775 value is the track length of the bot.
+        right_vel_d = vel_d + (0.5*(TRACK_LENGTH*turn_rate_d))
+        left_vel_d = vel_d - (0.5*(TRACK_LENGTH*turn_rate_d))
+
+        left_cmd = self.right_wheel.PWM_calculation(right_vel_d)
+        right_cmd = self.left_wheel.PWM_calculation(left_vel_d)
+        
+        # max pwm and direction checks
+        left_cmd, right_cmd = self.check_max(left_cmd, right_cmd)
+        left_cmd, right_cmd = self.direction(left_cmd, right_cmd)
+
+        # Change PWM duty cycle (aka speed)
+        self.right_pwm.ChangeDutyCycle(abs(right_cmd))
+        self.left_pwm.ChangeDutyCycle(abs(left_cmd))
 
 
-    def print_speed(self):
-        print("Updated...")
-        print("Omega: {} rad/s".format(self.right_wheel.omega))
-        print("Speed: {} m/s".format(self.right_wheel.speed))
-        print("Ticks: {}".format(self.right_wheel.encoder_ticks))
-        print("Delta Tick: {}".format(self.right_wheel.tick_change))
-
-
-    def voltage_mode(self, left_cmd, right_cmd):
+    def check_max(self, left_cmd, right_cmd):
         MAX_DUTY_CYCLE = 100
 
         # Handle input cmd
@@ -74,9 +87,11 @@ class MotorHandler():
         if (right_cmd > MAX_DUTY_CYCLE):
             right_cmd = MAX_DUTY_CYCLE
         elif (right_cmd < -MAX_DUTY_CYCLE):
-            right_cmd = -MAX_DUTY_CYCLE  
+            right_cmd = -MAX_DUTY_CYCLE 
 
+        return left_cmd, right_cmd
 
+    def direction(self, left_cmd, right_cmd):
         # Handle Direction
         if (left_cmd >= 0):
             GPIO.output(I3, LOW)
@@ -92,6 +107,24 @@ class MotorHandler():
             GPIO.output(I1, LOW)
             GPIO.output(I2, HIGH)
 
+    def print_speed(self):
+        print("Updated...")
+        print("Right Wheels")
+        print("     Omega: {} rad/s".format(self.right_wheel.omega))
+        print("     Speed: {} m/s".format(self.right_wheel.speed))
+        print("     Ticks: {}".format(self.right_wheel.encoder_ticks))
+        print("     Delta Tick: {}".format(self.right_wheel.tick_change))
+        print("Left Wheels")
+        print("     Omega: {} rad/s".format(self.left_wheel.omega))
+        print("     Speed: {} m/s".format(self.left_wheel.speed))
+        print("     Ticks: {}".format(self.left_wheel.encoder_ticks))
+        print("     Delta Tick: {}".format(self.left_wheel.tick_change))
+
+
+    def voltage_mode(self, left_cmd, right_cmd):
+        # max pwm and direction checks
+        left_cmd, right_cmd = self.check_max(left_cmd, right_cmd)
+        left_cmd, right_cmd = self.direction(left_cmd, right_cmd)
 
         # Change PWM duty cycle (aka speed)
         self.left_pwm.ChangeDutyCycle(abs(left_cmd))
@@ -151,6 +184,13 @@ class WheelPID(MotorHandler):
 
             # Reset encoder ticks
             self.encoder_ticks = 0
+    
+    def PWM_calculation(self, vel_d):
+        vel = self.speed
+        error = vel_d - vel
+
+
+        
 
 
 

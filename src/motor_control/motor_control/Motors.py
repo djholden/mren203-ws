@@ -18,8 +18,8 @@ I4 = 24 # left
 # Encoders
 RCA = 12 # right A
 RCB = 11 # right B
-LCA = 38 # left A (16)
-LCB = 40 # left B (18)
+LCA = 16 # left A (16)
+LCB = 18 # left B (18)
 
 TRACK_LENGTH = 0.2775
 
@@ -81,7 +81,6 @@ class MotorHandler():
 
 
     def check_max(self, left_cmd, right_cmd):
-        print("Doing max check")
         MAX_DUTY_CYCLE = 100
 
         # Handle input cmd
@@ -98,7 +97,6 @@ class MotorHandler():
         return left_cmd, right_cmd
 
     def direction(self, left_cmd, right_cmd):
-        print("Doing direction check")
         # Handle Direction
         if (left_cmd >= 0):
             GPIO.output(I3, LOW)
@@ -131,10 +129,12 @@ class MotorHandler():
 
 
     def voltage_mode(self, left_cmd, right_cmd):
+        
+
         # max pwm and direction checks
         left_cmd, right_cmd = self.check_max(left_cmd, right_cmd)
         left_cmd, right_cmd = self.direction(left_cmd, right_cmd)
-
+        
         # Change PWM duty cycle (aka speed)
         self.left_pwm.ChangeDutyCycle(abs(left_cmd))
         self.right_pwm.ChangeDutyCycle(abs(right_cmd))
@@ -188,6 +188,7 @@ class WheelPID(MotorHandler):
 
             # Convert to speed [m/s]
             self.speed = self.omega * self.radius
+            print(self.speed)
 
             # Update last time
             self.t_last = self.t_now

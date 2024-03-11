@@ -49,6 +49,7 @@ class MotorSubscriber(Node):
         if not self.isVoltageMode:
             self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms)
         # self.motors.PID_mode(0, 0, self.time_ms)
+        # print("LW: " + str(self.left_cmd) + " | RW:" + str(self.right_cmd) + "\n")
 
         # Create twist messages
         time_now = self.get_clock().now().to_msg()
@@ -96,7 +97,6 @@ class MotorSubscriber(Node):
         # Handle the control mode
         if self.isVoltageMode:
             # Joystick Controller
-            print("v mode")
             left_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) - left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)
             right_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) + left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)
             self.motors.voltage_mode(left_wheel, right_wheel)

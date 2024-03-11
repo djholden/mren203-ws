@@ -8,7 +8,8 @@ from rclpy.node import Node
 from sensor_msgs.msg import Joy
 from geometry_msgs.msg import TwistStamped
 
-SPEED = 150
+MAX_VOLT_SPEED = 150    # PWM Duty Cycle
+MAX_PID_SPEED = 0.50    # Meters per second
 
 class MotorSubscriber(Node):
 
@@ -31,6 +32,13 @@ class MotorSubscriber(Node):
         self.timer = self.create_timer(self.timer_period, self.callaback_loop)
 
         self.time_ms = 0
+        self.t_last = 0 # for buttons
+
+        # Controls
+        self.isVoltageMode = True
+        self.left_cmd = 0
+        self.right_cmd = 0
+
 
         self.motors = MotorHandler()
 
@@ -38,7 +46,8 @@ class MotorSubscriber(Node):
         
         # Update the PID clock
         self.time_ms = self.get_clock().now().nanoseconds*(1e-6)
-        self.motors.PID_mode(0, 0, self.time_ms)
+        self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms)
+        # self.motors.PID_mode(0, 0, self.time_ms)
 
         # Create twist messages
         time_now = self.get_clock().now().to_msg()
@@ -72,27 +81,25 @@ class MotorSubscriber(Node):
         y_btn = msg.buttons[3]
 
 
+        # Toggle for Voltage and PID
+        if a_btn > 0 and (self.time_ms - self.t_last) > 500 :
+            if self.isVoltageMode:
+                self.isVoltageMode = False
+            else:
+                self.isVoltageMode = True
+            self.t_last = self.time_ms
 
-        # Joystick Controller
-        left_wheel = left_y_axis*(SPEED*sqrt(2)/2) - left_x_axis*(SPEED*sqrt(2)/2)
-        right_wheel = left_y_axis*(SPEED*sqrt(2)/2) + left_x_axis*(SPEED*sqrt(2)/2)
-        
-        """ 
-        # Cap max speed to 100
-        if (left_wheel > 100):
-            left_wheel = 100
-        elif (left_wheel < -100):
-            left_wheel = -100
-        
-        if (right_wheel > 100):
-            right_wheel = 100
-        elif (right_wheel < -100):
-            right_wheel = -100 """
 
-        
-
-        self.motors.voltage_mode(left_wheel, right_wheel)
-
+        # Handle the control mode
+        if self.isVoltageMode:
+            # Joystick Controller
+            left_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) - left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)
+            right_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) + left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)
+            self.motors.voltage_mode(left_wheel, right_wheel)
+        else:
+            self.left_cmd = left_y_axis*(MAX_PID_SPEED*sqrt(2)/2) - left_x_axis*(MAX_PID_SPEED*sqrt(2)/2)
+            self.right_cmd = left_y_axis*(MAX_PID_SPEED*sqrt(2)/2) + left_x_axis*(MAX_PID_SPEED*sqrt(2)/2)
+            
         if (a_btn > 0):
             self.motors.print_speed()
 

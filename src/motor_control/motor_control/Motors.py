@@ -55,14 +55,14 @@ class MotorHandler():
         self.right_wheel = WheelPID(RCA, RCB)
 
 
-    def PID_mode(self, vel_d, turn_rate_d, current_time):
+    def PID_mode(self, left_vel_d, right_vel_d, current_time):
         self.right_wheel.update_rotational_speed(current_time)
         self.left_wheel.update_rotational_speed(current_time)
 
         # calculate the right and left wheel velocities base on the desired vehicle velocity
         # and desired vehicle turning rate. The 0.2775 value is the track length of the bot.
-        right_vel_d = vel_d + (0.5*(TRACK_LENGTH*turn_rate_d))
-        left_vel_d = vel_d - (0.5*(TRACK_LENGTH*turn_rate_d))
+        # right_vel_d = vel_d + (0.5*(TRACK_LENGTH*turn_rate_d))
+        # left_vel_d = vel_d - (0.5*(TRACK_LENGTH*turn_rate_d))
 
         right_cmd = self.right_wheel.PWM_calculation(right_vel_d, self.right_pwm)
         left_cmd = self.left_wheel.PWM_calculation(left_vel_d, self.left_pwm)
@@ -152,7 +152,8 @@ class WheelPID(MotorHandler):
         self.radius = radius        # In meters
         self.speed = 0              # In m/s
         self.omega = 0              # in rad/s
-
+                     
+        self.error_int = 0
         self.tick_change = 0
 
         # Create Event detector for encoder pulse
@@ -190,15 +191,9 @@ class WheelPID(MotorHandler):
         vel = self.speed
         error = vel_d - vel
         if(current_pwm<100): # will not update integral error if pwm already maxed
-            error_int += error
-        cmd = (KP*error) + (KI*error_int)
+            self.error_int += error
+        cmd = (KP*error) + (KI*self.error_int)
         return cmd
-
-
-
-
-        
-
 
 
 if __name__ == '__main__':

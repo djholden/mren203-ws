@@ -128,8 +128,9 @@ class MotorHandler():
         print("     Delta Tick: {}".format(self.left_wheel.tick_change))
 
 
-    def voltage_mode(self, left_cmd, right_cmd):
-        
+    def voltage_mode(self, left_cmd, right_cmd, time):
+        self.left_wheel.update_rotational_speed(time)
+        self.right_wheel.update_rotational_speed(time)
 
         # max pwm and direction checks
         left_cmd, right_cmd = self.check_max(left_cmd, right_cmd)
@@ -188,7 +189,6 @@ class WheelPID(MotorHandler):
 
             # Convert to speed [m/s]
             self.speed = self.omega * self.radius
-            print(self.speed)
 
             # Update last time
             self.t_last = self.t_now

@@ -1,0 +1,41 @@
+[3.281s] Invoking command in '/home/steve/mren203-ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/rplidar_ros -- -j4 -l4
+[3.608s] [ 77%] Built target rplidar_composition_node
+[3.809s] [100%] Built target rplidar_composition
+[4.164s] Invoked command in '/home/steve/mren203-ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/rplidar_ros -- -j4 -l4
+[4.681s] Invoking command in '/home/steve/mren203-ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/rplidar_ros
+[4.711s] -- Install configuration: ""
+[4.714s] -- Execute custom install script
+[4.716s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[4.719s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar.launch.py
+[4.721s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3.launch.py
+[4.722s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1.launch.py
+[4.724s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp.launch.py
+[4.726s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/test_rplidar_a3.launch.py
+[4.728s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar.launch.py
+[4.730s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3.launch.py
+[4.731s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1.launch.py
+[4.733s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp.launch.py
+[4.735s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/rviz/rplidar.rviz
+[4.739s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/lib/librplidar_composition_node.so
+[4.742s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/include/rplidar_node.hpp
+[4.743s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/include/visibility.h
+[4.746s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[4.749s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros
+[4.751s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros
+[4.753s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh
+[4.754s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv
+[4.756s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/environment/path.sh
+[4.757s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/environment/path.dsv
+[4.759s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/local_setup.bash
+[4.760s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/local_setup.sh
+[4.762s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/local_setup.zsh
+[4.763s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/local_setup.dsv
+[4.765s] -- Symlinking: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.dsv
+[4.805s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros
+[4.807s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/ament_index/resource_index/rclcpp_components/rplidar_ros
+[4.808s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.810s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.812s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake
+[4.813s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake
+[4.815s] -- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.xml
+[4.823s] Invoked command in '/home/steve/mren203-ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/rplidar_ros

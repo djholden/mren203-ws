@@ -1,0 +1,42 @@
+[2.736s] Invoking command in '/home/steve/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/steve/mren203-ws/src/steve_launch -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/steve/mren203-ws/install/steve_launch
+[3.068s] -- The C compiler identification is GNU 11.4.0
+[3.390s] -- The CXX compiler identification is GNU 11.4.0
+[3.422s] -- Detecting C compiler ABI info
+[3.815s] -- Detecting C compiler ABI info - done
+[3.847s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.850s] -- Detecting C compile features
+[3.852s] -- Detecting C compile features - done
+[3.870s] -- Detecting CXX compiler ABI info
+[4.311s] -- Detecting CXX compiler ABI info - done
+[4.342s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[4.344s] -- Detecting CXX compile features
+[4.347s] -- Detecting CXX compile features - done
+[4.378s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[5.563s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[5.979s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[6.636s] -- Configuring done
+[6.663s] -- Generating done
+[6.671s] -- Build files have been written to: /home/steve/mren203-ws/build/steve_launch
+[6.697s] Invoked command in '/home/steve/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/steve/mren203-ws/src/steve_launch -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/steve/mren203-ws/install/steve_launch
+[6.699s] Invoking command in '/home/steve/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/steve_launch -- -j4 -l4
+[6.911s] Invoked command in '/home/steve/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/steve_launch -- -j4 -l4
+[7.081s] Invoking command in '/home/steve/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/steve_launch
+[7.122s] -- Install configuration: ""
+[7.125s] -- Execute custom install script
+[7.129s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/manual_control.launch
+[7.171s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/package_run_dependencies/steve_launch
+[7.208s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/parent_prefix_path/steve_launch
+[7.245s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.sh
+[7.281s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.dsv
+[7.320s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/path.sh
+[7.356s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/path.dsv
+[7.398s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.bash
+[7.436s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.sh
+[7.474s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.zsh
+[7.512s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.dsv
+[7.550s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.dsv
+[7.588s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/packages/steve_launch
+[7.628s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig.cmake
+[7.664s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig-version.cmake
+[7.702s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.xml
+[7.751s] Invoked command in '/home/steve/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/steve_launch

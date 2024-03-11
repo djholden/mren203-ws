@@ -46,7 +46,8 @@ class MotorSubscriber(Node):
         
         # Update the PID clock
         self.time_ms = self.get_clock().now().nanoseconds*(1e-6)
-        self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms)
+        if not self.isVoltageMode:
+            self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms)
         # self.motors.PID_mode(0, 0, self.time_ms)
 
         # Create twist messages
@@ -54,12 +55,12 @@ class MotorSubscriber(Node):
         left_msg = TwistStamped()
         left_msg.header.stamp = time_now
         left_msg.header.frame_id = "left_motor"
-        left_msg.twist.linear.x = self.motors.left_wheel.speed
+        # left_msg.twist.linear.x = self.motors.left_wheel.speed
 
         right_msg = TwistStamped()
         right_msg.header.stamp = time_now
         right_msg.header.frame_id = "right_motor"
-        right_msg.twist.linear.x = self.motors.right_wheel.speed
+        # right_msg.twist.linear.x = self.motors.right_wheel.speed
 
         # Publish messages
         self.publisher_.publish(left_msg)
@@ -82,10 +83,12 @@ class MotorSubscriber(Node):
 
 
         # Toggle for Voltage and PID
-        if a_btn > 0 and (self.time_ms - self.t_last) > 500 :
+        if y_btn > 0:
             if self.isVoltageMode:
+                print("Switched to PID Mode")
                 self.isVoltageMode = False
             else:
+                print("Switched to Voltage Mode")
                 self.isVoltageMode = True
             self.t_last = self.time_ms
 
@@ -93,6 +96,7 @@ class MotorSubscriber(Node):
         # Handle the control mode
         if self.isVoltageMode:
             # Joystick Controller
+            print("v mode")
             left_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) - left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)
             right_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) + left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)
             self.motors.voltage_mode(left_wheel, right_wheel)

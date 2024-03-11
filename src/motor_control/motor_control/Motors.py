@@ -73,7 +73,7 @@ class MotorHandler():
         
         # max pwm and direction checks
         self.left_cmd, self.right_cmd = self.check_max(left_cmd, right_cmd)
-        self.left_cmd, self.right_cmd = self.direction(left_cmd, right_cmd)
+        self.left_cmd, self.right_cmd = self.direction(self.left_cmd, self.right_cmd)
 
         # Change PWM duty cycle (aka speed)
         self.left_pwm.ChangeDutyCycle(abs(self.left_cmd))
@@ -81,6 +81,7 @@ class MotorHandler():
 
 
     def check_max(self, left_cmd, right_cmd):
+        print("Doing max check")
         MAX_DUTY_CYCLE = 100
 
         # Handle input cmd
@@ -97,6 +98,7 @@ class MotorHandler():
         return left_cmd, right_cmd
 
     def direction(self, left_cmd, right_cmd):
+        print("Doing direction check")
         # Handle Direction
         if (left_cmd >= 0):
             GPIO.output(I3, LOW)
@@ -111,6 +113,8 @@ class MotorHandler():
         elif (right_cmd < 0):
             GPIO.output(I1, LOW)
             GPIO.output(I2, HIGH)
+
+        return left_cmd, right_cmd
 
     def print_speed(self):
         print("Updated...")
@@ -197,6 +201,9 @@ class WheelPID(MotorHandler):
         if(current_pwm<100): # will not update integral error if pwm already maxed
             self.error_int += error
         cmd = (KP*error) + (KI*self.error_int)
+        # print(str(type(cmd)) + " =================================================================")
+        if not cmd:
+            cmd = current_pwm
         return cmd
 
 

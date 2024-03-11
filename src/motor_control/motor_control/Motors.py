@@ -50,6 +50,10 @@ class MotorHandler():
         self.left_pwm.start(0)
         self.right_pwm.start(0)
 
+        # Current commands
+        self.left_cmd = 0
+        self.right_cmd = 0
+
         # Create PID Wheels
         self.left_wheel = WheelPID(LCA, LCB)
         self.right_wheel = WheelPID(RCA, RCB)
@@ -64,16 +68,16 @@ class MotorHandler():
         # right_vel_d = vel_d + (0.5*(TRACK_LENGTH*turn_rate_d))
         # left_vel_d = vel_d - (0.5*(TRACK_LENGTH*turn_rate_d))
 
-        right_cmd = self.right_wheel.PWM_calculation(right_vel_d, self.right_pwm)
-        left_cmd = self.left_wheel.PWM_calculation(left_vel_d, self.left_pwm)
+        left_cmd = self.left_wheel.PWM_calculation(left_vel_d, self.left_cmd)
+        right_cmd = self.right_wheel.PWM_calculation(right_vel_d, self.right_cmd)
         
         # max pwm and direction checks
-        left_cmd, right_cmd = self.check_max(left_cmd, right_cmd)
-        left_cmd, right_cmd = self.direction(left_cmd, right_cmd)
+        self.left_cmd, self.right_cmd = self.check_max(left_cmd, right_cmd)
+        self.left_cmd, self.right_cmd = self.direction(left_cmd, right_cmd)
 
         # Change PWM duty cycle (aka speed)
-        self.right_pwm.ChangeDutyCycle(abs(right_cmd))
-        self.left_pwm.ChangeDutyCycle(abs(left_cmd))
+        self.left_pwm.ChangeDutyCycle(abs(self.left_cmd))
+        self.right_pwm.ChangeDutyCycle(abs(self.right_cmd))
 
 
     def check_max(self, left_cmd, right_cmd):

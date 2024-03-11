@@ -55,8 +55,8 @@ class MotorHandler():
         self.right_cmd = 0
 
         # Create PID Wheels
-        self.left_wheel = WheelPID(LCA, LCB)
-        self.right_wheel = WheelPID(RCA, RCB)
+        self.left_wheel = WheelPID(LCA, LCB, DIR=-1)
+        self.right_wheel = WheelPID(RCA, RCB, DIR=1)
 
 
     def PID_mode(self, left_vel_d, right_vel_d, current_time):
@@ -150,7 +150,7 @@ class WheelPID(MotorHandler):
     """
         Class for wheel PID properties and functions
     """
-    def __init__(self, GPIO_A, GPIO_B, radius=0.0625, period=1000, TPR=3000):
+    def __init__(self, GPIO_A, GPIO_B, radius=0.0625, period=1000, TPR=3000, DIR=1):
         self.GPIO_A = GPIO_A
         self.GPIO_B = GPIO_B
 
@@ -161,6 +161,7 @@ class WheelPID(MotorHandler):
         self.radius = radius        # In meters
         self.speed = 0              # In m/s
         self.omega = 0              # in rad/s
+        self.dir = DIR
                      
         self.error_int = 0
         self.tick_change = 0
@@ -185,7 +186,7 @@ class WheelPID(MotorHandler):
 
         if (dt >= self.T):
             # Estimate angular velocity [rad/s]
-            self.omega = (2*math.pi) * (self.encoder_ticks/self.TPR) * (1000/dt)
+            self.omega = (2*math.pi) * (self.dir*self.encoder_ticks/self.TPR) * (1000/dt)
 
             # Convert to speed [m/s]
             self.speed = self.omega * self.radius

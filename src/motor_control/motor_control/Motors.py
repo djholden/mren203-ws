@@ -24,6 +24,7 @@ LCB = 40 # left B (18)
 TRACK_LENGTH = 0.2775
 
 KP = 5
+KI = 2.5
 
 class MotorHandler():
     
@@ -63,8 +64,8 @@ class MotorHandler():
         right_vel_d = vel_d + (0.5*(TRACK_LENGTH*turn_rate_d))
         left_vel_d = vel_d - (0.5*(TRACK_LENGTH*turn_rate_d))
 
-        left_cmd = self.right_wheel.PWM_calculation(right_vel_d)
-        right_cmd = self.left_wheel.PWM_calculation(left_vel_d)
+        right_cmd = self.right_wheel.PWM_calculation(right_vel_d, self.right_pwm)
+        left_cmd = self.left_wheel.PWM_calculation(left_vel_d, self.left_pwm)
         
         # max pwm and direction checks
         left_cmd, right_cmd = self.check_max(left_cmd, right_cmd)
@@ -185,9 +186,15 @@ class WheelPID(MotorHandler):
             # Reset encoder ticks
             self.encoder_ticks = 0
     
-    def PWM_calculation(self, vel_d):
+    def PWM_calculation(self, vel_d, current_pwm):
         vel = self.speed
         error = vel_d - vel
+        if(current_pwm<100): # will not update integral error if pwm already maxed
+            error_int += error
+        cmd = (KP*error) + (KI*error_int)
+        return cmd
+
+
 
 
         

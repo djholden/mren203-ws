@@ -58,6 +58,21 @@ class MotorHandler():
         self.left_wheel = WheelPID(LCA, LCB, DIR=-1)
         self.right_wheel = WheelPID(RCA, RCB, DIR=1)
 
+        # Create Pose and Twist
+        self.pose = {
+            "xyz": [0, 0, 0],
+            "rpy": [0, 0, 0]
+        }
+
+        self.twist = {
+            "xyz": [0, 0, 0],
+            "rpy": [0, 0, 0]
+        }
+
+        # Set Time variables
+        self.t_now = 0
+        self.t_last = 0
+
 
     def PID_mode(self, left_vel_d, right_vel_d, current_time, kp=KP, ki=KI):
         self.right_wheel.update_rotational_speed(current_time)
@@ -97,6 +112,8 @@ class MotorHandler():
         self.pose["xyz"][0] += delta_x
         self.pose["xyz"][1] += delta_y
         self.pose["rpy"][2] += delta_yaw
+
+        self.t_last = self.t_now
 
         return self.pose, self.twist
 

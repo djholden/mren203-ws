@@ -68,8 +68,8 @@ class MotorHandler():
         # right_vel_d = vel_d + (0.5*(TRACK_LENGTH*turn_rate_d))
         # left_vel_d = vel_d - (0.5*(TRACK_LENGTH*turn_rate_d))
 
-        left_cmd = self.left_wheel.PWM_calculation(left_vel_d, self.left_cmd, Ki=ki, kp=kp)
-        right_cmd = self.right_wheel.PWM_calculation(right_vel_d, self.right_cmd, Ki=ki, kp=kp)
+        left_cmd = self.left_wheel.PWM_calculation(left_vel_d, self.left_cmd, Ki=ki, Kp=kp)
+        right_cmd = self.right_wheel.PWM_calculation(right_vel_d, self.right_cmd, Ki=ki, Kp=kp)
         
         # max pwm and direction checks
         self.left_cmd, self.right_cmd = self.check_max(left_cmd, right_cmd)

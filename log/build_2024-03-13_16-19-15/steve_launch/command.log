@@ -1,0 +1,4 @@
+Invoking command in '/home/steve/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/steve_launch -- -j4 -l4
+Invoked command in '/home/steve/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/steve_launch -- -j4 -l4
+Invoking command in '/home/steve/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/steve_launch
+Invoked command in '/home/steve/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/steve_launch

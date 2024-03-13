@@ -1,0 +1,327 @@
+[4.822s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[4.822s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff8574b490>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff85a515d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff85a515d0>>)
+[5.180s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[5.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[5.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[5.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[5.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[5.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[5.181s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/steve/mren203-ws'
+[5.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[5.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[5.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[5.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[5.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[5.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[5.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[5.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[5.183s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[5.251s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[5.251s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[5.251s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[5.251s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[5.252s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[5.252s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extensions ['ignore', 'ignore_ament_install']
+[5.252s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) by extension 'ignore'
+[5.253s] Level 1:colcon.colcon_core.package_identification:_identify(Arduino) ignored
+[5.253s] Level 1:colcon.colcon_core.package_identification:_identify(Python) by extensions ['ignore', 'ignore_ament_install']
+[5.253s] Level 1:colcon.colcon_core.package_identification:_identify(Python) by extension 'ignore'
+[5.254s] Level 1:colcon.colcon_core.package_identification:_identify(Python) ignored
+[5.254s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[5.254s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[5.254s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[5.255s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[5.255s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[5.255s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[5.256s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[5.256s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[5.257s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[5.257s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[5.257s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[5.257s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[5.258s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[5.258s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[5.258s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[5.258s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[5.258s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[5.258s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[5.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[5.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[5.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[5.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[5.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[5.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick_ros2) by extensions ['ignore', 'ignore_ament_install']
+[5.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick_ros2) by extension 'ignore'
+[5.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick_ros2) by extension 'ignore_ament_install'
+[5.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick_ros2) by extensions ['colcon_pkg']
+[5.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick_ros2) by extension 'colcon_pkg'
+[5.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick_ros2) by extensions ['colcon_meta']
+[5.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick_ros2) by extension 'colcon_meta'
+[5.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick_ros2) by extensions ['ros']
+[5.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/joystick_ros2) by extension 'ros'
+[5.273s] DEBUG:colcon.colcon_core.package_identification:Package 'src/joystick_ros2' with type 'ros.ament_python' and name 'joystick_ros2'
+[5.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_control) by extensions ['ignore', 'ignore_ament_install']
+[5.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_control) by extension 'ignore'
+[5.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_control) by extension 'ignore_ament_install'
+[5.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_control) by extensions ['colcon_pkg']
+[5.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_control) by extension 'colcon_pkg'
+[5.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_control) by extensions ['colcon_meta']
+[5.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_control) by extension 'colcon_meta'
+[5.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_control) by extensions ['ros']
+[5.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_control) by extension 'ros'
+[5.279s] DEBUG:colcon.colcon_core.package_identification:Package 'src/motor_control' with type 'ros.ament_python' and name 'motor_control'
+[5.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros2) by extensions ['ignore', 'ignore_ament_install']
+[5.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros2) by extension 'ignore'
+[5.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros2) by extension 'ignore_ament_install'
+[5.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros2) by extensions ['colcon_pkg']
+[5.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros2) by extension 'colcon_pkg'
+[5.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros2) by extensions ['colcon_meta']
+[5.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros2) by extension 'colcon_meta'
+[5.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros2) by extensions ['ros']
+[5.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros2) by extension 'ros'
+[5.284s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rplidar_ros2' with type 'ros.ament_cmake' and name 'rplidar_ros'
+[5.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/steve_launch) by extensions ['ignore', 'ignore_ament_install']
+[5.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/steve_launch) by extension 'ignore'
+[5.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/steve_launch) by extension 'ignore_ament_install'
+[5.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/steve_launch) by extensions ['colcon_pkg']
+[5.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/steve_launch) by extension 'colcon_pkg'
+[5.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/steve_launch) by extensions ['colcon_meta']
+[5.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/steve_launch) by extension 'colcon_meta'
+[5.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/steve_launch) by extensions ['ros']
+[5.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/steve_launch) by extension 'ros'
+[5.289s] DEBUG:colcon.colcon_core.package_identification:Package 'src/steve_launch' with type 'ros.ament_cmake' and name 'steve_launch'
+[5.289s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[5.289s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[5.289s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[5.289s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[5.289s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[5.695s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[5.695s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[5.828s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 277 installed packages in /opt/ros/humble
+[5.834s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[6.217s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'cmake_args' from command line to 'None'
+[6.218s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'cmake_target' from command line to 'None'
+[6.218s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.218s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[6.218s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[6.218s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[6.218s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[6.218s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[6.218s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.219s] DEBUG:colcon.colcon_core.verb:Building package 'joystick_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/steve/mren203-ws/build/joystick_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/steve/mren203-ws/install/joystick_ros2', 'merge_install': False, 'path': '/home/steve/mren203-ws/src/joystick_ros2', 'symlink_install': True, 'test_result_base': None}
+[6.276s] Level 5:colcon.colcon_core.verb:set package 'motor_control' build argument 'cmake_args' from command line to 'None'
+[6.277s] Level 5:colcon.colcon_core.verb:set package 'motor_control' build argument 'cmake_target' from command line to 'None'
+[6.277s] Level 5:colcon.colcon_core.verb:set package 'motor_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.277s] Level 5:colcon.colcon_core.verb:set package 'motor_control' build argument 'cmake_clean_cache' from command line to 'False'
+[6.277s] Level 5:colcon.colcon_core.verb:set package 'motor_control' build argument 'cmake_clean_first' from command line to 'False'
+[6.277s] Level 5:colcon.colcon_core.verb:set package 'motor_control' build argument 'cmake_force_configure' from command line to 'False'
+[6.277s] Level 5:colcon.colcon_core.verb:set package 'motor_control' build argument 'ament_cmake_args' from command line to 'None'
+[6.277s] Level 5:colcon.colcon_core.verb:set package 'motor_control' build argument 'catkin_cmake_args' from command line to 'None'
+[6.277s] Level 5:colcon.colcon_core.verb:set package 'motor_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.278s] DEBUG:colcon.colcon_core.verb:Building package 'motor_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/steve/mren203-ws/build/motor_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/steve/mren203-ws/install/motor_control', 'merge_install': False, 'path': '/home/steve/mren203-ws/src/motor_control', 'symlink_install': True, 'test_result_base': None}
+[6.335s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_args' from command line to 'None'
+[6.335s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target' from command line to 'None'
+[6.335s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.336s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[6.336s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_first' from command line to 'False'
+[6.336s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_force_configure' from command line to 'False'
+[6.336s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'ament_cmake_args' from command line to 'None'
+[6.336s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[6.336s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.336s] DEBUG:colcon.colcon_core.verb:Building package 'rplidar_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/steve/mren203-ws/build/rplidar_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/steve/mren203-ws/install/rplidar_ros', 'merge_install': False, 'path': '/home/steve/mren203-ws/src/rplidar_ros2', 'symlink_install': True, 'test_result_base': None}
+[6.394s] Level 5:colcon.colcon_core.verb:set package 'steve_launch' build argument 'cmake_args' from command line to 'None'
+[6.394s] Level 5:colcon.colcon_core.verb:set package 'steve_launch' build argument 'cmake_target' from command line to 'None'
+[6.394s] Level 5:colcon.colcon_core.verb:set package 'steve_launch' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.394s] Level 5:colcon.colcon_core.verb:set package 'steve_launch' build argument 'cmake_clean_cache' from command line to 'False'
+[6.395s] Level 5:colcon.colcon_core.verb:set package 'steve_launch' build argument 'cmake_clean_first' from command line to 'False'
+[6.395s] Level 5:colcon.colcon_core.verb:set package 'steve_launch' build argument 'cmake_force_configure' from command line to 'False'
+[6.395s] Level 5:colcon.colcon_core.verb:set package 'steve_launch' build argument 'ament_cmake_args' from command line to 'None'
+[6.395s] Level 5:colcon.colcon_core.verb:set package 'steve_launch' build argument 'catkin_cmake_args' from command line to 'None'
+[6.395s] Level 5:colcon.colcon_core.verb:set package 'steve_launch' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.395s] DEBUG:colcon.colcon_core.verb:Building package 'steve_launch' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/steve/mren203-ws/build/steve_launch', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/steve/mren203-ws/install/steve_launch', 'merge_install': False, 'path': '/home/steve/mren203-ws/src/steve_launch', 'symlink_install': True, 'test_result_base': None}
+[6.452s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[6.512s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[6.513s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/steve/mren203-ws/src/joystick_ros2' with build type 'ament_python'
+[6.514s] Level 1:colcon.colcon_core.shell:create_environment_hook('joystick_ros2', 'ament_prefix_path')
+[6.592s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[6.593s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/joystick_ros2/share/joystick_ros2/hook/ament_prefix_path.ps1'
+[6.597s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/steve/mren203-ws/install/joystick_ros2/share/joystick_ros2/hook/ament_prefix_path.dsv'
+[6.600s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/joystick_ros2/share/joystick_ros2/hook/ament_prefix_path.sh'
+[6.663s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.664s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.794s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/steve/mren203-ws/src/motor_control' with build type 'ament_python'
+[6.795s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_control', 'ament_prefix_path')
+[6.856s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/motor_control/share/motor_control/hook/ament_prefix_path.ps1'
+[6.858s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/steve/mren203-ws/install/motor_control/share/motor_control/hook/ament_prefix_path.dsv'
+[6.860s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/motor_control/share/motor_control/hook/ament_prefix_path.sh'
+[6.920s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.920s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.049s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/steve/mren203-ws/src/rplidar_ros2' with build type 'ament_cmake'
+[7.049s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/steve/mren203-ws/src/rplidar_ros2'
+[7.110s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.110s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.239s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/steve/mren203-ws/src/steve_launch' with build type 'ament_cmake'
+[7.240s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/steve/mren203-ws/src/steve_launch'
+[7.301s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.301s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.513s] WARNING:colcon.colcon_ros.task.ament_python.build:Package 'joystick_ros2' doesn't explicitly install the 'package.xml' file (colcon-ros currently does it implicitly but that fallback will be removed in the future)
+[8.514s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/steve/mren203-ws/src/joystick_ros2'
+[8.575s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.575s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.790s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/steve/mren203-ws/src/motor_control'
+[9.850s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.850s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.000s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/steve/mren203-ws/build/rplidar_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/rplidar_ros -- -j4 -l4
+[10.032s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/steve/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/steve_launch -- -j4 -l4
+[10.637s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/steve/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/steve_launch -- -j4 -l4
+[10.801s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/steve/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/steve_launch
+[10.965s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(steve_launch)
+[10.973s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/steve/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/steve_launch
+[11.108s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/steve_launch' for CMake module files
+[11.112s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/steve_launch' for CMake config files
+[11.115s] Level 1:colcon.colcon_core.shell:create_environment_hook('steve_launch', 'cmake_prefix_path')
+[11.201s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/hook/cmake_prefix_path.ps1'
+[11.203s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/hook/cmake_prefix_path.dsv'
+[11.205s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/hook/cmake_prefix_path.sh'
+[11.209s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/steve_launch/bin'
+[11.210s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/steve_launch/lib/pkgconfig/steve_launch.pc'
+[11.211s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/steve_launch/lib/python3.10/site-packages'
+[11.212s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/steve_launch/bin'
+[11.304s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.ps1'
+[11.309s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.dsv'
+[11.312s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.sh'
+[11.317s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.bash'
+[11.322s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.zsh'
+[11.327s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/steve/mren203-ws/install/steve_launch/share/colcon-core/packages/steve_launch)
+[11.356s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/steve/mren203-ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/rplidar_ros -- -j4 -l4
+[11.588s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(steve_launch)
+[11.698s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/steve_launch' for CMake module files
+[11.701s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/steve_launch' for CMake config files
+[11.704s] Level 1:colcon.colcon_core.shell:create_environment_hook('steve_launch', 'cmake_prefix_path')
+[11.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/hook/cmake_prefix_path.ps1'
+[11.797s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/hook/cmake_prefix_path.dsv'
+[11.799s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/hook/cmake_prefix_path.sh'
+[11.802s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/steve_launch/bin'
+[11.802s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/steve_launch/lib/pkgconfig/steve_launch.pc'
+[11.803s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/steve_launch/lib/python3.10/site-packages'
+[11.804s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/steve_launch/bin'
+[11.879s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.ps1'
+[11.883s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.dsv'
+[11.885s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.sh'
+[11.887s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.bash'
+[11.889s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.zsh'
+[11.891s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/steve/mren203-ws/install/steve_launch/share/colcon-core/packages/steve_launch)
+[11.903s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/steve/mren203-ws/build/rplidar_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/rplidar_ros
+[12.036s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[12.037s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/steve/mren203-ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/rplidar_ros
+[12.129s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/rplidar_ros' for CMake module files
+[12.132s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/rplidar_ros' for CMake config files
+[12.135s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[12.238s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[12.240s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[12.241s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[12.244s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/rplidar_ros/lib'
+[12.245s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'ld_library_path_lib')
+[12.347s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/hook/ld_library_path_lib.ps1'
+[12.349s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/hook/ld_library_path_lib.dsv'
+[12.351s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/hook/ld_library_path_lib.sh'
+[12.354s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/rplidar_ros/bin'
+[12.355s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[12.356s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/rplidar_ros/lib/python3.10/site-packages'
+[12.357s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/rplidar_ros/bin'
+[12.614s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[12.620s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[12.627s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.sh'
+[12.632s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.bash'
+[12.637s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[12.640s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/steve/mren203-ws/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[12.659s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/steve/mren203-ws/build/joystick_ros2': PYTHONPATH=/home/steve/mren203-ws/build/joystick_ros2/prefix_override:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/joystick_ros2/build --no-deps install_data
+[12.667s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/steve/mren203-ws/build/motor_control': PYTHONPATH=/home/steve/mren203-ws/build/motor_control/prefix_override:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/motor_control/build --no-deps install_data
+[12.981s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[13.088s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/rplidar_ros' for CMake module files
+[13.092s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/rplidar_ros' for CMake config files
+[13.094s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[13.181s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[13.184s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[13.186s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[13.189s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/rplidar_ros/lib'
+[13.189s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'ld_library_path_lib')
+[13.271s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/hook/ld_library_path_lib.ps1'
+[13.273s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/hook/ld_library_path_lib.dsv'
+[13.274s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/hook/ld_library_path_lib.sh'
+[13.277s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/rplidar_ros/bin'
+[13.277s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[13.278s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/rplidar_ros/lib/python3.10/site-packages'
+[13.279s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/rplidar_ros/bin'
+[13.371s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[13.374s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[13.377s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.sh'
+[13.380s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.bash'
+[13.382s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[13.384s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/steve/mren203-ws/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[15.033s] Level 1:colcon.colcon_core.shell:create_environment_hook('joystick_ros2', 'pythonpath_develop')
+[15.035s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/steve/mren203-ws/build/joystick_ros2' returned '0': PYTHONPATH=/home/steve/mren203-ws/build/joystick_ros2/prefix_override:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/joystick_ros2/build --no-deps install_data
+[15.094s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/build/joystick_ros2/share/joystick_ros2/hook/pythonpath_develop.ps1'
+[15.096s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/steve/mren203-ws/build/joystick_ros2/share/joystick_ros2/hook/pythonpath_develop.dsv'
+[15.097s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/build/joystick_ros2/share/joystick_ros2/hook/pythonpath_develop.sh'
+[15.159s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/joystick_ros2' for CMake module files
+[15.204s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/joystick_ros2' for CMake config files
+[15.212s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/joystick_ros2/lib'
+[15.213s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/joystick_ros2/bin'
+[15.214s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/joystick_ros2/lib/pkgconfig/joystick_ros2.pc'
+[15.216s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages'
+[15.216s] Level 1:colcon.colcon_core.shell:create_environment_hook('joystick_ros2', 'pythonpath')
+[15.277s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/joystick_ros2/share/joystick_ros2/hook/pythonpath.ps1'
+[15.278s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/steve/mren203-ws/install/joystick_ros2/share/joystick_ros2/hook/pythonpath.dsv'
+[15.280s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/joystick_ros2/share/joystick_ros2/hook/pythonpath.sh'
+[15.282s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/joystick_ros2/bin'
+[15.282s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(joystick_ros2)
+[15.342s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/joystick_ros2/share/joystick_ros2/package.ps1'
+[15.344s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/steve/mren203-ws/install/joystick_ros2/share/joystick_ros2/package.dsv'
+[15.347s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/joystick_ros2/share/joystick_ros2/package.sh'
+[15.349s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/joystick_ros2/share/joystick_ros2/package.bash'
+[15.350s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/joystick_ros2/share/joystick_ros2/package.zsh'
+[15.352s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/steve/mren203-ws/install/joystick_ros2/share/colcon-core/packages/joystick_ros2)
+[15.355s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_control', 'pythonpath_develop')
+[15.358s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/steve/mren203-ws/build/motor_control' returned '0': PYTHONPATH=/home/steve/mren203-ws/build/motor_control/prefix_override:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/motor_control/build --no-deps install_data
+[15.418s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/build/motor_control/share/motor_control/hook/pythonpath_develop.ps1'
+[15.420s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/steve/mren203-ws/build/motor_control/share/motor_control/hook/pythonpath_develop.dsv'
+[15.422s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/build/motor_control/share/motor_control/hook/pythonpath_develop.sh'
+[15.484s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/motor_control' for CMake module files
+[15.486s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/motor_control' for CMake config files
+[15.489s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/motor_control/lib'
+[15.489s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/motor_control/bin'
+[15.489s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/motor_control/lib/pkgconfig/motor_control.pc'
+[15.490s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages'
+[15.490s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_control', 'pythonpath')
+[15.550s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/motor_control/share/motor_control/hook/pythonpath.ps1'
+[15.552s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/steve/mren203-ws/install/motor_control/share/motor_control/hook/pythonpath.dsv'
+[15.553s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/steve/mren203-ws/install/motor_control/share/motor_control/hook/pythonpath.sh'
+[15.556s] Level 1:colcon.colcon_core.environment:checking '/home/steve/mren203-ws/install/motor_control/bin'
+[15.556s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(motor_control)
+[15.614s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/motor_control/share/motor_control/package.ps1'
+[15.617s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/steve/mren203-ws/install/motor_control/share/motor_control/package.dsv'
+[15.619s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/motor_control/share/motor_control/package.sh'
+[15.621s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/motor_control/share/motor_control/package.bash'
+[15.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/steve/mren203-ws/install/motor_control/share/motor_control/package.zsh'
+[15.624s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/steve/mren203-ws/install/motor_control/share/colcon-core/packages/motor_control)
+[15.625s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[15.627s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[15.627s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[15.628s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[15.710s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[15.711s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[15.711s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[15.711s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[15.739s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[15.739s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[15.802s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/steve/mren203-ws/install/local_setup.ps1'
+[15.806s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/steve/mren203-ws/install/_local_setup_util_ps1.py'
+[15.812s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/steve/mren203-ws/install/setup.ps1'
+[15.874s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/steve/mren203-ws/install/local_setup.sh'
+[15.877s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/steve/mren203-ws/install/_local_setup_util_sh.py'
+[15.879s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/steve/mren203-ws/install/setup.sh'
+[15.942s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/steve/mren203-ws/install/local_setup.bash'
+[15.945s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/steve/mren203-ws/install/setup.bash'
+[16.008s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/steve/mren203-ws/install/local_setup.zsh'
+[16.010s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/steve/mren203-ws/install/setup.zsh'

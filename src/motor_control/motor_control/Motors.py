@@ -68,8 +68,8 @@ class MotorHandler():
         # right_vel_d = vel_d + (0.5*(TRACK_LENGTH*turn_rate_d))
         # left_vel_d = vel_d - (0.5*(TRACK_LENGTH*turn_rate_d))
 
-        left_cmd = self.left_wheel.PWM_calculation(left_vel_d, self.left_cmd, Ki=ki, kp=kp)
-        right_cmd = self.right_wheel.PWM_calculation(right_vel_d, self.right_cmd, Ki=ki, kp=kp)
+        left_cmd = self.left_wheel.PWM_calculation(left_vel_d, self.left_cmd, Ki=ki, Kp=kp)
+        right_cmd = self.right_wheel.PWM_calculation(right_vel_d, self.right_cmd, Ki=ki, Kp=kp)
         
         # max pwm and direction checks
         self.left_cmd, self.right_cmd = self.check_max(left_cmd, right_cmd)
@@ -78,6 +78,27 @@ class MotorHandler():
         # Change PWM duty cycle (aka speed)
         self.left_pwm.ChangeDutyCycle(abs(self.left_cmd))
         self.right_pwm.ChangeDutyCycle(abs(self.right_cmd))
+
+
+    def calculate_odom(self, current_time, seperation=TRACK_LENGTH):
+        self.t_now = current_time
+        dt = (self.t_now - self.t_last) # In Milliseconds
+
+        # Update Twist (Velocity + Angular Vel)
+        self.twist["xyz"][0] = (self.right_wheel.speed + self.left_wheel.speed) / 2
+        self.twist["rpy"][2] = (self.right_wheel.speed - self.left_wheel.speed) / seperation
+
+        # Calculate the deltas
+        delta_x = (self.twist["xyz"][0] * math.cos(self.twist["rpy"][2])) * (dt*1000)
+        delta_y = (self.twist["xyz"][0] * math.sin(self.twist["rpy"][2])) * (dt*1000)
+        delta_yaw = self.twist["rpy"][2] + (dt*1000)
+
+        # Update Pose (Position + Rotation)
+        self.pose["xyz"][0] += delta_x
+        self.pose["xyz"][1] += delta_y
+        self.pose["rpy"][2] += delta_yaw
+
+        return self.pose, self.twist
 
 
     def check_max(self, left_cmd, right_cmd):

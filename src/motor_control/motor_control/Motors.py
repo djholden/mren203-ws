@@ -59,7 +59,7 @@ class MotorHandler():
         self.right_wheel = WheelPID(RCA, RCB, DIR=1)
 
 
-    def PID_mode(self, left_vel_d, right_vel_d, current_time):
+    def PID_mode(self, left_vel_d, right_vel_d, current_time, kp=KP, ki=KI):
         self.right_wheel.update_rotational_speed(current_time)
         self.left_wheel.update_rotational_speed(current_time)
 
@@ -68,8 +68,8 @@ class MotorHandler():
         # right_vel_d = vel_d + (0.5*(TRACK_LENGTH*turn_rate_d))
         # left_vel_d = vel_d - (0.5*(TRACK_LENGTH*turn_rate_d))
 
-        left_cmd = self.left_wheel.PWM_calculation(left_vel_d, self.left_cmd)
-        right_cmd = self.right_wheel.PWM_calculation(right_vel_d, self.right_cmd)
+        left_cmd = self.left_wheel.PWM_calculation(left_vel_d, self.left_cmd, Ki=ki, kp=kp)
+        right_cmd = self.right_wheel.PWM_calculation(right_vel_d, self.right_cmd, Ki=ki, kp=kp)
         
         # max pwm and direction checks
         self.left_cmd, self.right_cmd = self.check_max(left_cmd, right_cmd)
@@ -197,12 +197,12 @@ class WheelPID(MotorHandler):
             # Reset encoder ticks
             self.encoder_ticks = 0
     
-    def PWM_calculation(self, vel_d, current_pwm):
+    def PWM_calculation(self, vel_d, current_pwm, Kp=KP, Ki=KI):
         vel = self.speed
         error = vel_d - vel
         if(current_pwm<100): # will not update integral error if pwm already maxed
             self.error_int += error
-        cmd = (KP*error) + (KI*self.error_int)
+        cmd = (Kp*error) + (Ki*self.error_int)
         # print(str(type(cmd)) + " =================================================================")
         if not cmd:
             cmd = current_pwm

@@ -27,6 +27,10 @@ class MotorSubscriber(Node):
         # Velocity Publisher
         self.publisher_ = self.create_publisher(TwistStamped, 'motors/vel', 10)
 
+        # Create Parameters
+        self.declare_parameter("Kp", 10.0)
+        self.declare_parameter("Ki", 10.0)
+
 
         self.timer_period = 0.01
         self.timer = self.create_timer(self.timer_period, self.callaback_loop)
@@ -43,11 +47,14 @@ class MotorSubscriber(Node):
         self.motors = MotorHandler()
 
     def callaback_loop(self):
+        kp_param = self.get_parameter('Kp').get_parameter_value().double_value
+        ki_param = self.get_parameter('Ki').get_parameter_value().double_value
         
         # Update the PID clock
         self.time_ms = self.get_clock().now().nanoseconds*(1e-6)
         if not self.isVoltageMode:
-            self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms)
+            # self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms)
+            self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms, kp=kp_param, ki=ki_param)
         # self.motors.PID_mode(0, 0, self.time_ms)
         # print("LW: " + str(self.left_cmd) + " | RW:" + str(self.right_cmd) + "\n")
 

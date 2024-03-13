@@ -64,9 +64,6 @@ class MotorSubscriber(Node):
         # self.motors.PID_mode(0, 0, self.time_ms)
         # print("LW: " + str(self.left_cmd) + " | RW:" + str(self.right_cmd) + "\n")
 
-        # Update the clock-dependant function
-        self.time_ms = self.get_clock().now().nanoseconds*(1e-6)
-        self.motors.PID_mode(0, 0, self.time_ms)
         pose, twist = self.motors.calculate_odom(self.time_ms)
 
         # Create odom message with proper frame ids

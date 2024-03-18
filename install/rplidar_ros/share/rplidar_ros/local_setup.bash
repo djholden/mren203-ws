@@ -1,1 +1,1 @@
-/home/steve/mren203-ws/build/rplidar_ros/ament_cmake_environment_hooks/local_setup.bash
+/home/dj/MREN203/mren203-ws/build/rplidar_ros/ament_cmake_environment_hooks/local_setup.bash

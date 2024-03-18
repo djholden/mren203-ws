@@ -1,0 +1,6 @@
+Invoking command in '/home/dj/MREN203/mren203-ws/build/steve_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dj/MREN203/mren203-ws/src/steve_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dj/MREN203/mren203-ws/install/steve_msgs
+Invoked command in '/home/dj/MREN203/mren203-ws/build/steve_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dj/MREN203/mren203-ws/src/steve_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dj/MREN203/mren203-ws/install/steve_msgs
+Invoking command in '/home/dj/MREN203/mren203-ws/build/steve_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dj/MREN203/mren203-ws/build/steve_msgs -- -j16 -l16
+Invoked command in '/home/dj/MREN203/mren203-ws/build/steve_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dj/MREN203/mren203-ws/build/steve_msgs -- -j16 -l16
+Invoking command in '/home/dj/MREN203/mren203-ws/build/steve_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dj/MREN203/mren203-ws/build/steve_msgs
+Invoked command in '/home/dj/MREN203/mren203-ws/build/steve_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dj/MREN203/mren203-ws/build/steve_msgs

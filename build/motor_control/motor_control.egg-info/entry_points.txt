@@ -1,3 +1,2 @@
 [console_scripts]
 motor_driver = motor_control.motor_control_node:main
-

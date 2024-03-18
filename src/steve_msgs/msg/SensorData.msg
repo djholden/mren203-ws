@@ -3,7 +3,7 @@
 
 # Hazards
 float32 temp
-float32 h2
+float32 humidity
 float32 co2
 float32 tvok
 

@@ -26,11 +26,10 @@ class SteveUI(Node):
         self.ser = SerialHandler()
 
     def sensor_callback(self):
-        # Read from arduino
-
-
         # Format Ros2 Message
         msg = SensorData()
+
+        serial_message = self.ser.rx()
 
         # Header
         self.time_ms = self.get_clock().now().nanoseconds*(1e-6)
@@ -39,15 +38,17 @@ class SteveUI(Node):
         msg.header = header
 
         # Hazards
-        msg.temp = 0
-        msg.h2 = 0
-        msg.co2 = 0
-        msg.tvok = 0
+        msg.temp = serial_message[0]
+        msg.co2 = serial_message[2]
+        msg.tvoc = serial_message[3]
+
+        # humidity
+        msg.humidity = serial_message[1]
 
         # Range Sensors
-        msg.ir_left = 0
-        msg.ir_right = 0
-        msg.ir_center = 0
+        msg.ir_center = serial_message[4]
+        msg.ir_right = serial_message[5]
+        msg.ir_left = serial_message[6]
 
         # Velocities
         msg.left_vel = 0

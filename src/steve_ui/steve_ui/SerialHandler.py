@@ -5,7 +5,7 @@ import time
 
 
 # Serial Communication default settings
-PORT = '/dev/ttyACM0'
+PORT = 'COM5'
 BAUD = 115200
 TIMEOUT = 1.0
 
@@ -32,10 +32,13 @@ class SerialHandler(Serial):
         
         try:
             while True:
-                print("New Message")
-                forward = int(input("Forward: "))
+                # print("New Message")
+                # forward = int(input("Forward: "))
                 
-                self.tx(fw_cmd=forward)
+                # self.tx(fw_cmd=forward)
+
+                serial_message = self.rx()
+                print(serial_message)
 
 
                 # print("sending message...")
@@ -86,6 +89,12 @@ class SerialHandler(Serial):
 
         return msg.rstrip(self.delim)
 
+    def rx(self):
+        while self.in_waiting <= 0:
+            time.sleep(0.01)
+        resp = self.readline().decode('utf-8').rstrip()
+        rx_vals = self.rx_parser(resp)
+        return rx_vals
 
     def rx_parser(self, msg):
         """

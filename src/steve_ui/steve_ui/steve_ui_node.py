@@ -23,6 +23,8 @@ class SteveUI(Node):
 
         self.time_ms = 0
 
+        self.ser = SerialHandler()
+
     def sensor_callback(self):
         # Read from arduino
 

@@ -95,11 +95,13 @@ class SerialHandler(Serial):
 
         try:
             ret_msg = {
-                'host': parsed[0],
-                'mode': parsed[1],
-                'control': parsed[2],
-                'fw_cmd': parsed[3],
-                'yaw_cmd': parsed[4]
+                'temp': parsed[0],
+                'humidity': parsed[1],
+                'CO2': parsed[2],
+                'TVOC': parsed[3],
+                'front range': parsed[4],
+                'right range': parsed[5],
+                'left range': parsed[6]
             }
         except IndexError:
             ret_msg = []

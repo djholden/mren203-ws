@@ -1,0 +1,221 @@
+[0.000000] (-) TimerEvent: {}
+[0.001763] (joystick_ros2) JobQueued: {'identifier': 'joystick_ros2', 'dependencies': OrderedDict()}
+[0.002472] (motor_control) JobQueued: {'identifier': 'motor_control', 'dependencies': OrderedDict()}
+[0.002851] (rplidar_ros) JobQueued: {'identifier': 'rplidar_ros', 'dependencies': OrderedDict()}
+[0.003110] (steve_launch) JobQueued: {'identifier': 'steve_launch', 'dependencies': OrderedDict()}
+[0.003525] (joystick_ros2) JobStarted: {'identifier': 'joystick_ros2'}
+[0.099066] (-) TimerEvent: {}
+[0.200013] (-) TimerEvent: {}
+[0.300796] (-) TimerEvent: {}
+[0.341808] (motor_control) JobStarted: {'identifier': 'motor_control'}
+[0.403679] (-) TimerEvent: {}
+[0.504452] (-) TimerEvent: {}
+[0.605676] (-) TimerEvent: {}
+[0.657785] (rplidar_ros) JobStarted: {'identifier': 'rplidar_ros'}
+[0.705920] (-) TimerEvent: {}
+[0.806695] (-) TimerEvent: {}
+[0.907448] (-) TimerEvent: {}
+[0.913049] (steve_launch) JobStarted: {'identifier': 'steve_launch'}
+[1.007828] (-) TimerEvent: {}
+[1.108868] (-) TimerEvent: {}
+[1.210088] (-) TimerEvent: {}
+[1.310893] (-) TimerEvent: {}
+[1.411591] (-) TimerEvent: {}
+[1.512310] (-) TimerEvent: {}
+[1.613003] (-) TimerEvent: {}
+[1.713617] (-) TimerEvent: {}
+[1.814244] (-) TimerEvent: {}
+[1.914873] (-) TimerEvent: {}
+[2.015495] (-) TimerEvent: {}
+[2.116172] (-) TimerEvent: {}
+[2.216955] (-) TimerEvent: {}
+[2.317933] (-) TimerEvent: {}
+[2.418994] (-) TimerEvent: {}
+[2.520149] (-) TimerEvent: {}
+[2.621379] (-) TimerEvent: {}
+[2.722074] (-) TimerEvent: {}
+[2.822883] (-) TimerEvent: {}
+[2.923711] (-) TimerEvent: {}
+[3.024419] (-) TimerEvent: {}
+[3.125109] (-) TimerEvent: {}
+[3.225731] (-) TimerEvent: {}
+[3.326352] (-) TimerEvent: {}
+[3.426981] (-) TimerEvent: {}
+[3.527620] (-) TimerEvent: {}
+[3.628424] (-) TimerEvent: {}
+[3.729345] (-) TimerEvent: {}
+[3.830493] (-) TimerEvent: {}
+[3.931228] (-) TimerEvent: {}
+[3.939049] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'cmake'}
+[3.944065] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'build'}
+[3.946763] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/steve/mren203-ws/build/rplidar_ros', '--', '-j4', '-l4'], 'cwd': '/home/steve/mren203-ws/build/rplidar_ros', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'steve'), ('SSH_CLIENT', '192.168.50.69 43364 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/steve'), ('OLDPWD', '/home/steve'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/steve/mren203-ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'steve'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/steve/mren203-ws/build/rplidar_ros'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.50.69 43364 192.168.50.203 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble')]), 'shell': False}
+[3.968337] (steve_launch) JobProgress: {'identifier': 'steve_launch', 'progress': 'cmake'}
+[3.975159] (steve_launch) JobProgress: {'identifier': 'steve_launch', 'progress': 'build'}
+[3.976092] (steve_launch) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/steve/mren203-ws/build/steve_launch', '--', '-j4', '-l4'], 'cwd': '/home/steve/mren203-ws/build/steve_launch', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'steve'), ('SSH_CLIENT', '192.168.50.69 43364 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/steve'), ('OLDPWD', '/home/steve'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/steve/mren203-ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'steve'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/steve/mren203-ws/build/steve_launch'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.50.69 43364 192.168.50.203 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble')]), 'shell': False}
+[4.031444] (-) TimerEvent: {}
+[4.132295] (-) TimerEvent: {}
+[4.233146] (-) TimerEvent: {}
+[4.334079] (-) TimerEvent: {}
+[4.435084] (-) TimerEvent: {}
+[4.536048] (-) TimerEvent: {}
+[4.562847] (steve_launch) CommandEnded: {'returncode': 0}
+[4.632795] (rplidar_ros) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target rplidar_composition_node\x1b[0m\n'}
+[4.636243] (-) TimerEvent: {}
+[4.674121] (steve_launch) JobProgress: {'identifier': 'steve_launch', 'progress': 'install'}
+[4.716410] (steve_launch) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/steve/mren203-ws/build/steve_launch'], 'cwd': '/home/steve/mren203-ws/build/steve_launch', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'steve'), ('SSH_CLIENT', '192.168.50.69 43364 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/steve'), ('OLDPWD', '/home/steve'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/steve/mren203-ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'steve'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/steve/mren203-ws/build/steve_launch'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.50.69 43364 192.168.50.203 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble')]), 'shell': False}
+[4.736455] (-) TimerEvent: {}
+[4.777724] (steve_launch) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.783625] (steve_launch) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[4.793968] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/manual_control.launch\n'}
+[4.795553] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/package_run_dependencies/steve_launch\n'}
+[4.798350] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/parent_prefix_path/steve_launch\n'}
+[4.800363] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.sh\n'}
+[4.801771] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.dsv\n'}
+[4.803663] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/path.sh\n'}
+[4.805192] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/path.dsv\n'}
+[4.807334] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.bash\n'}
+[4.809525] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.sh\n'}
+[4.811602] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.zsh\n'}
+[4.813195] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.dsv\n'}
+[4.815145] (steve_launch) StdoutLine: {'line': b'-- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.dsv\n'}
+[4.836698] (-) TimerEvent: {}
+[4.855767] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/packages/steve_launch\n'}
+[4.858319] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig.cmake\n'}
+[4.861077] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig-version.cmake\n'}
+[4.863204] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.xml\n'}
+[4.877267] (steve_launch) CommandEnded: {'returncode': 0}
+[4.895353] (rplidar_ros) StdoutLine: {'line': b'[ 77%] Built target rplidar_composition_node\n'}
+[4.937265] (-) TimerEvent: {}
+[4.952078] (rplidar_ros) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target rplidar_composition\x1b[0m\n'}
+[5.037560] (-) TimerEvent: {}
+[5.047392] (rplidar_ros) StdoutLine: {'line': b'[100%] Built target rplidar_composition\n'}
+[5.137839] (-) TimerEvent: {}
+[5.240226] (-) TimerEvent: {}
+[5.273468] (rplidar_ros) CommandEnded: {'returncode': 0}
+[5.340442] (-) TimerEvent: {}
+[5.441925] (-) TimerEvent: {}
+[5.543605] (-) TimerEvent: {}
+[5.645406] (-) TimerEvent: {}
+[5.746393] (-) TimerEvent: {}
+[5.826795] (steve_launch) JobEnded: {'identifier': 'steve_launch', 'rc': 0}
+[5.835600] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'install'}
+[5.835811] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/steve/mren203-ws/build/rplidar_ros'], 'cwd': '/home/steve/mren203-ws/build/rplidar_ros', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'steve'), ('SSH_CLIENT', '192.168.50.69 43364 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/steve'), ('OLDPWD', '/home/steve'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/steve/mren203-ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'steve'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/steve/mren203-ws/build/rplidar_ros'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.50.69 43364 192.168.50.203 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble')]), 'shell': False}
+[5.846598] (-) TimerEvent: {}
+[5.868904] (rplidar_ros) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.871777] (rplidar_ros) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.875245] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition\n'}
+[5.879640] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar.launch.py\n'}
+[5.881289] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3.launch.py\n'}
+[5.882746] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1.launch.py\n'}
+[5.884384] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp.launch.py\n'}
+[5.885934] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/test_rplidar_a3.launch.py\n'}
+[5.887356] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar.launch.py\n'}
+[5.888855] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3.launch.py\n'}
+[5.890309] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1.launch.py\n'}
+[5.891761] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp.launch.py\n'}
+[5.894471] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/rviz/rplidar.rviz\n'}
+[5.897069] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/lib/librplidar_composition_node.so\n'}
+[5.899986] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/include/rplidar_node.hpp\n'}
+[5.901395] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/include/visibility.h\n'}
+[5.904382] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition\n'}
+[5.905855] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros\n'}
+[5.908788] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros\n'}
+[5.910615] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh\n'}
+[5.911695] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv\n'}
+[5.913460] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/environment/path.sh\n'}
+[5.914622] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/environment/path.dsv\n'}
+[5.916272] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/local_setup.bash\n'}
+[5.918137] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/local_setup.sh\n'}
+[5.919874] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/local_setup.zsh\n'}
+[5.921043] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/local_setup.dsv\n'}
+[5.921873] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.dsv\n'}
+[5.946876] (-) TimerEvent: {}
+[5.957520] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros\n'}
+[5.959882] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/ament_index/resource_index/rclcpp_components/rplidar_ros\n'}
+[5.962021] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[5.963558] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[5.965375] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake\n'}
+[5.966789] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake\n'}
+[5.968114] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.xml\n'}
+[5.976039] (rplidar_ros) CommandEnded: {'returncode': 0}
+[6.046960] (-) TimerEvent: {}
+[6.153033] (-) TimerEvent: {}
+[6.254118] (-) TimerEvent: {}
+[6.356433] (-) TimerEvent: {}
+[6.460725] (-) TimerEvent: {}
+[6.564972] (-) TimerEvent: {}
+[6.587798] (joystick_ros2) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/steve/mren203-ws/build/joystick_ros2/build', '--no-deps', 'install_data'], 'cwd': '/home/steve/mren203-ws/build/joystick_ros2', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'steve', 'SSH_CLIENT': '192.168.50.69 43364 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/steve', 'OLDPWD': '/home/steve', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/steve/mren203-ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'steve', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '2', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/steve/mren203-ws/build/joystick_ros2', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.50.69 43364 192.168.50.203 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/steve/mren203-ws/build/joystick_ros2/prefix_override:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros'}, 'shell': False}
+[6.601642] (motor_control) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/steve/mren203-ws/build/motor_control/build', '--no-deps', 'install_data'], 'cwd': '/home/steve/mren203-ws/build/motor_control', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'steve', 'SSH_CLIENT': '192.168.50.69 43364 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/steve', 'OLDPWD': '/home/steve', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/steve/mren203-ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'steve', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '2', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/steve/mren203-ws/build/motor_control', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.50.69 43364 192.168.50.203 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/steve/mren203-ws/build/motor_control/prefix_override:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros'}, 'shell': False}
+[6.665258] (-) TimerEvent: {}
+[6.766986] (-) TimerEvent: {}
+[6.868227] (-) TimerEvent: {}
+[6.969180] (-) TimerEvent: {}
+[7.071860] (-) TimerEvent: {}
+[7.173967] (-) TimerEvent: {}
+[7.263258] (rplidar_ros) JobEnded: {'identifier': 'rplidar_ros', 'rc': 0}
+[7.274139] (-) TimerEvent: {}
+[7.374814] (-) TimerEvent: {}
+[7.475480] (-) TimerEvent: {}
+[7.576130] (-) TimerEvent: {}
+[7.676827] (-) TimerEvent: {}
+[7.777493] (-) TimerEvent: {}
+[7.878134] (-) TimerEvent: {}
+[7.916563] (joystick_ros2) StdoutLine: {'line': b'running develop\n'}
+[7.920861] (joystick_ros2) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[7.921718] (joystick_ros2) StderrLine: {'line': b'  warnings.warn(\n'}
+[7.927516] (joystick_ros2) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[7.928076] (joystick_ros2) StderrLine: {'line': b'  warnings.warn(\n'}
+[7.938378] (motor_control) StdoutLine: {'line': b'running develop\n'}
+[7.939367] (motor_control) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[7.939982] (motor_control) StderrLine: {'line': b'  warnings.warn(\n'}
+[7.944408] (motor_control) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[7.944983] (motor_control) StderrLine: {'line': b'  warnings.warn(\n'}
+[7.978298] (-) TimerEvent: {}
+[8.078997] (-) TimerEvent: {}
+[8.179660] (-) TimerEvent: {}
+[8.280718] (-) TimerEvent: {}
+[8.381726] (-) TimerEvent: {}
+[8.482779] (-) TimerEvent: {}
+[8.583760] (-) TimerEvent: {}
+[8.684739] (-) TimerEvent: {}
+[8.745315] (joystick_ros2) StdoutLine: {'line': b'running egg_info\n'}
+[8.746087] (joystick_ros2) StdoutLine: {'line': b'writing joystick_ros2.egg-info/PKG-INFO\n'}
+[8.747232] (joystick_ros2) StdoutLine: {'line': b'writing dependency_links to joystick_ros2.egg-info/dependency_links.txt\n'}
+[8.748499] (joystick_ros2) StdoutLine: {'line': b'writing entry points to joystick_ros2.egg-info/entry_points.txt\n'}
+[8.749428] (joystick_ros2) StdoutLine: {'line': b'writing requirements to joystick_ros2.egg-info/requires.txt\n'}
+[8.750071] (joystick_ros2) StdoutLine: {'line': b'writing top-level names to joystick_ros2.egg-info/top_level.txt\n'}
+[8.752951] (motor_control) StdoutLine: {'line': b'running egg_info\n'}
+[8.753689] (motor_control) StdoutLine: {'line': b'writing motor_control.egg-info/PKG-INFO\n'}
+[8.755134] (motor_control) StdoutLine: {'line': b'writing dependency_links to motor_control.egg-info/dependency_links.txt\n'}
+[8.756102] (motor_control) StdoutLine: {'line': b'writing entry points to motor_control.egg-info/entry_points.txt\n'}
+[8.757144] (motor_control) StdoutLine: {'line': b'writing requirements to motor_control.egg-info/requires.txt\n'}
+[8.757916] (joystick_ros2) StdoutLine: {'line': b"reading manifest file 'joystick_ros2.egg-info/SOURCES.txt'\n"}
+[8.758392] (motor_control) StdoutLine: {'line': b'writing top-level names to motor_control.egg-info/top_level.txt\n'}
+[8.761685] (joystick_ros2) StdoutLine: {'line': b"writing manifest file 'joystick_ros2.egg-info/SOURCES.txt'\n"}
+[8.766046] (motor_control) StdoutLine: {'line': b"reading manifest file 'motor_control.egg-info/SOURCES.txt'\n"}
+[8.767873] (joystick_ros2) StdoutLine: {'line': b'running build_ext\n'}
+[8.768821] (joystick_ros2) StdoutLine: {'line': b'Creating /home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages/joystick-ros2.egg-link (link to .)\n'}
+[8.770170] (motor_control) StdoutLine: {'line': b"writing manifest file 'motor_control.egg-info/SOURCES.txt'\n"}
+[8.773254] (joystick_ros2) StdoutLine: {'line': b'Installing joystick_ros2 script to /home/steve/mren203-ws/install/joystick_ros2/lib/joystick_ros2\n'}
+[8.774725] (joystick_ros2) StdoutLine: {'line': b'\n'}
+[8.775360] (joystick_ros2) StdoutLine: {'line': b'Installed /home/steve/mren203-ws/build/joystick_ros2\n'}
+[8.775754] (joystick_ros2) StdoutLine: {'line': b'running install_data\n'}
+[8.776382] (motor_control) StdoutLine: {'line': b'running build_ext\n'}
+[8.777673] (motor_control) StdoutLine: {'line': b'Creating /home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages/motor-control.egg-link (link to .)\n'}
+[8.785009] (-) TimerEvent: {}
+[8.786749] (motor_control) StdoutLine: {'line': b'Installing motor_driver script to /home/steve/mren203-ws/install/motor_control/lib/motor_control\n'}
+[8.789195] (motor_control) StdoutLine: {'line': b'\n'}
+[8.790612] (motor_control) StdoutLine: {'line': b'Installed /home/steve/mren203-ws/build/motor_control\n'}
+[8.791655] (motor_control) StdoutLine: {'line': b'running install_data\n'}
+[8.885437] (-) TimerEvent: {}
+[8.974015] (joystick_ros2) CommandEnded: {'returncode': 0}
+[8.985903] (-) TimerEvent: {}
+[9.087085] (-) TimerEvent: {}
+[9.187905] (-) TimerEvent: {}
+[9.312318] (joystick_ros2) JobEnded: {'identifier': 'joystick_ros2', 'rc': 0}
+[9.316362] (-) TimerEvent: {}
+[9.317044] (motor_control) CommandEnded: {'returncode': 0}
+[9.416636] (-) TimerEvent: {}
+[9.517898] (-) TimerEvent: {}
+[9.589087] (motor_control) JobEnded: {'identifier': 'motor_control', 'rc': 0}
+[9.592095] (-) EventReactorShutdown: {}

@@ -1,0 +1,30 @@
+[6.069s] Invoking command in '/home/steve/mren203-ws/build/joystick_ros2': PYTHONPATH=/home/steve/mren203-ws/build/joystick_ros2/prefix_override:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/joystick_ros2/build --no-deps install_data
+[7.975s] running develop
+[7.980s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[7.980s]   warnings.warn(
+[7.989s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[7.990s]   warnings.warn(
+[9.270s] running egg_info
+[9.272s] creating joystick_ros2.egg-info
+[9.285s] writing joystick_ros2.egg-info/PKG-INFO
+[9.287s] writing dependency_links to joystick_ros2.egg-info/dependency_links.txt
+[9.289s] writing entry points to joystick_ros2.egg-info/entry_points.txt
+[9.290s] writing requirements to joystick_ros2.egg-info/requires.txt
+[9.291s] writing top-level names to joystick_ros2.egg-info/top_level.txt
+[9.293s] writing manifest file 'joystick_ros2.egg-info/SOURCES.txt'
+[9.301s] reading manifest file 'joystick_ros2.egg-info/SOURCES.txt'
+[9.303s] writing manifest file 'joystick_ros2.egg-info/SOURCES.txt'
+[9.309s] running build_ext
+[9.309s] Creating /home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages/joystick-ros2.egg-link (link to .)
+[9.314s] Installing joystick_ros2 script to /home/steve/mren203-ws/install/joystick_ros2/lib/joystick_ros2
+[9.316s] 
+[9.317s] Installed /home/steve/mren203-ws/build/joystick_ros2
+[9.318s] running install_data
+[9.319s] creating /home/steve/mren203-ws/install/joystick_ros2/share/ament_index
+[9.320s] creating /home/steve/mren203-ws/install/joystick_ros2/share/ament_index/resource_index
+[9.322s] creating /home/steve/mren203-ws/install/joystick_ros2/share/ament_index/resource_index/packages
+[9.324s] copying resource/joystick_ros2 -> /home/steve/mren203-ws/install/joystick_ros2/share/ament_index/resource_index/packages
+[9.325s] creating /home/steve/mren203-ws/install/joystick_ros2/shared
+[9.327s] creating /home/steve/mren203-ws/install/joystick_ros2/shared/joystick_ros2
+[9.328s] copying package.xml -> /home/steve/mren203-ws/install/joystick_ros2/shared/joystick_ros2
+[9.555s] Invoked command in '/home/steve/mren203-ws/build/joystick_ros2' returned '0': PYTHONPATH=/home/steve/mren203-ws/build/joystick_ros2/prefix_override:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/joystick_ros2/build --no-deps install_data

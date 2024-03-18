@@ -1,0 +1,21 @@
+[5.854s] Invoking command in '/home/steve/mren203-ws/build/motor_control': PYTHONPATH=/home/steve/mren203-ws/build/motor_control/prefix_override:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/motor_control/build --no-deps install_data
+[7.195s] running develop
+[7.197s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[7.197s]   warnings.warn(
+[7.202s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[7.202s]   warnings.warn(
+[8.022s] running egg_info
+[8.024s] writing motor_control.egg-info/PKG-INFO
+[8.026s] writing dependency_links to motor_control.egg-info/dependency_links.txt
+[8.027s] writing entry points to motor_control.egg-info/entry_points.txt
+[8.029s] writing requirements to motor_control.egg-info/requires.txt
+[8.030s] writing top-level names to motor_control.egg-info/top_level.txt
+[8.041s] reading manifest file 'motor_control.egg-info/SOURCES.txt'
+[8.046s] writing manifest file 'motor_control.egg-info/SOURCES.txt'
+[8.056s] running build_ext
+[8.057s] Creating /home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages/motor-control.egg-link (link to .)
+[8.065s] Installing motor_driver script to /home/steve/mren203-ws/install/motor_control/lib/motor_control
+[8.069s] 
+[8.069s] Installed /home/steve/mren203-ws/build/motor_control
+[8.071s] running install_data
+[8.517s] Invoked command in '/home/steve/mren203-ws/build/motor_control' returned '0': PYTHONPATH=/home/steve/mren203-ws/build/motor_control/prefix_override:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/motor_control/build --no-deps install_data

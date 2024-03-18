@@ -1,0 +1,21 @@
+[6.126s] Invoking command in '/home/steve/mren203-ws/build/joystick_ros2': PYTHONPATH=/home/steve/mren203-ws/build/joystick_ros2/prefix_override:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/joystick_ros2/build --no-deps install_data
+[7.454s] running develop
+[7.455s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[7.456s]   warnings.warn(
+[7.461s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[7.462s]   warnings.warn(
+[8.277s] running egg_info
+[8.278s] writing joystick_ros2.egg-info/PKG-INFO
+[8.279s] writing dependency_links to joystick_ros2.egg-info/dependency_links.txt
+[8.281s] writing entry points to joystick_ros2.egg-info/entry_points.txt
+[8.282s] writing requirements to joystick_ros2.egg-info/requires.txt
+[8.283s] writing top-level names to joystick_ros2.egg-info/top_level.txt
+[8.288s] reading manifest file 'joystick_ros2.egg-info/SOURCES.txt'
+[8.291s] writing manifest file 'joystick_ros2.egg-info/SOURCES.txt'
+[8.297s] running build_ext
+[8.298s] Creating /home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages/joystick-ros2.egg-link (link to .)
+[8.303s] Installing joystick_ros2 script to /home/steve/mren203-ws/install/joystick_ros2/lib/joystick_ros2
+[8.304s] 
+[8.305s] Installed /home/steve/mren203-ws/build/joystick_ros2
+[8.307s] running install_data
+[8.507s] Invoked command in '/home/steve/mren203-ws/build/joystick_ros2' returned '0': PYTHONPATH=/home/steve/mren203-ws/build/joystick_ros2/prefix_override:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/joystick_ros2/build --no-deps install_data

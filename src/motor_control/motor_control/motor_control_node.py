@@ -5,10 +5,14 @@ from math import sqrt
 import rclpy
 from rclpy.node import Node
 
-from sensor_msgs.msg import Joy
-from geometry_msgs.msg import TwistStamped
+from scipy.spatial.transform import Rotation
 
-SPEED = 150
+from sensor_msgs.msg import Joy
+from geometry_msgs.msg import TwistStamped, TwistWithCovariance, PoseWithCovariance, Pose, Quaternion, Twist
+from nav_msgs.msg import Odometry
+
+MAX_VOLT_SPEED = 150    # PWM Duty Cycle
+MAX_PID_SPEED = 0.50    # Meters per second
 
 class MotorSubscriber(Node):
 
@@ -24,37 +28,78 @@ class MotorSubscriber(Node):
         self.subscription  # prevent unused variable warning
         
         # Velocity Publisher
-        self.publisher_ = self.create_publisher(TwistStamped, 'motors/vel', 10)
+        # self.publisher_ = self.create_publisher(TwistStamped, 'motors/vel', 10)
 
+        # Odometry Publisher
+        self.odom_pub_ = self.create_publisher(Odometry, '/odom', 10)
+
+        # Create Parameters
+        self.declare_parameter("Kp", 10.0)
+        self.declare_parameter("Ki", 10.0)
 
         self.timer_period = 0.01
         self.timer = self.create_timer(self.timer_period, self.callaback_loop)
 
         self.time_ms = 0
+        self.t_last = 0 # for buttons
+
+        # Controls
+        self.isVoltageMode = True
+        self.left_cmd = 0
+        self.right_cmd = 0
+
 
         self.motors = MotorHandler()
 
+
     def callaback_loop(self):
+        kp_param = self.get_parameter('Kp').get_parameter_value().double_value
+        ki_param = self.get_parameter('Ki').get_parameter_value().double_value
         
         # Update the PID clock
         self.time_ms = self.get_clock().now().nanoseconds*(1e-6)
-        self.motors.PID_mode(0, 0, self.time_ms)
+        if not self.isVoltageMode:
+            # self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms)
+            self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms, kp=kp_param, ki=ki_param)
+        # self.motors.PID_mode(0, 0, self.time_ms)
+        # print("LW: " + str(self.left_cmd) + " | RW:" + str(self.right_cmd) + "\n")
 
-        # Create twist messages
-        time_now = self.get_clock().now().to_msg()
-        left_msg = TwistStamped()
-        left_msg.header.stamp = time_now
-        left_msg.header.frame_id = "left_motor"
-        left_msg.twist.linear.x = self.motors.left_wheel.speed
+        pose, twist = self.motors.calculate_odom(self.time_ms)
 
-        right_msg = TwistStamped()
-        right_msg.header.stamp = time_now
-        right_msg.header.frame_id = "right_motor"
-        right_msg.twist.linear.x = self.motors.right_wheel.speed
+        # Create odom message with proper frame ids
+        odom_msg = Odometry()
+        odom_msg.header.stamp = self.time_ms
+        odom_msg.header.frame_id = "odom"
+        odom_msg.child_frame_id = "map"
+
+        # Convert from Euler to Quanternion (Pose)
+        pose_rot = Rotation.from_euler('xyz', pose["rpy"]).as_quat()
+
+        # Create Pose message
+        pose = Pose()
+        pose.position.x = pose["xyz"][0]
+        pose.position.y = pose["xyz"][1]
+        pose.position.z = pose["xyz"][2]
+        pose.orientation.x = pose_rot[0]
+        pose.orientation.y = pose_rot[1]
+        pose.orientation.z = pose_rot[2]
+        pose.orientation.w = pose_rot[3]
+        pose_msg = PoseWithCovariance()
+        pose_msg.pose = pose
+
+        # Create Twist Message
+        twist = Twist()
+        twist.linear.x = twist["xyz"][0]
+        twist.angular.z = twist["rpy"][2]
+        twist_msg = PoseWithCovariance()
+        twist_msg.pose = pose
+
+        # Add Pose and Twist to Odom message
+        odom_msg.pose = pose_msg
+        odom_msg.twist = twist_msg
 
         # Publish messages
-        self.publisher_.publish(left_msg)
-        self.publisher_.publish(right_msg)
+        self.odom_pub_.publish(odom_msg)
 
 
     def callaback(self, msg):
@@ -72,26 +117,27 @@ class MotorSubscriber(Node):
         y_btn = msg.buttons[3]
 
 
+        # Toggle for Voltage and PID
+        if y_btn > 0:
+            if self.isVoltageMode:
+                print("Switched to PID Mode")
+                self.isVoltageMode = False
+            else:
+                print("Switched to Voltage Mode")
+                self.isVoltageMode = True
+            self.t_last = self.time_ms
 
-        # Joystick Controller
-        left_wheel = left_y_axis*(SPEED*sqrt(2)/2) - left_x_axis*(SPEED*sqrt(2)/2)
-        right_wheel = left_y_axis*(SPEED*sqrt(2)/2) + left_x_axis*(SPEED*sqrt(2)/2)
 
-        # Cap max speed to 100
-        if (left_wheel > 100):
-            left_wheel = 100
-        elif (left_wheel < -100):
-            left_wheel = -100
-        
-        if (right_wheel > 100):
-            right_wheel = 100
-        elif (right_wheel < -100):
-            right_wheel = -100
-
-        
-
-        self.motors.voltage_mode(left_wheel, right_wheel)
-
+        # Handle the control mode
+        if self.isVoltageMode:
+            # Joystick Controller
+            left_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) - left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)
+            right_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) + left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)
+            self.motors.voltage_mode(left_wheel, right_wheel, self.time_ms)
+        else:
+            self.left_cmd = left_y_axis*(MAX_PID_SPEED*sqrt(2)/2) - left_x_axis*(MAX_PID_SPEED*sqrt(2)/2)
+            self.right_cmd = left_y_axis*(MAX_PID_SPEED*sqrt(2)/2) + left_x_axis*(MAX_PID_SPEED*sqrt(2)/2)
+            
         if (a_btn > 0):
             self.motors.print_speed()
 

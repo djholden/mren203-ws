@@ -1,0 +1,28 @@
+[6.313s] Invoking command in '/home/steve/mren203-ws/build/motor_control': PYTHONPATH=/home/steve/mren203-ws/build/motor_control/prefix_override:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/motor_control/build --no-deps install_data
+[8.149s] running develop
+[8.150s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[8.151s]   warnings.warn(
+[8.156s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[8.157s]   warnings.warn(
+[9.338s] running egg_info
+[9.339s] creating motor_control.egg-info
+[9.340s] writing motor_control.egg-info/PKG-INFO
+[9.341s] writing dependency_links to motor_control.egg-info/dependency_links.txt
+[9.342s] writing entry points to motor_control.egg-info/entry_points.txt
+[9.343s] writing requirements to motor_control.egg-info/requires.txt
+[9.344s] writing top-level names to motor_control.egg-info/top_level.txt
+[9.344s] writing manifest file 'motor_control.egg-info/SOURCES.txt'
+[9.353s] reading manifest file 'motor_control.egg-info/SOURCES.txt'
+[9.357s] writing manifest file 'motor_control.egg-info/SOURCES.txt'
+[9.366s] running build_ext
+[9.369s] Creating /home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages/motor-control.egg-link (link to .)
+[9.374s] Installing motor_driver script to /home/steve/mren203-ws/install/motor_control/lib/motor_control
+[9.380s] 
+[9.381s] Installed /home/steve/mren203-ws/build/motor_control
+[9.383s] running install_data
+[9.384s] creating /home/steve/mren203-ws/install/motor_control/share/ament_index
+[9.388s] creating /home/steve/mren203-ws/install/motor_control/share/ament_index/resource_index
+[9.390s] creating /home/steve/mren203-ws/install/motor_control/share/ament_index/resource_index/packages
+[9.391s] copying resource/motor_control -> /home/steve/mren203-ws/install/motor_control/share/ament_index/resource_index/packages
+[9.392s] copying package.xml -> /home/steve/mren203-ws/install/motor_control/share/motor_control
+[9.631s] Invoked command in '/home/steve/mren203-ws/build/motor_control' returned '0': PYTHONPATH=/home/steve/mren203-ws/build/motor_control/prefix_override:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/motor_control/build --no-deps install_data

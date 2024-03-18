@@ -10,6 +10,7 @@ from scipy.spatial.transform import Rotation
 from sensor_msgs.msg import Joy
 from geometry_msgs.msg import TwistStamped, TwistWithCovariance, PoseWithCovariance, Pose, Quaternion, Twist
 from nav_msgs.msg import Odometry
+from steve_msgs.msg import ControlUI, SetPoints
 
 MAX_VOLT_SPEED = 150    # PWM Duty Cycle
 MAX_PID_SPEED = 0.50    # Meters per second
@@ -26,6 +27,22 @@ class MotorSubscriber(Node):
             self.callaback,
             10)
         self.subscription  # prevent unused variable warning
+
+        # UI Subscriber
+        self.ui_sub = self.create_subscription(
+            ControlUI,
+            'ui',
+            self.ui_callback,
+            10
+        )
+
+        # Setpoint Subscriber
+        self.sp_sub = self.create_subscription(
+            SetPoints,
+            "setpoints",
+            self.sp_callback,
+            10
+        )
         
         # Velocity Publisher
         # self.publisher_ = self.create_publisher(TwistStamped, 'motors/vel', 10)
@@ -47,20 +64,82 @@ class MotorSubscriber(Node):
         self.isVoltageMode = True
         self.left_cmd = 0
         self.right_cmd = 0
+        self.isStopped = False
 
+        self.kp_param = 0
+        self.ki_param = 0
+        self.pwm = 100
 
         self.motors = MotorHandler()
 
+    def switch_cmd_mode(self):
+        if self.isVoltageMode:
+            print("Switched to PID Mode")
+            # Set errors to zero
+            self.motors.left_wheel.error = 0
+            self.motors.left_wheel.error_int = 0
+            self.motors.right_wheel.error = 0
+            self.motors.right_wheel.error_int = 0
+
+            self.isVoltageMode = False
+        else:
+            print("Switched to Voltage Mode")
+            self.isVoltageMode = True
+
+
+    def sp_callback(self, sp_msg):
+        # PID Values
+        self.kp = sp_msg.kp_val
+        self.ki = sp_msg.ki_val
+        self.pwm = sp_msg.pwm_val
+
+
+    def ui_callback(self, ui_msg):
+        # switch
+        sw_cmd_mode = ui_msg.cmd_mode
+        sw_auto_mode = ui_msg.auto_mode
+        new_poi = ui_msg.new_poi
+        e_stop = ui_msg.e_stop
+
+        # Commands
+        fwd_cmd = ui_msg.fwd_cmd
+        yaw_cmd = ui_msg.ang_cmd
+
+        # Handle E Stop First!!!
+        if e_stop or self.isStopped:
+            self.isStopped = True
+            self.motors.voltage_mode(0, 0, self.time_ms)
+
+        # Handle Switching CMD Modes
+        if sw_cmd_mode:
+            self.switch_cmd_mode()
+
+        # Move with UI
+        if fwd_cmd > 0:
+            self.left_cmd += 0.1
+            self.right_cmd += 0.1
+        elif fwd_cmd < 0:
+            self.left_cmd -= 0.1
+            self.right_cmd -= 0.1
+        
+        if yaw_cmd > 0: 
+            self.left_cmd += 0.1
+            self.right_cmd -= 0.1
+        elif yaw_cmd < 0:
+            self.left_cmd -= 0.1
+            self.right_cmd += 0.1
+
+
 
     def callaback_loop(self):
-        kp_param = self.get_parameter('Kp').get_parameter_value().double_value
-        ki_param = self.get_parameter('Ki').get_parameter_value().double_value
+        self.kp_param = self.get_parameter('Kp').get_parameter_value().double_value
+        self.ki_param = self.get_parameter('Ki').get_parameter_value().double_value
         
         # Update the PID clock
         self.time_ms = self.get_clock().now().nanoseconds*(1e-6)
         if not self.isVoltageMode:
             # self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms)
-            self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms, kp=kp_param, ki=ki_param)
+            self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms, kp=self.kp_param, ki=self.ki_param, pwm=self.pwm)
         # self.motors.PID_mode(0, 0, self.time_ms)
         # print("LW: " + str(self.left_cmd) + " | RW:" + str(self.right_cmd) + "\n")
 
@@ -116,17 +195,10 @@ class MotorSubscriber(Node):
         x_btn = msg.buttons[2]
         y_btn = msg.buttons[3]
 
-
         # Toggle for Voltage and PID
         if y_btn > 0:
-            if self.isVoltageMode:
-                print("Switched to PID Mode")
-                self.isVoltageMode = False
-            else:
-                print("Switched to Voltage Mode")
-                self.isVoltageMode = True
+            self.switch_cmd_mode()
             self.t_last = self.time_ms
-
 
         # Handle the control mode
         if self.isVoltageMode:

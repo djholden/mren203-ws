@@ -1,5 +1,5 @@
 # Message for sending input from UI
-header header
+Header header
 
 # Buttons
 bool cmd_mode

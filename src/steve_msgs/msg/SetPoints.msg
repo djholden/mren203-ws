@@ -1,5 +1,5 @@
 # Message for setting tuning values
-header header
+Header header
 
 # PID
 float32 kp_val

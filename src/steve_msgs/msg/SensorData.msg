@@ -1,5 +1,5 @@
 # Message for plotting live data
-header header
+Header header
 
 # Hazards
 float32 temp

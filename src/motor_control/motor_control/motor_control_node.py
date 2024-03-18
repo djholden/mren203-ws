@@ -155,14 +155,14 @@ class MotorSubscriber(Node):
         pose_rot = Rotation.from_euler('xyz', pose["rpy"]).as_quat()
 
         # Create Pose message
-        pose = Pose()
-        pose.position.x = pose["xyz"][0]
-        pose.position.y = pose["xyz"][1]
-        pose.position.z = pose["xyz"][2]
-        pose.orientation.x = pose_rot[0]
-        pose.orientation.y = pose_rot[1]
-        pose.orientation.z = pose_rot[2]
-        pose.orientation.w = pose_rot[3]
+        pose_m = Pose()
+        pose_m.position.x = pose["xyz"][0]
+        pose_m.position.y = pose["xyz"][1]
+        pose_m.position.z = pose["xyz"][2]
+        pose_m.orientation.x = pose_rot[0]
+        pose_m.orientation.y = pose_rot[1]
+        pose_m.orientation.z = pose_rot[2]
+        pose_m.orientation.w = pose_rot[3]
         pose_msg = PoseWithCovariance()
         pose_msg.pose = pose
 

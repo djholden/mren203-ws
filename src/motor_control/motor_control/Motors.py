@@ -61,13 +61,13 @@ class MotorHandler():
 
         # Create Pose and Twist
         self.pose = {
-            "xyz": [0, 0, 0],
-            "rpy": [0, 0, 0]
+            "xyz": [0.0, 0.0, 0.0],
+            "rpy": [0.0, 0.0, 0.0]
         }
 
         self.twist = {
-            "xyz": [0, 0, 0],
-            "rpy": [0, 0, 0]
+            "xyz": [0.0, 0.0, 0.0],
+            "rpy": [0.0, 0.0, 0.0]
         }
 
         # Set Time variables

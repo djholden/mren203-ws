@@ -10,7 +10,7 @@ from scipy.spatial.transform import Rotation
 from sensor_msgs.msg import Joy
 from geometry_msgs.msg import TwistStamped, TwistWithCovariance, PoseWithCovariance, Pose, Quaternion, Twist
 from nav_msgs.msg import Odometry
-from steve_msgs.msg import ControlUI, SetPoints
+from steve_msgs.msg import ControlUI, SetPoints, MotorData
 
 MAX_VOLT_SPEED = 150    # PWM Duty Cycle
 MAX_PID_SPEED = 0.50    # Meters per second
@@ -41,6 +41,13 @@ class MotorSubscriber(Node):
             SetPoints,
             "setpoints",
             self.sp_callback,
+            10
+        )
+
+        # MotorData Publisher
+        self.md_pub_ = self.create_publisher(
+            MotorData,
+            "motor_data",
             10
         )
         
@@ -167,17 +174,31 @@ class MotorSubscriber(Node):
         pose_msg.pose = pose
 
         # Create Twist Message
-        twist = Twist()
-        twist.linear.x = twist["xyz"][0]
-        twist.angular.z = twist["rpy"][2]
+        twist_m = Twist()
+        twist_m.linear.x = twist["xyz"][0]
+        twist_m.angular.z = twist["rpy"][2]
         twist_msg = PoseWithCovariance()
-        twist_msg.pose = pose
+        twist_msg.pose = twist_m
 
         # Add Pose and Twist to Odom message
         odom_msg.pose = pose_msg
         odom_msg.twist = twist_msg
 
+        # Handle Publishing the Motor Data
+        md_msg = MotorData()
+
+        # Handle commands (not sure if math is right, might need to use track length)
+        md_msg.fwd_cmd = (self.left_cmd + self.right_cmd)/2
+        md_msg.ang_cmd = (self.right_cmd - self.left_cmd)/2
+
+        # Actual wheel velocities
+        md_msg.left_vel = self.motors.left_wheel.speed
+        md_msg.right_vel = self.motors.left_wheel.speed
+        md_msg.fwd_vel = twist["xyz"][0]
+        md_msg.ang_vel = twist["rpy"][2]
+
         # Publish messages
+        self.md_pub_.publish(md_msg)
         self.odom_pub_.publish(odom_msg)
 
 

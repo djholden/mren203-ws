@@ -204,8 +204,9 @@ class WheelPID(MotorHandler):
         self.TPR = TPR              # Ticks per revolution
         self.radius = radius        # In meters
         self.speed = 0              # In m/s
+        self.prev_speed = 0         # In m/s
         self.omega = 0              # in rad/s
-        self.dir = DIR
+        self.dir = DIR              # in boolean (0-left or 1-right)
                      
         self.error = 0
         self.error_int = 0
@@ -225,6 +226,7 @@ class WheelPID(MotorHandler):
 
             
     def update_rotational_speed(self, current_time):
+        self.prev_speed = self.speed
         self.t_now = current_time
         dt = (self.t_now - self.t_last) # In Milliseconds
         #print("encoder ticks: {} s".format(self.encoder_ticks))
@@ -241,6 +243,13 @@ class WheelPID(MotorHandler):
 
             # Reset encoder ticks
             self.encoder_ticks = 0
+
+        # self.filter_speed()
+
+    def filter_speed(self, f=0.25):
+        if (self.speed > (self.prev_speed+f) or (self.speed < (self.prev_speed-f))):
+            self.speed = self.prev_speed
+
     
     def PWM_calculation(self, vel_d, current_pwm, Kp=KP, Ki=KI, pwm=PWM):
         vel = self.speed

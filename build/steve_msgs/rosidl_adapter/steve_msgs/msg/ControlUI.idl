@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from steve_msgs/msg/ControlUI.msg
+// generated code does not contain a copyright notice
+
+
+module steve_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Message for sending input from UI" "\n"
+      "Header header")
+    struct ControlUI {
+      @verbatim (language="comment", text=
+        "Buttons")
+      boolean cmd_mode;
+
+      boolean auto_mode;
+
+      boolean new_poi;
+
+      boolean e_stop;
+
+      @verbatim (language="comment", text=
+        "Movement")
+      float fwd_cmd;
+
+      float ang_cmd;
+    };
+  };
+};

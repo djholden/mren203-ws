@@ -17,6 +17,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ControlUI.msg"
   "msg/SensorData.msg"
   "msg/SetPoints.msg"
+  "msg/MotorData.msg"
 )
 
 if(BUILD_TESTING)

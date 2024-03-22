@@ -1,0 +1,1 @@
+/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_python/steve_msgs/steve_msgs.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+{
+  "package_name": "steve_msgs",
+  "non_idl_tuples": [
+    "/home/dj/MREN203/mren203-ws/src/steve_msgs:msg/ControlUI.msg",
+    "/home/dj/MREN203/mren203-ws/src/steve_msgs:msg/SensorData.msg",
+    "/home/dj/MREN203/mren203-ws/src/steve_msgs:msg/SetPoints.msg"
+  ]
+}

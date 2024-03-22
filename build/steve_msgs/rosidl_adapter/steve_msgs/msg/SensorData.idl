@@ -1,0 +1,43 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from steve_msgs/msg/SensorData.msg
+// generated code does not contain a copyright notice
+
+
+module steve_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Message for plotting live data" "\n"
+      "Header header")
+    struct SensorData {
+      @verbatim (language="comment", text=
+        "Hazards")
+      float temp;
+
+      float h2;
+
+      float co2;
+
+      float tvok;
+
+      @verbatim (language="comment", text=
+        "Range Sensors")
+      float ir_left;
+
+      float ir_right;
+
+      float ir_center;
+
+      @verbatim (language="comment", text=
+        "Velocities")
+      float left_vel;
+
+      float right_vel;
+
+      float avg_vel;
+
+      float fwd_vel;
+
+      float ang_vel;
+    };
+  };
+};

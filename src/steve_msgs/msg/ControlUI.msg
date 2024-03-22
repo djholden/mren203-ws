@@ -1,5 +1,5 @@
 # Message for sending input from UI
-header header
+#Header header
 
 # Buttons
 bool cmd_mode
@@ -7,6 +7,4 @@ bool auto_mode
 bool new_poi
 bool e_stop
 
-# Movement
-float32 fwd_cmd
-float32 ang_cmd
+

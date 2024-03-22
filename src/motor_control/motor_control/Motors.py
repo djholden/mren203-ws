@@ -25,6 +25,7 @@ TRACK_LENGTH = 0.2775
 
 KP = 5
 KI = 2.5
+PWM = 100
 
 class MotorHandler():
     
@@ -60,13 +61,13 @@ class MotorHandler():
 
         # Create Pose and Twist
         self.pose = {
-            "xyz": [0, 0, 0],
-            "rpy": [0, 0, 0]
+            "xyz": [0.0, 0.0, 0.0],
+            "rpy": [0.0, 0.0, 0.0]
         }
 
         self.twist = {
-            "xyz": [0, 0, 0],
-            "rpy": [0, 0, 0]
+            "xyz": [0.0, 0.0, 0.0],
+            "rpy": [0.0, 0.0, 0.0]
         }
 
         # Set Time variables
@@ -74,7 +75,7 @@ class MotorHandler():
         self.t_last = 0
 
 
-    def PID_mode(self, left_vel_d, right_vel_d, current_time, kp=KP, ki=KI):
+    def PID_mode(self, left_vel_d, right_vel_d, current_time, kp=KP, ki=KI, pwm=PWM):
         self.right_wheel.update_rotational_speed(current_time)
         self.left_wheel.update_rotational_speed(current_time)
 
@@ -83,9 +84,14 @@ class MotorHandler():
         # right_vel_d = vel_d + (0.5*(TRACK_LENGTH*turn_rate_d))
         # left_vel_d = vel_d - (0.5*(TRACK_LENGTH*turn_rate_d))
 
-        left_cmd = self.left_wheel.PWM_calculation(left_vel_d, self.left_cmd, Ki=ki, Kp=kp)
-        right_cmd = self.right_wheel.PWM_calculation(right_vel_d, self.right_cmd, Ki=ki, Kp=kp)
-        
+        # Check that Kp and Ki are not 0
+        if kp == 0 or ki == 0 or pwm == 0:
+            left_cmd = self.left_wheel.PWM_calculation(left_vel_d, self.left_cmd)
+            right_cmd = self.right_wheel.PWM_calculation(right_vel_d, self.right_cmd)
+        else:
+            left_cmd = self.left_wheel.PWM_calculation(left_vel_d, self.left_cmd, Ki=ki, Kp=kp, pwm=pwm)
+            right_cmd = self.right_wheel.PWM_calculation(right_vel_d, self.right_cmd, Ki=ki, Kp=kp, pwm=pwm)
+
         # max pwm and direction checks
         self.left_cmd, self.right_cmd = self.check_max(left_cmd, right_cmd)
         self.left_cmd, self.right_cmd = self.direction(self.left_cmd, self.right_cmd)
@@ -198,9 +204,11 @@ class WheelPID(MotorHandler):
         self.TPR = TPR              # Ticks per revolution
         self.radius = radius        # In meters
         self.speed = 0              # In m/s
+        self.prev_speed = 0         # In m/s
         self.omega = 0              # in rad/s
-        self.dir = DIR
+        self.dir = DIR              # in boolean (0-left or 1-right)
                      
+        self.error = 0
         self.error_int = 0
         self.tick_change = 0
 
@@ -218,6 +226,7 @@ class WheelPID(MotorHandler):
 
             
     def update_rotational_speed(self, current_time):
+        self.prev_speed = self.speed
         self.t_now = current_time
         dt = (self.t_now - self.t_last) # In Milliseconds
         #print("encoder ticks: {} s".format(self.encoder_ticks))
@@ -234,16 +243,22 @@ class WheelPID(MotorHandler):
 
             # Reset encoder ticks
             self.encoder_ticks = 0
+
+        # self.filter_speed()
+
+    def filter_speed(self, f=0.25):
+        if (self.speed > (self.prev_speed+f) or (self.speed < (self.prev_speed-f))):
+            self.speed = self.prev_speed
+
     
-    def PWM_calculation(self, vel_d, current_pwm, Kp=KP, Ki=KI):
+    def PWM_calculation(self, vel_d, current_pwm, Kp=KP, Ki=KI, pwm=PWM):
         vel = self.speed
-        error = vel_d - vel
+        self.error = vel_d - vel
         if(current_pwm<100): # will not update integral error if pwm already maxed
-            self.error_int += error
-        cmd = (Kp*error) + (Ki*self.error_int)
+            self.error_int += self.error
+        cmd = pwm*((Kp*self.error) + (Ki*self.error_int))
         # print(str(type(cmd)) + " =================================================================")
-        if not cmd:
-            cmd = current_pwm
+
         return cmd
 
 

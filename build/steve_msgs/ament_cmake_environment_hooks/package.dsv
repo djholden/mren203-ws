@@ -1,0 +1,4 @@
+source;share/steve_msgs/local_setup.bash
+source;share/steve_msgs/local_setup.dsv
+source;share/steve_msgs/local_setup.sh
+source;share/steve_msgs/local_setup.zsh

@@ -1,0 +1,31 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from steve_msgs/msg/SetPoints.msg
+// generated code does not contain a copyright notice
+
+
+module steve_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Message for setting tuning values" "\n"
+      "Header header")
+    struct SetPoints {
+      @verbatim (language="comment", text=
+        "PID")
+      float kp_val;
+
+      float ki_val;
+
+      float pwm_val;
+
+      @verbatim (language="comment", text=
+        "Hazards")
+      float temp_val;
+
+      float tvok_val;
+
+      float co2_val;
+
+      float h2_val;
+    };
+  };
+};

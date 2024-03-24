@@ -1,5 +1,6 @@
 /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/all_launch.launch
 /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/manual_control.launch
+/home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/webcam.launch
 /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/package_run_dependencies/steve_launch
 /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/parent_prefix_path/steve_launch
 /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.sh

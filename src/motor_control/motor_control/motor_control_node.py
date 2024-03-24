@@ -111,7 +111,7 @@ class MotorSubscriber(Node):
         tf_laser.header.frame_id = 'odom'
         tf_laser.child_frame_id = 'laser'
         # ADD THE ACTUAL TRANSFORMS FROM ODOM TO LASER 
-        self.tf_static_broadcaster.sendTransform(tf_laser)
+        #self.tf_static_broadcaster.sendTransform(tf_laser)
 
         # Controls
         self.isVoltageMode = True

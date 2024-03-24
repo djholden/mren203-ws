@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dj/MREN203/mren203-ws/src/steve_msgs
+CMAKE_SOURCE_DIR = /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dj/MREN203/mren203-ws/build/steve_msgs
+CMAKE_BINARY_DIR = /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs
 
 # Include any dependencies generated for this target.
 include CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/depend.make
@@ -78,8 +78,9 @@ rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp: /opt/ros/hum
 rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp: rosidl_adapter/steve_msgs/msg/ControlUI.idl
 rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp: rosidl_adapter/steve_msgs/msg/SensorData.idl
 rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp: rosidl_adapter/steve_msgs/msg/SetPoints.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dj/MREN203/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ type support dispatch for ROS interfaces"
-	/usr/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp --generator-arguments-file /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp__arguments.json --typesupports rosidl_typesupport_fastrtps_cpp rosidl_typesupport_introspection_cpp
+rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp: rosidl_adapter/steve_msgs/msg/MotorData.idl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ type support dispatch for ROS interfaces"
+	/usr/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp --generator-arguments-file /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp__arguments.json --typesupports rosidl_typesupport_fastrtps_cpp rosidl_typesupport_introspection_cpp
 
 rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp: rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp
@@ -87,53 +88,71 @@ rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp: rosidl_type
 rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp: rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp
 
+rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp: rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp
+
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.o: CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/flags.make
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.o: rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.o: CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dj/MREN203/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.o -MF CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.o.d -o CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.o -c /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.o -MF CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.o.d -o CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.o -c /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp
 
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp > CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp > CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.i
 
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp -o CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp -o CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.s
 
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.o: CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/flags.make
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.o: rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.o: CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dj/MREN203/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.o -MF CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.o.d -o CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.o -c /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.o -MF CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.o.d -o CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.o -c /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp
 
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp > CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp > CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.i
 
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp -o CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp -o CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.s
 
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.o: CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/flags.make
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.o: rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.o: CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dj/MREN203/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.o -MF CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.o.d -o CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.o -c /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.o -MF CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.o.d -o CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.o -c /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp
 
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp > CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp > CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.i
 
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp -o CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp -o CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.s
+
+CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp.o: CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/flags.make
+CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp.o: rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp
+CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp.o: CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp.o -MF CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp.o.d -o CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp.o -c /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp
+
+CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp > CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp.i
+
+CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp -o CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp.s
 
 # Object files for target steve_msgs__rosidl_typesupport_cpp
 steve_msgs__rosidl_typesupport_cpp_OBJECTS = \
 "CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.o" \
 "CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.o" \
-"CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.o"
+"CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.o" \
+"CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp.o"
 
 # External object files for target steve_msgs__rosidl_typesupport_cpp
 steve_msgs__rosidl_typesupport_cpp_EXTERNAL_OBJECTS =
@@ -141,13 +160,14 @@ steve_msgs__rosidl_typesupport_cpp_EXTERNAL_OBJECTS =
 libsteve_msgs__rosidl_typesupport_cpp.so: CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp.o
 libsteve_msgs__rosidl_typesupport_cpp.so: CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp.o
 libsteve_msgs__rosidl_typesupport_cpp.so: CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp.o
+libsteve_msgs__rosidl_typesupport_cpp.so: CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp.o
 libsteve_msgs__rosidl_typesupport_cpp.so: CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/build.make
 libsteve_msgs__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
 libsteve_msgs__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librosidl_typesupport_c.so
 libsteve_msgs__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libsteve_msgs__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librcutils.so
 libsteve_msgs__rosidl_typesupport_cpp.so: CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dj/MREN203/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libsteve_msgs__rosidl_typesupport_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libsteve_msgs__rosidl_typesupport_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -159,8 +179,9 @@ CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/clean:
 .PHONY : CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/clean
 
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/steve_msgs/msg/control_ui__type_support.cpp
+CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/steve_msgs/msg/motor_data__type_support.cpp
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/steve_msgs/msg/sensor_data__type_support.cpp
 CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/steve_msgs/msg/set_points__type_support.cpp
-	cd /home/dj/MREN203/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dj/MREN203/mren203-ws/src/steve_msgs /home/dj/MREN203/mren203-ws/src/steve_msgs /home/dj/MREN203/mren203-ws/build/steve_msgs /home/dj/MREN203/mren203-ws/build/steve_msgs /home/dj/MREN203/mren203-ws/build/steve_msgs/CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/steve_msgs__rosidl_typesupport_cpp.dir/depend
 

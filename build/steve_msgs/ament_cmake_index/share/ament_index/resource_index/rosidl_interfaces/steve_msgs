@@ -1,5 +1,7 @@
 msg/ControlUI.idl
 msg/ControlUI.msg
+msg/MotorData.idl
+msg/MotorData.msg
 msg/SensorData.idl
 msg/SensorData.msg
 msg/SetPoints.idl

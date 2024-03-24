@@ -5,15 +5,42 @@ from math import sqrt
 import rclpy
 from rclpy.node import Node
 
+from tf2_ros import TransformBroadcaster
+
 from scipy.spatial.transform import Rotation
 
-from sensor_msgs.msg import Joy
-from geometry_msgs.msg import TwistStamped, TwistWithCovariance, PoseWithCovariance, Pose, Quaternion, Twist
+# Message Imports
+from sensor_msgs.msg import Joy, JointState
+from geometry_msgs.msg import TwistStamped, TwistWithCovariance, PoseWithCovariance, Pose, Quaternion, Twist, TransformStamped
 from nav_msgs.msg import Odometry
 from steve_msgs.msg import ControlUI, SetPoints, MotorData
 
 MAX_VOLT_SPEED = 150    # PWM Duty Cycle
 MAX_PID_SPEED = 0.50    # Meters per second
+
+def quaternion_from_euler(ai, aj, ak):
+    ai /= 2.0
+    aj /= 2.0
+    ak /= 2.0
+    ci = math.cos(ai)
+    si = math.sin(ai)
+    cj = math.cos(aj)
+    sj = math.sin(aj)
+    ck = math.cos(ak)
+    sk = math.sin(ak)
+    cc = ci*ck
+    cs = ci*sk
+    sc = si*ck
+    ss = si*sk
+
+    q = np.empty((4, ))
+    q[0] = cj*sc - sj*cs
+    q[1] = cj*ss + sj*cc
+    q[2] = cj*cs - sj*sc
+    q[3] = cj*cc + sj*ss
+
+    return q
+
 
 class MotorSubscriber(Node):
 
@@ -50,6 +77,16 @@ class MotorSubscriber(Node):
             "motor_data",
             10
         )
+
+        # JointState Publisher
+        self.js_pub_ = self.create_publisher(
+            JointState,
+            "joint_states",
+            10
+        )
+
+        # TF Publisher
+        self.tf_broadcaster = TransformBroadcaster(self)
         
         # Velocity Publisher
         # self.publisher_ = self.create_publisher(TwistStamped, 'motors/vel', 10)
@@ -193,11 +230,35 @@ class MotorSubscriber(Node):
 
         # Actual wheel velocities
         md_msg.left_vel = self.motors.left_wheel.speed
-        md_msg.right_vel = self.motors.left_wheel.speed
+        md_msg.right_vel = self.motors.right_wheel.speed
         md_msg.fwd_vel = twist["xyz"][0]
         md_msg.ang_vel = twist["rpy"][2]
 
+        # Joint State Message
+        # js_msg = JointState()
+        # js_msg.header.stamp = self.time_ms
+        # js_msg.name = ["left_wheel_joint", "right_wheel_joint"]
+        # js_msg.velocity = [self.motors.left_wheel.speed, self.motors.right_wheel.speed]
+
+        # Do transform from odom to map
+        t = TransformStamped()
+
+        t.header.stamp = self.get_clock().now().to_msg()
+        t.header.frame_id = 'map'
+        t.child_frame_id = 'odom'
+
+        t.transform.translation.x = pose["xyz"][0]
+        t.transform.translation.y = pose["xyz"][1]
+        t.transform.translation.z = pose["xyz"][2]
+
+        t.transform.rotation.x = pose_rot[0]
+        t.transform.rotation.y = pose_rot[1]
+        t.transform.rotation.z = pose_rot[2]
+        t.transform.rotation.w = pose_rot[3]
+
         # Publish messages
+        # self.js_pub_.publish(js_msg)
+        self.tf_broadcaster.sendTransform(t)
         self.md_pub_.publish(md_msg)
         self.odom_pub_.publish(odom_msg)
 

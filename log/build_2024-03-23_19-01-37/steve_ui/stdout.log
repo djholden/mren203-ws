@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing steve_ui.egg-info/PKG-INFO
+writing dependency_links to steve_ui.egg-info/dependency_links.txt
+writing requirements to steve_ui.egg-info/requires.txt
+writing top-level names to steve_ui.egg-info/top_level.txt
+reading manifest file 'steve_ui.egg-info/SOURCES.txt'
+writing manifest file 'steve_ui.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/dj/MREN203/joint_states/mren203-ws/install/steve_ui/lib/python3.10/site-packages/steve-ui.egg-link (link to .)
+
+Installed /home/dj/MREN203/joint_states/mren203-ws/build/steve_ui
+running install_data
+copying resource/steve_ui -> /home/dj/MREN203/joint_states/mren203-ws/install/steve_ui/share/ament_index/resource_index/packages
+copying package.xml -> /home/dj/MREN203/joint_states/mren203-ws/install/steve_ui/share/steve_ui

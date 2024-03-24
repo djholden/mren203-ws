@@ -37,7 +37,7 @@ void ControlUI_fini_function(void * message_memory)
   typed_message->~ControlUI();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ControlUI_message_member_array[6] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ControlUI_message_member_array[4] = {
   {
     "cmd_mode",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
@@ -105,47 +105,13 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ControlUI_mes
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
-  },
-  {
-    "fwd_cmd",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(steve_msgs::msg::ControlUI, fwd_cmd),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "ang_cmd",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(steve_msgs::msg::ControlUI, ang_cmd),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ControlUI_message_members = {
   "steve_msgs::msg",  // message namespace
   "ControlUI",  // message name
-  6,  // number of fields
+  4,  // number of fields
   sizeof(steve_msgs::msg::ControlUI),
   ControlUI_message_member_array,  // message members
   ControlUI_init_function,  // function to initialize message memory (memory has to be allocated)

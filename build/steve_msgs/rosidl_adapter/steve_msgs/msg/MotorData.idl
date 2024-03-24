@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from steve_msgs/msg/MotorData.msg
+// generated code does not contain a copyright notice
+
+
+module steve_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Movement")
+    struct MotorData {
+      float fwd_cmd;
+
+      float ang_cmd;
+
+      @verbatim (language="comment", text=
+        "Velocities")
+      float left_vel;
+
+      float right_vel;
+
+      float fwd_vel;
+
+      float ang_vel;
+    };
+  };
+};

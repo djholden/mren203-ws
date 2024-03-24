@@ -1,3 +1,4 @@
-/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs:msg/ControlUI.idl
-/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs:msg/SensorData.idl
-/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs:msg/SetPoints.idl
+/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs:msg/ControlUI.idl
+/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs:msg/SensorData.idl
+/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs:msg/SetPoints.idl
+/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs:msg/MotorData.idl

@@ -42,8 +42,6 @@ struct ControlUI_
       this->auto_mode = false;
       this->new_poi = false;
       this->e_stop = false;
-      this->fwd_cmd = 0.0f;
-      this->ang_cmd = 0.0f;
     }
   }
 
@@ -57,8 +55,6 @@ struct ControlUI_
       this->auto_mode = false;
       this->new_poi = false;
       this->e_stop = false;
-      this->fwd_cmd = 0.0f;
-      this->ang_cmd = 0.0f;
     }
   }
 
@@ -75,12 +71,6 @@ struct ControlUI_
   using _e_stop_type =
     bool;
   _e_stop_type e_stop;
-  using _fwd_cmd_type =
-    float;
-  _fwd_cmd_type fwd_cmd;
-  using _ang_cmd_type =
-    float;
-  _ang_cmd_type ang_cmd;
 
   // setters for named parameter idiom
   Type & set__cmd_mode(
@@ -105,18 +95,6 @@ struct ControlUI_
     const bool & _arg)
   {
     this->e_stop = _arg;
-    return *this;
-  }
-  Type & set__fwd_cmd(
-    const float & _arg)
-  {
-    this->fwd_cmd = _arg;
-    return *this;
-  }
-  Type & set__ang_cmd(
-    const float & _arg)
-  {
-    this->ang_cmd = _arg;
     return *this;
   }
 
@@ -172,12 +150,6 @@ struct ControlUI_
       return false;
     }
     if (this->e_stop != other.e_stop) {
-      return false;
-    }
-    if (this->fwd_cmd != other.fwd_cmd) {
-      return false;
-    }
-    if (this->ang_cmd != other.ang_cmd) {
       return false;
     }
     return true;

@@ -21,96 +21,16 @@ namespace msg
 namespace builder
 {
 
-class Init_SensorData_ang_vel
-{
-public:
-  explicit Init_SensorData_ang_vel(::steve_msgs::msg::SensorData & msg)
-  : msg_(msg)
-  {}
-  ::steve_msgs::msg::SensorData ang_vel(::steve_msgs::msg::SensorData::_ang_vel_type arg)
-  {
-    msg_.ang_vel = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::steve_msgs::msg::SensorData msg_;
-};
-
-class Init_SensorData_fwd_vel
-{
-public:
-  explicit Init_SensorData_fwd_vel(::steve_msgs::msg::SensorData & msg)
-  : msg_(msg)
-  {}
-  Init_SensorData_ang_vel fwd_vel(::steve_msgs::msg::SensorData::_fwd_vel_type arg)
-  {
-    msg_.fwd_vel = std::move(arg);
-    return Init_SensorData_ang_vel(msg_);
-  }
-
-private:
-  ::steve_msgs::msg::SensorData msg_;
-};
-
-class Init_SensorData_avg_vel
-{
-public:
-  explicit Init_SensorData_avg_vel(::steve_msgs::msg::SensorData & msg)
-  : msg_(msg)
-  {}
-  Init_SensorData_fwd_vel avg_vel(::steve_msgs::msg::SensorData::_avg_vel_type arg)
-  {
-    msg_.avg_vel = std::move(arg);
-    return Init_SensorData_fwd_vel(msg_);
-  }
-
-private:
-  ::steve_msgs::msg::SensorData msg_;
-};
-
-class Init_SensorData_right_vel
-{
-public:
-  explicit Init_SensorData_right_vel(::steve_msgs::msg::SensorData & msg)
-  : msg_(msg)
-  {}
-  Init_SensorData_avg_vel right_vel(::steve_msgs::msg::SensorData::_right_vel_type arg)
-  {
-    msg_.right_vel = std::move(arg);
-    return Init_SensorData_avg_vel(msg_);
-  }
-
-private:
-  ::steve_msgs::msg::SensorData msg_;
-};
-
-class Init_SensorData_left_vel
-{
-public:
-  explicit Init_SensorData_left_vel(::steve_msgs::msg::SensorData & msg)
-  : msg_(msg)
-  {}
-  Init_SensorData_right_vel left_vel(::steve_msgs::msg::SensorData::_left_vel_type arg)
-  {
-    msg_.left_vel = std::move(arg);
-    return Init_SensorData_right_vel(msg_);
-  }
-
-private:
-  ::steve_msgs::msg::SensorData msg_;
-};
-
 class Init_SensorData_ir_center
 {
 public:
   explicit Init_SensorData_ir_center(::steve_msgs::msg::SensorData & msg)
   : msg_(msg)
   {}
-  Init_SensorData_left_vel ir_center(::steve_msgs::msg::SensorData::_ir_center_type arg)
+  ::steve_msgs::msg::SensorData ir_center(::steve_msgs::msg::SensorData::_ir_center_type arg)
   {
     msg_.ir_center = std::move(arg);
-    return Init_SensorData_left_vel(msg_);
+    return std::move(msg_);
   }
 
 private:

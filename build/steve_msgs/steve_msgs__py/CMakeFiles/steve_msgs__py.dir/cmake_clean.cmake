@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/steve_msgs/msg/__init__.py"
   "../rosidl_generator_py/steve_msgs/msg/_control_ui.py"
   "../rosidl_generator_py/steve_msgs/msg/_control_ui_s.c"
+  "../rosidl_generator_py/steve_msgs/msg/_motor_data.py"
+  "../rosidl_generator_py/steve_msgs/msg/_motor_data_s.c"
   "../rosidl_generator_py/steve_msgs/msg/_sensor_data.py"
   "../rosidl_generator_py/steve_msgs/msg/_sensor_data_s.c"
   "../rosidl_generator_py/steve_msgs/msg/_set_points.py"

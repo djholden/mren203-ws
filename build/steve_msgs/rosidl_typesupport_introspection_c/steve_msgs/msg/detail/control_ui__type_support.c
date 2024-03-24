@@ -31,7 +31,7 @@ void steve_msgs__msg__ControlUI__rosidl_typesupport_introspection_c__ControlUI_f
   steve_msgs__msg__ControlUI__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember steve_msgs__msg__ControlUI__rosidl_typesupport_introspection_c__ControlUI_message_member_array[6] = {
+static rosidl_typesupport_introspection_c__MessageMember steve_msgs__msg__ControlUI__rosidl_typesupport_introspection_c__ControlUI_message_member_array[4] = {
   {
     "cmd_mode",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
@@ -99,47 +99,13 @@ static rosidl_typesupport_introspection_c__MessageMember steve_msgs__msg__Contro
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
-  },
-  {
-    "fwd_cmd",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(steve_msgs__msg__ControlUI, fwd_cmd),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "ang_cmd",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(steve_msgs__msg__ControlUI, ang_cmd),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers steve_msgs__msg__ControlUI__rosidl_typesupport_introspection_c__ControlUI_message_members = {
   "steve_msgs__msg",  // message namespace
   "ControlUI",  // message name
-  6,  // number of fields
+  4,  // number of fields
   sizeof(steve_msgs__msg__ControlUI),
   steve_msgs__msg__ControlUI__rosidl_typesupport_introspection_c__ControlUI_message_member_array,  // message members
   steve_msgs__msg__ControlUI__rosidl_typesupport_introspection_c__ControlUI_init_function,  // function to initialize message memory (memory has to be allocated)

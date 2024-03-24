@@ -1,1 +1,1 @@
-/home/dj/MREN203/mren203-ws/build/rplidar_ros/ament_cmake_environment_hooks/local_setup.sh
+/home/dj/MREN203/joint_states/mren203-ws/build/rplidar_ros/ament_cmake_environment_hooks/local_setup.sh

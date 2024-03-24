@@ -21,48 +21,16 @@ namespace msg
 namespace builder
 {
 
-class Init_ControlUI_ang_cmd
-{
-public:
-  explicit Init_ControlUI_ang_cmd(::steve_msgs::msg::ControlUI & msg)
-  : msg_(msg)
-  {}
-  ::steve_msgs::msg::ControlUI ang_cmd(::steve_msgs::msg::ControlUI::_ang_cmd_type arg)
-  {
-    msg_.ang_cmd = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::steve_msgs::msg::ControlUI msg_;
-};
-
-class Init_ControlUI_fwd_cmd
-{
-public:
-  explicit Init_ControlUI_fwd_cmd(::steve_msgs::msg::ControlUI & msg)
-  : msg_(msg)
-  {}
-  Init_ControlUI_ang_cmd fwd_cmd(::steve_msgs::msg::ControlUI::_fwd_cmd_type arg)
-  {
-    msg_.fwd_cmd = std::move(arg);
-    return Init_ControlUI_ang_cmd(msg_);
-  }
-
-private:
-  ::steve_msgs::msg::ControlUI msg_;
-};
-
 class Init_ControlUI_e_stop
 {
 public:
   explicit Init_ControlUI_e_stop(::steve_msgs::msg::ControlUI & msg)
   : msg_(msg)
   {}
-  Init_ControlUI_fwd_cmd e_stop(::steve_msgs::msg::ControlUI::_e_stop_type arg)
+  ::steve_msgs::msg::ControlUI e_stop(::steve_msgs::msg::ControlUI::_e_stop_type arg)
   {
     msg_.e_stop = std::move(arg);
-    return Init_ControlUI_fwd_cmd(msg_);
+    return std::move(msg_);
   }
 
 private:

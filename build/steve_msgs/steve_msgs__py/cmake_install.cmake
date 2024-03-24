@@ -1,8 +1,8 @@
-# Install script for directory: /home/dj/MREN203/mren203-ws/build/steve_msgs/steve_msgs__py
+# Install script for directory: /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/steve_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/dj/MREN203/mren203-ws/install/steve_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/dj/MREN203/joint_states/mren203-ws/install/steve_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -29,9 +29,6 @@ typedef struct steve_msgs__msg__ControlUI
   bool auto_mode;
   bool new_poi;
   bool e_stop;
-  /// Movement
-  float fwd_cmd;
-  float ang_cmd;
 } steve_msgs__msg__ControlUI;
 
 // Struct for a sequence of steve_msgs__msg__ControlUI.

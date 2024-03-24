@@ -1,11 +1,12 @@
 {
   "package_name": "steve_msgs",
-  "output_dir": "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_cpp/steve_msgs",
+  "output_dir": "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_cpp/steve_msgs",
   "template_dir": "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource",
   "idl_tuples": [
-    "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs:msg/ControlUI.idl",
-    "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs:msg/SensorData.idl",
-    "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs:msg/SetPoints.idl"
+    "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs:msg/ControlUI.idl",
+    "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs:msg/SensorData.idl",
+    "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs:msg/SetPoints.idl",
+    "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs:msg/MotorData.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp",
@@ -23,8 +24,9 @@
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__builder.hpp.em",
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__struct.hpp.em",
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
-    "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/ControlUI.idl",
-    "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/SensorData.idl",
-    "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/SetPoints.idl"
+    "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/ControlUI.idl",
+    "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/SensorData.idl",
+    "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/SetPoints.idl",
+    "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/MotorData.idl"
   ]
 }

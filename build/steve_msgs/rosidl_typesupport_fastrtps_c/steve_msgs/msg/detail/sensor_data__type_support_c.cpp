@@ -84,31 +84,6 @@ static bool _SensorData__cdr_serialize(
     cdr << ros_message->ir_center;
   }
 
-  // Field name: left_vel
-  {
-    cdr << ros_message->left_vel;
-  }
-
-  // Field name: right_vel
-  {
-    cdr << ros_message->right_vel;
-  }
-
-  // Field name: avg_vel
-  {
-    cdr << ros_message->avg_vel;
-  }
-
-  // Field name: fwd_vel
-  {
-    cdr << ros_message->fwd_vel;
-  }
-
-  // Field name: ang_vel
-  {
-    cdr << ros_message->ang_vel;
-  }
-
   return true;
 }
 
@@ -154,31 +129,6 @@ static bool _SensorData__cdr_deserialize(
   // Field name: ir_center
   {
     cdr >> ros_message->ir_center;
-  }
-
-  // Field name: left_vel
-  {
-    cdr >> ros_message->left_vel;
-  }
-
-  // Field name: right_vel
-  {
-    cdr >> ros_message->right_vel;
-  }
-
-  // Field name: avg_vel
-  {
-    cdr >> ros_message->avg_vel;
-  }
-
-  // Field name: fwd_vel
-  {
-    cdr >> ros_message->fwd_vel;
-  }
-
-  // Field name: ang_vel
-  {
-    cdr >> ros_message->ang_vel;
   }
 
   return true;
@@ -237,36 +187,6 @@ size_t get_serialized_size_steve_msgs__msg__SensorData(
   // field.name ir_center
   {
     size_t item_size = sizeof(ros_message->ir_center);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name left_vel
-  {
-    size_t item_size = sizeof(ros_message->left_vel);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name right_vel
-  {
-    size_t item_size = sizeof(ros_message->right_vel);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name avg_vel
-  {
-    size_t item_size = sizeof(ros_message->avg_vel);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name fwd_vel
-  {
-    size_t item_size = sizeof(ros_message->fwd_vel);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name ang_vel
-  {
-    size_t item_size = sizeof(ros_message->ang_vel);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -355,46 +275,6 @@ size_t max_serialized_size_steve_msgs__msg__SensorData(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
-  // member: left_vel
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // member: right_vel
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // member: avg_vel
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // member: fwd_vel
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // member: ang_vel
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -404,7 +284,7 @@ size_t max_serialized_size_steve_msgs__msg__SensorData(
     using DataType = steve_msgs__msg__SensorData;
     is_plain =
       (
-      offsetof(DataType, ang_vel) +
+      offsetof(DataType, ir_center) +
       last_member_size
       ) == ret_val;
   }

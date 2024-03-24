@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dj/MREN203/mren203-ws/src/steve_msgs
+CMAKE_SOURCE_DIR = /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dj/MREN203/mren203-ws/build/steve_msgs
+CMAKE_BINARY_DIR = /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs
 
 # Include any dependencies generated for this target.
 include CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend.make
@@ -85,8 +85,9 @@ rosidl_generator_c/steve_msgs/msg/control_ui.h: /opt/ros/humble/share/rosidl_gen
 rosidl_generator_c/steve_msgs/msg/control_ui.h: rosidl_adapter/steve_msgs/msg/ControlUI.idl
 rosidl_generator_c/steve_msgs/msg/control_ui.h: rosidl_adapter/steve_msgs/msg/SensorData.idl
 rosidl_generator_c/steve_msgs/msg/control_ui.h: rosidl_adapter/steve_msgs/msg/SetPoints.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dj/MREN203/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_c__arguments.json
+rosidl_generator_c/steve_msgs/msg/control_ui.h: rosidl_adapter/steve_msgs/msg/MotorData.idl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_c__arguments.json
 
 rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.h: rosidl_generator_c/steve_msgs/msg/control_ui.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.h
@@ -121,6 +122,18 @@ rosidl_generator_c/steve_msgs/msg/detail/set_points__struct.h: rosidl_generator_
 rosidl_generator_c/steve_msgs/msg/detail/set_points__type_support.h: rosidl_generator_c/steve_msgs/msg/control_ui.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/steve_msgs/msg/detail/set_points__type_support.h
 
+rosidl_generator_c/steve_msgs/msg/motor_data.h: rosidl_generator_c/steve_msgs/msg/control_ui.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/steve_msgs/msg/motor_data.h
+
+rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.h: rosidl_generator_c/steve_msgs/msg/control_ui.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.h
+
+rosidl_generator_c/steve_msgs/msg/detail/motor_data__struct.h: rosidl_generator_c/steve_msgs/msg/control_ui.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/steve_msgs/msg/detail/motor_data__struct.h
+
+rosidl_generator_c/steve_msgs/msg/detail/motor_data__type_support.h: rosidl_generator_c/steve_msgs/msg/control_ui.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/steve_msgs/msg/detail/motor_data__type_support.h
+
 rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c: rosidl_generator_c/steve_msgs/msg/control_ui.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c
 
@@ -130,53 +143,71 @@ rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c: rosidl_genera
 rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c: rosidl_generator_c/steve_msgs/msg/control_ui.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c
 
+rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c: rosidl_generator_c/steve_msgs/msg/control_ui.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c
+
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.o: CMakeFiles/steve_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.o: rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.o: CMakeFiles/steve_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dj/MREN203/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.o -MF CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.o.d -o CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.o -c /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.o -MF CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.o.d -o CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.o -c /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c
 
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c > CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c > CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.i
 
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c -o CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c -o CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.s
 
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.o: CMakeFiles/steve_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.o: rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.o: CMakeFiles/steve_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dj/MREN203/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.o -MF CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.o.d -o CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.o -c /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.o -MF CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.o.d -o CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.o -c /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c
 
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c > CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c > CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.i
 
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c -o CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c -o CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.s
 
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.o: CMakeFiles/steve_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.o: rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.o: CMakeFiles/steve_msgs__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dj/MREN203/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.o -MF CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.o.d -o CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.o -c /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.o -MF CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.o.d -o CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.o -c /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c
 
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c > CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c > CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.i
 
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c -o CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c -o CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.s
+
+CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c.o: CMakeFiles/steve_msgs__rosidl_generator_c.dir/flags.make
+CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c.o: rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c
+CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c.o: CMakeFiles/steve_msgs__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c.o -MF CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c.o.d -o CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c.o -c /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c
+
+CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c > CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c.i
+
+CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c -o CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c.s
 
 # Object files for target steve_msgs__rosidl_generator_c
 steve_msgs__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.o" \
 "CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.o" \
-"CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.o"
+"CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.o" \
+"CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c.o"
 
 # External object files for target steve_msgs__rosidl_generator_c
 steve_msgs__rosidl_generator_c_EXTERNAL_OBJECTS =
@@ -184,11 +215,12 @@ steve_msgs__rosidl_generator_c_EXTERNAL_OBJECTS =
 libsteve_msgs__rosidl_generator_c.so: CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.c.o
 libsteve_msgs__rosidl_generator_c.so: CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c.o
 libsteve_msgs__rosidl_generator_c.so: CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.c.o
+libsteve_msgs__rosidl_generator_c.so: CMakeFiles/steve_msgs__rosidl_generator_c.dir/rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c.o
 libsteve_msgs__rosidl_generator_c.so: CMakeFiles/steve_msgs__rosidl_generator_c.dir/build.make
 libsteve_msgs__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libsteve_msgs__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libsteve_msgs__rosidl_generator_c.so: CMakeFiles/steve_msgs__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dj/MREN203/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libsteve_msgs__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libsteve_msgs__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/steve_msgs__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -204,6 +236,10 @@ CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_m
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/detail/control_ui__functions.h
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/detail/control_ui__struct.h
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/detail/control_ui__type_support.h
+CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.c
+CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/detail/motor_data__functions.h
+CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/detail/motor_data__struct.h
+CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/detail/motor_data__type_support.h
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.c
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/detail/sensor_data__functions.h
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/detail/sensor_data__struct.h
@@ -212,8 +248,9 @@ CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_m
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/detail/set_points__functions.h
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/detail/set_points__struct.h
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/detail/set_points__type_support.h
+CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/motor_data.h
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/sensor_data.h
 CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/steve_msgs/msg/set_points.h
-	cd /home/dj/MREN203/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dj/MREN203/mren203-ws/src/steve_msgs /home/dj/MREN203/mren203-ws/src/steve_msgs /home/dj/MREN203/mren203-ws/build/steve_msgs /home/dj/MREN203/mren203-ws/build/steve_msgs /home/dj/MREN203/mren203-ws/build/steve_msgs/CMakeFiles/steve_msgs__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles/steve_msgs__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/steve_msgs__rosidl_generator_c.dir/depend
 

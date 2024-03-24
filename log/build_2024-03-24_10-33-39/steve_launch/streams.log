@@ -1,0 +1,22 @@
+[0.306s] Invoking command in '/home/dj/MREN203/joint_states/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dj/MREN203/joint_states/mren203-ws/build/steve_launch -- -j16 -l16
+[0.502s] Invoked command in '/home/dj/MREN203/joint_states/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dj/MREN203/joint_states/mren203-ws/build/steve_launch -- -j16 -l16
+[0.530s] Invoking command in '/home/dj/MREN203/joint_states/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dj/MREN203/joint_states/mren203-ws/build/steve_launch
+[0.536s] -- Install configuration: ""
+[0.536s] -- Execute custom install script
+[0.536s] -- Up-to-date symlink: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/steve_launch/launch/manual_control.launch
+[0.536s] -- Up-to-date symlink: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/ament_index/resource_index/package_run_dependencies/steve_launch
+[0.537s] -- Up-to-date symlink: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/ament_index/resource_index/parent_prefix_path/steve_launch
+[0.537s] -- Up-to-date symlink: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.sh
+[0.537s] -- Up-to-date symlink: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.dsv
+[0.538s] -- Up-to-date symlink: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/steve_launch/environment/path.sh
+[0.539s] -- Up-to-date symlink: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/steve_launch/environment/path.dsv
+[0.539s] -- Up-to-date symlink: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/steve_launch/local_setup.bash
+[0.539s] -- Up-to-date symlink: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/steve_launch/local_setup.sh
+[0.539s] -- Up-to-date symlink: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/steve_launch/local_setup.zsh
+[0.539s] -- Up-to-date symlink: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/steve_launch/local_setup.dsv
+[0.539s] -- Symlinking: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/steve_launch/package.dsv
+[0.545s] -- Up-to-date symlink: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/ament_index/resource_index/packages/steve_launch
+[0.546s] -- Up-to-date symlink: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig.cmake
+[0.546s] -- Up-to-date symlink: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig-version.cmake
+[0.546s] -- Up-to-date symlink: /home/dj/MREN203/joint_states/mren203-ws/install/steve_launch/share/steve_launch/package.xml
+[0.549s] Invoked command in '/home/dj/MREN203/joint_states/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dj/MREN203/joint_states/mren203-ws/build/steve_launch

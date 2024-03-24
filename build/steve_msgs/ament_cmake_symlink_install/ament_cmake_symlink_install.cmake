@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/dj/MREN203/mren203-ws/install/steve_msgs/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/dj/MREN203/joint_states/mren203-ws/install/steve_msgs/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/dj/MREN203/mren203-ws/install/steve_msgs/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/dj/MREN203/joint_states/mren203-ws/install/steve_msgs/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/dj/MREN203/mren203-ws/install/steve_msgs/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/dj/MREN203/joint_states/mren203-ws/install/steve_msgs/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/dj/MREN203/mren203-ws/install/steve_msgs/${destination}")
+      set(destination "/home/dj/MREN203/joint_states/mren203-ws/install/steve_msgs/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -310,131 +310,137 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/steve_msgs" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/steve_msgs" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/steve_msgs" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/steve_msgs" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
 
-# install(DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.h")
-ament_cmake_symlink_install_directory("/home/dj/MREN203/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.h")
+# install(DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.h")
+ament_cmake_symlink_install_directory("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_c/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.h")
 
 # install(FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/steve_msgs/environment")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/steve_msgs/environment")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/steve_msgs/environment")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/steve_msgs/environment")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/steve_msgs/environment")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/steve_msgs/environment")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/steve_msgs/environment")
 
-# install(DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_fastrtps_c/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN_EXCLUDE" "*.cpp")
-ament_cmake_symlink_install_directory("/home/dj/MREN203/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_fastrtps_c/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN_EXCLUDE" "*.cpp")
+# install(DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_fastrtps_c/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN_EXCLUDE" "*.cpp")
+ament_cmake_symlink_install_directory("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_fastrtps_c/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN_EXCLUDE" "*.cpp")
 
-# install(DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_introspection_c/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.h")
-ament_cmake_symlink_install_directory("/home/dj/MREN203/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_introspection_c/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.h")
+# install(DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_introspection_c/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.h")
+ament_cmake_symlink_install_directory("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_introspection_c/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.h")
 
-# install(DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_cpp/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.hpp")
-ament_cmake_symlink_install_directory("/home/dj/MREN203/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_cpp/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.hpp")
+# install(DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_cpp/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.hpp")
+ament_cmake_symlink_install_directory("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_cpp/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.hpp")
 
-# install(DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_fastrtps_cpp/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN_EXCLUDE" "*.cpp")
-ament_cmake_symlink_install_directory("/home/dj/MREN203/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_fastrtps_cpp/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN_EXCLUDE" "*.cpp")
+# install(DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_fastrtps_cpp/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN_EXCLUDE" "*.cpp")
+ament_cmake_symlink_install_directory("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_fastrtps_cpp/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN_EXCLUDE" "*.cpp")
 
-# install(DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_introspection_cpp/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.hpp")
-ament_cmake_symlink_install_directory("/home/dj/MREN203/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_typesupport_introspection_cpp/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.hpp")
+# install(DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_introspection_cpp/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.hpp")
+ament_cmake_symlink_install_directory("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_typesupport_introspection_cpp/steve_msgs/" "DESTINATION" "include/steve_msgs/steve_msgs" "PATTERN" "*.hpp")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/steve_msgs/environment")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/steve_msgs/environment")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/steve_msgs/environment")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/steve_msgs/environment")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/steve_msgs/environment")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/steve_msgs/environment")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/steve_msgs/environment")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/steve_msgs/environment")
 
-# install(DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_python/steve_msgs/steve_msgs.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/steve_msgs-0.0.0-py3.10.egg-info")
-ament_cmake_symlink_install_directory("/home/dj/MREN203/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_python/steve_msgs/steve_msgs.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/steve_msgs-0.0.0-py3.10.egg-info")
+# install(DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_python/steve_msgs/steve_msgs.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/steve_msgs-0.0.0-py3.10.egg-info")
+ament_cmake_symlink_install_directory("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_python/steve_msgs/steve_msgs.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/steve_msgs-0.0.0-py3.10.egg-info")
 
-# install(DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_py/steve_msgs/" "DESTINATION" "local/lib/python3.10/dist-packages/steve_msgs" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
-ament_cmake_symlink_install_directory("/home/dj/MREN203/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_py/steve_msgs/" "DESTINATION" "local/lib/python3.10/dist-packages/steve_msgs" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+# install(DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_py/steve_msgs/" "DESTINATION" "local/lib/python3.10/dist-packages/steve_msgs" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" DIRECTORY "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_py/steve_msgs/" "DESTINATION" "local/lib/python3.10/dist-packages/steve_msgs" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
 # install("TARGETS" "steve_msgs__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/steve_msgs")
-include("/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install("TARGETS" "steve_msgs__rosidl_typesupport_introspection_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/steve_msgs")
-include("/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install("TARGETS" "steve_msgs__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/steve_msgs")
-include("/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/ControlUI.idl" "DESTINATION" "share/steve_msgs/msg")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/ControlUI.idl" "DESTINATION" "share/steve_msgs/msg")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/ControlUI.idl" "DESTINATION" "share/steve_msgs/msg")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/ControlUI.idl" "DESTINATION" "share/steve_msgs/msg")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/SensorData.idl" "DESTINATION" "share/steve_msgs/msg")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/SensorData.idl" "DESTINATION" "share/steve_msgs/msg")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/SensorData.idl" "DESTINATION" "share/steve_msgs/msg")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/SensorData.idl" "DESTINATION" "share/steve_msgs/msg")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/SetPoints.idl" "DESTINATION" "share/steve_msgs/msg")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/SetPoints.idl" "DESTINATION" "share/steve_msgs/msg")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/SetPoints.idl" "DESTINATION" "share/steve_msgs/msg")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/SetPoints.idl" "DESTINATION" "share/steve_msgs/msg")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/src/steve_msgs/msg/ControlUI.msg" "DESTINATION" "share/steve_msgs/msg")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/src/steve_msgs/msg/ControlUI.msg" "DESTINATION" "share/steve_msgs/msg")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/MotorData.idl" "DESTINATION" "share/steve_msgs/msg")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_adapter/steve_msgs/msg/MotorData.idl" "DESTINATION" "share/steve_msgs/msg")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/src/steve_msgs/msg/SensorData.msg" "DESTINATION" "share/steve_msgs/msg")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/src/steve_msgs/msg/SensorData.msg" "DESTINATION" "share/steve_msgs/msg")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs/msg/ControlUI.msg" "DESTINATION" "share/steve_msgs/msg")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs/msg/ControlUI.msg" "DESTINATION" "share/steve_msgs/msg")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/src/steve_msgs/msg/SetPoints.msg" "DESTINATION" "share/steve_msgs/msg")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/src/steve_msgs/msg/SetPoints.msg" "DESTINATION" "share/steve_msgs/msg")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs/msg/SensorData.msg" "DESTINATION" "share/steve_msgs/msg")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs/msg/SensorData.msg" "DESTINATION" "share/steve_msgs/msg")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/steve_msgs" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/steve_msgs" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs/msg/SetPoints.msg" "DESTINATION" "share/steve_msgs/msg")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs/msg/SetPoints.msg" "DESTINATION" "share/steve_msgs/msg")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/steve_msgs" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/steve_msgs" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs/msg/MotorData.msg" "DESTINATION" "share/steve_msgs/msg")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs/msg/MotorData.msg" "DESTINATION" "share/steve_msgs/msg")
+
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/steve_msgs" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/steve_msgs" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/steve_msgs" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/steve_msgs" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/steve_msgs/environment")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/steve_msgs/environment")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/steve_msgs/environment")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/steve_msgs/environment")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/steve_msgs/environment")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/steve_msgs/environment")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/steve_msgs/environment")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/steve_msgs/environment")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/steve_msgs/environment")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/steve_msgs/environment")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/steve_msgs/environment")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/steve_msgs/environment")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/steve_msgs/environment")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/steve_msgs/environment")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/steve_msgs")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/steve_msgs")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/steve_msgs")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/steve_msgs")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/steve_msgs")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/steve_msgs")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/steve_msgs")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/steve_msgs")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/steve_msgs")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/steve_msgs")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/steve_msgs")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/steve_msgs")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/steve_msgs")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/steve_msgs")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/steve_msgs")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/steve_msgs")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/steve_msgs")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/steve_msgs")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/steve_msgs")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/steve_msgs")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/packages/steve_msgs" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/packages/steve_msgs" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/packages/steve_msgs" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_index/share/ament_index/resource_index/packages/steve_msgs" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/steve_msgs/cmake")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_core/steve_msgsConfig.cmake" "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_core/steve_msgsConfig-version.cmake" "DESTINATION" "share/steve_msgs/cmake")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_core/steve_msgsConfig.cmake" "/home/dj/MREN203/mren203-ws/build/steve_msgs/ament_cmake_core/steve_msgsConfig-version.cmake" "DESTINATION" "share/steve_msgs/cmake")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_core/steve_msgsConfig.cmake" "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_core/steve_msgsConfig-version.cmake" "DESTINATION" "share/steve_msgs/cmake")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_core/steve_msgsConfig.cmake" "/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_core/steve_msgsConfig-version.cmake" "DESTINATION" "share/steve_msgs/cmake")
 
-# install(FILES "/home/dj/MREN203/mren203-ws/src/steve_msgs/package.xml" "DESTINATION" "share/steve_msgs")
-ament_cmake_symlink_install_files("/home/dj/MREN203/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/mren203-ws/src/steve_msgs/package.xml" "DESTINATION" "share/steve_msgs")
+# install(FILES "/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs/package.xml" "DESTINATION" "share/steve_msgs")
+ament_cmake_symlink_install_files("/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs" FILES "/home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs/package.xml" "DESTINATION" "share/steve_msgs")

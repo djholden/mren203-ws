@@ -1,8 +1,11 @@
 <?xml version="1.0"?>
 <launch>
     <node name="joystick" pkg="joystick_ros2" exec="joystick_ros2"></node>
-    <node name="motors" pkg="motor_control" exec="motor_driver"></node>
+    <node name="motors" pkg="motor_control" exec="motor_driver">
+	<param name="Kp" value="0.02" />
+	<param name="Ki" value="0.0094"/>
+    </node>
     <node name="foxglove" pkg="foxglove_bridge" exec="foxglove_bridge"></node>
-    <include file="$(find-pkg-share rplidar)/launch/rplidar.launch.py"/>
+    <include file="$(find-pkg-share rplidar_ros)/launch/rplidar.launch.py"/>
     <include file="$(find-pkg-share my_bot)/launch/rsp.launch.py"/>
 </launch>

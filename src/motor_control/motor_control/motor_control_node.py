@@ -258,7 +258,7 @@ class MotorSubscriber(Node):
 
         # Publish messages
         # self.js_pub_.publish(js_msg)
-        self.tf_broadcaster.sendTransform(t)
+        # self.tf_broadcaster.sendTransform(t)
         self.md_pub_.publish(md_msg)
         self.odom_pub_.publish(odom_msg)
 

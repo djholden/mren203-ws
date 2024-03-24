@@ -5,7 +5,7 @@ from math import sqrt
 import rclpy
 from rclpy.node import Node
 
-from tf2_ros import TransformBroadcaster
+from tf2_ros import TransformBroadcaster, StaticTransformBroadcaster
 
 from scipy.spatial.transform import Rotation
 
@@ -18,28 +18,28 @@ from steve_msgs.msg import ControlUI, SetPoints, MotorData
 MAX_VOLT_SPEED = 150    # PWM Duty Cycle
 MAX_PID_SPEED = 0.50    # Meters per second
 
-def quaternion_from_euler(ai, aj, ak):
-    ai /= 2.0
-    aj /= 2.0
-    ak /= 2.0
-    ci = math.cos(ai)
-    si = math.sin(ai)
-    cj = math.cos(aj)
-    sj = math.sin(aj)
-    ck = math.cos(ak)
-    sk = math.sin(ak)
-    cc = ci*ck
-    cs = ci*sk
-    sc = si*ck
-    ss = si*sk
+# def quaternion_from_euler(ai, aj, ak):
+#     ai /= 2.0
+#     aj /= 2.0
+#     ak /= 2.0
+#     ci = math.cos(ai)
+#     si = math.sin(ai)
+#     cj = math.cos(aj)
+#     sj = math.sin(aj)
+#     ck = math.cos(ak)
+#     sk = math.sin(ak)
+#     cc = ci*ck
+#     cs = ci*sk
+#     sc = si*ck
+#     ss = si*sk
 
-    q = np.empty((4, ))
-    q[0] = cj*sc - sj*cs
-    q[1] = cj*ss + sj*cc
-    q[2] = cj*cs - sj*sc
-    q[3] = cj*cc + sj*ss
+#     q = np.empty((4, ))
+#     q[0] = cj*sc - sj*cs
+#     q[1] = cj*ss + sj*cc
+#     q[2] = cj*cs - sj*sc
+#     q[3] = cj*cc + sj*ss
 
-    return q
+#     return q
 
 
 class MotorSubscriber(Node):
@@ -87,6 +87,7 @@ class MotorSubscriber(Node):
 
         # TF Publisher
         self.tf_broadcaster = TransformBroadcaster(self)
+        self.tf_static_broadcaster = StaticTransformBroadcaster(self)
         
         # Velocity Publisher
         # self.publisher_ = self.create_publisher(TwistStamped, 'motors/vel', 10)
@@ -103,6 +104,14 @@ class MotorSubscriber(Node):
 
         self.time_ms = 0
         self.t_last = 0 # for buttons
+
+        # Transform from laser to odom (once)
+        tf_laser = TransformStamped()
+        tf_laser.header.stamp = self.get_clock().now().to_msg()
+        tf_laser.header.frame_id = 'odom'
+        tf_laser.child_frame_id = 'laser'
+        # ADD THE ACTUAL TRANSFORMS FROM ODOM TO LASER 
+        self.tf_static_broadcaster.sendTransform(tf_laser)
 
         # Controls
         self.isVoltageMode = True

@@ -191,7 +191,7 @@ class MotorSubscriber(Node):
 
         # Create odom message with proper frame ids
         odom_msg = Odometry()
-        odom_msg.header.stamp = self.time_ms
+        odom_msg.header.stamp = self.get_clock().now().to_msg()
         odom_msg.header.frame_id = "odom"
         odom_msg.child_frame_id = "map"
 
@@ -208,14 +208,14 @@ class MotorSubscriber(Node):
         pose_m.orientation.z = pose_rot[2]
         pose_m.orientation.w = pose_rot[3]
         pose_msg = PoseWithCovariance()
-        pose_msg.pose = pose
+        pose_msg.pose = pose_m
 
         # Create Twist Message
         twist_m = Twist()
         twist_m.linear.x = twist["xyz"][0]
         twist_m.angular.z = twist["rpy"][2]
-        twist_msg = PoseWithCovariance()
-        twist_msg.pose = twist_m
+        twist_msg = TwistWithCovariance()
+        twist_msg.twist = twist_m
 
         # Add Pose and Twist to Odom message
         odom_msg.pose = pose_msg
@@ -229,8 +229,8 @@ class MotorSubscriber(Node):
         md_msg.ang_cmd = (self.right_cmd - self.left_cmd)/2
 
         # Actual wheel velocities
-        md_msg.left_vel = self.motors.left_wheel.speed
-        md_msg.right_vel = self.motors.right_wheel.speed
+        md_msg.left_vel = self.motors.left_wheel.speed*1.0
+        md_msg.right_vel = self.motors.right_wheel.speed*1.0
         md_msg.fwd_vel = twist["xyz"][0]
         md_msg.ang_vel = twist["rpy"][2]
 

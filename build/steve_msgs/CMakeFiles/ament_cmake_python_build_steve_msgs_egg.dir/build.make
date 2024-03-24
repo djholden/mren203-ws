@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs
+CMAKE_SOURCE_DIR = /home/steve/mren203-ws/src/steve_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs
+CMAKE_BINARY_DIR = /home/steve/mren203-ws/build/steve_msgs
 
 # Utility rule file for ament_cmake_python_build_steve_msgs_egg.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_build_steve_msgs_egg.dir/compiler_depend.m
 include CMakeFiles/ament_cmake_python_build_steve_msgs_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_steve_msgs_egg:
-	cd /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_python/steve_msgs && /usr/bin/python3 setup.py egg_info
+	cd /home/steve/mren203-ws/build/steve_msgs/ament_cmake_python/steve_msgs && /usr/bin/python3 setup.py egg_info
 
 ament_cmake_python_build_steve_msgs_egg: CMakeFiles/ament_cmake_python_build_steve_msgs_egg
 ament_cmake_python_build_steve_msgs_egg: CMakeFiles/ament_cmake_python_build_steve_msgs_egg.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_build_steve_msgs_egg.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_build_steve_msgs_egg.dir/clean
 
 CMakeFiles/ament_cmake_python_build_steve_msgs_egg.dir/depend:
-	cd /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles/ament_cmake_python_build_steve_msgs_egg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/steve/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/steve/mren203-ws/src/steve_msgs /home/steve/mren203-ws/src/steve_msgs /home/steve/mren203-ws/build/steve_msgs /home/steve/mren203-ws/build/steve_msgs /home/steve/mren203-ws/build/steve_msgs/CMakeFiles/ament_cmake_python_build_steve_msgs_egg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_build_steve_msgs_egg.dir/depend
 

@@ -4,8 +4,3 @@ steve_msgs.egg-info/PKG-INFO
 steve_msgs.egg-info/SOURCES.txt
 steve_msgs.egg-info/dependency_links.txt
 steve_msgs.egg-info/top_level.txt
-steve_msgs/msg/__init__.py
-steve_msgs/msg/_control_ui.py
-steve_msgs/msg/_motor_data.py
-steve_msgs/msg/_sensor_data.py
-steve_msgs/msg/_set_points.py

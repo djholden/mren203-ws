@@ -9,6 +9,7 @@ steve_ui/steve_ui_node.py
 steve_ui.egg-info/PKG-INFO
 steve_ui.egg-info/SOURCES.txt
 steve_ui.egg-info/dependency_links.txt
+steve_ui.egg-info/entry_points.txt
 steve_ui.egg-info/requires.txt
 steve_ui.egg-info/top_level.txt
 steve_ui.egg-info/zip-safe

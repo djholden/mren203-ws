@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs
+CMAKE_SOURCE_DIR = /home/steve/mren203-ws/src/steve_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs
+CMAKE_BINARY_DIR = /home/steve/mren203-ws/build/steve_msgs
 
 # Utility rule file for steve_msgs__cpp.
 
@@ -102,8 +102,8 @@ rosidl_generator_cpp/steve_msgs/msg/control_ui.hpp: rosidl_adapter/steve_msgs/ms
 rosidl_generator_cpp/steve_msgs/msg/control_ui.hpp: rosidl_adapter/steve_msgs/msg/SensorData.idl
 rosidl_generator_cpp/steve_msgs/msg/control_ui.hpp: rosidl_adapter/steve_msgs/msg/SetPoints.idl
 rosidl_generator_cpp/steve_msgs/msg/control_ui.hpp: rosidl_adapter/steve_msgs/msg/MotorData.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/steve/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/steve/mren203-ws/build/steve_msgs/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/steve_msgs/msg/detail/control_ui__builder.hpp: rosidl_generator_cpp/steve_msgs/msg/control_ui.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/steve_msgs/msg/detail/control_ui__builder.hpp
@@ -179,6 +179,6 @@ CMakeFiles/steve_msgs__cpp.dir/clean:
 .PHONY : CMakeFiles/steve_msgs__cpp.dir/clean
 
 CMakeFiles/steve_msgs__cpp.dir/depend:
-	cd /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles/steve_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/steve/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/steve/mren203-ws/src/steve_msgs /home/steve/mren203-ws/src/steve_msgs /home/steve/mren203-ws/build/steve_msgs /home/steve/mren203-ws/build/steve_msgs /home/steve/mren203-ws/build/steve_msgs/CMakeFiles/steve_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/steve_msgs__cpp.dir/depend
 

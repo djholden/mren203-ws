@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs
+CMAKE_SOURCE_DIR = /home/steve/mren203-ws/src/steve_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs
+CMAKE_BINARY_DIR = /home/steve/mren203-ws/build/steve_msgs
 
 # Utility rule file for steve_msgs.
 
@@ -66,10 +66,10 @@ include CMakeFiles/steve_msgs.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/steve_msgs.dir/progress.make
 
-CMakeFiles/steve_msgs: /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs/msg/ControlUI.msg
-CMakeFiles/steve_msgs: /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs/msg/SensorData.msg
-CMakeFiles/steve_msgs: /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs/msg/SetPoints.msg
-CMakeFiles/steve_msgs: /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs/msg/MotorData.msg
+CMakeFiles/steve_msgs: /home/steve/mren203-ws/src/steve_msgs/msg/ControlUI.msg
+CMakeFiles/steve_msgs: /home/steve/mren203-ws/src/steve_msgs/msg/SensorData.msg
+CMakeFiles/steve_msgs: /home/steve/mren203-ws/src/steve_msgs/msg/SetPoints.msg
+CMakeFiles/steve_msgs: /home/steve/mren203-ws/src/steve_msgs/msg/MotorData.msg
 
 steve_msgs: CMakeFiles/steve_msgs
 steve_msgs: CMakeFiles/steve_msgs.dir/build.make
@@ -84,6 +84,6 @@ CMakeFiles/steve_msgs.dir/clean:
 .PHONY : CMakeFiles/steve_msgs.dir/clean
 
 CMakeFiles/steve_msgs.dir/depend:
-	cd /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles/steve_msgs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/steve/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/steve/mren203-ws/src/steve_msgs /home/steve/mren203-ws/src/steve_msgs /home/steve/mren203-ws/build/steve_msgs /home/steve/mren203-ws/build/steve_msgs /home/steve/mren203-ws/build/steve_msgs/CMakeFiles/steve_msgs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/steve_msgs.dir/depend
 

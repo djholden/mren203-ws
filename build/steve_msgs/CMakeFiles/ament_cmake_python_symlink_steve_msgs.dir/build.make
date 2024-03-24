@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs
+CMAKE_SOURCE_DIR = /home/steve/mren203-ws/src/steve_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs
+CMAKE_BINARY_DIR = /home/steve/mren203-ws/build/steve_msgs
 
 # Utility rule file for ament_cmake_python_symlink_steve_msgs.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_symlink_steve_msgs.dir/compiler_depend.mak
 include CMakeFiles/ament_cmake_python_symlink_steve_msgs.dir/progress.make
 
 CMakeFiles/ament_cmake_python_symlink_steve_msgs:
-	/usr/bin/cmake -E create_symlink /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/rosidl_generator_py/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/ament_cmake_python/steve_msgs/steve_msgs
+	/usr/bin/cmake -E create_symlink /home/steve/mren203-ws/build/steve_msgs/rosidl_generator_py/steve_msgs /home/steve/mren203-ws/build/steve_msgs/ament_cmake_python/steve_msgs/steve_msgs
 
 ament_cmake_python_symlink_steve_msgs: CMakeFiles/ament_cmake_python_symlink_steve_msgs
 ament_cmake_python_symlink_steve_msgs: CMakeFiles/ament_cmake_python_symlink_steve_msgs.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_symlink_steve_msgs.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_symlink_steve_msgs.dir/clean
 
 CMakeFiles/ament_cmake_python_symlink_steve_msgs.dir/depend:
-	cd /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/src/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs /home/dj/MREN203/joint_states/mren203-ws/build/steve_msgs/CMakeFiles/ament_cmake_python_symlink_steve_msgs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/steve/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/steve/mren203-ws/src/steve_msgs /home/steve/mren203-ws/src/steve_msgs /home/steve/mren203-ws/build/steve_msgs /home/steve/mren203-ws/build/steve_msgs /home/steve/mren203-ws/build/steve_msgs/CMakeFiles/ament_cmake_python_symlink_steve_msgs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_symlink_steve_msgs.dir/depend
 

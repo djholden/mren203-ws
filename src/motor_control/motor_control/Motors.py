@@ -102,6 +102,9 @@ class MotorHandler():
 
 
     def calculate_odom(self, current_time, seperation=TRACK_LENGTH):
+        self.right_wheel.update_rotational_speed(current_time)
+        self.left_wheel.update_rotational_speed(current_time)
+
         self.t_now = current_time
         dt = (self.t_now - self.t_last) # In Milliseconds
 

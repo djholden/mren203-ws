@@ -7,6 +7,7 @@ from serial.serialutil import SerialException
 from steve_msgs.msg import SensorData, ControlUI, SetPoints
 from std_msgs.msg import Header, Bool, Int16
 from sensor_msgs.msg import Imu
+from rosgraph_msgs.msg import Clock
 
 # Custom Imports
 from .SerialHandler import SerialHandler
@@ -46,6 +47,13 @@ class SteveUI(Node, StateMachine):
         self.imu_pub = self.create_publisher(
             Imu,
             'imu/data',
+            10
+        )
+
+        #Imu data publisher
+        self.clk_pub = self.create_publisher(
+            Clock,
+            'clock',
             10
         )
 
@@ -165,7 +173,13 @@ class SteveUI(Node, StateMachine):
         imu_msg.linear_acceleration.y = self.fsm.accel[1]
         imu_msg.linear_acceleration.z = self.fsm.accel[2]
 
+        # Clock Message
+        clk_msg = Clock()
+        clk_msg.clock.sec = self.get_clock().now().to_msg().sec
+        clk_msg.clock.nanosec = self.get_clock().now().to_msg().nanosec
+
         # Publish
+        self.clk_pub.publish(clk_msg)
         self.imu_pub.publish(imu_msg)
         self.state_pub.publish(state_msg)
         self.sensor_pub.publish(msg)

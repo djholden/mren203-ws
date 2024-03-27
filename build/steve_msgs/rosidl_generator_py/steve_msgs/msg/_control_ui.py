@@ -7,8 +7,6 @@
 
 import builtins  # noqa: E402, I100
 
-import math  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -61,8 +59,6 @@ class ControlUI(metaclass=Metaclass_ControlUI):
         '_auto_mode',
         '_new_poi',
         '_e_stop',
-        '_fwd_cmd',
-        '_ang_cmd',
     ]
 
     _fields_and_field_types = {
@@ -70,8 +66,6 @@ class ControlUI(metaclass=Metaclass_ControlUI):
         'auto_mode': 'boolean',
         'new_poi': 'boolean',
         'e_stop': 'boolean',
-        'fwd_cmd': 'float',
-        'ang_cmd': 'float',
     }
 
     SLOT_TYPES = (
@@ -79,8 +73,6 @@ class ControlUI(metaclass=Metaclass_ControlUI):
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -91,8 +83,6 @@ class ControlUI(metaclass=Metaclass_ControlUI):
         self.auto_mode = kwargs.get('auto_mode', bool())
         self.new_poi = kwargs.get('new_poi', bool())
         self.e_stop = kwargs.get('e_stop', bool())
-        self.fwd_cmd = kwargs.get('fwd_cmd', float())
-        self.ang_cmd = kwargs.get('ang_cmd', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -130,10 +120,6 @@ class ControlUI(metaclass=Metaclass_ControlUI):
         if self.new_poi != other.new_poi:
             return False
         if self.e_stop != other.e_stop:
-            return False
-        if self.fwd_cmd != other.fwd_cmd:
-            return False
-        if self.ang_cmd != other.ang_cmd:
             return False
         return True
 
@@ -193,33 +179,3 @@ class ControlUI(metaclass=Metaclass_ControlUI):
                 isinstance(value, bool), \
                 "The 'e_stop' field must be of type 'bool'"
         self._e_stop = value
-
-    @builtins.property
-    def fwd_cmd(self):
-        """Message field 'fwd_cmd'."""
-        return self._fwd_cmd
-
-    @fwd_cmd.setter
-    def fwd_cmd(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, float), \
-                "The 'fwd_cmd' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'fwd_cmd' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._fwd_cmd = value
-
-    @builtins.property
-    def ang_cmd(self):
-        """Message field 'ang_cmd'."""
-        return self._ang_cmd
-
-    @ang_cmd.setter
-    def ang_cmd(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, float), \
-                "The 'ang_cmd' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'ang_cmd' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._ang_cmd = value

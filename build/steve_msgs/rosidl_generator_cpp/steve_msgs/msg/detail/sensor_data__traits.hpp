@@ -71,41 +71,6 @@ inline void to_flow_style_yaml(
   {
     out << "ir_center: ";
     rosidl_generator_traits::value_to_yaml(msg.ir_center, out);
-    out << ", ";
-  }
-
-  // member: left_vel
-  {
-    out << "left_vel: ";
-    rosidl_generator_traits::value_to_yaml(msg.left_vel, out);
-    out << ", ";
-  }
-
-  // member: right_vel
-  {
-    out << "right_vel: ";
-    rosidl_generator_traits::value_to_yaml(msg.right_vel, out);
-    out << ", ";
-  }
-
-  // member: avg_vel
-  {
-    out << "avg_vel: ";
-    rosidl_generator_traits::value_to_yaml(msg.avg_vel, out);
-    out << ", ";
-  }
-
-  // member: fwd_vel
-  {
-    out << "fwd_vel: ";
-    rosidl_generator_traits::value_to_yaml(msg.fwd_vel, out);
-    out << ", ";
-  }
-
-  // member: ang_vel
-  {
-    out << "ang_vel: ";
-    rosidl_generator_traits::value_to_yaml(msg.ang_vel, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -181,56 +146,6 @@ inline void to_block_style_yaml(
     }
     out << "ir_center: ";
     rosidl_generator_traits::value_to_yaml(msg.ir_center, out);
-    out << "\n";
-  }
-
-  // member: left_vel
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "left_vel: ";
-    rosidl_generator_traits::value_to_yaml(msg.left_vel, out);
-    out << "\n";
-  }
-
-  // member: right_vel
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "right_vel: ";
-    rosidl_generator_traits::value_to_yaml(msg.right_vel, out);
-    out << "\n";
-  }
-
-  // member: avg_vel
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "avg_vel: ";
-    rosidl_generator_traits::value_to_yaml(msg.avg_vel, out);
-    out << "\n";
-  }
-
-  // member: fwd_vel
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "fwd_vel: ";
-    rosidl_generator_traits::value_to_yaml(msg.fwd_vel, out);
-    out << "\n";
-  }
-
-  // member: ang_vel
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "ang_vel: ";
-    rosidl_generator_traits::value_to_yaml(msg.ang_vel, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

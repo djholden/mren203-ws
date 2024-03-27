@@ -45,11 +45,6 @@ struct SensorData_
       this->ir_left = 0.0f;
       this->ir_right = 0.0f;
       this->ir_center = 0.0f;
-      this->left_vel = 0.0f;
-      this->right_vel = 0.0f;
-      this->avg_vel = 0.0f;
-      this->fwd_vel = 0.0f;
-      this->ang_vel = 0.0f;
     }
   }
 
@@ -66,11 +61,6 @@ struct SensorData_
       this->ir_left = 0.0f;
       this->ir_right = 0.0f;
       this->ir_center = 0.0f;
-      this->left_vel = 0.0f;
-      this->right_vel = 0.0f;
-      this->avg_vel = 0.0f;
-      this->fwd_vel = 0.0f;
-      this->ang_vel = 0.0f;
     }
   }
 
@@ -96,21 +86,6 @@ struct SensorData_
   using _ir_center_type =
     float;
   _ir_center_type ir_center;
-  using _left_vel_type =
-    float;
-  _left_vel_type left_vel;
-  using _right_vel_type =
-    float;
-  _right_vel_type right_vel;
-  using _avg_vel_type =
-    float;
-  _avg_vel_type avg_vel;
-  using _fwd_vel_type =
-    float;
-  _fwd_vel_type fwd_vel;
-  using _ang_vel_type =
-    float;
-  _ang_vel_type ang_vel;
 
   // setters for named parameter idiom
   Type & set__temp(
@@ -153,36 +128,6 @@ struct SensorData_
     const float & _arg)
   {
     this->ir_center = _arg;
-    return *this;
-  }
-  Type & set__left_vel(
-    const float & _arg)
-  {
-    this->left_vel = _arg;
-    return *this;
-  }
-  Type & set__right_vel(
-    const float & _arg)
-  {
-    this->right_vel = _arg;
-    return *this;
-  }
-  Type & set__avg_vel(
-    const float & _arg)
-  {
-    this->avg_vel = _arg;
-    return *this;
-  }
-  Type & set__fwd_vel(
-    const float & _arg)
-  {
-    this->fwd_vel = _arg;
-    return *this;
-  }
-  Type & set__ang_vel(
-    const float & _arg)
-  {
-    this->ang_vel = _arg;
     return *this;
   }
 
@@ -247,21 +192,6 @@ struct SensorData_
       return false;
     }
     if (this->ir_center != other.ir_center) {
-      return false;
-    }
-    if (this->left_vel != other.left_vel) {
-      return false;
-    }
-    if (this->right_vel != other.right_vel) {
-      return false;
-    }
-    if (this->avg_vel != other.avg_vel) {
-      return false;
-    }
-    if (this->fwd_vel != other.fwd_vel) {
-      return false;
-    }
-    if (this->ang_vel != other.ang_vel) {
       return false;
     }
     return true;

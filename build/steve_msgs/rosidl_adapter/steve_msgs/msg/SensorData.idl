@@ -26,18 +26,6 @@ module steve_msgs {
       float ir_right;
 
       float ir_center;
-
-      @verbatim (language="comment", text=
-        "Velocities")
-      float left_vel;
-
-      float right_vel;
-
-      float avg_vel;
-
-      float fwd_vel;
-
-      float ang_vel;
     };
   };
 };

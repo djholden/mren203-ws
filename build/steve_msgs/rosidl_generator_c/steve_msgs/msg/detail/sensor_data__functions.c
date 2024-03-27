@@ -24,11 +24,6 @@ steve_msgs__msg__SensorData__init(steve_msgs__msg__SensorData * msg)
   // ir_left
   // ir_right
   // ir_center
-  // left_vel
-  // right_vel
-  // avg_vel
-  // fwd_vel
-  // ang_vel
   return true;
 }
 
@@ -45,11 +40,6 @@ steve_msgs__msg__SensorData__fini(steve_msgs__msg__SensorData * msg)
   // ir_left
   // ir_right
   // ir_center
-  // left_vel
-  // right_vel
-  // avg_vel
-  // fwd_vel
-  // ang_vel
 }
 
 bool
@@ -86,26 +76,6 @@ steve_msgs__msg__SensorData__are_equal(const steve_msgs__msg__SensorData * lhs, 
   if (lhs->ir_center != rhs->ir_center) {
     return false;
   }
-  // left_vel
-  if (lhs->left_vel != rhs->left_vel) {
-    return false;
-  }
-  // right_vel
-  if (lhs->right_vel != rhs->right_vel) {
-    return false;
-  }
-  // avg_vel
-  if (lhs->avg_vel != rhs->avg_vel) {
-    return false;
-  }
-  // fwd_vel
-  if (lhs->fwd_vel != rhs->fwd_vel) {
-    return false;
-  }
-  // ang_vel
-  if (lhs->ang_vel != rhs->ang_vel) {
-    return false;
-  }
   return true;
 }
 
@@ -131,16 +101,6 @@ steve_msgs__msg__SensorData__copy(
   output->ir_right = input->ir_right;
   // ir_center
   output->ir_center = input->ir_center;
-  // left_vel
-  output->left_vel = input->left_vel;
-  // right_vel
-  output->right_vel = input->right_vel;
-  // avg_vel
-  output->avg_vel = input->avg_vel;
-  // fwd_vel
-  output->fwd_vel = input->fwd_vel;
-  // ang_vel
-  output->ang_vel = input->ang_vel;
   return true;
 }
 

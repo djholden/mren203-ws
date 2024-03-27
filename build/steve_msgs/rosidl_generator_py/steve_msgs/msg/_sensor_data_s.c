@@ -113,51 +113,6 @@ bool steve_msgs__msg__sensor_data__convert_from_py(PyObject * _pymsg, void * _ro
     ros_message->ir_center = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // left_vel
-    PyObject * field = PyObject_GetAttrString(_pymsg, "left_vel");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->left_vel = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // right_vel
-    PyObject * field = PyObject_GetAttrString(_pymsg, "right_vel");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->right_vel = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // avg_vel
-    PyObject * field = PyObject_GetAttrString(_pymsg, "avg_vel");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->avg_vel = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // fwd_vel
-    PyObject * field = PyObject_GetAttrString(_pymsg, "fwd_vel");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->fwd_vel = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // ang_vel
-    PyObject * field = PyObject_GetAttrString(_pymsg, "ang_vel");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->ang_vel = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -251,61 +206,6 @@ PyObject * steve_msgs__msg__sensor_data__convert_to_py(void * raw_ros_message)
     field = PyFloat_FromDouble(ros_message->ir_center);
     {
       int rc = PyObject_SetAttrString(_pymessage, "ir_center", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // left_vel
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->left_vel);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "left_vel", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // right_vel
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->right_vel);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "right_vel", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // avg_vel
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->avg_vel);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "avg_vel", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // fwd_vel
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->fwd_vel);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "fwd_vel", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // ang_vel
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->ang_vel);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "ang_vel", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

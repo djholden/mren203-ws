@@ -69,16 +69,6 @@ static bool _ControlUI__cdr_serialize(
     cdr << (ros_message->e_stop ? true : false);
   }
 
-  // Field name: fwd_cmd
-  {
-    cdr << ros_message->fwd_cmd;
-  }
-
-  // Field name: ang_cmd
-  {
-    cdr << ros_message->ang_cmd;
-  }
-
   return true;
 }
 
@@ -119,16 +109,6 @@ static bool _ControlUI__cdr_deserialize(
     ros_message->e_stop = tmp ? true : false;
   }
 
-  // Field name: fwd_cmd
-  {
-    cdr >> ros_message->fwd_cmd;
-  }
-
-  // Field name: ang_cmd
-  {
-    cdr >> ros_message->ang_cmd;
-  }
-
   return true;
 }  // NOLINT(readability/fn_size)
 
@@ -167,18 +147,6 @@ size_t get_serialized_size_steve_msgs__msg__ControlUI(
   // field.name e_stop
   {
     size_t item_size = sizeof(ros_message->e_stop);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name fwd_cmd
-  {
-    size_t item_size = sizeof(ros_message->fwd_cmd);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name ang_cmd
-  {
-    size_t item_size = sizeof(ros_message->ang_cmd);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -239,22 +207,6 @@ size_t max_serialized_size_steve_msgs__msg__ControlUI(
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
-  // member: fwd_cmd
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // member: ang_cmd
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -264,7 +216,7 @@ size_t max_serialized_size_steve_msgs__msg__ControlUI(
     using DataType = steve_msgs__msg__ControlUI;
     is_plain =
       (
-      offsetof(DataType, ang_cmd) +
+      offsetof(DataType, e_stop) +
       last_member_size
       ) == ret_val;
   }

@@ -33,12 +33,6 @@ typedef struct steve_msgs__msg__SensorData
   float ir_left;
   float ir_right;
   float ir_center;
-  /// Velocities
-  float left_vel;
-  float right_vel;
-  float avg_vel;
-  float fwd_vel;
-  float ang_vel;
 } steve_msgs__msg__SensorData;
 
 // Struct for a sequence of steve_msgs__msg__SensorData.

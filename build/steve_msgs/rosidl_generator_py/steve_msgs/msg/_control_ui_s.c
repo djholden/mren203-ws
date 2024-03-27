@@ -86,24 +86,6 @@ bool steve_msgs__msg__control_ui__convert_from_py(PyObject * _pymsg, void * _ros
     ros_message->e_stop = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // fwd_cmd
-    PyObject * field = PyObject_GetAttrString(_pymsg, "fwd_cmd");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->fwd_cmd = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // ang_cmd
-    PyObject * field = PyObject_GetAttrString(_pymsg, "ang_cmd");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->ang_cmd = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -164,28 +146,6 @@ PyObject * steve_msgs__msg__control_ui__convert_to_py(void * raw_ros_message)
     field = PyBool_FromLong(ros_message->e_stop ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "e_stop", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // fwd_cmd
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->fwd_cmd);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "fwd_cmd", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // ang_cmd
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->ang_cmd);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "ang_cmd", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

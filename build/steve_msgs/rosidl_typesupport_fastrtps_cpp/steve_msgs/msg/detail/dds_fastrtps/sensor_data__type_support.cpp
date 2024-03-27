@@ -46,16 +46,6 @@ cdr_serialize(
   cdr << ros_message.ir_right;
   // Member: ir_center
   cdr << ros_message.ir_center;
-  // Member: left_vel
-  cdr << ros_message.left_vel;
-  // Member: right_vel
-  cdr << ros_message.right_vel;
-  // Member: avg_vel
-  cdr << ros_message.avg_vel;
-  // Member: fwd_vel
-  cdr << ros_message.fwd_vel;
-  // Member: ang_vel
-  cdr << ros_message.ang_vel;
   return true;
 }
 
@@ -85,21 +75,6 @@ cdr_deserialize(
 
   // Member: ir_center
   cdr >> ros_message.ir_center;
-
-  // Member: left_vel
-  cdr >> ros_message.left_vel;
-
-  // Member: right_vel
-  cdr >> ros_message.right_vel;
-
-  // Member: avg_vel
-  cdr >> ros_message.avg_vel;
-
-  // Member: fwd_vel
-  cdr >> ros_message.fwd_vel;
-
-  // Member: ang_vel
-  cdr >> ros_message.ang_vel;
 
   return true;
 }
@@ -156,36 +131,6 @@ get_serialized_size(
   // Member: ir_center
   {
     size_t item_size = sizeof(ros_message.ir_center);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: left_vel
-  {
-    size_t item_size = sizeof(ros_message.left_vel);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: right_vel
-  {
-    size_t item_size = sizeof(ros_message.right_vel);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: avg_vel
-  {
-    size_t item_size = sizeof(ros_message.avg_vel);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: fwd_vel
-  {
-    size_t item_size = sizeof(ros_message.fwd_vel);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: ang_vel
-  {
-    size_t item_size = sizeof(ros_message.ang_vel);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -276,51 +221,6 @@ max_serialized_size_SensorData(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Member: left_vel
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: right_vel
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: avg_vel
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: fwd_vel
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: ang_vel
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -329,7 +229,7 @@ max_serialized_size_SensorData(
     using DataType = steve_msgs::msg::SensorData;
     is_plain =
       (
-      offsetof(DataType, ang_vel) +
+      offsetof(DataType, ir_center) +
       last_member_size
       ) == ret_val;
   }

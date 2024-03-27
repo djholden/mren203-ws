@@ -1,0 +1,50 @@
+[0.998s] Invoking command in '/home/dj/MREN203/joint_states/mren203-ws/build/motor_control': AMENT_PREFIX_PATH=/home/dj/MREN203/joint_states/mren203-ws/install/steve_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dj/MREN203/joint_states/mren203-ws/install/steve_msgs LD_LIBRARY_PATH=/home/dj/MREN203/joint_states/mren203-ws/install/steve_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dj/MREN203/joint_states/mren203-ws/build/motor_control/prefix_override:/home/dj/MREN203/joint_states/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/dj/MREN203/joint_states/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/dj/MREN203/joint_states/mren203-ws/build/motor_control/build --no-deps install_data
+[1.270s] running develop
+[1.270s] /home/dj/.local/lib/python3.10/site-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[1.270s] !!
+[1.270s] 
+[1.270s]         ********************************************************************************
+[1.270s]         Please avoid running ``setup.py`` and ``easy_install``.
+[1.270s]         Instead, use pypa/build, pypa/installer or other
+[1.271s]         standards-based tools.
+[1.271s] 
+[1.271s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[1.271s]         ********************************************************************************
+[1.271s] 
+[1.271s] !!
+[1.271s]   easy_install.initialize_options(self)
+[1.298s] /home/dj/.local/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[1.298s] !!
+[1.298s] 
+[1.298s]         ********************************************************************************
+[1.298s]         Please avoid running ``setup.py`` directly.
+[1.298s]         Instead, use pypa/build, pypa/installer or other
+[1.298s]         standards-based tools.
+[1.298s] 
+[1.298s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[1.298s]         ********************************************************************************
+[1.298s] 
+[1.298s] !!
+[1.298s]   self.initialize_options()
+[1.467s] running egg_info
+[1.467s] creating motor_control.egg-info
+[1.481s] writing motor_control.egg-info/PKG-INFO
+[1.481s] writing dependency_links to motor_control.egg-info/dependency_links.txt
+[1.482s] writing entry points to motor_control.egg-info/entry_points.txt
+[1.482s] writing requirements to motor_control.egg-info/requires.txt
+[1.482s] writing top-level names to motor_control.egg-info/top_level.txt
+[1.482s] writing manifest file 'motor_control.egg-info/SOURCES.txt'
+[1.511s] reading manifest file 'motor_control.egg-info/SOURCES.txt'
+[1.511s] writing manifest file 'motor_control.egg-info/SOURCES.txt'
+[1.564s] running build_ext
+[1.564s] Creating /home/dj/MREN203/joint_states/mren203-ws/install/motor_control/lib/python3.10/site-packages/motor-control.egg-link (link to .)
+[1.565s] Installing motor_driver script to /home/dj/MREN203/joint_states/mren203-ws/install/motor_control/lib/motor_control
+[1.565s] 
+[1.565s] Installed /home/dj/MREN203/joint_states/mren203-ws/build/motor_control
+[1.565s] running install_data
+[1.565s] creating /home/dj/MREN203/joint_states/mren203-ws/install/motor_control/share/ament_index
+[1.565s] creating /home/dj/MREN203/joint_states/mren203-ws/install/motor_control/share/ament_index/resource_index
+[1.565s] creating /home/dj/MREN203/joint_states/mren203-ws/install/motor_control/share/ament_index/resource_index/packages
+[1.565s] copying resource/motor_control -> /home/dj/MREN203/joint_states/mren203-ws/install/motor_control/share/ament_index/resource_index/packages
+[1.566s] copying package.xml -> /home/dj/MREN203/joint_states/mren203-ws/install/motor_control/share/motor_control
+[1.660s] Invoked command in '/home/dj/MREN203/joint_states/mren203-ws/build/motor_control' returned '0': AMENT_PREFIX_PATH=/home/dj/MREN203/joint_states/mren203-ws/install/steve_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dj/MREN203/joint_states/mren203-ws/install/steve_msgs LD_LIBRARY_PATH=/home/dj/MREN203/joint_states/mren203-ws/install/steve_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dj/MREN203/joint_states/mren203-ws/build/motor_control/prefix_override:/home/dj/MREN203/joint_states/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/dj/MREN203/joint_states/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/dj/MREN203/joint_states/mren203-ws/build/motor_control/build --no-deps install_data

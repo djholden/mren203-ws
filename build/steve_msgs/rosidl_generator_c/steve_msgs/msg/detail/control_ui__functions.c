@@ -21,8 +21,6 @@ steve_msgs__msg__ControlUI__init(steve_msgs__msg__ControlUI * msg)
   // auto_mode
   // new_poi
   // e_stop
-  // fwd_cmd
-  // ang_cmd
   return true;
 }
 
@@ -36,8 +34,6 @@ steve_msgs__msg__ControlUI__fini(steve_msgs__msg__ControlUI * msg)
   // auto_mode
   // new_poi
   // e_stop
-  // fwd_cmd
-  // ang_cmd
 }
 
 bool
@@ -62,14 +58,6 @@ steve_msgs__msg__ControlUI__are_equal(const steve_msgs__msg__ControlUI * lhs, co
   if (lhs->e_stop != rhs->e_stop) {
     return false;
   }
-  // fwd_cmd
-  if (lhs->fwd_cmd != rhs->fwd_cmd) {
-    return false;
-  }
-  // ang_cmd
-  if (lhs->ang_cmd != rhs->ang_cmd) {
-    return false;
-  }
   return true;
 }
 
@@ -89,10 +77,6 @@ steve_msgs__msg__ControlUI__copy(
   output->new_poi = input->new_poi;
   // e_stop
   output->e_stop = input->e_stop;
-  // fwd_cmd
-  output->fwd_cmd = input->fwd_cmd;
-  // ang_cmd
-  output->ang_cmd = input->ang_cmd;
   return true;
 }
 

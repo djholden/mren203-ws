@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dj/MREN203/mren203-ws/src/steve_msgs
+CMAKE_SOURCE_DIR = /home/steve/mren203-ws/src/steve_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dj/MREN203/mren203-ws/build/steve_msgs
+CMAKE_BINARY_DIR = /home/steve/mren203-ws/build/steve_msgs
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/dj/MREN203/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dj/MREN203/mren203-ws/src/steve_msgs /home/dj/MREN203/mren203-ws/src/steve_msgs /home/dj/MREN203/mren203-ws/build/steve_msgs /home/dj/MREN203/mren203-ws/build/steve_msgs /home/dj/MREN203/mren203-ws/build/steve_msgs/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/steve/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/steve/mren203-ws/src/steve_msgs /home/steve/mren203-ws/src/steve_msgs /home/steve/mren203-ws/build/steve_msgs /home/steve/mren203-ws/build/steve_msgs /home/steve/mren203-ws/build/steve_msgs/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

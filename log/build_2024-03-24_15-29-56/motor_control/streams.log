@@ -1,0 +1,29 @@
+[6.166s] Invoking command in '/home/steve/mren203-ws/build/motor_control': AMENT_PREFIX_PATH=/home/steve/mren203-ws/install/steve_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/steve/mren203-ws/install/steve_msgs LD_LIBRARY_PATH=/home/steve/mren203-ws/install/steve_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/steve/mren203-ws/build/motor_control/prefix_override:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/motor_control/build --no-deps install_data
+[7.825s] running develop
+[7.826s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[7.827s]   warnings.warn(
+[7.833s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[7.834s]   warnings.warn(
+[9.007s] running egg_info
+[9.008s] creating motor_control.egg-info
+[9.009s] writing motor_control.egg-info/PKG-INFO
+[9.010s] writing dependency_links to motor_control.egg-info/dependency_links.txt
+[9.013s] writing entry points to motor_control.egg-info/entry_points.txt
+[9.014s] writing requirements to motor_control.egg-info/requires.txt
+[9.015s] writing top-level names to motor_control.egg-info/top_level.txt
+[9.017s] writing manifest file 'motor_control.egg-info/SOURCES.txt'
+[9.022s] reading manifest file 'motor_control.egg-info/SOURCES.txt'
+[9.026s] writing manifest file 'motor_control.egg-info/SOURCES.txt'
+[9.033s] running build_ext
+[9.034s] Creating /home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages/motor-control.egg-link (link to .)
+[9.039s] Installing motor_driver script to /home/steve/mren203-ws/install/motor_control/lib/motor_control
+[9.040s] Installing tf_node script to /home/steve/mren203-ws/install/motor_control/lib/motor_control
+[9.042s] 
+[9.047s] Installed /home/steve/mren203-ws/build/motor_control
+[9.049s] running install_data
+[9.056s] creating /home/steve/mren203-ws/install/motor_control/share/ament_index
+[9.058s] creating /home/steve/mren203-ws/install/motor_control/share/ament_index/resource_index
+[9.060s] creating /home/steve/mren203-ws/install/motor_control/share/ament_index/resource_index/packages
+[9.069s] copying resource/motor_control -> /home/steve/mren203-ws/install/motor_control/share/ament_index/resource_index/packages
+[9.073s] copying package.xml -> /home/steve/mren203-ws/install/motor_control/share/motor_control
+[9.673s] Invoked command in '/home/steve/mren203-ws/build/motor_control' returned '0': AMENT_PREFIX_PATH=/home/steve/mren203-ws/install/steve_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/steve/mren203-ws/install/steve_msgs LD_LIBRARY_PATH=/home/steve/mren203-ws/install/steve_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/steve/mren203-ws/build/motor_control/prefix_override:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/motor_control/build --no-deps install_data

@@ -18,12 +18,6 @@ module steve_msgs {
       boolean new_poi;
 
       boolean e_stop;
-
-      @verbatim (language="comment", text=
-        "Movement")
-      float fwd_cmd;
-
-      float ang_cmd;
     };
   };
 };

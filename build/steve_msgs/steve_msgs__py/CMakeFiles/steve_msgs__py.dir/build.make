@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dj/MREN203/mren203-ws/src/steve_msgs
+CMAKE_SOURCE_DIR = /home/steve/mren203-ws/src/steve_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dj/MREN203/mren203-ws/build/steve_msgs
+CMAKE_BINARY_DIR = /home/steve/mren203-ws/build/steve_msgs
 
 # Utility rule file for steve_msgs__py.
 
@@ -72,10 +72,12 @@ steve_msgs__py/CMakeFiles/steve_msgs__py: rosidl_generator_py/steve_msgs/_steve_
 steve_msgs__py/CMakeFiles/steve_msgs__py: rosidl_generator_py/steve_msgs/msg/_control_ui.py
 steve_msgs__py/CMakeFiles/steve_msgs__py: rosidl_generator_py/steve_msgs/msg/_sensor_data.py
 steve_msgs__py/CMakeFiles/steve_msgs__py: rosidl_generator_py/steve_msgs/msg/_set_points.py
+steve_msgs__py/CMakeFiles/steve_msgs__py: rosidl_generator_py/steve_msgs/msg/_motor_data.py
 steve_msgs__py/CMakeFiles/steve_msgs__py: rosidl_generator_py/steve_msgs/msg/__init__.py
 steve_msgs__py/CMakeFiles/steve_msgs__py: rosidl_generator_py/steve_msgs/msg/_control_ui_s.c
 steve_msgs__py/CMakeFiles/steve_msgs__py: rosidl_generator_py/steve_msgs/msg/_sensor_data_s.c
 steve_msgs__py/CMakeFiles/steve_msgs__py: rosidl_generator_py/steve_msgs/msg/_set_points_s.c
+steve_msgs__py/CMakeFiles/steve_msgs__py: rosidl_generator_py/steve_msgs/msg/_motor_data_s.c
 
 rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -93,8 +95,9 @@ rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c:
 rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/steve_msgs/msg/ControlUI.idl
 rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/steve_msgs/msg/SensorData.idl
 rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/steve_msgs/msg/SetPoints.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dj/MREN203/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/dj/MREN203/mren203-ws/build/steve_msgs/steve_msgs__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/dj/MREN203/mren203-ws/build/steve_msgs/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/steve_msgs/msg/MotorData.idl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/steve/mren203-ws/build/steve_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /home/steve/mren203-ws/build/steve_msgs/steve_msgs__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/steve/mren203-ws/build/steve_msgs/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_introspection_c.c
@@ -111,6 +114,9 @@ rosidl_generator_py/steve_msgs/msg/_sensor_data.py: rosidl_generator_py/steve_ms
 rosidl_generator_py/steve_msgs/msg/_set_points.py: rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/steve_msgs/msg/_set_points.py
 
+rosidl_generator_py/steve_msgs/msg/_motor_data.py: rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/steve_msgs/msg/_motor_data.py
+
 rosidl_generator_py/steve_msgs/msg/__init__.py: rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/steve_msgs/msg/__init__.py
 
@@ -123,12 +129,17 @@ rosidl_generator_py/steve_msgs/msg/_sensor_data_s.c: rosidl_generator_py/steve_m
 rosidl_generator_py/steve_msgs/msg/_set_points_s.c: rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/steve_msgs/msg/_set_points_s.c
 
+rosidl_generator_py/steve_msgs/msg/_motor_data_s.c: rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/steve_msgs/msg/_motor_data_s.c
+
 steve_msgs__py: rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_c.c
 steve_msgs__py: rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 steve_msgs__py: rosidl_generator_py/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_introspection_c.c
 steve_msgs__py: rosidl_generator_py/steve_msgs/msg/__init__.py
 steve_msgs__py: rosidl_generator_py/steve_msgs/msg/_control_ui.py
 steve_msgs__py: rosidl_generator_py/steve_msgs/msg/_control_ui_s.c
+steve_msgs__py: rosidl_generator_py/steve_msgs/msg/_motor_data.py
+steve_msgs__py: rosidl_generator_py/steve_msgs/msg/_motor_data_s.c
 steve_msgs__py: rosidl_generator_py/steve_msgs/msg/_sensor_data.py
 steve_msgs__py: rosidl_generator_py/steve_msgs/msg/_sensor_data_s.c
 steve_msgs__py: rosidl_generator_py/steve_msgs/msg/_set_points.py
@@ -142,10 +153,10 @@ steve_msgs__py/CMakeFiles/steve_msgs__py.dir/build: steve_msgs__py
 .PHONY : steve_msgs__py/CMakeFiles/steve_msgs__py.dir/build
 
 steve_msgs__py/CMakeFiles/steve_msgs__py.dir/clean:
-	cd /home/dj/MREN203/mren203-ws/build/steve_msgs/steve_msgs__py && $(CMAKE_COMMAND) -P CMakeFiles/steve_msgs__py.dir/cmake_clean.cmake
+	cd /home/steve/mren203-ws/build/steve_msgs/steve_msgs__py && $(CMAKE_COMMAND) -P CMakeFiles/steve_msgs__py.dir/cmake_clean.cmake
 .PHONY : steve_msgs__py/CMakeFiles/steve_msgs__py.dir/clean
 
 steve_msgs__py/CMakeFiles/steve_msgs__py.dir/depend:
-	cd /home/dj/MREN203/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dj/MREN203/mren203-ws/src/steve_msgs /home/dj/MREN203/mren203-ws/build/steve_msgs/steve_msgs__py /home/dj/MREN203/mren203-ws/build/steve_msgs /home/dj/MREN203/mren203-ws/build/steve_msgs/steve_msgs__py /home/dj/MREN203/mren203-ws/build/steve_msgs/steve_msgs__py/CMakeFiles/steve_msgs__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/steve/mren203-ws/build/steve_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/steve/mren203-ws/src/steve_msgs /home/steve/mren203-ws/build/steve_msgs/steve_msgs__py /home/steve/mren203-ws/build/steve_msgs /home/steve/mren203-ws/build/steve_msgs/steve_msgs__py /home/steve/mren203-ws/build/steve_msgs/steve_msgs__py/CMakeFiles/steve_msgs__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : steve_msgs__py/CMakeFiles/steve_msgs__py.dir/depend
 

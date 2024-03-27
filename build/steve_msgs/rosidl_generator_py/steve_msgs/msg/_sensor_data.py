@@ -64,11 +64,6 @@ class SensorData(metaclass=Metaclass_SensorData):
         '_ir_left',
         '_ir_right',
         '_ir_center',
-        '_left_vel',
-        '_right_vel',
-        '_avg_vel',
-        '_fwd_vel',
-        '_ang_vel',
     ]
 
     _fields_and_field_types = {
@@ -79,19 +74,9 @@ class SensorData(metaclass=Metaclass_SensorData):
         'ir_left': 'float',
         'ir_right': 'float',
         'ir_center': 'float',
-        'left_vel': 'float',
-        'right_vel': 'float',
-        'avg_vel': 'float',
-        'fwd_vel': 'float',
-        'ang_vel': 'float',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
@@ -112,11 +97,6 @@ class SensorData(metaclass=Metaclass_SensorData):
         self.ir_left = kwargs.get('ir_left', float())
         self.ir_right = kwargs.get('ir_right', float())
         self.ir_center = kwargs.get('ir_center', float())
-        self.left_vel = kwargs.get('left_vel', float())
-        self.right_vel = kwargs.get('right_vel', float())
-        self.avg_vel = kwargs.get('avg_vel', float())
-        self.fwd_vel = kwargs.get('fwd_vel', float())
-        self.ang_vel = kwargs.get('ang_vel', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -160,16 +140,6 @@ class SensorData(metaclass=Metaclass_SensorData):
         if self.ir_right != other.ir_right:
             return False
         if self.ir_center != other.ir_center:
-            return False
-        if self.left_vel != other.left_vel:
-            return False
-        if self.right_vel != other.right_vel:
-            return False
-        if self.avg_vel != other.avg_vel:
-            return False
-        if self.fwd_vel != other.fwd_vel:
-            return False
-        if self.ang_vel != other.ang_vel:
             return False
         return True
 
@@ -282,78 +252,3 @@ class SensorData(metaclass=Metaclass_SensorData):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'ir_center' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._ir_center = value
-
-    @builtins.property
-    def left_vel(self):
-        """Message field 'left_vel'."""
-        return self._left_vel
-
-    @left_vel.setter
-    def left_vel(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, float), \
-                "The 'left_vel' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'left_vel' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._left_vel = value
-
-    @builtins.property
-    def right_vel(self):
-        """Message field 'right_vel'."""
-        return self._right_vel
-
-    @right_vel.setter
-    def right_vel(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, float), \
-                "The 'right_vel' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'right_vel' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._right_vel = value
-
-    @builtins.property
-    def avg_vel(self):
-        """Message field 'avg_vel'."""
-        return self._avg_vel
-
-    @avg_vel.setter
-    def avg_vel(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, float), \
-                "The 'avg_vel' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'avg_vel' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._avg_vel = value
-
-    @builtins.property
-    def fwd_vel(self):
-        """Message field 'fwd_vel'."""
-        return self._fwd_vel
-
-    @fwd_vel.setter
-    def fwd_vel(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, float), \
-                "The 'fwd_vel' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'fwd_vel' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._fwd_vel = value
-
-    @builtins.property
-    def ang_vel(self):
-        """Message field 'ang_vel'."""
-        return self._ang_vel
-
-    @ang_vel.setter
-    def ang_vel(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, float), \
-                "The 'ang_vel' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'ang_vel' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._ang_vel = value

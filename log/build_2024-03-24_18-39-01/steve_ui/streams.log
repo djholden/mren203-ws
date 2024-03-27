@@ -1,0 +1,20 @@
+[4.828s] Invoking command in '/home/steve/mren203-ws/build/steve_ui': PYTHONPATH=/home/steve/mren203-ws/build/steve_ui/prefix_override:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/steve_ui/build --no-deps install_data
+[6.401s] running develop
+[6.403s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[6.404s]   warnings.warn(
+[6.409s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[6.409s]   warnings.warn(
+[7.153s] running egg_info
+[7.153s] writing steve_ui.egg-info/PKG-INFO
+[7.154s] writing dependency_links to steve_ui.egg-info/dependency_links.txt
+[7.155s] writing entry points to steve_ui.egg-info/entry_points.txt
+[7.156s] writing requirements to steve_ui.egg-info/requires.txt
+[7.157s] writing top-level names to steve_ui.egg-info/top_level.txt
+[7.164s] reading manifest file 'steve_ui.egg-info/SOURCES.txt'
+[7.167s] writing manifest file 'steve_ui.egg-info/SOURCES.txt'
+[7.173s] running build_ext
+[7.174s] Creating /home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages/steve-ui.egg-link (link to .)
+[7.178s] 
+[7.178s] Installed /home/steve/mren203-ws/build/steve_ui
+[7.179s] running install_data
+[7.310s] Invoked command in '/home/steve/mren203-ws/build/steve_ui' returned '0': PYTHONPATH=/home/steve/mren203-ws/build/steve_ui/prefix_override:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/steve_ui/build --no-deps install_data

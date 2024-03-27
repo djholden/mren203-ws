@@ -1,0 +1,22 @@
+[6.644s] Invoking command in '/home/steve/mren203-ws/build/motor_control': PYTHONPATH=/home/steve/mren203-ws/build/motor_control/prefix_override:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/motor_control/build --no-deps install_data
+[8.160s] running develop
+[8.161s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[8.162s]   warnings.warn(
+[8.168s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[8.168s]   warnings.warn(
+[9.313s] running egg_info
+[9.314s] writing motor_control.egg-info/PKG-INFO
+[9.318s] writing dependency_links to motor_control.egg-info/dependency_links.txt
+[9.320s] writing entry points to motor_control.egg-info/entry_points.txt
+[9.321s] writing requirements to motor_control.egg-info/requires.txt
+[9.322s] writing top-level names to motor_control.egg-info/top_level.txt
+[9.328s] reading manifest file 'motor_control.egg-info/SOURCES.txt'
+[9.332s] writing manifest file 'motor_control.egg-info/SOURCES.txt'
+[9.341s] running build_ext
+[9.342s] Creating /home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages/motor-control.egg-link (link to .)
+[9.353s] Installing motor_driver script to /home/steve/mren203-ws/install/motor_control/lib/motor_control
+[9.355s] Installing tf_node script to /home/steve/mren203-ws/install/motor_control/lib/motor_control
+[9.363s] 
+[9.364s] Installed /home/steve/mren203-ws/build/motor_control
+[9.366s] running install_data
+[9.908s] Invoked command in '/home/steve/mren203-ws/build/motor_control' returned '0': PYTHONPATH=/home/steve/mren203-ws/build/motor_control/prefix_override:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/motor_control/build --no-deps install_data

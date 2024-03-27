@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating testing.egg-info
+writing testing.egg-info/PKG-INFO
+writing dependency_links to testing.egg-info/dependency_links.txt
+writing entry points to testing.egg-info/entry_points.txt
+writing requirements to testing.egg-info/requires.txt
+writing top-level names to testing.egg-info/top_level.txt
+writing manifest file 'testing.egg-info/SOURCES.txt'
+reading manifest file 'testing.egg-info/SOURCES.txt'
+writing manifest file 'testing.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/dj/MREN203/joint_states/mren203-ws/install/testing/lib/python3.10/site-packages/testing.egg-link (link to .)
+Installing test_joint_state script to /home/dj/MREN203/joint_states/mren203-ws/install/testing/lib/testing
+
+Installed /home/dj/MREN203/joint_states/mren203-ws/build/testing
+running install_data
+creating /home/dj/MREN203/joint_states/mren203-ws/install/testing/share/ament_index
+creating /home/dj/MREN203/joint_states/mren203-ws/install/testing/share/ament_index/resource_index
+creating /home/dj/MREN203/joint_states/mren203-ws/install/testing/share/ament_index/resource_index/packages
+copying resource/testing -> /home/dj/MREN203/joint_states/mren203-ws/install/testing/share/ament_index/resource_index/packages
+copying package.xml -> /home/dj/MREN203/joint_states/mren203-ws/install/testing/share/testing

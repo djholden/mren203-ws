@@ -102,6 +102,9 @@ class MotorHandler():
 
 
     def calculate_odom(self, current_time, seperation=TRACK_LENGTH):
+        self.right_wheel.update_rotational_speed(current_time)
+        self.left_wheel.update_rotational_speed(current_time)
+
         self.t_now = current_time
         dt = (self.t_now - self.t_last) # In Milliseconds
 
@@ -110,9 +113,9 @@ class MotorHandler():
         self.twist["rpy"][2] = (self.right_wheel.speed - self.left_wheel.speed) / seperation
 
         # Calculate the deltas
-        delta_x = (self.twist["xyz"][0] * math.cos(self.twist["rpy"][2])) * (dt*1000)
-        delta_y = (self.twist["xyz"][0] * math.sin(self.twist["rpy"][2])) * (dt*1000)
-        delta_yaw = self.twist["rpy"][2] + (dt*1000)
+        delta_x = (self.twist["xyz"][0] * math.cos(self.twist["rpy"][2])) * (dt/1000)
+        delta_y = (self.twist["xyz"][0] * math.sin(self.twist["rpy"][2])) * (dt/1000)
+        delta_yaw = self.twist["rpy"][2] * (dt/1000)
 
         # Update Pose (Position + Rotation)
         self.pose["xyz"][0] += delta_x

@@ -1,3 +1,2 @@
 [console_scripts]
-
-
+fsm_node = steve_ui.steve_ui_node:main

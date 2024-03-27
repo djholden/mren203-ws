@@ -1,0 +1,51 @@
+[1.100s] Invoking command in '/home/dj/MREN203/main/mren203-ws/build/motor_control': PYTHONPATH=/home/dj/MREN203/main/mren203-ws/build/motor_control/prefix_override:/home/dj/MREN203/main/mren203-ws/install/motor_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/dj/MREN203/main/mren203-ws/build/motor_control/build --no-deps install_data
+[1.380s] running develop
+[1.380s] /home/dj/.local/lib/python3.10/site-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[1.381s] !!
+[1.381s] 
+[1.381s]         ********************************************************************************
+[1.381s]         Please avoid running ``setup.py`` and ``easy_install``.
+[1.381s]         Instead, use pypa/build, pypa/installer or other
+[1.381s]         standards-based tools.
+[1.381s] 
+[1.381s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[1.381s]         ********************************************************************************
+[1.381s] 
+[1.381s] !!
+[1.381s]   easy_install.initialize_options(self)
+[1.409s] /home/dj/.local/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[1.410s] !!
+[1.410s] 
+[1.410s]         ********************************************************************************
+[1.410s]         Please avoid running ``setup.py`` directly.
+[1.410s]         Instead, use pypa/build, pypa/installer or other
+[1.410s]         standards-based tools.
+[1.410s] 
+[1.410s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[1.410s]         ********************************************************************************
+[1.411s] 
+[1.411s] !!
+[1.411s]   self.initialize_options()
+[1.584s] running egg_info
+[1.585s] creating motor_control.egg-info
+[1.599s] writing motor_control.egg-info/PKG-INFO
+[1.599s] writing dependency_links to motor_control.egg-info/dependency_links.txt
+[1.599s] writing entry points to motor_control.egg-info/entry_points.txt
+[1.599s] writing requirements to motor_control.egg-info/requires.txt
+[1.599s] writing top-level names to motor_control.egg-info/top_level.txt
+[1.599s] writing manifest file 'motor_control.egg-info/SOURCES.txt'
+[1.629s] reading manifest file 'motor_control.egg-info/SOURCES.txt'
+[1.630s] writing manifest file 'motor_control.egg-info/SOURCES.txt'
+[1.680s] running build_ext
+[1.681s] Creating /home/dj/MREN203/main/mren203-ws/install/motor_control/lib/python3.10/site-packages/motor-control.egg-link (link to .)
+[1.681s] Installing motor_driver script to /home/dj/MREN203/main/mren203-ws/install/motor_control/lib/motor_control
+[1.681s] Installing tf_node script to /home/dj/MREN203/main/mren203-ws/install/motor_control/lib/motor_control
+[1.681s] 
+[1.681s] Installed /home/dj/MREN203/main/mren203-ws/build/motor_control
+[1.682s] running install_data
+[1.682s] creating /home/dj/MREN203/main/mren203-ws/install/motor_control/share/ament_index
+[1.682s] creating /home/dj/MREN203/main/mren203-ws/install/motor_control/share/ament_index/resource_index
+[1.682s] creating /home/dj/MREN203/main/mren203-ws/install/motor_control/share/ament_index/resource_index/packages
+[1.682s] copying resource/motor_control -> /home/dj/MREN203/main/mren203-ws/install/motor_control/share/ament_index/resource_index/packages
+[1.682s] copying package.xml -> /home/dj/MREN203/main/mren203-ws/install/motor_control/share/motor_control
+[1.776s] Invoked command in '/home/dj/MREN203/main/mren203-ws/build/motor_control' returned '0': PYTHONPATH=/home/dj/MREN203/main/mren203-ws/build/motor_control/prefix_override:/home/dj/MREN203/main/mren203-ws/install/motor_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/dj/MREN203/main/mren203-ws/build/motor_control/build --no-deps install_data

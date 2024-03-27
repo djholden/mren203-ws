@@ -55,22 +55,16 @@ class ControlUI(metaclass=Metaclass_ControlUI):
     """Message class 'ControlUI'."""
 
     __slots__ = [
-        '_cmd_mode',
-        '_auto_mode',
         '_new_poi',
         '_e_stop',
     ]
 
     _fields_and_field_types = {
-        'cmd_mode': 'boolean',
-        'auto_mode': 'boolean',
         'new_poi': 'boolean',
         'e_stop': 'boolean',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
-        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
@@ -79,8 +73,6 @@ class ControlUI(metaclass=Metaclass_ControlUI):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.cmd_mode = kwargs.get('cmd_mode', bool())
-        self.auto_mode = kwargs.get('auto_mode', bool())
         self.new_poi = kwargs.get('new_poi', bool())
         self.e_stop = kwargs.get('e_stop', bool())
 
@@ -113,10 +105,6 @@ class ControlUI(metaclass=Metaclass_ControlUI):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.cmd_mode != other.cmd_mode:
-            return False
-        if self.auto_mode != other.auto_mode:
-            return False
         if self.new_poi != other.new_poi:
             return False
         if self.e_stop != other.e_stop:
@@ -127,32 +115,6 @@ class ControlUI(metaclass=Metaclass_ControlUI):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
-
-    @builtins.property
-    def cmd_mode(self):
-        """Message field 'cmd_mode'."""
-        return self._cmd_mode
-
-    @cmd_mode.setter
-    def cmd_mode(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, bool), \
-                "The 'cmd_mode' field must be of type 'bool'"
-        self._cmd_mode = value
-
-    @builtins.property
-    def auto_mode(self):
-        """Message field 'auto_mode'."""
-        return self._auto_mode
-
-    @auto_mode.setter
-    def auto_mode(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, bool), \
-                "The 'auto_mode' field must be of type 'bool'"
-        self._auto_mode = value
 
     @builtins.property
     def new_poi(self):

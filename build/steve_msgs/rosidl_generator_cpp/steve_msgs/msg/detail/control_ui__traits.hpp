@@ -25,20 +25,6 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: cmd_mode
-  {
-    out << "cmd_mode: ";
-    rosidl_generator_traits::value_to_yaml(msg.cmd_mode, out);
-    out << ", ";
-  }
-
-  // member: auto_mode
-  {
-    out << "auto_mode: ";
-    rosidl_generator_traits::value_to_yaml(msg.auto_mode, out);
-    out << ", ";
-  }
-
   // member: new_poi
   {
     out << "new_poi: ";
@@ -58,26 +44,6 @@ inline void to_block_style_yaml(
   const ControlUI & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: cmd_mode
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "cmd_mode: ";
-    rosidl_generator_traits::value_to_yaml(msg.cmd_mode, out);
-    out << "\n";
-  }
-
-  // member: auto_mode
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "auto_mode: ";
-    rosidl_generator_traits::value_to_yaml(msg.auto_mode, out);
-    out << "\n";
-  }
-
   // member: new_poi
   {
     if (indentation > 0) {

@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
-import rclpy
-from rclpy.node import Node
-from steve_msgs.msg import ControlUI, SetPoints, SensorData
-from SerialHandler import SerialHandler
+
+from scipy.spatial.transform import Rotation
 
 class StateMachine():
     def __init__(self):
@@ -13,21 +11,29 @@ class StateMachine():
         self.new_poi = False
 
         #Setpoint message
-        self.temp_val = 0
-        self.tvok_val = 0
-        self.co2_val = 0
-        self.h2 = 0
+        self.temp_val = 0.0
+        self.tvok_val = 0.0
+        self.co2_val = 0.0
+        self.h2 = 0.0
 
         #Sensordata message
-        self.temp = 0
-        self.h2 = 0
-        self.co2 = 0
-        self.tvok = 0
-        self.ir_left = 0 
-        self.ir_right = 0 
-        self.ir_center = 0 
+        self.temp = 0.0
+        self.h2 = 0.0
+        self.co2 = 0.0
+        self.tvok = 0.0
+        self.ir_left = 0.0
+        self.ir_right = 0.0
+        self.ir_center = 0.0
+
+        # IMU Data
+        self.accel = [0.0, 0.0, 0.0]  # Linear Acceleration
+        self.omega = [0.0, 0.0, 0.0]  # Angular Acceleration
+        self.theta = [0.0, 0.0, 0.0]  # Angular Position (Euler)
+        self.quatr = []         # Angular Position (Quaternion)
 
         #initialize state
+        self.t_last = 0         # In milliseconds
+        self.t_now = 0.00001    # In milliseconds
         self.current_state = 0 
 
     def toggle_value(self, value):
@@ -40,6 +46,20 @@ class StateMachine():
     def ir_sensor_check(self):
         if(self.ir_left < 12 or self.ir_right < 12 or self.ir_center < 12):
             self.e_stop = True  
+
+    
+    def calculate_imu(self):
+        dt = self.t_now - self.t_last   # Ensure that t_now is updated
+
+        # Calculate Euler Orientation
+        self.theta[0] += self.omega[0]*dt/1000
+        self.theta[1] += self.omega[1]*dt/1000
+        self.theta[2] += self.omega[2]*dt/1000
+
+        self.t_last = self.t_now
+
+        self.quatr = Rotation.from_euler('xyz', self.theta, degrees=True).as_quat()
+
 
     
     def check_state(self):

@@ -1,9 +1,12 @@
 import rclpy
 from rclpy.node import Node
 
+from serial.serialutil import SerialException
+
 # Interfaces
 from steve_msgs.msg import SensorData, ControlUI, SetPoints
 from std_msgs.msg import Header, Bool, Int16
+from sensor_msgs.msg import Imu
 
 # Custom Imports
 from .SerialHandler import SerialHandler
@@ -39,52 +42,74 @@ class SteveUI(Node, StateMachine):
             10
         )
 
+        #Imu data publisher
+        self.imu_pub = self.create_publisher(
+            Imu,
+            'imu/data',
+            10
+        )
+
         # Button Subscribers
-        self.e_sub = self.create_subscription(Bool, 'e_stop', self.e_callback, 1)
-        self.auto_sub = self.create_subscription(Bool, 'auto_mode', self.auto_callback, 1)
-        self.poi_sub = self.create_subscription(Bool, 'poi', self.poi_callback, 1)
+        self.e_sub = self.create_subscription(Bool, 'e_stop', self.e_callback, 10)
+        self.auto_sub = self.create_subscription(Bool, 'auto_mode', self.auto_callback, 10)
+        self.poi_sub = self.create_subscription(Bool, 'poi', self.poi_callback, 10)
 
         # Loop Timer
         self.sensor_timer = self.create_timer(1/SENSOR_FREQ, self.main_callback)
 
         self.ser = SerialHandler()
+        self.fsm = StateMachine()
         self.time_ms = 0
 
     def sp_callback(self, sp_msg):
         # Setpoints for Hazards
-        self.temp_val = sp_msg.temp_val
-        self.tvok_val = sp_msg.tvok_val
-        self.co2_val = sp_msg.co2_val
-        self.h2 = sp_msg.h2_val
+        self.fsm.temp_val = sp_msg.temp_val
+        self.fsm.tvok_val = sp_msg.tvok_val
+        self.fsm.co2_val = sp_msg.co2_val
+        self.fsm.h2 = sp_msg.h2_val
 
     def e_callback(self, msg):
         if (bool(msg.data)):
-            self.e_stop = True
+            self.fsm.e_stop = True
 
     def auto_callback(self, msg):
         if (bool(msg.data)):
-            self.auto_mode = self.toggle_value(self.auto_mode)
+            self.fsm.auto_mode = self.toggle_value(self.auto_mode)
 
     def poi_callback(self, msg):
         if (bool(msg.data)):
-            self.new_poi = self.toggle_value(self.new_poi)
+            self.fsm.new_poi = self.toggle_value(self.new_poi)
 
     def main_callback(self):
         # Read from arduino
-        ser_data = self.ser.rx()
+        try:
+            ser_data = self.ser.rx()
 
-        # Set State Machine Values
-        # Hazards
-        self.temp = float(ser_data['temp'])
-        self.h2 = float(ser_data['humidity'])
-        self.co2 = float(ser_data['CO2'])
-        self.tvok = float(ser_data['TVOC'])
+            # Set State Machine Values
+            # Hazards
+            self.fsm.temp = float(ser_data['temp'])
+            self.fsm.h2 = float(ser_data['humidity'])
+            self.fsm.co2 = float(ser_data['CO2'])
+            self.fsm.tvok = float(ser_data['TVOC'])
 
-        # Range Sensors
-        self.ir_left = float(ser_data['left range'])
-        self.ir_right = float(ser_data['right range'])
-        self.ir_center = float(ser_data['front range'])
+            # Range Sensors
+            self.fsm.ir_left = float(ser_data['left range'])
+            self.fsm.ir_right = float(ser_data['right range'])
+            self.fsm.ir_center = float(ser_data['front range'])
 
+            # Accelerometer
+            self.fsm.accel[0] = float(ser_data['ax'])
+            self.fsm.accel[1] = float(ser_data['ay'])
+            self.fsm.accel[2] = float(ser_data['az'])
+            self.fsm.omega[0] = float(ser_data['ox'])
+            self.fsm.omega[1] = float(ser_data['oy'])
+            self.fsm.omega[2] = float(ser_data['oz'])
+        except FileNotFoundError:
+            self.get_logger().debug('No serial port is connected. Try setting a new port or give the port ')
+
+        except ValueError:
+            pass
+        
 
         # Create Sensor Message
         msg = SensorData()
@@ -95,42 +120,56 @@ class SteveUI(Node, StateMachine):
         # msg.header = header
 
         # Hazards
-        msg.temp = self.temp
-        msg.h2 = self.h2
-        msg.co2 = self.co2
-        msg.tvok = self.tvok
-
-        # Accelerometer
-        msg.ax = float(ser_data['ax'])
-        msg.ay = float(ser_data['ay'])
-        msg.az = float(ser_data['az'])
-        msg.ox = float(ser_data['ox'])
-        msg.oy = float(ser_data['oy'])
-        msg.oz = float(ser_data['oz'])
+        msg.temp = self.fsm.temp
+        msg.h2 = self.fsm.h2
+        msg.co2 = self.fsm.co2
+        msg.tvok = self.fsm.tvok
 
         # Range Sensors
-        msg.ir_left = self.ir_left
-        msg.ir_right = self.ir_right
-        msg.ir_center = self.ir_center
+        msg.ir_left = self.fsm.ir_left
+        msg.ir_right = self.fsm.ir_right
+        msg.ir_center = self.fsm.ir_center
 
         # Do some checks
         # Check ir sensor for obstacles
-        self.ir_sensor_check()
+        self.fsm.ir_sensor_check()
 
         # Create UI message
-        ui_msg = ControlUI()
+        # ui_msg = ControlUI()
+        # ui_msg.e_stop = self.fsm.e_stop
+        # ui_msg.auto_mode = self.fsm.auto_mode
 
-        ui_msg.e_stop = self.e_stop
-        ui_msg.auto_mode = self.auto_mode
+        # Buttons
+        e_stop_msg = Bool().data = self.fsm.e_stop
+        auto_msg = Bool().data = self.fsm.auto_mode
+        poi_msg = Bool().data = self.fsm.new_poi
 
         # Run the state machine
-        self.check_state()
+        self.fsm.t_now = self.get_clock().now().nanoseconds*(1e-6)
+        self.fsm.check_state()
+        self.fsm.calculate_imu()
         state_msg = Int16()
-        state_msg.data = self.current_state
+        state_msg.data = self.fsm.current_state
+
+        # Create IMU Message
+        imu_msg = Imu()
+        imu_msg.header.stamp = self.get_clock().now().to_msg()
+        imu_msg.orientation.x = self.fsm.quatr[0]
+        imu_msg.orientation.y = self.fsm.quatr[1]
+        imu_msg.orientation.z = self.fsm.quatr[2]
+        imu_msg.orientation.w = self.fsm.quatr[3]
+        imu_msg.angular_velocity.x = self.fsm.omega[0]
+        imu_msg.angular_velocity.y = self.fsm.omega[1]
+        imu_msg.angular_velocity.z = self.fsm.omega[2]
+        imu_msg.linear_acceleration.x = self.fsm.accel[0]
+        imu_msg.linear_acceleration.y = self.fsm.accel[1]
+        imu_msg.linear_acceleration.z = self.fsm.accel[2]
 
         # Publish
+        self.imu_pub.publish(imu_msg)
         self.state_pub.publish(state_msg)
         self.sensor_pub.publish(msg)
+
 
 
 def main(args=None):

@@ -1,0 +1,50 @@
+[1.201s] Invoking command in '/home/dj/MREN203/main/mren203-ws/build/testing': PYTHONPATH=/home/dj/MREN203/main/mren203-ws/build/testing/prefix_override:/home/dj/MREN203/main/mren203-ws/install/testing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/dj/MREN203/main/mren203-ws/build/testing/build --no-deps install_data
+[1.503s] running develop
+[1.506s] /home/dj/.local/lib/python3.10/site-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[1.506s] !!
+[1.506s] 
+[1.506s]         ********************************************************************************
+[1.506s]         Please avoid running ``setup.py`` and ``easy_install``.
+[1.506s]         Instead, use pypa/build, pypa/installer or other
+[1.507s]         standards-based tools.
+[1.507s] 
+[1.507s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[1.507s]         ********************************************************************************
+[1.507s] 
+[1.507s] !!
+[1.507s]   easy_install.initialize_options(self)
+[1.529s] /home/dj/.local/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[1.529s] !!
+[1.529s] 
+[1.529s]         ********************************************************************************
+[1.529s]         Please avoid running ``setup.py`` directly.
+[1.529s]         Instead, use pypa/build, pypa/installer or other
+[1.529s]         standards-based tools.
+[1.529s] 
+[1.529s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[1.529s]         ********************************************************************************
+[1.530s] 
+[1.530s] !!
+[1.530s]   self.initialize_options()
+[1.704s] running egg_info
+[1.704s] creating testing.egg-info
+[1.718s] writing testing.egg-info/PKG-INFO
+[1.718s] writing dependency_links to testing.egg-info/dependency_links.txt
+[1.719s] writing entry points to testing.egg-info/entry_points.txt
+[1.719s] writing requirements to testing.egg-info/requires.txt
+[1.719s] writing top-level names to testing.egg-info/top_level.txt
+[1.719s] writing manifest file 'testing.egg-info/SOURCES.txt'
+[1.752s] reading manifest file 'testing.egg-info/SOURCES.txt'
+[1.752s] writing manifest file 'testing.egg-info/SOURCES.txt'
+[1.806s] running build_ext
+[1.806s] Creating /home/dj/MREN203/main/mren203-ws/install/testing/lib/python3.10/site-packages/testing.egg-link (link to .)
+[1.806s] Installing test_joint_state script to /home/dj/MREN203/main/mren203-ws/install/testing/lib/testing
+[1.807s] 
+[1.807s] Installed /home/dj/MREN203/main/mren203-ws/build/testing
+[1.807s] running install_data
+[1.807s] creating /home/dj/MREN203/main/mren203-ws/install/testing/share/ament_index
+[1.807s] creating /home/dj/MREN203/main/mren203-ws/install/testing/share/ament_index/resource_index
+[1.807s] creating /home/dj/MREN203/main/mren203-ws/install/testing/share/ament_index/resource_index/packages
+[1.807s] copying resource/testing -> /home/dj/MREN203/main/mren203-ws/install/testing/share/ament_index/resource_index/packages
+[1.807s] copying package.xml -> /home/dj/MREN203/main/mren203-ws/install/testing/share/testing
+[1.844s] Invoked command in '/home/dj/MREN203/main/mren203-ws/build/testing' returned '0': PYTHONPATH=/home/dj/MREN203/main/mren203-ws/build/testing/prefix_override:/home/dj/MREN203/main/mren203-ws/install/testing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/dj/MREN203/main/mren203-ws/build/testing/build --no-deps install_data

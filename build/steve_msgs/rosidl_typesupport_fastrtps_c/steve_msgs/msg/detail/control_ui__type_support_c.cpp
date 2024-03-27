@@ -49,16 +49,6 @@ static bool _ControlUI__cdr_serialize(
     return false;
   }
   const _ControlUI__ros_msg_type * ros_message = static_cast<const _ControlUI__ros_msg_type *>(untyped_ros_message);
-  // Field name: cmd_mode
-  {
-    cdr << (ros_message->cmd_mode ? true : false);
-  }
-
-  // Field name: auto_mode
-  {
-    cdr << (ros_message->auto_mode ? true : false);
-  }
-
   // Field name: new_poi
   {
     cdr << (ros_message->new_poi ? true : false);
@@ -81,20 +71,6 @@ static bool _ControlUI__cdr_deserialize(
     return false;
   }
   _ControlUI__ros_msg_type * ros_message = static_cast<_ControlUI__ros_msg_type *>(untyped_ros_message);
-  // Field name: cmd_mode
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message->cmd_mode = tmp ? true : false;
-  }
-
-  // Field name: auto_mode
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message->auto_mode = tmp ? true : false;
-  }
-
   // Field name: new_poi
   {
     uint8_t tmp;
@@ -126,18 +102,6 @@ size_t get_serialized_size_steve_msgs__msg__ControlUI(
   (void)padding;
   (void)wchar_size;
 
-  // field.name cmd_mode
-  {
-    size_t item_size = sizeof(ros_message->cmd_mode);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name auto_mode
-  {
-    size_t item_size = sizeof(ros_message->auto_mode);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
   // field.name new_poi
   {
     size_t item_size = sizeof(ros_message->new_poi);
@@ -179,20 +143,6 @@ size_t max_serialized_size_steve_msgs__msg__ControlUI(
   full_bounded = true;
   is_plain = true;
 
-  // member: cmd_mode
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // member: auto_mode
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
   // member: new_poi
   {
     size_t array_size = 1;

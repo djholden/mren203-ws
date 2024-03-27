@@ -1,0 +1,52 @@
+[1.381s] Invoking command in '/home/dj/MREN203/main/mren203-ws/build/joystick_ros2': PYTHONPATH=/home/dj/MREN203/main/mren203-ws/build/joystick_ros2/prefix_override:/home/dj/MREN203/main/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/dj/MREN203/main/mren203-ws/build/joystick_ros2/build --no-deps install_data
+[1.684s] running develop
+[1.684s] /home/dj/.local/lib/python3.10/site-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[1.685s] !!
+[1.685s] 
+[1.685s]         ********************************************************************************
+[1.685s]         Please avoid running ``setup.py`` and ``easy_install``.
+[1.685s]         Instead, use pypa/build, pypa/installer or other
+[1.686s]         standards-based tools.
+[1.686s] 
+[1.686s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[1.686s]         ********************************************************************************
+[1.686s] 
+[1.687s] !!
+[1.687s]   easy_install.initialize_options(self)
+[1.710s] /home/dj/.local/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[1.710s] !!
+[1.710s] 
+[1.710s]         ********************************************************************************
+[1.710s]         Please avoid running ``setup.py`` directly.
+[1.710s]         Instead, use pypa/build, pypa/installer or other
+[1.710s]         standards-based tools.
+[1.710s] 
+[1.710s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[1.710s]         ********************************************************************************
+[1.710s] 
+[1.710s] !!
+[1.710s]   self.initialize_options()
+[1.885s] running egg_info
+[1.885s] creating joystick_ros2.egg-info
+[1.899s] writing joystick_ros2.egg-info/PKG-INFO
+[1.900s] writing dependency_links to joystick_ros2.egg-info/dependency_links.txt
+[1.900s] writing entry points to joystick_ros2.egg-info/entry_points.txt
+[1.900s] writing requirements to joystick_ros2.egg-info/requires.txt
+[1.901s] writing top-level names to joystick_ros2.egg-info/top_level.txt
+[1.901s] writing manifest file 'joystick_ros2.egg-info/SOURCES.txt'
+[1.937s] reading manifest file 'joystick_ros2.egg-info/SOURCES.txt'
+[1.938s] writing manifest file 'joystick_ros2.egg-info/SOURCES.txt'
+[2.017s] running build_ext
+[2.017s] Creating /home/dj/MREN203/main/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages/joystick-ros2.egg-link (link to .)
+[2.018s] Installing joystick_ros2 script to /home/dj/MREN203/main/mren203-ws/install/joystick_ros2/lib/joystick_ros2
+[2.018s] 
+[2.018s] Installed /home/dj/MREN203/main/mren203-ws/build/joystick_ros2
+[2.018s] running install_data
+[2.018s] creating /home/dj/MREN203/main/mren203-ws/install/joystick_ros2/share/ament_index
+[2.018s] creating /home/dj/MREN203/main/mren203-ws/install/joystick_ros2/share/ament_index/resource_index
+[2.018s] creating /home/dj/MREN203/main/mren203-ws/install/joystick_ros2/share/ament_index/resource_index/packages
+[2.018s] copying resource/joystick_ros2 -> /home/dj/MREN203/main/mren203-ws/install/joystick_ros2/share/ament_index/resource_index/packages
+[2.019s] creating /home/dj/MREN203/main/mren203-ws/install/joystick_ros2/shared
+[2.019s] creating /home/dj/MREN203/main/mren203-ws/install/joystick_ros2/shared/joystick_ros2
+[2.019s] copying package.xml -> /home/dj/MREN203/main/mren203-ws/install/joystick_ros2/shared/joystick_ros2
+[2.091s] Invoked command in '/home/dj/MREN203/main/mren203-ws/build/joystick_ros2' returned '0': PYTHONPATH=/home/dj/MREN203/main/mren203-ws/build/joystick_ros2/prefix_override:/home/dj/MREN203/main/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/dj/MREN203/main/mren203-ws/build/joystick_ros2/build --no-deps install_data

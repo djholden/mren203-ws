@@ -1,0 +1,42 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/dj/MREN203/main/mren203-ws/build/steve_launch
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/launch/all_launch.launch
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/launch/ekf.launch.py
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/launch/manual_control.launch
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/launch/online_sync_launch.launch.py
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/launch/webcam.launch
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/params/ekf.yaml
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/params/mapper_params_online_sync.yaml
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/ament_index/resource_index/package_run_dependencies/steve_launch
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/ament_index/resource_index/parent_prefix_path/steve_launch
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.sh
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.dsv
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/environment/path.sh
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/environment/path.dsv
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/local_setup.bash
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/local_setup.sh
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/local_setup.zsh
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/local_setup.dsv
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/package.dsv
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/ament_index/resource_index/packages/steve_launch
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig.cmake
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig-version.cmake
+-- Symlinking: /home/dj/MREN203/main/mren203-ws/install/steve_launch/share/steve_launch/package.xml

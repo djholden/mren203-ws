@@ -25,9 +25,10 @@ extern "C"
 typedef struct steve_msgs__msg__ControlUI
 {
   /// Buttons
-  bool cmd_mode;
-  bool auto_mode;
+  /// bool cmd_mode
+  /// bool auto_mode
   bool new_poi;
+  /// This is the actual state of e_stop
   bool e_stop;
 } steve_msgs__msg__ControlUI;
 

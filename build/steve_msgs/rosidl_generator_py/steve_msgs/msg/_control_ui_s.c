@@ -50,24 +50,6 @@ bool steve_msgs__msg__control_ui__convert_from_py(PyObject * _pymsg, void * _ros
     assert(strncmp("steve_msgs.msg._control_ui.ControlUI", full_classname_dest, 36) == 0);
   }
   steve_msgs__msg__ControlUI * ros_message = _ros_message;
-  {  // cmd_mode
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cmd_mode");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->cmd_mode = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // auto_mode
-    PyObject * field = PyObject_GetAttrString(_pymsg, "auto_mode");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->auto_mode = (Py_True == field);
-    Py_DECREF(field);
-  }
   {  // new_poi
     PyObject * field = PyObject_GetAttrString(_pymsg, "new_poi");
     if (!field) {
@@ -108,28 +90,6 @@ PyObject * steve_msgs__msg__control_ui__convert_to_py(void * raw_ros_message)
     }
   }
   steve_msgs__msg__ControlUI * ros_message = (steve_msgs__msg__ControlUI *)raw_ros_message;
-  {  // cmd_mode
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->cmd_mode ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "cmd_mode", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // auto_mode
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->auto_mode ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "auto_mode", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // new_poi
     PyObject * field = NULL;
     field = PyBool_FromLong(ros_message->new_poi ? 1 : 0);

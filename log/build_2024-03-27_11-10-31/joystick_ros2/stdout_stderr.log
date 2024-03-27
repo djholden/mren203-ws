@@ -1,0 +1,43 @@
+running develop
+/home/dj/.local/lib/python3.10/site-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` and ``easy_install``.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://github.com/pypa/setuptools/issues/917 for details.
+        ********************************************************************************
+
+!!
+  easy_install.initialize_options(self)
+/home/dj/.local/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+running egg_info
+writing joystick_ros2.egg-info/PKG-INFO
+writing dependency_links to joystick_ros2.egg-info/dependency_links.txt
+writing entry points to joystick_ros2.egg-info/entry_points.txt
+writing requirements to joystick_ros2.egg-info/requires.txt
+writing top-level names to joystick_ros2.egg-info/top_level.txt
+reading manifest file 'joystick_ros2.egg-info/SOURCES.txt'
+writing manifest file 'joystick_ros2.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/dj/MREN203/main/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages/joystick-ros2.egg-link (link to .)
+Installing joystick_ros2 script to /home/dj/MREN203/main/mren203-ws/install/joystick_ros2/lib/joystick_ros2
+
+Installed /home/dj/MREN203/main/mren203-ws/build/joystick_ros2
+running install_data
+copying resource/joystick_ros2 -> /home/dj/MREN203/main/mren203-ws/install/joystick_ros2/share/ament_index/resource_index/packages
+copying package.xml -> /home/dj/MREN203/main/mren203-ws/install/joystick_ros2/shared/joystick_ros2

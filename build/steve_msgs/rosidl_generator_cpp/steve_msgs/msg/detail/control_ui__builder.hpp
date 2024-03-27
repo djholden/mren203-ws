@@ -40,45 +40,13 @@ private:
 class Init_ControlUI_new_poi
 {
 public:
-  explicit Init_ControlUI_new_poi(::steve_msgs::msg::ControlUI & msg)
-  : msg_(msg)
+  Init_ControlUI_new_poi()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
   Init_ControlUI_e_stop new_poi(::steve_msgs::msg::ControlUI::_new_poi_type arg)
   {
     msg_.new_poi = std::move(arg);
     return Init_ControlUI_e_stop(msg_);
-  }
-
-private:
-  ::steve_msgs::msg::ControlUI msg_;
-};
-
-class Init_ControlUI_auto_mode
-{
-public:
-  explicit Init_ControlUI_auto_mode(::steve_msgs::msg::ControlUI & msg)
-  : msg_(msg)
-  {}
-  Init_ControlUI_new_poi auto_mode(::steve_msgs::msg::ControlUI::_auto_mode_type arg)
-  {
-    msg_.auto_mode = std::move(arg);
-    return Init_ControlUI_new_poi(msg_);
-  }
-
-private:
-  ::steve_msgs::msg::ControlUI msg_;
-};
-
-class Init_ControlUI_cmd_mode
-{
-public:
-  Init_ControlUI_cmd_mode()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  Init_ControlUI_auto_mode cmd_mode(::steve_msgs::msg::ControlUI::_cmd_mode_type arg)
-  {
-    msg_.cmd_mode = std::move(arg);
-    return Init_ControlUI_auto_mode(msg_);
   }
 
 private:
@@ -96,7 +64,7 @@ template<>
 inline
 auto build<::steve_msgs::msg::ControlUI>()
 {
-  return steve_msgs::msg::builder::Init_ControlUI_cmd_mode();
+  return steve_msgs::msg::builder::Init_ControlUI_new_poi();
 }
 
 }  // namespace steve_msgs

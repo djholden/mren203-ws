@@ -1,11 +1,31 @@
 <?xml version="1.0"?>
 <launch>
+
+    <!-- Joystick Controller -->
     <node name="joystick" pkg="joystick_ros2" exec="joystick_ros2"></node>
+
+    <!-- Motors -->
     <node name="motors" pkg="motor_control" exec="motor_driver">
         <param name="Kp" value="0.02" />
         <param name="Ki" value="0.0094"/>
     </node>
+
+    <!-- State Machine -->
+    <node name="steve_ui" pkg="steve_ui" exec="fsm_node"></node>
+
+    <!-- Foxglove Connection -->
     <node name="foxglove" pkg="foxglove_bridge" exec="foxglove_bridge"></node>
+
+    <!-- LiDAR Package -->
     <include file="$(find-pkg-share rplidar_ros)/launch/rplidar.launch.py"/>
-    <!-- <include file="$(find-pkg-share my_bot)/launch/rsp.launch.py"/> -->
+
+    <!-- Robot Description  -->
+    <include file="$(find-pkg-share my_bot)/launch/rsp.launch.py"/>
+
+    <!-- SLAM Toolbox -->
+    <include file="$(find-pkg-share steve_launch)/launch/online_sync_launch.launch.py"/>
+
+    <!-- Sensor Fusion Package -->
+    <include file="$(find-pkg-share steve_launch)/launch/ekf.launch.py"/>
+
 </launch>

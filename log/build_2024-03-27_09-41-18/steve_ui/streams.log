@@ -1,0 +1,50 @@
+[0.957s] Invoking command in '/home/dj/MREN203/main/mren203-ws/build/steve_ui': AMENT_PREFIX_PATH=/home/dj/MREN203/main/mren203-ws/install/steve_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dj/MREN203/main/mren203-ws/install/steve_msgs LD_LIBRARY_PATH=/home/dj/MREN203/main/mren203-ws/install/steve_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dj/MREN203/main/mren203-ws/build/steve_ui/prefix_override:/home/dj/MREN203/main/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/dj/MREN203/main/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/dj/MREN203/main/mren203-ws/build/steve_ui/build --no-deps install_data
+[1.223s] running develop
+[1.223s] /home/dj/.local/lib/python3.10/site-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[1.223s] !!
+[1.223s] 
+[1.223s]         ********************************************************************************
+[1.223s]         Please avoid running ``setup.py`` and ``easy_install``.
+[1.223s]         Instead, use pypa/build, pypa/installer or other
+[1.224s]         standards-based tools.
+[1.224s] 
+[1.224s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[1.224s]         ********************************************************************************
+[1.224s] 
+[1.224s] !!
+[1.224s]   easy_install.initialize_options(self)
+[1.253s] /home/dj/.local/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[1.253s] !!
+[1.253s] 
+[1.253s]         ********************************************************************************
+[1.253s]         Please avoid running ``setup.py`` directly.
+[1.253s]         Instead, use pypa/build, pypa/installer or other
+[1.253s]         standards-based tools.
+[1.254s] 
+[1.254s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[1.254s]         ********************************************************************************
+[1.254s] 
+[1.254s] !!
+[1.254s]   self.initialize_options()
+[1.422s] running egg_info
+[1.422s] creating steve_ui.egg-info
+[1.436s] writing steve_ui.egg-info/PKG-INFO
+[1.437s] writing dependency_links to steve_ui.egg-info/dependency_links.txt
+[1.437s] writing entry points to steve_ui.egg-info/entry_points.txt
+[1.437s] writing requirements to steve_ui.egg-info/requires.txt
+[1.438s] writing top-level names to steve_ui.egg-info/top_level.txt
+[1.438s] writing manifest file 'steve_ui.egg-info/SOURCES.txt'
+[1.467s] reading manifest file 'steve_ui.egg-info/SOURCES.txt'
+[1.467s] writing manifest file 'steve_ui.egg-info/SOURCES.txt'
+[1.519s] running build_ext
+[1.519s] Creating /home/dj/MREN203/main/mren203-ws/install/steve_ui/lib/python3.10/site-packages/steve-ui.egg-link (link to .)
+[1.520s] Installing fsm_node script to /home/dj/MREN203/main/mren203-ws/install/steve_ui/lib/steve_ui
+[1.520s] 
+[1.520s] Installed /home/dj/MREN203/main/mren203-ws/build/steve_ui
+[1.520s] running install_data
+[1.520s] creating /home/dj/MREN203/main/mren203-ws/install/steve_ui/share/ament_index
+[1.520s] creating /home/dj/MREN203/main/mren203-ws/install/steve_ui/share/ament_index/resource_index
+[1.520s] creating /home/dj/MREN203/main/mren203-ws/install/steve_ui/share/ament_index/resource_index/packages
+[1.520s] copying resource/steve_ui -> /home/dj/MREN203/main/mren203-ws/install/steve_ui/share/ament_index/resource_index/packages
+[1.521s] copying package.xml -> /home/dj/MREN203/main/mren203-ws/install/steve_ui/share/steve_ui
+[1.615s] Invoked command in '/home/dj/MREN203/main/mren203-ws/build/steve_ui' returned '0': AMENT_PREFIX_PATH=/home/dj/MREN203/main/mren203-ws/install/steve_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dj/MREN203/main/mren203-ws/install/steve_msgs LD_LIBRARY_PATH=/home/dj/MREN203/main/mren203-ws/install/steve_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dj/MREN203/main/mren203-ws/build/steve_ui/prefix_override:/home/dj/MREN203/main/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/dj/MREN203/main/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/dj/MREN203/main/mren203-ws/build/steve_ui/build --no-deps install_data

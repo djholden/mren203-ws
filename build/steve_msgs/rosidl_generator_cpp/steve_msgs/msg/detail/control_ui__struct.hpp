@@ -38,8 +38,6 @@ struct ControlUI_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->cmd_mode = false;
-      this->auto_mode = false;
       this->new_poi = false;
       this->e_stop = false;
     }
@@ -51,20 +49,12 @@ struct ControlUI_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->cmd_mode = false;
-      this->auto_mode = false;
       this->new_poi = false;
       this->e_stop = false;
     }
   }
 
   // field types and members
-  using _cmd_mode_type =
-    bool;
-  _cmd_mode_type cmd_mode;
-  using _auto_mode_type =
-    bool;
-  _auto_mode_type auto_mode;
   using _new_poi_type =
     bool;
   _new_poi_type new_poi;
@@ -73,18 +63,6 @@ struct ControlUI_
   _e_stop_type e_stop;
 
   // setters for named parameter idiom
-  Type & set__cmd_mode(
-    const bool & _arg)
-  {
-    this->cmd_mode = _arg;
-    return *this;
-  }
-  Type & set__auto_mode(
-    const bool & _arg)
-  {
-    this->auto_mode = _arg;
-    return *this;
-  }
   Type & set__new_poi(
     const bool & _arg)
   {
@@ -140,12 +118,6 @@ struct ControlUI_
   // comparison operators
   bool operator==(const ControlUI_ & other) const
   {
-    if (this->cmd_mode != other.cmd_mode) {
-      return false;
-    }
-    if (this->auto_mode != other.auto_mode) {
-      return false;
-    }
     if (this->new_poi != other.new_poi) {
       return false;
     }

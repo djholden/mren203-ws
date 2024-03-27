@@ -10,13 +10,13 @@ module steve_msgs {
       "Header header")
     struct ControlUI {
       @verbatim (language="comment", text=
-        "Buttons")
-      boolean cmd_mode;
-
-      boolean auto_mode;
-
+        "Buttons" "\n"
+        "bool cmd_mode" "\n"
+        "bool auto_mode")
       boolean new_poi;
 
+      @verbatim (language="comment", text=
+        "This is the actual state of e_stop")
       boolean e_stop;
     };
   };

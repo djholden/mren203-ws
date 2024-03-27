@@ -32,10 +32,6 @@ cdr_serialize(
   const steve_msgs::msg::ControlUI & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: cmd_mode
-  cdr << (ros_message.cmd_mode ? true : false);
-  // Member: auto_mode
-  cdr << (ros_message.auto_mode ? true : false);
   // Member: new_poi
   cdr << (ros_message.new_poi ? true : false);
   // Member: e_stop
@@ -49,20 +45,6 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   steve_msgs::msg::ControlUI & ros_message)
 {
-  // Member: cmd_mode
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.cmd_mode = tmp ? true : false;
-  }
-
-  // Member: auto_mode
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.auto_mode = tmp ? true : false;
-  }
-
   // Member: new_poi
   {
     uint8_t tmp;
@@ -93,18 +75,6 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: cmd_mode
-  {
-    size_t item_size = sizeof(ros_message.cmd_mode);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: auto_mode
-  {
-    size_t item_size = sizeof(ros_message.auto_mode);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
   // Member: new_poi
   {
     size_t item_size = sizeof(ros_message.new_poi);
@@ -140,22 +110,6 @@ max_serialized_size_ControlUI(
   full_bounded = true;
   is_plain = true;
 
-
-  // Member: cmd_mode
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: auto_mode
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
 
   // Member: new_poi
   {

@@ -1,1 +1,1 @@
-/home/steve/mren203-ws/build/rplidar_ros/ament_cmake_core/rplidar_rosConfig.cmake
+/home/dj/MREN203/main/mren203-ws/build/rplidar_ros/ament_cmake_core/rplidar_rosConfig.cmake

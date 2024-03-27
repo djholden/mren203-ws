@@ -10,6 +10,7 @@ from tf2_ros import TransformBroadcaster, StaticTransformBroadcaster
 from scipy.spatial.transform import Rotation
 
 # Message Imports
+from std_msgs.msg import Bool
 from sensor_msgs.msg import Joy, JointState
 from geometry_msgs.msg import TwistStamped, TwistWithCovariance, PoseWithCovariance, Pose, Quaternion, Twist, TransformStamped
 from nav_msgs.msg import Odometry
@@ -17,29 +18,7 @@ from steve_msgs.msg import ControlUI, SetPoints, MotorData
 
 MAX_VOLT_SPEED = 150    # PWM Duty Cycle
 MAX_PID_SPEED = 0.50    # Meters per second
-
-# def quaternion_from_euler(ai, aj, ak):
-#     ai /= 2.0
-#     aj /= 2.0
-#     ak /= 2.0
-#     ci = math.cos(ai)
-#     si = math.sin(ai)
-#     cj = math.cos(aj)
-#     sj = math.sin(aj)
-#     ck = math.cos(ak)
-#     sk = math.sin(ak)
-#     cc = ci*ck
-#     cs = ci*sk
-#     sc = si*ck
-#     ss = si*sk
-
-#     q = np.empty((4, ))
-#     q[0] = cj*sc - sj*cs
-#     q[1] = cj*ss + sj*cc
-#     q[2] = cj*cs - sj*sc
-#     q[3] = cj*cc + sj*ss
-
-#     return q
+CALLBACK_FREQ = 120     # Hz
 
 
 class MotorSubscriber(Node):
@@ -52,14 +31,6 @@ class MotorSubscriber(Node):
             Joy,
             'joy',
             self.callaback,
-            10)
-        self.subscription  # prevent unused variable warning
-
-        # UI Subscriber
-        self.ui_sub = self.create_subscription(
-            ControlUI,
-            'ui',
-            self.ui_callback,
             10
         )
 
@@ -88,12 +59,14 @@ class MotorSubscriber(Node):
         # TF Publisher
         self.tf_broadcaster = TransformBroadcaster(self)
         self.tf_static_broadcaster = StaticTransformBroadcaster(self)
-        
-        # Velocity Publisher
-        # self.publisher_ = self.create_publisher(TwistStamped, 'motors/vel', 10)
 
         # Odometry Publisher
-        self.odom_pub_ = self.create_publisher(Odometry, '/odom', 10)
+        self.odom_pub_ = self.create_publisher(Odometry, '/wheel/odometry', 10)
+
+        # Button Subscribers
+        self.e_sub = self.create_subscription(Bool, 'e_stop', self.e_callback, 10)
+        self.auto_sub = self.create_subscription(Bool, 'auto_mode', self.auto_callback, 10)
+        self.poi_sub = self.create_subscription(Bool, 'poi', self.poi_callback, 10)
 
         # Create Parameters
         self.declare_parameter("Kp", 10.0)
@@ -126,12 +99,20 @@ class MotorSubscriber(Node):
         self.left_cmd = 0
         self.right_cmd = 0
         self.isStopped = False
+        self.isAuto = False
 
         self.kp_param = 0
         self.ki_param = 0
         self.pwm = 100
 
         self.motors = MotorHandler()
+
+    def toggle_value(self, value):
+        if value:
+            value = False
+        else:
+            value = True
+        return value
 
     def switch_cmd_mode(self):
         if self.isVoltageMode:
@@ -154,63 +135,44 @@ class MotorSubscriber(Node):
         self.ki = sp_msg.ki_val
         self.pwm = sp_msg.pwm_val
 
-
-    def ui_callback(self, ui_msg):
-        # switch
-        sw_cmd_mode = ui_msg.cmd_mode
-        sw_auto_mode = ui_msg.auto_mode
-        new_poi = ui_msg.new_poi
-        e_stop = ui_msg.e_stop
-
-        # Commands
-        fwd_cmd = ui_msg.fwd_cmd
-        yaw_cmd = ui_msg.ang_cmd
-
-        # Handle E Stop First!!!
-        if e_stop or self.isStopped:
+    def e_callback(self, msg):
+        if (bool(msg.data)):
             self.isStopped = True
-            self.motors.voltage_mode(0, 0, self.time_ms)
+        else:
+            self.isStopped = False
 
-        # Handle Switching CMD Modes
-        if sw_cmd_mode:
-            self.switch_cmd_mode()
+    def auto_callback(self, msg):
+        if (bool(msg.data)):
+            self.isAuto = True
+        else:
+            self.isAuto = False
 
-        # Move with UI
-        if fwd_cmd > 0:
-            self.left_cmd += 0.1
-            self.right_cmd += 0.1
-        elif fwd_cmd < 0:
-            self.left_cmd -= 0.1
-            self.right_cmd -= 0.1
-        
-        if yaw_cmd > 0: 
-            self.left_cmd += 0.1
-            self.right_cmd -= 0.1
-        elif yaw_cmd < 0:
-            self.left_cmd -= 0.1
-            self.right_cmd += 0.1
-
+    def poi_callback(self, msg):
+        pass
 
 
     def callaback_loop(self):
+        """
+                MAIN CALLBACK LOOP ()
+        """
         self.kp_param = self.get_parameter('Kp').get_parameter_value().double_value
         self.ki_param = self.get_parameter('Ki').get_parameter_value().double_value
         
         # Update the PID clock
         self.time_ms = self.get_clock().now().nanoseconds*(1e-6)
-        if not self.isVoltageMode:
-            # self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms)
+        if self.isStopped:
+            self.motors.PID_mode(0.0, 0.0, self.time_ms, kp=self.kp_param, ki=self.ki_param, pwm=self.pwm)
+        elif not self.isVoltageMode:
             self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms, kp=self.kp_param, ki=self.ki_param, pwm=self.pwm)
-        # self.motors.PID_mode(0, 0, self.time_ms)
-        # print("LW: " + str(self.left_cmd) + " | RW:" + str(self.right_cmd) + "\n")
 
+        
         pose, twist = self.motors.calculate_odom(self.time_ms)
 
         # Create odom message with proper frame ids
         odom_msg = Odometry()
         odom_msg.header.stamp = self.get_clock().now().to_msg()
         odom_msg.header.frame_id = "odom"
-        odom_msg.child_frame_id = "map"
+        odom_msg.child_frame_id = "base_link"
 
         # Convert from Euler to Quanternion (Pose)
         pose_rot = Rotation.from_euler('xyz', pose["rpy"]).as_quat()
@@ -251,13 +213,21 @@ class MotorSubscriber(Node):
         md_msg.fwd_vel = twist["xyz"][0]
         md_msg.ang_vel = twist["rpy"][2]
 
+
         # Joint State Message
         # js_msg = JointState()
         # js_msg.header.stamp = self.time_ms
         # js_msg.name = ["left_wheel_joint", "right_wheel_joint"]
         # js_msg.velocity = [self.motors.left_wheel.speed, self.motors.right_wheel.speed]
 
-        # Do transform from odom to map
+        
+        # Publish messages
+        # self.js_pub_.publish(js_msg)
+        # self.tf_broadcaster.sendTransform(self.base_link_to_odom(pose, pose_rot))
+        self.md_pub_.publish(md_msg)
+        self.odom_pub_.publish(odom_msg)
+
+    def base_link_to_odom(self, pose, pose_rot):
         t = TransformStamped()
 
         t.header.stamp = self.get_clock().now().to_msg()
@@ -273,11 +243,7 @@ class MotorSubscriber(Node):
         t.transform.rotation.z = pose_rot[2]
         t.transform.rotation.w = pose_rot[3]
 
-        # Publish messages
-        # self.js_pub_.publish(js_msg)
-        self.tf_broadcaster.sendTransform(t)
-        self.md_pub_.publish(md_msg)
-        # self.odom_pub_.publish(odom_msg)
+        return t
 
 
     def callaback(self, msg):
@@ -304,6 +270,7 @@ class MotorSubscriber(Node):
             # Joystick Controller
             left_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) - left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)
             right_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) + left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)
+            if self.isStopped: return
             self.motors.voltage_mode(left_wheel, right_wheel, self.time_ms)
         else:
             self.left_cmd = left_y_axis*(MAX_PID_SPEED*sqrt(2)/2) - left_x_axis*(MAX_PID_SPEED*sqrt(2)/2)

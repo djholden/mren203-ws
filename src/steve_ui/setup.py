@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'fsm_node = steve_ui.steve_ui_node:main'
         ],
     },
 )

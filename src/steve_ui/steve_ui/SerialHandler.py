@@ -32,10 +32,14 @@ class SerialHandler(Serial):
         
         try:
             while True:
-                print("New Message")
-                forward = int(input("Forward: "))
+                # print("New Message")
+                # forward = int(input("Forward: "))
                 
-                self.tx(fw_cmd=forward)
+                # self.tx(fw_cmd=forward)
+
+                serial_message = self.rx()
+                print(serial_message)
+                print(serial_message['temp'])
 
 
                 # print("sending message...")
@@ -86,6 +90,12 @@ class SerialHandler(Serial):
 
         return msg.rstrip(self.delim)
 
+    def rx(self):
+        while self.in_waiting <= 0:
+            time.sleep(0.01)
+        resp = self.readline().decode('utf-8').rstrip()
+        rx_vals = self.rx_parser(resp)
+        return rx_vals
 
     def rx_parser(self, msg):
         """
@@ -95,17 +105,36 @@ class SerialHandler(Serial):
 
         try:
             ret_msg = {
-                'host': parsed[0],
-                'mode': parsed[1],
-                'control': parsed[2],
-                'fw_cmd': parsed[3],
-                'yaw_cmd': parsed[4]
+                'temp': parsed[0],
+                'humidity': parsed[1],
+                'CO2': parsed[2],
+                'TVOC': parsed[3],
+                'front range': parsed[4],
+                'right range': parsed[5],
+                'left range': parsed[6],
+                'ax': float(parsed[7])*9.81,
+                'ay': float(parsed[8])*9.81,
+                'az': float(parsed[9])*9.81,
+                'ox': float(parsed[10]),
+                'oy': float(parsed[11]),
+                'oz': float(parsed[12])
             }
         except IndexError:
-            ret_msg = []
-            for item in parsed:
-                ret_msg.append(item)
-
+            ret_msg = {
+                'temp': -1,
+                'humidity': -1,
+                'CO2': -1,
+                'TVOC': -1,
+                'front range': -1,
+                'right range': -1,
+                'left range': -1,
+                'ax': -9999,
+                'ay': -9999,
+                'az': -9999,
+                'ox': -9999,
+                'oy': -9999,
+                'oz': -9999
+            }
         return ret_msg
 
 

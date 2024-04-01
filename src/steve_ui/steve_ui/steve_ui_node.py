@@ -63,7 +63,7 @@ class SteveUI(Node, StateMachine):
             10
         )
 
-        # E_Stop Publisher
+        # Auto Mode Publisher
         self.am_pub_ = self.create_publisher(
             Int16,
             "is_auto",
@@ -174,6 +174,8 @@ class SteveUI(Node, StateMachine):
         state_msg.data = self.fsm.current_state
         am_msg = Int16()
         am_msg.data = int(self.fsm.auto_mode)
+        e_msg = Bool()
+        e_msg.data = self.fsm.e_stop
 
         # Create IMU Message
         imu_msg = Imu()
@@ -195,7 +197,7 @@ class SteveUI(Node, StateMachine):
         clk_msg.clock.nanosec = self.get_clock().now().to_msg().nanosec
 
         # Publish
-        # self.e_pub_.publish(e_stop_msg)
+        self.e_pub_.publish(e_msg)
         self.am_pub_.publish(am_msg)
         self.clk_pub.publish(clk_msg)
         self.imu_pub.publish(imu_msg)

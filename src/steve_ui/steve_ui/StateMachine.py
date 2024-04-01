@@ -94,15 +94,6 @@ class StateMachine():
     def state_0(self):
         # Do activation checks
 
-        # Check for Movement
-        if self.accel[0] > 0.1 or self.accel[0] < -0.1:
-            print("FSM: Acceleration Fault\n")
-            return
-        
-        if self.accel[1] > 0.01 or self.accel[1] < -0.01:
-            print("FSM: Acceleration Fault\n")
-            return
-
         # Check for Sensor Data
         if self.temp > 0:
             print("FSM: Sensor Fault\n")

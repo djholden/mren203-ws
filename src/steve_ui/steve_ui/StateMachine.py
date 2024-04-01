@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from scipy.spatial.transform import Rotation
+import time
 
 class StateMachine():
     def __init__(self):
@@ -62,6 +63,32 @@ class StateMachine():
 
         self.quatr = Rotation.from_euler('xyz', self.theta, degrees=True).as_quat()
 
+    
+    def safety_checks(self):
+        # Check for Sensor Data
+        if self.temp > 0:
+            print("FSM: Sensor Fault\n")
+            return False
+        
+        if self.h2 > 0:
+            print("FSM: Sensor Fault\n")
+            return False
+        
+        if self.co2 > 0:
+            print("FSM: Sensor Fault\n")
+            return False
+        
+        if self.tvok > 0:
+            print("FSM: Sensor Fault\n")
+            return False
+
+        # Check for E-Stop
+        self.ir_sensor_check()
+        if self.e_stop:
+            print("FSM: E-Stop Fault\n")
+            return False
+        
+        return True
 
     
     def check_state(self):
@@ -95,28 +122,7 @@ class StateMachine():
 
     def state_0(self):
         # Do activation checks
-
-        # Check for Sensor Data
-        if self.temp > 0:
-            print("FSM: Sensor Fault\n")
-            return
-        
-        if self.h2 > 0:
-            print("FSM: Sensor Fault\n")
-            return
-        
-        if self.co2 > 0:
-            print("FSM: Sensor Fault\n")
-            return
-        
-        if self.tvok > 0:
-            print("FSM: Sensor Fault\n")
-            return
-
-        # Check for E-Stop
-        self.ir_sensor_check()
-        if self.e_stop:
-            print("FSM: E-Stop Fault\n")
+        if self.safety_checks == False:
             return
 
         # If all pass
@@ -135,13 +141,11 @@ class StateMachine():
 
     def state_2(self):
         # Do the safety checks before entering autonomous mode
-
-        # Check E-Stop
-        if(self.e_stop == True):
-            self.current_state = 1
+        if self.safety_checks == False:
             return
 
         self.current_state = 30
+        
 
     def state_30(self):
         # Autonomous Mode (Explore)

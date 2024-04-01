@@ -63,6 +63,13 @@ class SteveUI(Node, StateMachine):
             10
         )
 
+        # E_Stop Publisher
+        self.am_pub_ = self.create_publisher(
+            Bool,
+            "is_auto",
+            10
+        )
+
         # Button Subscribers
         self.e_sub = self.create_subscription(Bool, 'e_stop', self.e_callback, 10)
         self.auto_sub = self.create_subscription(Bool, 'auto_mode', self.auto_callback, 10)
@@ -165,6 +172,8 @@ class SteveUI(Node, StateMachine):
         self.fsm.calculate_imu()
         state_msg = Int16()
         state_msg.data = self.fsm.current_state
+        am_msg = Bool()
+        am_msg.data = self.fsm.auto_mode
 
         # Create IMU Message
         imu_msg = Imu()
@@ -187,6 +196,7 @@ class SteveUI(Node, StateMachine):
 
         # Publish
         # self.e_pub_.publish(e_stop_msg)
+        self.am_pub_.publish(am_msg)
         self.clk_pub.publish(clk_msg)
         self.imu_pub.publish(imu_msg)
         self.state_pub.publish(state_msg)

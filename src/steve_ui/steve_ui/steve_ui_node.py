@@ -87,7 +87,7 @@ class SteveUI(Node, StateMachine):
         self.fsm.temp_val = sp_msg.temp_val
         self.fsm.tvok_val = sp_msg.tvok_val
         self.fsm.co2_val = sp_msg.co2_val
-        self.fsm.h2 = sp_msg.h2_val
+        self.fsm.h2_val = sp_msg.h2_val
 
     def e_callback(self, msg):
         if (bool(msg.data)):

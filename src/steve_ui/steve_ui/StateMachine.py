@@ -12,10 +12,10 @@ class StateMachine():
         self.new_poi = False
 
         #Setpoint message
-        self.temp_val = 0.0
-        self.tvok_val = 0.0
-        self.co2_val = 0.0
-        self.h2 = 0.0
+        self.temp_val = 50.0
+        self.tvok_val = 1000.0
+        self.co2_val = 1200.0
+        self.h2_val = 60.0
 
         #Sensordata message
         self.temp = 0.0
@@ -145,7 +145,7 @@ class StateMachine():
             return
 
         self.current_state = 30
-        
+
 
     def state_30(self):
         # Autonomous Mode (Explore)

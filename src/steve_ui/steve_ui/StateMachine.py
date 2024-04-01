@@ -45,7 +45,7 @@ class StateMachine():
     
     def ir_sensor_check(self):
         if(self.ir_left < 12 or self.ir_right < 12 or self.ir_center < 12):
-            self.e_stop = True  
+            self.e_stop = True 
 
     
     def calculate_imu(self):
@@ -115,6 +115,7 @@ class StateMachine():
             return
 
         # Check for E-Stop
+        self.ir_sensor_check()
         if self.e_stop:
             return
 

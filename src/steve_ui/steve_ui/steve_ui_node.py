@@ -155,8 +155,8 @@ class SteveUI(Node, StateMachine):
         # ui_msg.auto_mode = self.fsm.auto_mode
 
         # Buttons
-        e_stop_msg = Bool().data 
-        e_stop_msg = self.fsm.e_stop
+        e_stop_msg = Bool()
+        e_stop_msg.data = self.fsm.e_stop
         # auto_msg = Bool().data = self.fsm.auto_mode
         # poi_msg = Bool().data = self.fsm.new_poi
 

@@ -65,7 +65,7 @@ class SteveUI(Node, StateMachine):
 
         # E_Stop Publisher
         self.am_pub_ = self.create_publisher(
-            Bool,
+            Int16,
             "is_auto",
             10
         )
@@ -172,8 +172,8 @@ class SteveUI(Node, StateMachine):
         self.fsm.calculate_imu()
         state_msg = Int16()
         state_msg.data = self.fsm.current_state
-        am_msg = Bool()
-        am_msg.data = self.fsm.auto_mode
+        am_msg = Int16()
+        am_msg.data = int(self.fsm.auto_mode)
 
         # Create IMU Message
         imu_msg = Imu()

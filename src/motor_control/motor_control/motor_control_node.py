@@ -177,7 +177,7 @@ class MotorSubscriber(Node):
         # Update the PID clock
         self.time_ms = self.get_clock().now().nanoseconds*(1e-6)
         if self.isStopped:
-            self.motors.PID_mode(0.0, 0.0, self.time_ms, kp=self.kp_param, ki=self.ki_param, pwm=self.pwm)
+            self.motors.voltage_mode(0, 0, self.time_ms)
         elif not self.isVoltageMode:
             self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms, kp=self.kp_param, ki=self.ki_param, pwm=self.pwm)
 

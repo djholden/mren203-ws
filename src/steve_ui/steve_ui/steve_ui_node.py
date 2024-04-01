@@ -57,6 +57,13 @@ class SteveUI(Node, StateMachine):
             10
         )
 
+        # E_Stop Publisher
+        self.e_pub_ = self.create_publisher(
+            Bool,
+            "e_stop",
+            10
+        )
+
         # Button Subscribers
         self.e_sub = self.create_subscription(Bool, 'e_stop', self.e_callback, 10)
         self.auto_sub = self.create_subscription(Bool, 'auto_mode', self.auto_callback, 10)
@@ -179,6 +186,7 @@ class SteveUI(Node, StateMachine):
         clk_msg.clock.nanosec = self.get_clock().now().to_msg().nanosec
 
         # Publish
+        self.e_pub_.publish(e_stop_msg)
         self.clk_pub.publish(clk_msg)
         self.imu_pub.publish(imu_msg)
         self.state_pub.publish(state_msg)

@@ -95,10 +95,26 @@ class StateMachine():
         # Do activation checks
 
         # Check for Motor Data
+        for i in self.accel:
+            if i > 0.01 or i < -0.01:
+                return
 
         # Check for Sensor Data
+        if self.temp == 0:
+            return
+        
+        if self.h2 == 0:
+            return
+        
+        if self.co2 == 0:
+            return
+        
+        if self.tvok == 0:
+            return
 
         # Check for E-Stop
+        if self.e_stop:
+            return
 
         # If all pass
         self.current_state = 1
@@ -106,6 +122,7 @@ class StateMachine():
                 
     def state_1(self):
         # Manual Control Mode
+        #self.e_stop = False
 
         # Send to next state for auto activation
         if(self.auto_mode == True):

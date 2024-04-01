@@ -95,11 +95,11 @@ class SteveUI(Node, StateMachine):
 
     def auto_callback(self, msg):
         if (bool(msg.data)):
-            self.fsm.auto_mode = self.toggle_value(self.auto_mode)
+            self.fsm.auto_mode = self.fsm.toggle_value(self.fsm.auto_mode)
 
     def poi_callback(self, msg):
         if (bool(msg.data)):
-            self.fsm.new_poi = self.toggle_value(self.new_poi)
+            self.fsm.new_poi = self.fsm.toggle_value(self.fsm.new_poi)
 
     def main_callback(self):
         # Read from arduino

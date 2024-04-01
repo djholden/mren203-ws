@@ -150,9 +150,15 @@ class StateMachine():
     def state_30(self):
         # Autonomous Mode (Explore)
 
+        if self.safety_checks == False:
+            self.current_state = 1
+            self.auto_mode = False
+            return
+
         # Check E-Stop
         if(self.e_stop == True):
             self.current_state = 1
+            self.auto_mode = False
             return
 
         # Check for stopped request

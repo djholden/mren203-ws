@@ -155,9 +155,10 @@ class SteveUI(Node, StateMachine):
         # ui_msg.auto_mode = self.fsm.auto_mode
 
         # Buttons
-        e_stop_msg = Bool().data = self.fsm.e_stop
-        auto_msg = Bool().data = self.fsm.auto_mode
-        poi_msg = Bool().data = self.fsm.new_poi
+        e_stop_msg = Bool().data 
+        e_stop_msg = self.fsm.e_stop
+        # auto_msg = Bool().data = self.fsm.auto_mode
+        # poi_msg = Bool().data = self.fsm.new_poi
 
         # Run the state machine
         self.fsm.t_now = self.get_clock().now().nanoseconds*(1e-6)

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- cReAtEs A lAuNcH fIlE -->
+<launch>
+
+    <!-- Joystick Controller -->
+    <node name="joystick" pkg="joystick_ros2" exec="joystick_ros2"></node>
+
+    <!-- Motors -->
+    <node name="motors" pkg="motor_control" exec="motor_driver">
+        <param name="Kp" value="0.02" />
+        <param name="Ki" value="0.0094"/>
+    </node>
+
+    <!-- State Machine -->
+    <node name="steve_ui" pkg="steve_ui" exec="fsm_node"></node>
+
+    <!-- Foxglove Connection -->
+    <node name="foxglove" pkg="foxglove_bridge" exec="foxglove_bridge"></node>
+    
+</launch>

@@ -18,7 +18,7 @@ from steve_msgs.msg import ControlUI, SetPoints, MotorData
 
 MAX_VOLT_SPEED = 150    # PWM Duty Cycle
 MAX_PID_SPEED = 0.50    # Meters per second
-CALLBACK_FREQ = 120     # Hz
+CALLBACK_FREQ = 240     # Hz
 
 
 class MotorSubscriber(Node):

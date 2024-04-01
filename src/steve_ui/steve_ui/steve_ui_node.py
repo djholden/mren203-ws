@@ -155,8 +155,8 @@ class SteveUI(Node, StateMachine):
         # ui_msg.auto_mode = self.fsm.auto_mode
 
         # Buttons
-        e_stop_msg = Bool()
-        e_stop_msg.data = self.fsm.e_stop
+        # e_stop_msg = Bool()
+        # e_stop_msg.data = self.fsm.e_stop
         # auto_msg = Bool().data = self.fsm.auto_mode
         # poi_msg = Bool().data = self.fsm.new_poi
 
@@ -187,7 +187,7 @@ class SteveUI(Node, StateMachine):
         clk_msg.clock.nanosec = self.get_clock().now().to_msg().nanosec
 
         # Publish
-        self.e_pub_.publish(e_stop_msg)
+        # self.e_pub_.publish(e_stop_msg)
         self.clk_pub.publish(clk_msg)
         self.imu_pub.publish(imu_msg)
         self.state_pub.publish(state_msg)

@@ -94,10 +94,12 @@ class StateMachine():
     def state_0(self):
         # Do activation checks
 
-        # Check for Motor Data
-        for i in self.accel:
-            if i > 0.01 or i < -0.01:
-                return
+        # Check for Movement
+        if self.accel[0] > 0.01 or self.accel[0] < -0.01:
+            return
+        
+        if self.accel[1] > 0.01 or self.accel[1] < -0.01:
+            return
 
         # Check for Sensor Data
         if self.temp == 0:

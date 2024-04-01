@@ -2,6 +2,7 @@
 import RPi.GPIO as GPIO
 import math
 import time
+import random
 
 HIGH = True
 LOW = False
@@ -59,6 +60,9 @@ class MotorHandler():
         self.left_wheel = WheelPID(LCA, LCB, DIR=-1)
         self.right_wheel = WheelPID(RCA, RCB, DIR=1)
 
+        # Boolean fot wether or not the bot is currently turning in auto mode
+        self.isTurning = False
+
         # Create Pose and Twist
         self.pose = {
             "xyz": [0.0, 0.0, 0.0],
@@ -70,9 +74,15 @@ class MotorHandler():
             "rpy": [0.0, 0.0, 0.0]
         }
 
+        self.ser = SerialHandler()
+
         # Set Time variables
         self.t_now = 0
         self.t_last = 0
+
+        self.currentTime = 0
+        self.previousTime = 0
+        self.turningTime = 0
 
 
     def PID_mode(self, left_vel_d, right_vel_d, current_time, kp=KP, ki=KI, pwm=PWM):
@@ -186,6 +196,49 @@ class MotorHandler():
         # Change PWM duty cycle (aka speed)
         self.left_pwm.ChangeDutyCycle(abs(left_cmd))
         self.right_pwm.ChangeDutyCycle(abs(right_cmd))
+    
+    def AutoMode(self, time, ir_left, ir_right, ir_center):
+        self.currentTime = time
+
+        self.left_wheel.update_rotational_speed(self.currentTime)
+        self.right_wheel.update_rotational_speed(self.currentTime)
+
+        if((ir_left < 20 or ir_right < 20 or ir_center < 20) and not self.isTurning):
+            self.left_pwm.ChangeDutyCycle(abs(0))
+            self.right_pwm.ChangeDutyCycle(abs(0))
+            timeMulti = random.randint(2, 8)
+            self.turningTime = timeMulti*1000
+            self.previousTime = time
+            self.currentTime = time
+            self.isTurning = True
+        
+        if(self.isTurning):
+            dt = self.currentTime - self.previousTime
+            if (dt > self.turningTime):
+                left_cmd = 0
+                right_cmd = 0
+                self.isTurning = False
+            else:
+                if(dt > 1000):
+                    left_cmd = 60
+                    right_cmd = -60
+                else:
+                    left_cmd = 0
+                    right_cmd = 0
+        else:
+            left_cmd = 100
+            right_cmd = 100        
+
+        # max pwm and direction checks
+        left_cmd, right_cmd = self.check_max(left_cmd, right_cmd)
+        left_cmd, right_cmd = self.direction(left_cmd, right_cmd)
+        
+        # Change PWM duty cycle (aka speed)
+        self.left_pwm.ChangeDutyCycle(abs(left_cmd))
+        self.right_pwm.ChangeDutyCycle(abs(right_cmd))
+
+
+
 
     def shutdown(self):
         self.voltage_mode(0, 0)
@@ -234,18 +287,17 @@ class WheelPID(MotorHandler):
         dt = (self.t_now - self.t_last) # In Milliseconds
         #print("encoder ticks: {} s".format(self.encoder_ticks))
 
-        if (dt >= self.T):
-            # Estimate angular velocity [rad/s]
-            self.omega = (2*math.pi) * (self.dir*self.encoder_ticks/self.TPR) * (1000/dt)
+        # Estimate angular velocity [rad/s]
+        self.omega = (2*math.pi) * (self.dir*self.encoder_ticks/self.TPR) * (1000/dt)
 
-            # Convert to speed [m/s]
-            self.speed = self.omega * self.radius
+        # Convert to speed [m/s]
+        self.speed = self.omega * self.radius
 
-            # Update last time
-            self.t_last = self.t_now
+        # Update last time
+        self.t_last = self.t_now
 
-            # Reset encoder ticks
-            self.encoder_ticks = 0
+        # Reset encoder ticks
+        self.encoder_ticks = 0
 
         # self.filter_speed()
 

@@ -14,7 +14,7 @@ from std_msgs.msg import Bool
 from sensor_msgs.msg import Joy, JointState
 from geometry_msgs.msg import TwistStamped, TwistWithCovariance, PoseWithCovariance, Pose, Quaternion, Twist, TransformStamped
 from nav_msgs.msg import Odometry
-from steve_msgs.msg import ControlUI, SetPoints, MotorData
+from steve_msgs.msg import ControlUI, SetPoints, MotorData, SensorData
 
 MAX_VOLT_SPEED = 150    # PWM Duty Cycle
 MAX_PID_SPEED = 0.50    # Meters per second
@@ -53,6 +53,14 @@ class MotorSubscriber(Node):
         self.js_pub_ = self.create_publisher(
             JointState,
             "joint_states",
+            10
+        )
+
+        # serial data Subscriber
+        self.subscription = self.create_subscription(
+            SensorData,
+            'sensor_data',
+            self.SerialCallback,
             10
         )
 
@@ -105,6 +113,16 @@ class MotorSubscriber(Node):
         self.ki_param = 0
         self.pwm = 100
 
+        # initialize serial sensor data variables
+        self.temp = 0
+        self.tvoc = 0
+        self.co2 = 0
+        self.humidity = 0
+
+        self.ir_left = 0
+        self.ir_right = 0
+        self.ir_center = 0
+
         self.motors = MotorHandler()
 
     def toggle_value(self, value):
@@ -146,6 +164,16 @@ class MotorSubscriber(Node):
             self.isAuto = True
         else:
             self.isAuto = False
+    
+    def SerialCallback(self, msg):
+        self.temp = msg.temp
+        self.tvoc = msg.tvok
+        self.co2 = msg.co2
+        self.humidity = msg.h2
+
+        self.ir_left = self.ir_left
+        self.ir_right = self.ir_right
+        self.ir_center = self.ir_center
 
     def poi_callback(self, msg):
         pass
@@ -164,6 +192,9 @@ class MotorSubscriber(Node):
             self.motors.PID_mode(0.0, 0.0, self.time_ms, kp=self.kp_param, ki=self.ki_param, pwm=self.pwm)
         elif not self.isVoltageMode:
             self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms, kp=self.kp_param, ki=self.ki_param, pwm=self.pwm)
+        
+        if self.isAuto:
+            self.motors.AutoMode(self.time_ms, self.ir_left, self.ir_right, self.ir_center)
 
         
         pose, twist = self.motors.calculate_odom(self.time_ms)
@@ -266,13 +297,13 @@ class MotorSubscriber(Node):
             self.t_last = self.time_ms
 
         # Handle the control mode
-        if self.isVoltageMode:
+        if self.isVoltageMode and not self.isAuto:
             # Joystick Controller
             left_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) - left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)
             right_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) + left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)
             if self.isStopped: return
             self.motors.voltage_mode(left_wheel, right_wheel, self.time_ms)
-        else:
+        elif not self.isVoltageMode and not self.isAuto:
             self.left_cmd = left_y_axis*(MAX_PID_SPEED*sqrt(2)/2) - left_x_axis*(MAX_PID_SPEED*sqrt(2)/2)
             self.right_cmd = left_y_axis*(MAX_PID_SPEED*sqrt(2)/2) + left_x_axis*(MAX_PID_SPEED*sqrt(2)/2)
             

@@ -102,16 +102,16 @@ class StateMachine():
             return
 
         # Check for Sensor Data
-        if self.temp == 0:
+        if self.temp > 0:
             return
         
-        if self.h2 == 0:
+        if self.h2 > 0:
             return
         
-        if self.co2 == 0:
+        if self.co2 > 0:
             return
         
-        if self.tvok == 0:
+        if self.tvok > 0:
             return
 
         # Check for E-Stop

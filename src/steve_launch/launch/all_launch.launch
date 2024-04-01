@@ -21,7 +21,7 @@
     <include file="$(find-pkg-share rplidar_ros)/launch/rplidar.launch.py"/>
 
     <!-- Robot Description  -->
-    <include file="$(find-pkg-share my_bot)/launch/rsp.launch.py"/>
+    <!-- <include file="$(find-pkg-share my_bot)/launch/rsp.launch.py"/> -->
 
     <!-- SLAM Toolbox -->
     <include file="$(find-pkg-share steve_launch)/launch/online_sync_launch.launch.py"/>

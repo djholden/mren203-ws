@@ -15,7 +15,6 @@ from .StateMachine import StateMachine
 
 SENSOR_FREQ = 500
 
-
 class SteveUI(Node, StateMachine):
 
     def __init__(self):
@@ -119,7 +118,7 @@ class SteveUI(Node, StateMachine):
             self.fsm.omega[0] = float(ser_data['ox'])
             self.fsm.omega[1] = float(ser_data['oy'])
             self.fsm.omega[2] = float(ser_data['oz'])
-        except FileNotFoundError:
+        except SerialException:
             self.get_logger().debug('No serial port is connected. Try setting a new port or give the port ')
 
         except ValueError:
@@ -158,7 +157,7 @@ class SteveUI(Node, StateMachine):
         # e_stop_msg = Bool()
         # e_stop_msg.data = self.fsm.e_stop
         # auto_msg = Bool().data = self.fsm.auto_mode
-        # poi_msg = Bool().data = self.fsm.new_poi
+        # poi_msg = Bool()s.data = self.fsm.new_poi
 
         # Run the state machine
         self.fsm.t_now = self.get_clock().now().nanoseconds*(1e-6)

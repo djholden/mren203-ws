@@ -89,14 +89,14 @@ class MotorSubscriber(Node):
         tf_base = TransformStamped()
         tf_base.header.stamp = self.get_clock().now().to_msg()
         tf_base.header.frame_id = 'odom'
-        tf_base.child_frame_id = 'base_footprint'
+        tf_base.child_frame_id = 'base_link'
         # ADD THE ACTUAL TRANSFORMS FROM ODOM TO LASER 
         self.tf_static_broadcaster.sendTransform(tf_base)
 
          # Transform from base_link to laser (once)
         tf_laser = TransformStamped()
         tf_laser.header.stamp = self.get_clock().now().to_msg()
-        tf_laser.header.frame_id = 'base_footprint'
+        tf_laser.header.frame_id = 'base_link'
         tf_laser.child_frame_id = 'laser'
         # ADD THE ACTUAL TRANSFORMS FROM ODOM TO LASER 
         self.tf_static_broadcaster.sendTransform(tf_laser)
@@ -248,7 +248,7 @@ class MotorSubscriber(Node):
 
         t.header.stamp = self.get_clock().now().to_msg()
         t.header.frame_id = 'odom'
-        t.child_frame_id = 'base_footprint'
+        t.child_frame_id = 'base_link'
 
         t.transform.translation.x = pose["xyz"][0]
         t.transform.translation.y = pose["xyz"][1]

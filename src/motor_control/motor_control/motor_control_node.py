@@ -56,6 +56,13 @@ class MotorSubscriber(Node):
             10
         )
 
+        # E_Stop Publisher
+        self.e_pub_ = self.create_publisher(
+            Bool,
+            "e_stop",
+            10
+        )
+
         # TF Publisher
         self.tf_broadcaster = TransformBroadcaster(self)
         self.tf_static_broadcaster = StaticTransformBroadcaster(self)
@@ -128,6 +135,15 @@ class MotorSubscriber(Node):
             print("Switched to Voltage Mode")
             self.isVoltageMode = True
 
+    def e_stop_toggle(self):
+        e_msg = Bool()
+        e_msg.data
+        if (self.isStopped):
+            self.isStopped = False
+        else:
+            self.isStopped = True
+        e_msg.data = self.isStopped
+        self.e_pub_.publish(e_msg)
 
     def sp_callback(self, sp_msg):
         # PID Values
@@ -264,6 +280,10 @@ class MotorSubscriber(Node):
         if y_btn > 0:
             self.switch_cmd_mode()
             self.t_last = self.time_ms
+
+        if b_btn > 0:
+            self.e_stop_toggle()
+
 
         # Handle the control mode
         if self.isVoltageMode:

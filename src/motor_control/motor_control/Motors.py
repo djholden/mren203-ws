@@ -2,6 +2,7 @@
 import RPi.GPIO as GPIO
 import math
 import time
+import random
 
 HIGH = True
 LOW = False
@@ -178,6 +179,46 @@ class MotorHandler():
     def voltage_mode(self, left_cmd, right_cmd, time):
         self.left_wheel.update_rotational_speed(time)
         self.right_wheel.update_rotational_speed(time)
+
+        # max pwm and direction checks
+        left_cmd, right_cmd = self.check_max(left_cmd, right_cmd)
+        left_cmd, right_cmd = self.direction(left_cmd, right_cmd)
+        
+        # Change PWM duty cycle (aka speed)
+        self.left_pwm.ChangeDutyCycle(abs(left_cmd))
+        self.right_pwm.ChangeDutyCycle(abs(right_cmd))
+    
+    def AutoMode(self, time, ir_left, ir_right, ir_center):
+        self.currentTime = time
+
+        self.left_wheel.update_rotational_speed(self.currentTime)
+        self.right_wheel.update_rotational_speed(self.currentTime)
+
+        if((ir_left < 20 or ir_right < 20 or ir_center < 20) and not self.isTurning):
+            self.left_pwm.ChangeDutyCycle(abs(0))
+            self.right_pwm.ChangeDutyCycle(abs(0))
+            timeMulti = random.randint(2, 8)
+            self.turningTime = timeMulti*1000
+            self.previousTime = time
+            self.currentTime = time
+            self.isTurning = True
+        
+        if(self.isTurning):
+            dt = self.currentTime - self.previousTime
+            if (dt > self.turningTime):
+                left_cmd = 0
+                right_cmd = 0
+                self.isTurning = False
+            else:
+                if(dt > 1000):
+                    left_cmd = 60
+                    right_cmd = -60
+                else:
+                    left_cmd = 0
+                    right_cmd = 0
+        else:
+            left_cmd = 100
+            right_cmd = 100        
 
         # max pwm and direction checks
         left_cmd, right_cmd = self.check_max(left_cmd, right_cmd)

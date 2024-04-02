@@ -14,7 +14,7 @@ from std_msgs.msg import Bool
 from sensor_msgs.msg import Joy, JointState
 from geometry_msgs.msg import TwistStamped, TwistWithCovariance, PoseWithCovariance, Pose, Quaternion, Twist, TransformStamped
 from nav_msgs.msg import Odometry
-from steve_msgs.msg import ControlUI, SetPoints, MotorData
+from steve_msgs.msg import ControlUI, SetPoints, MotorData, SensorData
 
 MAX_VOLT_SPEED = 150    # PWM Duty Cycle
 MAX_PID_SPEED = 0.50    # Meters per second
@@ -60,6 +60,14 @@ class MotorSubscriber(Node):
         self.e_pub_ = self.create_publisher(
             Bool,
             "e_stop",
+            10
+        )
+
+        # serial data Subscriber
+        self.subscription = self.create_subscription(
+            SensorData,
+            'sensor_data',
+            self.SerialCallback,
             10
         )
 
@@ -111,6 +119,16 @@ class MotorSubscriber(Node):
         self.kp_param = 0
         self.ki_param = 0
         self.pwm = 100
+
+        # initialize serial sensor data variables
+        self.temp = 0
+        self.tvoc = 0
+        self.co2 = 0
+        self.humidity = 0
+
+        self.ir_left = 0
+        self.ir_right = 0
+        self.ir_center = 0
 
         self.motors = MotorHandler()
 
@@ -165,6 +183,16 @@ class MotorSubscriber(Node):
 
     def poi_callback(self, msg):
         pass
+
+    def SerialCallback(self, msg):
+        self.temp = msg.temp
+        self.tvoc = msg.tvok
+        self.co2 = msg.co2
+        self.humidity = msg.h2
+
+        self.ir_left = self.ir_left
+        self.ir_right = self.ir_right
+        self.ir_center = self.ir_center
 
 
     def callaback_loop(self):
@@ -286,18 +314,17 @@ class MotorSubscriber(Node):
 
 
         # Handle the control mode
-        if self.isVoltageMode:
+        if self.isVoltageMode and not self.isAuto:
             # Joystick Controller
             left_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) - left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)
             right_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) + left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)
             if self.isStopped: return
             self.motors.voltage_mode(left_wheel, right_wheel, self.time_ms)
-        else:
+        elif not self.isVoltageMode and not self.isAuto:
             self.left_cmd = left_y_axis*(MAX_PID_SPEED*sqrt(2)/2) - left_x_axis*(MAX_PID_SPEED*sqrt(2)/2)
             self.right_cmd = left_y_axis*(MAX_PID_SPEED*sqrt(2)/2) + left_x_axis*(MAX_PID_SPEED*sqrt(2)/2)
-            
-        if (a_btn > 0):
-            self.motors.print_speed()
+        if self.isAuto:
+            self.motors.AutoMode(self.time_ms, self.ir_left, self.ir_right, self.ir_center)
 
         #self.get_logger().info('Time: {} Left Cmd: {} & Right Cmd: {}'.format(self.time_ms, left_wheel, right_wheel))
 

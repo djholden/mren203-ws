@@ -205,9 +205,12 @@ class MotorSubscriber(Node):
         # Update the PID clock
         self.time_ms = self.get_clock().now().nanoseconds*(1e-6)
         if self.isStopped:
-            self.motors.voltage_mode(0, 0, self.time_ms)
+            self.motors.PID_mode(0.0, 0.0, self.time_ms, kp=self.kp_param, ki=self.ki_param, pwm=self.pwm)
         elif not self.isVoltageMode:
             self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms, kp=self.kp_param, ki=self.ki_param, pwm=self.pwm)
+        
+        if self.isAuto:
+            self.motors.AutoMode(self.time_ms, self.ir_left, self.ir_right, self.ir_center)
 
         
         pose, twist = self.motors.calculate_odom(self.time_ms)
@@ -323,8 +326,9 @@ class MotorSubscriber(Node):
         elif not self.isVoltageMode and not self.isAuto:
             self.left_cmd = left_y_axis*(MAX_PID_SPEED*sqrt(2)/2) - left_x_axis*(MAX_PID_SPEED*sqrt(2)/2)
             self.right_cmd = left_y_axis*(MAX_PID_SPEED*sqrt(2)/2) + left_x_axis*(MAX_PID_SPEED*sqrt(2)/2)
-        if self.isAuto:
-            self.motors.AutoMode(self.time_ms, self.ir_left, self.ir_right, self.ir_center)
+            
+        if (a_btn > 0):
+            self.motors.print_speed()
 
         #self.get_logger().info('Time: {} Left Cmd: {} & Right Cmd: {}'.format(self.time_ms, left_wheel, right_wheel))
 

@@ -49,10 +49,8 @@ class StateMachine():
         if((self.ir_left < 12 or self.ir_right < 12 or self.ir_center < 12) and not self.e_stop):
             self.e_stop = True
             self.pub_e_stop = True
-        else:
-            self.e_stop = False
-            self.pub_e_stop = True
     
+
     def calculate_imu(self):
         dt = self.t_now - self.t_last   # Ensure that t_now is updated
 
@@ -126,7 +124,7 @@ class StateMachine():
 
     def state_0(self):
         # Do activation checks
-        if self.safety_checks == False:
+        if self.safety_checks() == False:
             self.pub_e_stop = True
             return
 
@@ -146,7 +144,7 @@ class StateMachine():
 
     def state_2(self):
         # Do the safety checks before entering autonomous mode
-        if self.safety_checks == False:
+        if self.safety_checks() == False:
             self.pub_e_stop = True
             return
 
@@ -156,7 +154,7 @@ class StateMachine():
     def state_30(self):
         # Autonomous Mode (Explore)
 
-        if self.safety_checks == False:
+        if self.safety_checks() == False:
             self.current_state = 1
             self.auto_mode = False
             self.pub_e_stop = True

@@ -102,7 +102,7 @@ class MotorHandler():
         self.left_pwm.ChangeDutyCycle(abs(self.left_cmd))
         self.right_pwm.ChangeDutyCycle(abs(self.right_cmd))
 
-    def auto_mode(self, time_ms, ir_left, ir_right, ir_center, fwd_cmd=100, turn_cmd=60):
+    def auto_mode(self, time_ms, ir_left, ir_right, ir_center, fwd_cmd=150, turn_cmd=60):
 
         # Update wheel speed
         self.left_wheel.update_rotational_speed(time_ms)
@@ -111,8 +111,7 @@ class MotorHandler():
         # Check if its too close to a wall
         if((ir_left < 20 or ir_right < 20 or ir_center < 20) and not self.isTurning):
             # Stop Wheels
-            self.left_pwm.ChangeDutyCycle(abs(0))
-            self.right_pwm.ChangeDutyCycle(abs(0))
+            self.voltage_mode(0, 0, time_ms)
 
             # Random turn time
             timeMulti = random.randint(2, 8)
@@ -139,13 +138,7 @@ class MotorHandler():
             left_cmd = fwd_cmd
             right_cmd = fwd_cmd       
 
-        # max pwm and direction checks
-        left_cmd, right_cmd = self.check_max(left_cmd, right_cmd)
-        left_cmd, right_cmd = self.direction(left_cmd, right_cmd)
-
-        # Change PWM duty cycle (aka speed)
-        self.left_pwm.ChangeDutyCycle(abs(left_cmd))
-        self.right_pwm.ChangeDutyCycle(abs(right_cmd))
+        self.voltage_mode(left_cmd, right_cmd, time_ms)
 
 
     def calculate_odom(self, current_time, seperation=TRACK_LENGTH):

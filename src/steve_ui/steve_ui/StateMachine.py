@@ -170,6 +170,8 @@ class StateMachine():
         # Check for stopped request
         if(self.auto_mode == False):
             self.current_state = 1
+            self.e_stop = True
+            self.pub_e_stop = True
             return
             
         #explore mode until a POI is found

@@ -187,7 +187,6 @@ class MotorSubscriber(Node):
             self.isAuto = True
         else:
             self.isAuto = False
-            self.motors.voltage_mode(0, 0, self.time_ms)
 
     def poi_callback(self, msg):
         pass

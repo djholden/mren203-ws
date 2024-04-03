@@ -222,8 +222,8 @@ class MotorSubscriber(Node):
 
         
         # Do Odom calculations
-        #pose, twist = self.motors.calculate_odom(self.time_ms)
-        pose, twist = self.motors.calculate_odom_from_imu(self.time_ms, accel=self.accel, omega=self.omega)
+        pose, twist = self.motors.calculate_odom(self.time_ms)
+        #pose, twist = self.motors.calculate_odom_from_imu(self.time_ms, accel=self.accel, omega=self.omega)
 
         # Create odom message with proper frame ids
         odom_msg = Odometry()
@@ -280,7 +280,7 @@ class MotorSubscriber(Node):
         
         # Publish messages
         # self.js_pub_.publish(js_msg)
-        # self.tf_broadcaster.sendTransform(self.base_link_to_odom(pose, pose_rot))
+        self.tf_broadcaster.sendTransform(self.base_link_to_odom(pose, pose_rot))
         self.md_pub_.publish(md_msg)
         self.odom_pub_.publish(odom_msg)
 

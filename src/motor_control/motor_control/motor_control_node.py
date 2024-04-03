@@ -10,7 +10,7 @@ from tf2_ros import TransformBroadcaster, StaticTransformBroadcaster
 from scipy.spatial.transform import Rotation
 
 # Message Imports
-from std_msgs.msg import Bool
+from std_msgs.msg import Bool, Int16
 from sensor_msgs.msg import Joy, JointState, Imu
 from geometry_msgs.msg import TwistStamped, TwistWithCovariance, PoseWithCovariance, Pose, Quaternion, Twist, TransformStamped
 from nav_msgs.msg import Odometry
@@ -88,7 +88,7 @@ class MotorSubscriber(Node):
 
         # Button Subscribers
         self.e_sub = self.create_subscription(Bool, 'e_stop', self.e_callback, 10)
-        self.auto_sub = self.create_subscription(Bool, 'auto_mode', self.auto_callback, 10)
+        self.auto_sub = self.create_subscription(Int16, 'is_auto', self.auto_callback, 10)
         self.poi_sub = self.create_subscription(Bool, 'poi', self.poi_callback, 10)
 
         # Create Parameters

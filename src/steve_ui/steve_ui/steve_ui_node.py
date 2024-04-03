@@ -92,8 +92,10 @@ class SteveUI(Node, StateMachine):
     def e_callback(self, msg):
         if (bool(msg.data)):
             self.fsm.e_stop = True
+            self.get_logger().debug('E-Stop: True')
         else:
             self.fsm.e_stop = False
+            self.get_logger().debug('E-Stop: False')
 
     def auto_callback(self, msg):
         if (bool(msg.data)):

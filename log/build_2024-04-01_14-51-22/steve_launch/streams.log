@@ -1,0 +1,29 @@
+[1.457s] Invoking command in '/home/steve/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/steve_launch -- -j4 -l4
+[4.103s] Invoked command in '/home/steve/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/steve_launch -- -j4 -l4
+[6.526s] Invoking command in '/home/steve/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/steve_launch
+[6.555s] -- Install configuration: ""
+[6.557s] -- Execute custom install script
+[6.560s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/all_launch.launch
+[6.560s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/ekf.launch.py
+[6.561s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/fsm_sensors.launch
+[6.562s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/manual_control.launch
+[6.562s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/online_sync_launch.launch.py
+[6.563s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/webcam.launch
+[6.565s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/params/ekf.yaml
+[6.565s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/params/mapper_params_online_sync.yaml
+[6.567s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/package_run_dependencies/steve_launch
+[6.568s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/parent_prefix_path/steve_launch
+[6.569s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.sh
+[6.570s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.dsv
+[6.571s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/path.sh
+[6.572s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/path.dsv
+[6.573s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.bash
+[6.574s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.sh
+[6.575s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.zsh
+[6.576s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.dsv
+[6.576s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.dsv
+[6.610s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/packages/steve_launch
+[6.611s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig.cmake
+[6.613s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig-version.cmake
+[6.615s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.xml
+[8.001s] Invoked command in '/home/steve/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/steve_launch

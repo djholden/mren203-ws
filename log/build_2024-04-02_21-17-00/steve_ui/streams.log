@@ -1,0 +1,21 @@
+[5.320s] Invoking command in '/home/steve/mren203-ws/build/steve_ui': AMENT_PREFIX_PATH=/home/steve/mren203-ws/install/steve_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/steve/mren203-ws/install/steve_msgs LD_LIBRARY_PATH=/home/steve/mren203-ws/install/steve_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/steve/mren203-ws/build/steve_ui/prefix_override:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/steve_ui/build --no-deps install_data
+[6.822s] running develop
+[6.823s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[6.824s]   warnings.warn(
+[6.828s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[6.828s]   warnings.warn(
+[7.693s] running egg_info
+[7.694s] writing steve_ui.egg-info/PKG-INFO
+[7.696s] writing dependency_links to steve_ui.egg-info/dependency_links.txt
+[7.698s] writing entry points to steve_ui.egg-info/entry_points.txt
+[7.699s] writing requirements to steve_ui.egg-info/requires.txt
+[7.700s] writing top-level names to steve_ui.egg-info/top_level.txt
+[7.705s] reading manifest file 'steve_ui.egg-info/SOURCES.txt'
+[7.709s] writing manifest file 'steve_ui.egg-info/SOURCES.txt'
+[7.716s] running build_ext
+[7.716s] Creating /home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages/steve-ui.egg-link (link to .)
+[7.721s] Installing fsm_node script to /home/steve/mren203-ws/install/steve_ui/lib/steve_ui
+[7.722s] 
+[7.723s] Installed /home/steve/mren203-ws/build/steve_ui
+[7.725s] running install_data
+[7.926s] Invoked command in '/home/steve/mren203-ws/build/steve_ui' returned '0': AMENT_PREFIX_PATH=/home/steve/mren203-ws/install/steve_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/steve/mren203-ws/install/steve_msgs LD_LIBRARY_PATH=/home/steve/mren203-ws/install/steve_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/steve/mren203-ws/build/steve_ui/prefix_override:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/steve_ui/build --no-deps install_data

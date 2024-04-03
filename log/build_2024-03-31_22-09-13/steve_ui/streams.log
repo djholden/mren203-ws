@@ -1,0 +1,28 @@
+[6.479s] Invoking command in '/home/steve/mren203-ws/build/steve_ui': PYTHONPATH=/home/steve/mren203-ws/build/steve_ui/prefix_override:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/steve_ui/build --no-deps install_data
+[8.234s] running develop
+[8.238s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[8.239s]   warnings.warn(
+[8.244s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[8.245s]   warnings.warn(
+[9.491s] running egg_info
+[9.493s] creating steve_ui.egg-info
+[9.495s] writing steve_ui.egg-info/PKG-INFO
+[9.498s] writing dependency_links to steve_ui.egg-info/dependency_links.txt
+[9.498s] writing entry points to steve_ui.egg-info/entry_points.txt
+[9.500s] writing requirements to steve_ui.egg-info/requires.txt
+[9.502s] writing top-level names to steve_ui.egg-info/top_level.txt
+[9.502s] writing manifest file 'steve_ui.egg-info/SOURCES.txt'
+[9.507s] reading manifest file 'steve_ui.egg-info/SOURCES.txt'
+[9.509s] writing manifest file 'steve_ui.egg-info/SOURCES.txt'
+[9.519s] running build_ext
+[9.520s] Creating /home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages/steve-ui.egg-link (link to .)
+[9.525s] Installing fsm_node script to /home/steve/mren203-ws/install/steve_ui/lib/steve_ui
+[9.535s] 
+[9.538s] Installed /home/steve/mren203-ws/build/steve_ui
+[9.541s] running install_data
+[9.548s] creating /home/steve/mren203-ws/install/steve_ui/share/ament_index
+[9.552s] creating /home/steve/mren203-ws/install/steve_ui/share/ament_index/resource_index
+[9.554s] creating /home/steve/mren203-ws/install/steve_ui/share/ament_index/resource_index/packages
+[9.557s] copying resource/steve_ui -> /home/steve/mren203-ws/install/steve_ui/share/ament_index/resource_index/packages
+[9.567s] copying package.xml -> /home/steve/mren203-ws/install/steve_ui/share/steve_ui
+[9.776s] Invoked command in '/home/steve/mren203-ws/build/steve_ui' returned '0': PYTHONPATH=/home/steve/mren203-ws/build/steve_ui/prefix_override:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/steve_ui/build --no-deps install_data

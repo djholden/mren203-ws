@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dj/MREN203/main/mren203-ws/src/my_bot
+CMAKE_SOURCE_DIR = /home/steve/mren203-ws/src/my_bot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dj/MREN203/main/mren203-ws/build/my_bot
+CMAKE_BINARY_DIR = /home/steve/mren203-ws/build/my_bot
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/dj/MREN203/main/mren203-ws/build/my_bot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dj/MREN203/main/mren203-ws/src/my_bot /home/dj/MREN203/main/mren203-ws/src/my_bot /home/dj/MREN203/main/mren203-ws/build/my_bot /home/dj/MREN203/main/mren203-ws/build/my_bot /home/dj/MREN203/main/mren203-ws/build/my_bot/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/steve/mren203-ws/build/my_bot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/steve/mren203-ws/src/my_bot /home/steve/mren203-ws/src/my_bot /home/steve/mren203-ws/build/my_bot /home/steve/mren203-ws/build/my_bot /home/steve/mren203-ws/build/my_bot/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

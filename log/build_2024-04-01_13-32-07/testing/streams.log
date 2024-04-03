@@ -1,0 +1,28 @@
+[7.513s] Invoking command in '/home/steve/mren203-ws/build/testing': PYTHONPATH=/home/steve/mren203-ws/build/testing/prefix_override:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/testing/build --no-deps install_data
+[12.201s] running develop
+[12.217s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[12.218s]   warnings.warn(
+[12.236s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[12.239s]   warnings.warn(
+[15.586s] running egg_info
+[15.587s] creating testing.egg-info
+[15.589s] writing testing.egg-info/PKG-INFO
+[15.592s] writing dependency_links to testing.egg-info/dependency_links.txt
+[15.594s] writing entry points to testing.egg-info/entry_points.txt
+[15.600s] writing requirements to testing.egg-info/requires.txt
+[15.602s] writing top-level names to testing.egg-info/top_level.txt
+[15.605s] writing manifest file 'testing.egg-info/SOURCES.txt'
+[15.625s] reading manifest file 'testing.egg-info/SOURCES.txt'
+[15.635s] writing manifest file 'testing.egg-info/SOURCES.txt'
+[15.653s] running build_ext
+[15.664s] Creating /home/steve/mren203-ws/install/testing/lib/python3.10/site-packages/testing.egg-link (link to .)
+[15.670s] Installing test_joint_state script to /home/steve/mren203-ws/install/testing/lib/testing
+[15.674s] 
+[15.675s] Installed /home/steve/mren203-ws/build/testing
+[15.678s] running install_data
+[15.680s] creating /home/steve/mren203-ws/install/testing/share/ament_index
+[15.684s] creating /home/steve/mren203-ws/install/testing/share/ament_index/resource_index
+[15.687s] creating /home/steve/mren203-ws/install/testing/share/ament_index/resource_index/packages
+[15.688s] copying resource/testing -> /home/steve/mren203-ws/install/testing/share/ament_index/resource_index/packages
+[15.691s] copying package.xml -> /home/steve/mren203-ws/install/testing/share/testing
+[16.031s] Invoked command in '/home/steve/mren203-ws/build/testing' returned '0': PYTHONPATH=/home/steve/mren203-ws/build/testing/prefix_override:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/testing/build --no-deps install_data

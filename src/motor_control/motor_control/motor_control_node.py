@@ -84,7 +84,7 @@ class MotorSubscriber(Node):
         self.tf_static_broadcaster = StaticTransformBroadcaster(self)
 
         # Odometry Publisher
-        self.odom_pub_ = self.create_publisher(Odometry, '/wheel/odometry', 10)
+        self.odom_pub_ = self.create_publisher(Odometry, 'odom', 10)
 
         # Button Subscribers
         self.e_sub = self.create_subscription(Bool, 'e_stop', self.e_callback, 10)

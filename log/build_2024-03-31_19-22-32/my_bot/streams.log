@@ -1,0 +1,60 @@
+[1.874s] Invoking command in '/home/steve/mren203-ws/build/my_bot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/steve/mren203-ws/src/my_bot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/steve/mren203-ws/install/my_bot
+[2.184s] -- The C compiler identification is GNU 11.4.0
+[2.508s] -- The CXX compiler identification is GNU 11.4.0
+[2.540s] -- Detecting C compiler ABI info
+[2.940s] -- Detecting C compiler ABI info - done
+[2.978s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.979s] -- Detecting C compile features
+[2.980s] -- Detecting C compile features - done
+[2.995s] -- Detecting CXX compiler ABI info
+[3.480s] -- Detecting CXX compiler ABI info - done
+[3.508s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.510s] -- Detecting CXX compile features
+[3.512s] -- Detecting CXX compile features - done
+[3.537s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[4.650s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[5.101s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[5.427s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[6.069s] -- Added test 'copyright' to check source files copyright and LICENSE
+[6.096s] -- Added test 'flake8' to check Python code syntax and style conventions
+[6.100s] -- Added test 'lint_cmake' to check CMake code style
+[6.104s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[6.118s] -- Added test 'xmllint' to check XML markup files
+[6.128s] -- Configuring done
+[6.149s] -- Generating done
+[6.155s] -- Build files have been written to: /home/steve/mren203-ws/build/my_bot
+[6.174s] Invoked command in '/home/steve/mren203-ws/build/my_bot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/steve/mren203-ws/src/my_bot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/steve/mren203-ws/install/my_bot
+[6.181s] Invoking command in '/home/steve/mren203-ws/build/my_bot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/my_bot -- -j4 -l4
+[6.346s] Invoked command in '/home/steve/mren203-ws/build/my_bot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/my_bot -- -j4 -l4
+[6.516s] Invoking command in '/home/steve/mren203-ws/build/my_bot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/my_bot
+[6.558s] -- Install configuration: ""
+[6.562s] -- Execute custom install script
+[6.566s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/config/empty.yaml
+[6.617s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/config/my_controllers.yaml
+[6.656s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/config/view_bot.rviz
+[6.696s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/description/gazebo_control.xacro
+[6.735s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/description/inertial_macros.xacro
+[6.774s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/description/lidar.xacro
+[6.814s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/description/robot.urdf.xacro
+[6.850s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/description/robot_core.xacro
+[6.888s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/description/ros2_control.xacro
+[6.927s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/launch/launch_sim.launch.py
+[6.972s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/launch/rsp.launch.py
+[7.020s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/worlds/empty.world
+[7.058s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/worlds/test.world
+[7.099s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/ament_index/resource_index/package_run_dependencies/my_bot
+[7.136s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/ament_index/resource_index/parent_prefix_path/my_bot
+[7.174s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/environment/ament_prefix_path.sh
+[7.213s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/environment/ament_prefix_path.dsv
+[7.251s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/environment/path.sh
+[7.289s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/environment/path.dsv
+[7.331s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/local_setup.bash
+[7.387s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/local_setup.sh
+[7.422s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/local_setup.zsh
+[7.462s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/local_setup.dsv
+[7.505s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/package.dsv
+[7.551s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/ament_index/resource_index/packages/my_bot
+[7.599s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/cmake/my_botConfig.cmake
+[7.638s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/cmake/my_botConfig-version.cmake
+[7.675s] -- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/package.xml
+[7.726s] Invoked command in '/home/steve/mren203-ws/build/my_bot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/my_bot

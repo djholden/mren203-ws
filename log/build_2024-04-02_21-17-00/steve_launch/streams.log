@@ -1,0 +1,29 @@
+[0.303s] Invoking command in '/home/steve/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/steve_launch -- -j4 -l4
+[0.973s] Invoked command in '/home/steve/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/steve_launch -- -j4 -l4
+[1.818s] Invoking command in '/home/steve/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/steve_launch
+[2.229s] -- Install configuration: ""
+[2.230s] -- Execute custom install script
+[2.231s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/all_launch.launch
+[2.231s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/ekf.launch.py
+[2.233s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/fsm_sensors.launch
+[2.234s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/manual_control.launch
+[2.235s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/online_sync_launch.launch.py
+[2.236s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/webcam.launch
+[2.238s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/params/ekf.yaml
+[2.239s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/params/mapper_params_online_sync.yaml
+[2.240s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/package_run_dependencies/steve_launch
+[2.241s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/parent_prefix_path/steve_launch
+[2.241s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.sh
+[2.242s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.dsv
+[2.243s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/path.sh
+[2.243s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/path.dsv
+[2.244s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.bash
+[2.245s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.sh
+[2.246s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.zsh
+[2.246s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.dsv
+[2.247s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.dsv
+[2.248s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/packages/steve_launch
+[2.248s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig.cmake
+[2.249s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig-version.cmake
+[2.250s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.xml
+[2.251s] Invoked command in '/home/steve/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/steve_launch

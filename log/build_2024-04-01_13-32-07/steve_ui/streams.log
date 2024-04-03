@@ -1,0 +1,28 @@
+[6.242s] Invoking command in '/home/steve/mren203-ws/build/steve_ui': AMENT_PREFIX_PATH=/home/steve/mren203-ws/install/steve_msgs:${AMENT_PREFIX_PATH} PYTHONPATH=/home/steve/mren203-ws/build/steve_ui/prefix_override:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/steve_ui/build --no-deps install_data
+[7.903s] running develop
+[7.907s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[7.908s]   warnings.warn(
+[7.912s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[7.913s]   warnings.warn(
+[9.098s] running egg_info
+[9.099s] creating steve_ui.egg-info
+[9.099s] writing steve_ui.egg-info/PKG-INFO
+[9.100s] writing dependency_links to steve_ui.egg-info/dependency_links.txt
+[9.101s] writing entry points to steve_ui.egg-info/entry_points.txt
+[9.103s] writing requirements to steve_ui.egg-info/requires.txt
+[9.104s] writing top-level names to steve_ui.egg-info/top_level.txt
+[9.107s] writing manifest file 'steve_ui.egg-info/SOURCES.txt'
+[9.116s] reading manifest file 'steve_ui.egg-info/SOURCES.txt'
+[9.117s] writing manifest file 'steve_ui.egg-info/SOURCES.txt'
+[9.125s] running build_ext
+[9.126s] Creating /home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages/steve-ui.egg-link (link to .)
+[9.131s] Installing fsm_node script to /home/steve/mren203-ws/install/steve_ui/lib/steve_ui
+[9.135s] 
+[9.136s] Installed /home/steve/mren203-ws/build/steve_ui
+[9.138s] running install_data
+[9.140s] creating /home/steve/mren203-ws/install/steve_ui/share/ament_index
+[9.141s] creating /home/steve/mren203-ws/install/steve_ui/share/ament_index/resource_index
+[9.145s] creating /home/steve/mren203-ws/install/steve_ui/share/ament_index/resource_index/packages
+[9.148s] copying resource/steve_ui -> /home/steve/mren203-ws/install/steve_ui/share/ament_index/resource_index/packages
+[9.150s] copying package.xml -> /home/steve/mren203-ws/install/steve_ui/share/steve_ui
+[9.371s] Invoked command in '/home/steve/mren203-ws/build/steve_ui' returned '0': AMENT_PREFIX_PATH=/home/steve/mren203-ws/install/steve_msgs:${AMENT_PREFIX_PATH} PYTHONPATH=/home/steve/mren203-ws/build/steve_ui/prefix_override:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/steve_ui/build --no-deps install_data

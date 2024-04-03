@@ -1,0 +1,49 @@
+[1.424s] Invoking command in '/home/steve/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake /home/steve/mren203-ws/src/steve_launch -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/steve/mren203-ws/install/steve_launch
+[1.743s] -- The C compiler identification is GNU 11.4.0
+[2.056s] -- The CXX compiler identification is GNU 11.4.0
+[2.090s] -- Detecting C compiler ABI info
+[2.430s] -- Detecting C compiler ABI info - done
+[2.455s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.456s] -- Detecting C compile features
+[2.458s] -- Detecting C compile features - done
+[2.470s] -- Detecting CXX compiler ABI info
+[2.845s] -- Detecting CXX compiler ABI info - done
+[2.870s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.871s] -- Detecting CXX compile features
+[2.873s] -- Detecting CXX compile features - done
+[2.900s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.969s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[4.547s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[6.041s] -- Configuring done
+[6.113s] -- Generating done
+[6.142s] -- Build files have been written to: /home/steve/mren203-ws/build/steve_launch
+[6.184s] Invoked command in '/home/steve/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake /home/steve/mren203-ws/src/steve_launch -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/steve/mren203-ws/install/steve_launch
+[6.206s] Invoking command in '/home/steve/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/steve_launch -- -j4 -l4
+[6.568s] Invoked command in '/home/steve/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/steve_launch -- -j4 -l4
+[6.992s] Invoking command in '/home/steve/mren203-ws/build/steve_launch': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/steve_launch
+[7.065s] -- Install configuration: ""
+[7.070s] -- Execute custom install script
+[7.073s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/all_launch.launch
+[7.129s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/ekf.launch.py
+[7.224s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/fsm_sensors.launch
+[7.274s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/manual_control.launch
+[7.364s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/online_sync_launch.launch.py
+[7.470s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/webcam.launch
+[7.586s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/params/ekf.yaml
+[7.731s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/params/mapper_params_online_sync.yaml
+[7.841s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/package_run_dependencies/steve_launch
+[7.952s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/parent_prefix_path/steve_launch
+[8.013s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.sh
+[8.068s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.dsv
+[8.115s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/path.sh
+[8.167s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/path.dsv
+[8.211s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.bash
+[8.260s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.sh
+[8.304s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.zsh
+[8.358s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.dsv
+[8.423s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.dsv
+[8.500s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/packages/steve_launch
+[8.648s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig.cmake
+[8.751s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig-version.cmake
+[8.856s] -- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.xml
+[8.974s] Invoked command in '/home/steve/mren203-ws/build/steve_launch' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/steve_launch

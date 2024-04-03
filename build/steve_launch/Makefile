@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dj/MREN203/main/mren203-ws/src/steve_launch
+CMAKE_SOURCE_DIR = /home/steve/mren203-ws/src/steve_launch
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dj/MREN203/main/mren203-ws/build/steve_launch
+CMAKE_BINARY_DIR = /home/steve/mren203-ws/build/steve_launch
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dj/MREN203/main/mren203-ws/build/steve_launch/CMakeFiles /home/dj/MREN203/main/mren203-ws/build/steve_launch//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/mren203-ws/build/steve_launch/CMakeFiles /home/steve/mren203-ws/build/steve_launch//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dj/MREN203/main/mren203-ws/build/steve_launch/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/mren203-ws/build/steve_launch/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

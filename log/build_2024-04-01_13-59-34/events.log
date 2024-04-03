@@ -1,0 +1,581 @@
+[0.000000] (-) TimerEvent: {}
+[0.002059] (joystick_ros2) JobQueued: {'identifier': 'joystick_ros2', 'dependencies': OrderedDict()}
+[0.002944] (my_bot) JobQueued: {'identifier': 'my_bot', 'dependencies': OrderedDict()}
+[0.003221] (rplidar_ros) JobQueued: {'identifier': 'rplidar_ros', 'dependencies': OrderedDict()}
+[0.003639] (steve_launch) JobQueued: {'identifier': 'steve_launch', 'dependencies': OrderedDict()}
+[0.003846] (steve_msgs) JobQueued: {'identifier': 'steve_msgs', 'dependencies': OrderedDict()}
+[0.004545] (testing) JobQueued: {'identifier': 'testing', 'dependencies': OrderedDict()}
+[0.004852] (motor_control) JobQueued: {'identifier': 'motor_control', 'dependencies': OrderedDict([('steve_msgs', '/home/steve/mren203-ws/install/steve_msgs')])}
+[0.005399] (steve_ui) JobQueued: {'identifier': 'steve_ui', 'dependencies': OrderedDict([('steve_msgs', '/home/steve/mren203-ws/install/steve_msgs')])}
+[0.005618] (steve_msgs) JobStarted: {'identifier': 'steve_msgs'}
+[0.099113] (-) TimerEvent: {}
+[0.200393] (-) TimerEvent: {}
+[0.288446] (joystick_ros2) JobStarted: {'identifier': 'joystick_ros2'}
+[0.300557] (-) TimerEvent: {}
+[0.401465] (-) TimerEvent: {}
+[0.502538] (-) TimerEvent: {}
+[0.603668] (-) TimerEvent: {}
+[0.624916] (my_bot) JobStarted: {'identifier': 'my_bot'}
+[0.703899] (-) TimerEvent: {}
+[0.804959] (-) TimerEvent: {}
+[0.906251] (-) TimerEvent: {}
+[0.928468] (rplidar_ros) JobStarted: {'identifier': 'rplidar_ros'}
+[1.006413] (-) TimerEvent: {}
+[1.107082] (-) TimerEvent: {}
+[1.200949] (steve_msgs) JobProgress: {'identifier': 'steve_msgs', 'progress': 'cmake'}
+[1.204917] (steve_msgs) JobProgress: {'identifier': 'steve_msgs', 'progress': 'build'}
+[1.207742] (steve_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/steve/mren203-ws/build/steve_msgs', '--', '-j4', '-l4'], 'cwd': '/home/steve/mren203-ws/build/steve_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1000/default,1242,0'), ('USER', 'steve'), ('SSH_CLIENT', '192.168.50.111 41158 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/steve/mren203-ws/install/steve_msgs/lib:/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/steve'), ('OLDPWD', '/home/steve'), ('TERM_PROGRAM_VERSION', '3.2a'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/steve/mren203-ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'steve'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'screen'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('ROS_DOMAIN_ID', '96'), ('AMENT_PREFIX_PATH', '/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/steve/mren203-ws/build/steve_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.50.111 41158 192.168.50.203 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/steve/mren203-ws/build/testing:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:/home/steve/mren203-ws/build/steve_ui:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('TMUX_PANE', '%0'), ('CMAKE_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble')]), 'shell': False}
+[1.211727] (-) TimerEvent: {}
+[1.312610] (-) TimerEvent: {}
+[1.413429] (-) TimerEvent: {}
+[1.514327] (-) TimerEvent: {}
+[1.615577] (-) TimerEvent: {}
+[1.716365] (-) TimerEvent: {}
+[1.818275] (-) TimerEvent: {}
+[1.920192] (-) TimerEvent: {}
+[2.022523] (-) TimerEvent: {}
+[2.125050] (-) TimerEvent: {}
+[2.226218] (-) TimerEvent: {}
+[2.327480] (-) TimerEvent: {}
+[2.429919] (-) TimerEvent: {}
+[2.530988] (-) TimerEvent: {}
+[2.632054] (-) TimerEvent: {}
+[2.732902] (-) TimerEvent: {}
+[2.833783] (-) TimerEvent: {}
+[2.934969] (-) TimerEvent: {}
+[3.035670] (-) TimerEvent: {}
+[3.138059] (-) TimerEvent: {}
+[3.178600] (my_bot) JobProgress: {'identifier': 'my_bot', 'progress': 'cmake'}
+[3.182595] (my_bot) JobProgress: {'identifier': 'my_bot', 'progress': 'build'}
+[3.183919] (my_bot) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/steve/mren203-ws/build/my_bot', '--', '-j4', '-l4'], 'cwd': '/home/steve/mren203-ws/build/my_bot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1000/default,1242,0'), ('USER', 'steve'), ('SSH_CLIENT', '192.168.50.111 41158 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/steve/mren203-ws/install/steve_msgs/lib:/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/steve'), ('OLDPWD', '/home/steve'), ('TERM_PROGRAM_VERSION', '3.2a'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/steve/mren203-ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'steve'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'screen'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('ROS_DOMAIN_ID', '96'), ('AMENT_PREFIX_PATH', '/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/steve/mren203-ws/build/my_bot'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.50.111 41158 192.168.50.203 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/steve/mren203-ws/build/testing:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:/home/steve/mren203-ws/build/steve_ui:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('TMUX_PANE', '%0'), ('CMAKE_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble')]), 'shell': False}
+[3.196197] (steve_msgs) StdoutLine: {'line': b'[  1%] Built target steve_msgs__cpp\n'}
+[3.196892] (steve_msgs) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_symlink_steve_msgs\n'}
+[3.197402] (steve_msgs) StdoutLine: {'line': b'[ 12%] Built target steve_msgs__rosidl_generator_c\n'}
+[3.197872] (steve_msgs) StdoutLine: {'line': b'[ 23%] Built target steve_msgs__rosidl_typesupport_cpp\n'}
+[3.198285] (steve_msgs) StdoutLine: {'line': b'[ 34%] Built target steve_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[3.198701] (steve_msgs) StdoutLine: {'line': b'[ 45%] Built target steve_msgs__rosidl_typesupport_introspection_cpp\n'}
+[3.199177] (steve_msgs) StdoutLine: {'line': b'[ 56%] Built target steve_msgs__rosidl_typesupport_fastrtps_c\n'}
+[3.199588] (steve_msgs) StdoutLine: {'line': b'[ 67%] Built target steve_msgs__rosidl_typesupport_c\n'}
+[3.199979] (steve_msgs) StdoutLine: {'line': b'[ 78%] Built target steve_msgs__rosidl_typesupport_introspection_c\n'}
+[3.200374] (steve_msgs) StdoutLine: {'line': b'[ 78%] Built target steve_msgs\n'}
+[3.200760] (steve_msgs) StdoutLine: {'line': b'[ 80%] Built target steve_msgs__py\n'}
+[3.201161] (steve_msgs) StdoutLine: {'line': b'[ 89%] Built target steve_msgs__rosidl_generator_py\n'}
+[3.201660] (steve_msgs) StdoutLine: {'line': b'[ 92%] Built target steve_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[3.202099] (steve_msgs) StdoutLine: {'line': b'[ 96%] Built target steve_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[3.202598] (steve_msgs) StdoutLine: {'line': b'[100%] Built target steve_msgs__rosidl_typesupport_c__pyext\n'}
+[3.211250] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'cmake'}
+[3.215924] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'build'}
+[3.217177] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/steve/mren203-ws/build/rplidar_ros', '--', '-j4', '-l4'], 'cwd': '/home/steve/mren203-ws/build/rplidar_ros', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1000/default,1242,0'), ('USER', 'steve'), ('SSH_CLIENT', '192.168.50.111 41158 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/steve/mren203-ws/install/steve_msgs/lib:/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/steve'), ('OLDPWD', '/home/steve'), ('TERM_PROGRAM_VERSION', '3.2a'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/steve/mren203-ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'steve'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'screen'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('ROS_DOMAIN_ID', '96'), ('AMENT_PREFIX_PATH', '/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/steve/mren203-ws/build/rplidar_ros'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.50.111 41158 192.168.50.203 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/steve/mren203-ws/build/testing:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:/home/steve/mren203-ws/build/steve_ui:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('TMUX_PANE', '%0'), ('CMAKE_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble')]), 'shell': False}
+[3.238370] (-) TimerEvent: {}
+[3.332432] (steve_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[3.337391] (steve_msgs) StdoutLine: {'line': b'writing steve_msgs.egg-info/PKG-INFO\n'}
+[3.338605] (-) TimerEvent: {}
+[3.340434] (steve_msgs) StdoutLine: {'line': b'writing dependency_links to steve_msgs.egg-info/dependency_links.txt\n'}
+[3.341054] (steve_msgs) StdoutLine: {'line': b'writing top-level names to steve_msgs.egg-info/top_level.txt\n'}
+[3.359733] (steve_msgs) StdoutLine: {'line': b"reading manifest file 'steve_msgs.egg-info/SOURCES.txt'\n"}
+[3.364069] (steve_msgs) StdoutLine: {'line': b"writing manifest file 'steve_msgs.egg-info/SOURCES.txt'\n"}
+[3.383470] (my_bot) CommandEnded: {'returncode': 0}
+[3.438932] (-) TimerEvent: {}
+[3.540362] (-) TimerEvent: {}
+[3.544215] (steve_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_steve_msgs_egg\n'}
+[3.559240] (my_bot) JobProgress: {'identifier': 'my_bot', 'progress': 'install'}
+[3.603740] (my_bot) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/steve/mren203-ws/build/my_bot'], 'cwd': '/home/steve/mren203-ws/build/my_bot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1000/default,1242,0'), ('USER', 'steve'), ('SSH_CLIENT', '192.168.50.111 41158 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/steve/mren203-ws/install/steve_msgs/lib:/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/steve'), ('OLDPWD', '/home/steve'), ('TERM_PROGRAM_VERSION', '3.2a'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/steve/mren203-ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'steve'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'screen'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('ROS_DOMAIN_ID', '96'), ('AMENT_PREFIX_PATH', '/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/steve/mren203-ws/build/my_bot'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.50.111 41158 192.168.50.203 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/steve/mren203-ws/build/testing:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:/home/steve/mren203-ws/build/steve_ui:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('TMUX_PANE', '%0'), ('CMAKE_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble')]), 'shell': False}
+[3.609133] (steve_msgs) CommandEnded: {'returncode': 0}
+[3.639053] (my_bot) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.640638] (-) TimerEvent: {}
+[3.646818] (my_bot) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[3.655350] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/config/empty.yaml\n'}
+[3.658749] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/config/my_controllers.yaml\n'}
+[3.660887] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/config/view_bot.rviz\n'}
+[3.664340] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/description/gazebo_control.xacro\n'}
+[3.666957] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/description/inertial_macros.xacro\n'}
+[3.668202] (rplidar_ros) StdoutLine: {'line': b'[ 77%] Built target rplidar_composition_node\n'}
+[3.670494] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/description/lidar.xacro\n'}
+[3.671916] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/description/robot.urdf.xacro\n'}
+[3.674279] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/description/robot_core.xacro\n'}
+[3.676418] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/description/ros2_control.xacro\n'}
+[3.678520] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/launch/launch_sim.launch.py\n'}
+[3.680389] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/launch/rsp.launch.py\n'}
+[3.682050] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/worlds/empty.world\n'}
+[3.683515] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/worlds/test.world\n'}
+[3.684321] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/ament_index/resource_index/package_run_dependencies/my_bot\n'}
+[3.686289] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/ament_index/resource_index/parent_prefix_path/my_bot\n'}
+[3.688122] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/environment/ament_prefix_path.sh\n'}
+[3.689153] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/environment/ament_prefix_path.dsv\n'}
+[3.690853] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/environment/path.sh\n'}
+[3.691956] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/environment/path.dsv\n'}
+[3.693534] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/local_setup.bash\n'}
+[3.695163] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/local_setup.sh\n'}
+[3.696896] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/local_setup.zsh\n'}
+[3.699025] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/local_setup.dsv\n'}
+[3.699802] (my_bot) StdoutLine: {'line': b'-- Symlinking: /home/steve/mren203-ws/install/my_bot/share/my_bot/package.dsv\n'}
+[3.740814] (-) TimerEvent: {}
+[3.741681] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/ament_index/resource_index/packages/my_bot\n'}
+[3.745861] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/cmake/my_botConfig.cmake\n'}
+[3.747731] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/cmake/my_botConfig-version.cmake\n'}
+[3.750161] (my_bot) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/my_bot/share/my_bot/package.xml\n'}
+[3.757872] (my_bot) CommandEnded: {'returncode': 0}
+[3.841209] (-) TimerEvent: {}
+[3.842629] (rplidar_ros) StdoutLine: {'line': b'[100%] Built target rplidar_composition\n'}
+[3.941522] (-) TimerEvent: {}
+[4.044741] (-) TimerEvent: {}
+[4.128066] (rplidar_ros) CommandEnded: {'returncode': 0}
+[4.145055] (-) TimerEvent: {}
+[4.246240] (-) TimerEvent: {}
+[4.349086] (-) TimerEvent: {}
+[4.451149] (-) TimerEvent: {}
+[4.552828] (-) TimerEvent: {}
+[4.609765] (my_bot) JobEnded: {'identifier': 'my_bot', 'rc': 0}
+[4.614379] (steve_launch) JobStarted: {'identifier': 'steve_launch'}
+[4.653000] (-) TimerEvent: {}
+[4.754203] (-) TimerEvent: {}
+[4.855685] (-) TimerEvent: {}
+[4.947973] (steve_msgs) JobProgress: {'identifier': 'steve_msgs', 'progress': 'install'}
+[4.949077] (steve_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/steve/mren203-ws/build/steve_msgs'], 'cwd': '/home/steve/mren203-ws/build/steve_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1000/default,1242,0'), ('USER', 'steve'), ('SSH_CLIENT', '192.168.50.111 41158 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/steve/mren203-ws/install/steve_msgs/lib:/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/steve'), ('OLDPWD', '/home/steve'), ('TERM_PROGRAM_VERSION', '3.2a'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/steve/mren203-ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'steve'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'screen'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('ROS_DOMAIN_ID', '96'), ('AMENT_PREFIX_PATH', '/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/steve/mren203-ws/build/steve_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.50.111 41158 192.168.50.203 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/steve/mren203-ws/build/testing:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:/home/steve/mren203-ws/build/steve_ui:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('TMUX_PANE', '%0'), ('CMAKE_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble')]), 'shell': False}
+[4.957154] (-) TimerEvent: {}
+[4.958531] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'install'}
+[4.960235] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/steve/mren203-ws/build/rplidar_ros'], 'cwd': '/home/steve/mren203-ws/build/rplidar_ros', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1000/default,1242,0'), ('USER', 'steve'), ('SSH_CLIENT', '192.168.50.111 41158 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/steve/mren203-ws/install/steve_msgs/lib:/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/steve'), ('OLDPWD', '/home/steve'), ('TERM_PROGRAM_VERSION', '3.2a'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/steve/mren203-ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'steve'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'screen'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('ROS_DOMAIN_ID', '96'), ('AMENT_PREFIX_PATH', '/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/steve/mren203-ws/build/rplidar_ros'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.50.111 41158 192.168.50.203 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/steve/mren203-ws/build/testing:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:/home/steve/mren203-ws/build/steve_ui:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('TMUX_PANE', '%0'), ('CMAKE_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble')]), 'shell': False}
+[4.976631] (steve_launch) JobProgress: {'identifier': 'steve_launch', 'progress': 'cmake'}
+[4.982578] (steve_launch) JobProgress: {'identifier': 'steve_launch', 'progress': 'build'}
+[4.987126] (steve_launch) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/steve/mren203-ws/build/steve_launch', '--', '-j4', '-l4'], 'cwd': '/home/steve/mren203-ws/build/steve_launch', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1000/default,1242,0'), ('USER', 'steve'), ('SSH_CLIENT', '192.168.50.111 41158 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/steve/mren203-ws/install/steve_msgs/lib:/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/steve'), ('OLDPWD', '/home/steve'), ('TERM_PROGRAM_VERSION', '3.2a'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/steve/mren203-ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'steve'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'screen'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('ROS_DOMAIN_ID', '96'), ('AMENT_PREFIX_PATH', '/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/steve/mren203-ws/build/steve_launch'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.50.111 41158 192.168.50.203 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/steve/mren203-ws/build/testing:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:/home/steve/mren203-ws/build/steve_ui:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('TMUX_PANE', '%0'), ('CMAKE_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble')]), 'shell': False}
+[4.995813] (steve_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.998923] (steve_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.000540] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/ament_index/resource_index/rosidl_interfaces/steve_msgs\n'}
+[5.003686] (rplidar_ros) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.005267] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/control_ui.h\n'}
+[5.007040] (rplidar_ros) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.008616] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__functions.h\n'}
+[5.009481] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition\n'}
+[5.012199] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__struct.h\n'}
+[5.013185] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar.launch.py\n'}
+[5.014100] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3.launch.py\n'}
+[5.015918] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1.launch.py\n'}
+[5.017867] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp.launch.py\n'}
+[5.019124] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__type_support.h\n'}
+[5.020293] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/test_rplidar_a3.launch.py\n'}
+[5.021370] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar.launch.py\n'}
+[5.023396] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3.launch.py\n'}
+[5.025591] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__functions.h\n'}
+[5.026465] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1.launch.py\n'}
+[5.029013] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp.launch.py\n'}
+[5.029638] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/rviz/rplidar.rviz\n'}
+[5.030027] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__struct.h\n'}
+[5.032026] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/lib/librplidar_composition_node.so\n'}
+[5.033732] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__type_support.h\n'}
+[5.034503] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/include/rplidar_node.hpp\n'}
+[5.035131] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__functions.h\n'}
+[5.036095] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/include/visibility.h\n'}
+[5.036571] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__struct.h\n'}
+[5.037409] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition\n'}
+[5.037971] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__type_support.h\n'}
+[5.038986] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros\n'}
+[5.039897] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__functions.h\n'}
+[5.040808] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros\n'}
+[5.041681] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__struct.h\n'}
+[5.042438] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh\n'}
+[5.043400] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv\n'}
+[5.044769] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__type_support.h\n'}
+[5.045940] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/environment/path.sh\n'}
+[5.047511] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/motor_data.h\n'}
+[5.048099] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/environment/path.dsv\n'}
+[5.050706] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[5.052222] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/local_setup.bash\n'}
+[5.053700] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/sensor_data.h\n'}
+[5.054249] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/local_setup.sh\n'}
+[5.058085] (-) TimerEvent: {}
+[5.060070] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/set_points.h\n'}
+[5.060716] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/local_setup.zsh\n'}
+[5.061816] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/library_path.sh\n'}
+[5.062473] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/local_setup.dsv\n'}
+[5.063221] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/library_path.dsv\n'}
+[5.072437] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.dsv\n'}
+[5.073532] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__rosidl_typesupport_fastrtps_c.h\n'}
+[5.074390] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__rosidl_typesupport_fastrtps_c.h\n'}
+[5.075276] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__rosidl_typesupport_fastrtps_c.h\n'}
+[5.075987] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__rosidl_typesupport_fastrtps_c.h\n'}
+[5.076914] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[5.077578] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__rosidl_typesupport_introspection_c.h\n'}
+[5.078165] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__rosidl_typesupport_introspection_c.h\n'}
+[5.079721] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__rosidl_typesupport_introspection_c.h\n'}
+[5.081868] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__rosidl_typesupport_introspection_c.h\n'}
+[5.085376] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[5.089760] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/control_ui.hpp\n'}
+[5.091595] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__builder.hpp\n'}
+[5.093734] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__struct.hpp\n'}
+[5.095389] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__traits.hpp\n'}
+[5.098097] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__builder.hpp\n'}
+[5.098765] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__struct.hpp\n'}
+[5.100198] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros\n'}
+[5.101198] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__traits.hpp\n'}
+[5.102415] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__builder.hpp\n'}
+[5.103319] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/ament_index/resource_index/rclcpp_components/rplidar_ros\n'}
+[5.104180] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__struct.hpp\n'}
+[5.105043] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[5.106103] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__traits.hpp\n'}
+[5.107030] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[5.108024] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__builder.hpp\n'}
+[5.109249] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake\n'}
+[5.110157] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__struct.hpp\n'}
+[5.111126] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__traits.hpp\n'}
+[5.112241] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake\n'}
+[5.113476] (rplidar_ros) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/rplidar_ros/share/rplidar_ros/package.xml\n'}
+[5.114513] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/motor_data.hpp\n'}
+[5.115521] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/sensor_data.hpp\n'}
+[5.128231] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/set_points.hpp\n'}
+[5.128776] (rplidar_ros) CommandEnded: {'returncode': 0}
+[5.130745] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.131575] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.134588] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.134997] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.135408] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[5.137936] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.142159] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.144443] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.144879] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.146241] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/pythonpath.sh\n'}
+[5.147132] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/pythonpath.dsv\n'}
+[5.149912] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[5.151619] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[5.153212] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[5.155206] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[5.158540] (-) TimerEvent: {}
+[5.163177] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/__init__.py\n'}
+[5.165128] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[5.167095] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[5.169546] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[5.171338] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/libsteve_msgs__rosidl_generator_py.so\n'}
+[5.172166] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/__init__.py\n'}
+[5.173624] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_control_ui.py\n'}
+[5.175682] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_control_ui_s.c\n'}
+[5.176430] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_motor_data.py\n'}
+[5.178562] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_motor_data_s.c\n'}
+[5.179979] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_sensor_data.py\n'}
+[5.181613] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_sensor_data_s.c\n'}
+[5.182877] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_set_points.py\n'}
+[5.184180] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_set_points_s.c\n'}
+[5.185514] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/steve_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[5.187015] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/steve_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[5.188620] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/steve_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[5.191307] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/steve_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[5.194167] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/steve_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[5.196983] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/steve_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[5.199025] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/ControlUI.idl\n'}
+[5.200930] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/SensorData.idl\n'}
+[5.203208] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/SetPoints.idl\n'}
+[5.204836] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/MotorData.idl\n'}
+[5.208167] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/ControlUI.msg\n'}
+[5.211593] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/SensorData.msg\n'}
+[5.213662] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/SetPoints.msg\n'}
+[5.215848] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/MotorData.msg\n'}
+[5.216360] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/ament_index/resource_index/package_run_dependencies/steve_msgs\n'}
+[5.216749] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/ament_index/resource_index/parent_prefix_path/steve_msgs\n'}
+[5.217151] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/ament_prefix_path.sh\n'}
+[5.220246] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/ament_prefix_path.dsv\n'}
+[5.222488] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/path.sh\n'}
+[5.225391] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/path.dsv\n'}
+[5.226319] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/local_setup.bash\n'}
+[5.226829] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/local_setup.sh\n'}
+[5.227350] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/local_setup.zsh\n'}
+[5.227757] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/local_setup.dsv\n'}
+[5.228119] (steve_msgs) StdoutLine: {'line': b'-- Symlinking: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/package.dsv\n'}
+[5.259167] (-) TimerEvent: {}
+[5.268788] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/ament_index/resource_index/packages/steve_msgs\n'}
+[5.270156] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[5.271996] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[5.273954] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[5.275413] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[5.276832] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[5.278716] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[5.280853] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[5.282963] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgsConfig.cmake\n'}
+[5.285333] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgsConfig-version.cmake\n'}
+[5.286370] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/package.xml\n'}
+[5.287695] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_generator_c.so\n'}
+[5.290511] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[5.292663] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_typesupport_introspection_c.so\n'}
+[5.295359] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_typesupport_c.so\n'}
+[5.297387] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[5.299574] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[5.306756] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_typesupport_cpp.so\n'}
+[5.359394] (-) TimerEvent: {}
+[5.460491] (-) TimerEvent: {}
+[5.490501] (steve_msgs) StdoutLine: {'line': b"Listing '/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs'...\n"}
+[5.491915] (steve_msgs) StdoutLine: {'line': b"Listing '/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg'...\n"}
+[5.520737] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_generator_py.so\n'}
+[5.522896] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_generator_cExport.cmake\n'}
+[5.524445] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[5.525894] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[5.526929] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[5.528110] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[5.528802] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[5.530090] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_cExport.cmake\n'}
+[5.530890] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[5.532093] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_generator_cppExport.cmake\n'}
+[5.533541] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[5.534192] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[5.536185] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[5.538012] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[5.539202] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[5.540327] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[5.542096] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_generator_pyExport.cmake\n'}
+[5.542574] (steve_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[5.563047] (-) TimerEvent: {}
+[5.666040] (-) TimerEvent: {}
+[5.671307] (steve_launch) CommandEnded: {'returncode': 0}
+[5.687461] (steve_msgs) CommandEnded: {'returncode': 0}
+[5.766563] (-) TimerEvent: {}
+[5.868121] (-) TimerEvent: {}
+[5.970066] (-) TimerEvent: {}
+[6.070692] (-) TimerEvent: {}
+[6.120487] (joystick_ros2) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/steve/mren203-ws/build/joystick_ros2/build', '--no-deps', 'install_data'], 'cwd': '/home/steve/mren203-ws/build/joystick_ros2', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'TMUX': '/tmp/tmux-1000/default,1242,0', 'USER': 'steve', 'SSH_CLIENT': '192.168.50.111 41158 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '3', 'LD_LIBRARY_PATH': '/home/steve/mren203-ws/install/steve_msgs/lib:/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/steve', 'OLDPWD': '/home/steve', 'TERM_PROGRAM_VERSION': '3.2a', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/steve/mren203-ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'steve', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'screen', 'XDG_SESSION_ID': '2', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'TERM_PROGRAM': 'tmux', 'ROS_DOMAIN_ID': '96', 'AMENT_PREFIX_PATH': '/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/steve/mren203-ws/build/joystick_ros2', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.50.111 41158 192.168.50.203 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/steve/mren203-ws/build/joystick_ros2/prefix_override:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/home/steve/mren203-ws/build/testing:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:/home/steve/mren203-ws/build/steve_ui:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'TMUX_PANE': '%0', 'CMAKE_PREFIX_PATH': '/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot'}, 'shell': False}
+[6.171204] (-) TimerEvent: {}
+[6.272312] (-) TimerEvent: {}
+[6.375273] (-) TimerEvent: {}
+[6.478792] (-) TimerEvent: {}
+[6.582141] (-) TimerEvent: {}
+[6.636917] (rplidar_ros) JobEnded: {'identifier': 'rplidar_ros', 'rc': 0}
+[6.647775] (steve_launch) JobProgress: {'identifier': 'steve_launch', 'progress': 'install'}
+[6.649169] (steve_launch) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/steve/mren203-ws/build/steve_launch'], 'cwd': '/home/steve/mren203-ws/build/steve_launch', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1000/default,1242,0'), ('USER', 'steve'), ('SSH_CLIENT', '192.168.50.111 41158 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/steve/mren203-ws/install/steve_msgs/lib:/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/steve'), ('OLDPWD', '/home/steve'), ('TERM_PROGRAM_VERSION', '3.2a'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/steve/mren203-ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'steve'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'screen'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('ROS_DOMAIN_ID', '96'), ('AMENT_PREFIX_PATH', '/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/steve/mren203-ws/build/steve_launch'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.50.111 41158 192.168.50.203 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/steve/mren203-ws/build/testing:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:/home/steve/mren203-ws/build/steve_ui:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('TMUX_PANE', '%0'), ('CMAKE_PREFIX_PATH', '/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble')]), 'shell': False}
+[6.651785] (testing) JobStarted: {'identifier': 'testing'}
+[6.682387] (-) TimerEvent: {}
+[6.785950] (-) TimerEvent: {}
+[6.888934] (-) TimerEvent: {}
+[6.991695] (-) TimerEvent: {}
+[7.089687] (steve_launch) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.092148] (-) TimerEvent: {}
+[7.095379] (steve_launch) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[7.096545] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/all_launch.launch\n'}
+[7.097723] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/ekf.launch.py\n'}
+[7.098281] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/fsm_sensors.launch\n'}
+[7.099214] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/manual_control.launch\n'}
+[7.100050] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/online_sync_launch.launch.py\n'}
+[7.100476] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/launch/webcam.launch\n'}
+[7.100801] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/params/ekf.yaml\n'}
+[7.101111] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/params/mapper_params_online_sync.yaml\n'}
+[7.102186] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/package_run_dependencies/steve_launch\n'}
+[7.102653] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/parent_prefix_path/steve_launch\n'}
+[7.103035] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.sh\n'}
+[7.103351] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/ament_prefix_path.dsv\n'}
+[7.103650] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/path.sh\n'}
+[7.103948] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/environment/path.dsv\n'}
+[7.104241] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.bash\n'}
+[7.104534] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.sh\n'}
+[7.104827] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.zsh\n'}
+[7.105124] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/local_setup.dsv\n'}
+[7.105572] (steve_launch) StdoutLine: {'line': b'-- Symlinking: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.dsv\n'}
+[7.106579] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/ament_index/resource_index/packages/steve_launch\n'}
+[7.107498] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig.cmake\n'}
+[7.108336] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/cmake/steve_launchConfig-version.cmake\n'}
+[7.109168] (steve_launch) StdoutLine: {'line': b'-- Up-to-date symlink: /home/steve/mren203-ws/install/steve_launch/share/steve_launch/package.xml\n'}
+[7.192569] (-) TimerEvent: {}
+[7.294411] (-) TimerEvent: {}
+[7.396233] (-) TimerEvent: {}
+[7.498160] (-) TimerEvent: {}
+[7.521975] (joystick_ros2) StdoutLine: {'line': b'running develop\n'}
+[7.526556] (joystick_ros2) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[7.527228] (joystick_ros2) StderrLine: {'line': b'  warnings.warn(\n'}
+[7.529272] (steve_msgs) JobEnded: {'identifier': 'steve_msgs', 'rc': 0}
+[7.532351] (steve_launch) CommandEnded: {'returncode': 0}
+[7.534730] (joystick_ros2) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[7.535340] (joystick_ros2) StderrLine: {'line': b'  warnings.warn(\n'}
+[7.598515] (-) TimerEvent: {}
+[7.699244] (-) TimerEvent: {}
+[7.782613] (motor_control) JobStarted: {'identifier': 'motor_control'}
+[7.799477] (-) TimerEvent: {}
+[7.900232] (-) TimerEvent: {}
+[8.003468] (-) TimerEvent: {}
+[8.105931] (-) TimerEvent: {}
+[8.207187] (-) TimerEvent: {}
+[8.308015] (-) TimerEvent: {}
+[8.408759] (-) TimerEvent: {}
+[8.468943] (joystick_ros2) StdoutLine: {'line': b'running egg_info\n'}
+[8.469789] (joystick_ros2) StdoutLine: {'line': b'writing joystick_ros2.egg-info/PKG-INFO\n'}
+[8.471043] (joystick_ros2) StdoutLine: {'line': b'writing dependency_links to joystick_ros2.egg-info/dependency_links.txt\n'}
+[8.472309] (joystick_ros2) StdoutLine: {'line': b'writing entry points to joystick_ros2.egg-info/entry_points.txt\n'}
+[8.473249] (joystick_ros2) StdoutLine: {'line': b'writing requirements to joystick_ros2.egg-info/requires.txt\n'}
+[8.474313] (joystick_ros2) StdoutLine: {'line': b'writing top-level names to joystick_ros2.egg-info/top_level.txt\n'}
+[8.481598] (joystick_ros2) StdoutLine: {'line': b"reading manifest file 'joystick_ros2.egg-info/SOURCES.txt'\n"}
+[8.484725] (joystick_ros2) StdoutLine: {'line': b"writing manifest file 'joystick_ros2.egg-info/SOURCES.txt'\n"}
+[8.491227] (joystick_ros2) StdoutLine: {'line': b'running build_ext\n'}
+[8.492445] (joystick_ros2) StdoutLine: {'line': b'Creating /home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages/joystick-ros2.egg-link (link to .)\n'}
+[8.497461] (joystick_ros2) StdoutLine: {'line': b'Installing joystick_ros2 script to /home/steve/mren203-ws/install/joystick_ros2/lib/joystick_ros2\n'}
+[8.499914] (joystick_ros2) StdoutLine: {'line': b'\n'}
+[8.500569] (joystick_ros2) StdoutLine: {'line': b'Installed /home/steve/mren203-ws/build/joystick_ros2\n'}
+[8.501023] (joystick_ros2) StdoutLine: {'line': b'running install_data\n'}
+[8.509074] (-) TimerEvent: {}
+[8.610970] (-) TimerEvent: {}
+[8.712507] (-) TimerEvent: {}
+[8.813200] (-) TimerEvent: {}
+[8.913925] (-) TimerEvent: {}
+[9.014574] (-) TimerEvent: {}
+[9.115242] (-) TimerEvent: {}
+[9.215947] (-) TimerEvent: {}
+[9.316618] (-) TimerEvent: {}
+[9.417454] (-) TimerEvent: {}
+[9.518611] (-) TimerEvent: {}
+[9.620401] (-) TimerEvent: {}
+[9.721485] (-) TimerEvent: {}
+[9.822431] (-) TimerEvent: {}
+[9.923720] (-) TimerEvent: {}
+[9.993103] (steve_launch) JobEnded: {'identifier': 'steve_launch', 'rc': 0}
+[9.997640] (steve_ui) JobStarted: {'identifier': 'steve_ui'}
+[10.023967] (-) TimerEvent: {}
+[10.127089] (-) TimerEvent: {}
+[10.228830] (-) TimerEvent: {}
+[10.327650] (joystick_ros2) CommandEnded: {'returncode': 0}
+[10.329553] (-) TimerEvent: {}
+[10.430844] (-) TimerEvent: {}
+[10.532024] (-) TimerEvent: {}
+[10.607158] (joystick_ros2) JobEnded: {'identifier': 'joystick_ros2', 'rc': 0}
+[10.632178] (-) TimerEvent: {}
+[10.732846] (-) TimerEvent: {}
+[10.833581] (-) TimerEvent: {}
+[10.934268] (-) TimerEvent: {}
+[11.034966] (-) TimerEvent: {}
+[11.135621] (-) TimerEvent: {}
+[11.236287] (-) TimerEvent: {}
+[11.336917] (-) TimerEvent: {}
+[11.437596] (-) TimerEvent: {}
+[11.538322] (-) TimerEvent: {}
+[11.638978] (-) TimerEvent: {}
+[11.739823] (-) TimerEvent: {}
+[11.840860] (-) TimerEvent: {}
+[11.941554] (-) TimerEvent: {}
+[12.044369] (-) TimerEvent: {}
+[12.149638] (-) TimerEvent: {}
+[12.250451] (-) TimerEvent: {}
+[12.351314] (-) TimerEvent: {}
+[12.452444] (-) TimerEvent: {}
+[12.553167] (-) TimerEvent: {}
+[12.653983] (-) TimerEvent: {}
+[12.754744] (-) TimerEvent: {}
+[12.855448] (-) TimerEvent: {}
+[12.956171] (-) TimerEvent: {}
+[13.056865] (-) TimerEvent: {}
+[13.157878] (-) TimerEvent: {}
+[13.259274] (-) TimerEvent: {}
+[13.360110] (-) TimerEvent: {}
+[13.461154] (-) TimerEvent: {}
+[13.562532] (-) TimerEvent: {}
+[13.663807] (-) TimerEvent: {}
+[13.766789] (-) TimerEvent: {}
+[13.868294] (-) TimerEvent: {}
+[13.895966] (testing) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/steve/mren203-ws/build/testing/build', '--no-deps', 'install_data'], 'cwd': '/home/steve/mren203-ws/build/testing', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'TMUX': '/tmp/tmux-1000/default,1242,0', 'USER': 'steve', 'SSH_CLIENT': '192.168.50.111 41158 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '3', 'LD_LIBRARY_PATH': '/home/steve/mren203-ws/install/steve_msgs/lib:/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/steve', 'OLDPWD': '/home/steve', 'TERM_PROGRAM_VERSION': '3.2a', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/steve/mren203-ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'steve', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'screen', 'XDG_SESSION_ID': '2', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'TERM_PROGRAM': 'tmux', 'ROS_DOMAIN_ID': '96', 'AMENT_PREFIX_PATH': '/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/steve/mren203-ws/build/testing', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.50.111 41158 192.168.50.203 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/steve/mren203-ws/build/testing/prefix_override:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:/home/steve/mren203-ws/build/testing:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:/home/steve/mren203-ws/build/steve_ui:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'TMUX_PANE': '%0', 'CMAKE_PREFIX_PATH': '/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot'}, 'shell': False}
+[13.968506] (-) TimerEvent: {}
+[14.071236] (-) TimerEvent: {}
+[14.173183] (-) TimerEvent: {}
+[14.274907] (-) TimerEvent: {}
+[14.376599] (-) TimerEvent: {}
+[14.477570] (-) TimerEvent: {}
+[14.579059] (-) TimerEvent: {}
+[14.679926] (-) TimerEvent: {}
+[14.780774] (-) TimerEvent: {}
+[14.881596] (-) TimerEvent: {}
+[14.982501] (-) TimerEvent: {}
+[15.084260] (-) TimerEvent: {}
+[15.185624] (-) TimerEvent: {}
+[15.286640] (-) TimerEvent: {}
+[15.388510] (-) TimerEvent: {}
+[15.431759] (testing) StdoutLine: {'line': b'running develop\n'}
+[15.433304] (testing) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[15.433982] (testing) StderrLine: {'line': b'  warnings.warn(\n'}
+[15.438496] (testing) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[15.439129] (testing) StderrLine: {'line': b'  warnings.warn(\n'}
+[15.488683] (-) TimerEvent: {}
+[15.591235] (-) TimerEvent: {}
+[15.694138] (-) TimerEvent: {}
+[15.800304] (-) TimerEvent: {}
+[15.889063] (motor_control) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/steve/mren203-ws/build/motor_control/build', '--no-deps', 'install_data'], 'cwd': '/home/steve/mren203-ws/build/motor_control', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'TMUX': '/tmp/tmux-1000/default,1242,0', 'USER': 'steve', 'SSH_CLIENT': '192.168.50.111 41158 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '3', 'LD_LIBRARY_PATH': '/home/steve/mren203-ws/install/steve_msgs/lib:/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/steve', 'OLDPWD': '/home/steve', 'TERM_PROGRAM_VERSION': '3.2a', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/steve/mren203-ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'steve', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'screen', 'XDG_SESSION_ID': '2', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'TERM_PROGRAM': 'tmux', 'ROS_DOMAIN_ID': '96', 'AMENT_PREFIX_PATH': '/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/steve/mren203-ws/build/motor_control', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.50.111 41158 192.168.50.203 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/steve/mren203-ws/build/motor_control/prefix_override:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/build/testing:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:/home/steve/mren203-ws/build/steve_ui:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'TMUX_PANE': '%0', 'CMAKE_PREFIX_PATH': '/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot'}, 'shell': False}
+[15.900810] (-) TimerEvent: {}
+[15.916687] (steve_ui) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/steve/mren203-ws/build/steve_ui/build', '--no-deps', 'install_data'], 'cwd': '/home/steve/mren203-ws/build/steve_ui', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'TMUX': '/tmp/tmux-1000/default,1242,0', 'USER': 'steve', 'SSH_CLIENT': '192.168.50.111 41158 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '3', 'LD_LIBRARY_PATH': '/home/steve/mren203-ws/install/steve_msgs/lib:/home/steve/mren203-ws/install/rplidar_ros/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/steve', 'OLDPWD': '/home/steve', 'TERM_PROGRAM_VERSION': '3.2a', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/steve/mren203-ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'steve', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'screen', 'XDG_SESSION_ID': '2', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'TERM_PROGRAM': 'tmux', 'ROS_DOMAIN_ID': '96', 'AMENT_PREFIX_PATH': '/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/steve/mren203-ws/build/steve_ui', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.50.111 41158 192.168.50.203 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/steve/mren203-ws/build/steve_ui/prefix_override:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/build/testing:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:/home/steve/mren203-ws/build/steve_ui:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:/home/steve/mren203-ws/build/motor_control:/home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages:/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages:/home/steve/mren203-ws/build/joystick_ros2:/home/steve/mren203-ws/install/joystick_ros2/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'TMUX_PANE': '%0', 'CMAKE_PREFIX_PATH': '/home/steve/mren203-ws/install/steve_msgs:/home/steve/mren203-ws/install/steve_launch:/home/steve/mren203-ws/install/rplidar_ros:/home/steve/mren203-ws/install/my_bot'}, 'shell': False}
+[16.000944] (-) TimerEvent: {}
+[16.104331] (-) TimerEvent: {}
+[16.206819] (-) TimerEvent: {}
+[16.309317] (-) TimerEvent: {}
+[16.411958] (-) TimerEvent: {}
+[16.514233] (-) TimerEvent: {}
+[16.616523] (-) TimerEvent: {}
+[16.717444] (-) TimerEvent: {}
+[16.721741] (testing) StdoutLine: {'line': b'running egg_info\n'}
+[16.722779] (testing) StdoutLine: {'line': b'writing testing.egg-info/PKG-INFO\n'}
+[16.723948] (testing) StdoutLine: {'line': b'writing dependency_links to testing.egg-info/dependency_links.txt\n'}
+[16.725090] (testing) StdoutLine: {'line': b'writing entry points to testing.egg-info/entry_points.txt\n'}
+[16.726165] (testing) StdoutLine: {'line': b'writing requirements to testing.egg-info/requires.txt\n'}
+[16.727000] (testing) StdoutLine: {'line': b'writing top-level names to testing.egg-info/top_level.txt\n'}
+[16.735179] (testing) StdoutLine: {'line': b"reading manifest file 'testing.egg-info/SOURCES.txt'\n"}
+[16.738556] (testing) StdoutLine: {'line': b"writing manifest file 'testing.egg-info/SOURCES.txt'\n"}
+[16.745392] (testing) StdoutLine: {'line': b'running build_ext\n'}
+[16.746444] (testing) StdoutLine: {'line': b'Creating /home/steve/mren203-ws/install/testing/lib/python3.10/site-packages/testing.egg-link (link to .)\n'}
+[16.750723] (testing) StdoutLine: {'line': b'Installing test_joint_state script to /home/steve/mren203-ws/install/testing/lib/testing\n'}
+[16.752145] (testing) StdoutLine: {'line': b'\n'}
+[16.752987] (testing) StdoutLine: {'line': b'Installed /home/steve/mren203-ws/build/testing\n'}
+[16.754077] (testing) StdoutLine: {'line': b'running install_data\n'}
+[16.817670] (-) TimerEvent: {}
+[16.925485] (testing) CommandEnded: {'returncode': 0}
+[16.927713] (-) TimerEvent: {}
+[17.030535] (-) TimerEvent: {}
+[17.132803] (-) TimerEvent: {}
+[17.236396] (-) TimerEvent: {}
+[17.326781] (testing) JobEnded: {'identifier': 'testing', 'rc': 0}
+[17.340363] (-) TimerEvent: {}
+[17.443406] (-) TimerEvent: {}
+[17.456356] (motor_control) StdoutLine: {'line': b'running develop\n'}
+[17.458013] (motor_control) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[17.459087] (motor_control) StderrLine: {'line': b'  warnings.warn(\n'}
+[17.463729] (motor_control) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[17.464314] (motor_control) StderrLine: {'line': b'  warnings.warn(\n'}
+[17.484922] (steve_ui) StdoutLine: {'line': b'running develop\n'}
+[17.486438] (steve_ui) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[17.487072] (steve_ui) StderrLine: {'line': b'  warnings.warn(\n'}
+[17.492157] (steve_ui) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[17.492725] (steve_ui) StderrLine: {'line': b'  warnings.warn(\n'}
+[17.543548] (-) TimerEvent: {}
+[17.644226] (-) TimerEvent: {}
+[17.744924] (-) TimerEvent: {}
+[17.845725] (-) TimerEvent: {}
+[17.946385] (-) TimerEvent: {}
+[18.047099] (-) TimerEvent: {}
+[18.147784] (-) TimerEvent: {}
+[18.248582] (-) TimerEvent: {}
+[18.333424] (motor_control) StdoutLine: {'line': b'running egg_info\n'}
+[18.338042] (motor_control) StdoutLine: {'line': b'writing motor_control.egg-info/PKG-INFO\n'}
+[18.338980] (motor_control) StdoutLine: {'line': b'writing dependency_links to motor_control.egg-info/dependency_links.txt\n'}
+[18.339748] (motor_control) StdoutLine: {'line': b'writing entry points to motor_control.egg-info/entry_points.txt\n'}
+[18.340476] (motor_control) StdoutLine: {'line': b'writing requirements to motor_control.egg-info/requires.txt\n'}
+[18.341115] (motor_control) StdoutLine: {'line': b'writing top-level names to motor_control.egg-info/top_level.txt\n'}
+[18.348791] (motor_control) StdoutLine: {'line': b"reading manifest file 'motor_control.egg-info/SOURCES.txt'\n"}
+[18.349404] (-) TimerEvent: {}
+[18.352296] (motor_control) StdoutLine: {'line': b"writing manifest file 'motor_control.egg-info/SOURCES.txt'\n"}
+[18.358615] (motor_control) StdoutLine: {'line': b'running build_ext\n'}
+[18.359611] (motor_control) StdoutLine: {'line': b'Creating /home/steve/mren203-ws/install/motor_control/lib/python3.10/site-packages/motor-control.egg-link (link to .)\n'}
+[18.360351] (steve_ui) StdoutLine: {'line': b'running egg_info\n'}
+[18.360980] (steve_ui) StdoutLine: {'line': b'writing steve_ui.egg-info/PKG-INFO\n'}
+[18.362049] (steve_ui) StdoutLine: {'line': b'writing dependency_links to steve_ui.egg-info/dependency_links.txt\n'}
+[18.362927] (steve_ui) StdoutLine: {'line': b'writing entry points to steve_ui.egg-info/entry_points.txt\n'}
+[18.363713] (steve_ui) StdoutLine: {'line': b'writing requirements to steve_ui.egg-info/requires.txt\n'}
+[18.364443] (steve_ui) StdoutLine: {'line': b'writing top-level names to steve_ui.egg-info/top_level.txt\n'}
+[18.364912] (motor_control) StdoutLine: {'line': b'Installing motor_driver script to /home/steve/mren203-ws/install/motor_control/lib/motor_control\n'}
+[18.365533] (motor_control) StdoutLine: {'line': b'Installing tf_node script to /home/steve/mren203-ws/install/motor_control/lib/motor_control\n'}
+[18.366614] (motor_control) StdoutLine: {'line': b'\n'}
+[18.367260] (motor_control) StdoutLine: {'line': b'Installed /home/steve/mren203-ws/build/motor_control\n'}
+[18.367654] (motor_control) StdoutLine: {'line': b'running install_data\n'}
+[18.377028] (steve_ui) StdoutLine: {'line': b"reading manifest file 'steve_ui.egg-info/SOURCES.txt'\n"}
+[18.382648] (steve_ui) StdoutLine: {'line': b"writing manifest file 'steve_ui.egg-info/SOURCES.txt'\n"}
+[18.392730] (steve_ui) StdoutLine: {'line': b'running build_ext\n'}
+[18.394648] (steve_ui) StdoutLine: {'line': b'Creating /home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages/steve-ui.egg-link (link to .)\n'}
+[18.401682] (steve_ui) StdoutLine: {'line': b'Installing fsm_node script to /home/steve/mren203-ws/install/steve_ui/lib/steve_ui\n'}
+[18.404527] (steve_ui) StdoutLine: {'line': b'\n'}
+[18.405891] (steve_ui) StdoutLine: {'line': b'Installed /home/steve/mren203-ws/build/steve_ui\n'}
+[18.407132] (steve_ui) StdoutLine: {'line': b'running install_data\n'}
+[18.449720] (-) TimerEvent: {}
+[18.552209] (-) TimerEvent: {}
+[18.560281] (motor_control) CommandEnded: {'returncode': 0}
+[18.652374] (-) TimerEvent: {}
+[18.753621] (-) TimerEvent: {}
+[18.853556] (motor_control) JobEnded: {'identifier': 'motor_control', 'rc': 0}
+[18.857876] (-) TimerEvent: {}
+[18.858579] (steve_ui) CommandEnded: {'returncode': 0}
+[18.958075] (-) TimerEvent: {}
+[19.058775] (-) TimerEvent: {}
+[19.134695] (steve_ui) JobEnded: {'identifier': 'steve_ui', 'rc': 0}
+[19.137900] (-) EventReactorShutdown: {}

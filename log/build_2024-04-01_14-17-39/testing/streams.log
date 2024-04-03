@@ -1,0 +1,21 @@
+[7.598s] Invoking command in '/home/steve/mren203-ws/build/testing': PYTHONPATH=/home/steve/mren203-ws/build/testing/prefix_override:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/testing/build --no-deps install_data
+[9.115s] running develop
+[9.117s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[9.118s]   warnings.warn(
+[9.123s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[9.124s]   warnings.warn(
+[10.281s] running egg_info
+[10.282s] writing testing.egg-info/PKG-INFO
+[10.284s] writing dependency_links to testing.egg-info/dependency_links.txt
+[10.285s] writing entry points to testing.egg-info/entry_points.txt
+[10.287s] writing requirements to testing.egg-info/requires.txt
+[10.287s] writing top-level names to testing.egg-info/top_level.txt
+[10.295s] reading manifest file 'testing.egg-info/SOURCES.txt'
+[10.298s] writing manifest file 'testing.egg-info/SOURCES.txt'
+[10.306s] running build_ext
+[10.307s] Creating /home/steve/mren203-ws/install/testing/lib/python3.10/site-packages/testing.egg-link (link to .)
+[10.311s] Installing test_joint_state script to /home/steve/mren203-ws/install/testing/lib/testing
+[10.313s] 
+[10.313s] Installed /home/steve/mren203-ws/build/testing
+[10.315s] running install_data
+[10.523s] Invoked command in '/home/steve/mren203-ws/build/testing' returned '0': PYTHONPATH=/home/steve/mren203-ws/build/testing/prefix_override:/home/steve/mren203-ws/install/testing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/testing/build --no-deps install_data

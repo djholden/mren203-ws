@@ -27,6 +27,6 @@
     <include file="$(find-pkg-share steve_launch)/launch/online_sync_launch.launch.py"/>
 
     <!-- Sensor Fusion Package -->
-    <include file="$(find-pkg-share steve_launch)/launch/ekf.launch.py"/>
+	    <!-- <include file="$(find-pkg-share steve_launch)/launch/ekf.launch.py"/> -->
 
 </launch>

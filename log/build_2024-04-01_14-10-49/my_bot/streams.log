@@ -1,0 +1,6 @@
+[2.049s] Invoking command in '/home/steve/mren203-ws/build/my_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/my_bot -- -j4 -l4
+[2.080s] [0mCMake Error: The current CMakeCache.txt directory /home/steve/mren203-ws/build/my_bot/CMakeCache.txt is different than the directory /home/dj/MREN203/main/mren203-ws/build/my_bot where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[2.122s] [0mCMake Error: The source directory "/home/dj/MREN203/main/mren203-ws/src/my_bot" does not exist.
+[2.122s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[2.126s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[2.137s] Invoked command in '/home/steve/mren203-ws/build/my_bot' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/my_bot -- -j4 -l4

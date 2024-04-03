@@ -1,0 +1,166 @@
+[1.195s] Invoking command in '/home/steve/mren203-ws/build/steve_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/steve_msgs -- -j4 -l4
+[3.196s] [  1%] Built target steve_msgs__cpp
+[3.197s] [ 12%] Built target steve_msgs__rosidl_generator_c
+[3.197s] [ 12%] Built target ament_cmake_python_symlink_steve_msgs
+[3.198s] [ 23%] Built target steve_msgs__rosidl_typesupport_cpp
+[3.198s] [ 34%] Built target steve_msgs__rosidl_typesupport_introspection_cpp
+[3.198s] [ 45%] Built target steve_msgs__rosidl_typesupport_fastrtps_c
+[3.199s] [ 56%] Built target steve_msgs__rosidl_typesupport_fastrtps_cpp
+[3.199s] [ 67%] Built target steve_msgs__rosidl_typesupport_introspection_c
+[3.201s] [ 78%] Built target steve_msgs__rosidl_typesupport_c
+[3.202s] [ 78%] Built target steve_msgs
+[3.203s] [ 80%] Built target steve_msgs__py
+[3.203s] [ 89%] Built target steve_msgs__rosidl_generator_py
+[3.204s] [ 92%] Built target steve_msgs__rosidl_typesupport_fastrtps_c__pyext
+[3.205s] [ 96%] Built target steve_msgs__rosidl_typesupport_introspection_c__pyext
+[3.205s] [100%] Built target steve_msgs__rosidl_typesupport_c__pyext
+[3.206s] running egg_info
+[3.207s] writing steve_msgs.egg-info/PKG-INFO
+[3.208s] writing dependency_links to steve_msgs.egg-info/dependency_links.txt
+[3.210s] writing top-level names to steve_msgs.egg-info/top_level.txt
+[3.212s] reading manifest file 'steve_msgs.egg-info/SOURCES.txt'
+[3.215s] writing manifest file 'steve_msgs.egg-info/SOURCES.txt'
+[3.216s] [100%] Built target ament_cmake_python_build_steve_msgs_egg
+[3.275s] Invoked command in '/home/steve/mren203-ws/build/steve_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --build /home/steve/mren203-ws/build/steve_msgs -- -j4 -l4
+[4.145s] Invoking command in '/home/steve/mren203-ws/build/steve_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/steve_msgs
+[4.188s] -- Install configuration: ""
+[4.195s] -- Execute custom install script
+[4.198s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/ament_index/resource_index/rosidl_interfaces/steve_msgs
+[4.201s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/control_ui.h
+[4.202s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__functions.h
+[4.204s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__struct.h
+[4.205s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__type_support.h
+[4.207s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__functions.h
+[4.209s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__struct.h
+[4.211s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__type_support.h
+[4.214s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__functions.h
+[4.216s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__struct.h
+[4.218s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__type_support.h
+[4.221s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__functions.h
+[4.223s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__struct.h
+[4.226s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__type_support.h
+[4.228s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/motor_data.h
+[4.231s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/rosidl_generator_c__visibility_control.h
+[4.233s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/sensor_data.h
+[4.235s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/set_points.h
+[4.240s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/library_path.sh
+[4.245s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/library_path.dsv
+[4.264s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__rosidl_typesupport_fastrtps_c.h
+[4.264s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__rosidl_typesupport_fastrtps_c.h
+[4.265s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__rosidl_typesupport_fastrtps_c.h
+[4.265s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__rosidl_typesupport_fastrtps_c.h
+[4.266s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.266s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__rosidl_typesupport_introspection_c.h
+[4.267s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__rosidl_typesupport_introspection_c.h
+[4.267s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__rosidl_typesupport_introspection_c.h
+[4.268s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__rosidl_typesupport_introspection_c.h
+[4.268s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.270s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/control_ui.hpp
+[4.272s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__builder.hpp
+[4.272s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__struct.hpp
+[4.277s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__traits.hpp
+[4.277s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__builder.hpp
+[4.278s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__struct.hpp
+[4.278s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__traits.hpp
+[4.281s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__builder.hpp
+[4.282s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__struct.hpp
+[4.282s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__traits.hpp
+[4.282s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__builder.hpp
+[4.283s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__struct.hpp
+[4.283s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__traits.hpp
+[4.284s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/motor_data.hpp
+[4.285s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/sensor_data.hpp
+[4.286s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/set_points.hpp
+[4.290s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__rosidl_typesupport_fastrtps_cpp.hpp
+[4.292s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__rosidl_typesupport_fastrtps_cpp.hpp
+[4.293s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__rosidl_typesupport_fastrtps_cpp.hpp
+[4.295s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__rosidl_typesupport_fastrtps_cpp.hpp
+[4.296s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.299s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/control_ui__rosidl_typesupport_introspection_cpp.hpp
+[4.301s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/motor_data__rosidl_typesupport_introspection_cpp.hpp
+[4.303s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/sensor_data__rosidl_typesupport_introspection_cpp.hpp
+[4.304s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/include/steve_msgs/steve_msgs/msg/detail/set_points__rosidl_typesupport_introspection_cpp.hpp
+[4.306s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/pythonpath.sh
+[4.308s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/pythonpath.dsv
+[4.309s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[4.310s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[4.311s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[4.312s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[4.315s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/__init__.py
+[4.316s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_c.c
+[4.317s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.319s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/_steve_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[4.320s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/libsteve_msgs__rosidl_generator_py.so
+[4.321s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/__init__.py
+[4.324s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_control_ui.py
+[4.325s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_control_ui_s.c
+[4.327s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_motor_data.py
+[4.328s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_motor_data_s.c
+[4.331s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_sensor_data.py
+[4.332s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_sensor_data_s.c
+[4.333s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_set_points.py
+[4.335s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg/_set_points_s.c
+[4.337s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/steve_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[4.341s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/steve_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[4.344s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/steve_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[4.346s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/steve_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[4.348s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/steve_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[4.350s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/steve_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[4.352s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/ControlUI.idl
+[4.353s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/SensorData.idl
+[4.355s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/SetPoints.idl
+[4.357s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/MotorData.idl
+[4.360s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/ControlUI.msg
+[4.361s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/SensorData.msg
+[4.362s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/SetPoints.msg
+[4.363s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/msg/MotorData.msg
+[4.364s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/ament_index/resource_index/package_run_dependencies/steve_msgs
+[4.365s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/ament_index/resource_index/parent_prefix_path/steve_msgs
+[4.366s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/ament_prefix_path.sh
+[4.368s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/ament_prefix_path.dsv
+[4.369s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/path.sh
+[4.370s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/environment/path.dsv
+[4.372s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/local_setup.bash
+[4.373s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/local_setup.sh
+[4.374s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/local_setup.zsh
+[4.376s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/local_setup.dsv
+[4.378s] -- Symlinking: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/package.dsv
+[4.398s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/ament_index/resource_index/packages/steve_msgs
+[4.399s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/rosidl_cmake-extras.cmake
+[4.400s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.402s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[4.404s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[4.406s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.408s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.409s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.411s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgsConfig.cmake
+[4.413s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgsConfig-version.cmake
+[4.414s] -- Up-to-date symlink: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/package.xml
+[4.415s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_generator_c.so
+[4.418s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_typesupport_fastrtps_c.so
+[4.419s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_typesupport_introspection_c.so
+[4.421s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_typesupport_c.so
+[4.422s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_typesupport_fastrtps_cpp.so
+[4.423s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_typesupport_introspection_cpp.so
+[4.424s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_typesupport_cpp.so
+[4.619s] Listing '/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs'...
+[4.622s] Listing '/home/steve/mren203-ws/install/steve_msgs/local/lib/python3.10/dist-packages/steve_msgs/msg'...
+[4.646s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/lib/libsteve_msgs__rosidl_generator_py.so
+[4.650s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_generator_cExport.cmake
+[4.652s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_generator_cExport-noconfig.cmake
+[4.653s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[4.655s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[4.656s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_introspection_cExport.cmake
+[4.657s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.659s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_cExport.cmake
+[4.661s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[4.662s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_generator_cppExport.cmake
+[4.664s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[4.665s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[4.667s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[4.668s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.669s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_cppExport.cmake
+[4.669s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/steve_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[4.670s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_generator_pyExport.cmake
+[4.672s] -- Up-to-date: /home/steve/mren203-ws/install/steve_msgs/share/steve_msgs/cmake/export_steve_msgs__rosidl_generator_pyExport-noconfig.cmake
+[5.545s] Invoked command in '/home/steve/mren203-ws/build/steve_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/steve/mren203-ws/install/testing:/home/steve/mren203-ws/install/steve_ui:/home/steve/mren203-ws/install/motor_control:/home/steve/mren203-ws/install/joystick_ros2:/opt/ros/humble /usr/bin/cmake --install /home/steve/mren203-ws/build/steve_msgs

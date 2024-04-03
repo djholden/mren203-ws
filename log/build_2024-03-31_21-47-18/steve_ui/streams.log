@@ -1,0 +1,21 @@
+[4.584s] Invoking command in '/home/steve/mren203-ws/build/steve_ui': PYTHONPATH=/home/steve/mren203-ws/build/steve_ui/prefix_override:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/steve_ui/build --no-deps install_data
+[6.146s] running develop
+[6.148s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[6.149s]   warnings.warn(
+[6.153s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[6.155s]   warnings.warn(
+[6.901s] running egg_info
+[6.901s] writing steve_ui.egg-info/PKG-INFO
+[6.961s] writing dependency_links to steve_ui.egg-info/dependency_links.txt
+[6.964s] writing entry points to steve_ui.egg-info/entry_points.txt
+[6.965s] writing requirements to steve_ui.egg-info/requires.txt
+[6.966s] writing top-level names to steve_ui.egg-info/top_level.txt
+[6.976s] reading manifest file 'steve_ui.egg-info/SOURCES.txt'
+[6.979s] writing manifest file 'steve_ui.egg-info/SOURCES.txt'
+[6.986s] running build_ext
+[6.986s] Creating /home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages/steve-ui.egg-link (link to .)
+[6.990s] Installing fsm_node script to /home/steve/mren203-ws/install/steve_ui/lib/steve_ui
+[6.991s] 
+[6.992s] Installed /home/steve/mren203-ws/build/steve_ui
+[6.992s] running install_data
+[7.125s] Invoked command in '/home/steve/mren203-ws/build/steve_ui' returned '0': PYTHONPATH=/home/steve/mren203-ws/build/steve_ui/prefix_override:/home/steve/mren203-ws/install/steve_ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/steve/mren203-ws/build/steve_ui/build --no-deps install_data

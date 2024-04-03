@@ -119,12 +119,12 @@ class SteveUI(Node, StateMachine):
             self.fsm.ir_center = float(ser_data['front range'])
 
             # Accelerometer
-            self.fsm.accel[0] = float(ser_data['ax'])
-            self.fsm.accel[1] = float(ser_data['ay'])
-            self.fsm.accel[2] = float(ser_data['az'])
-            self.fsm.omega[0] = float(ser_data['ox'])
-            self.fsm.omega[1] = float(ser_data['oy'])
-            self.fsm.omega[2] = float(ser_data['oz'])
+            self.fsm.accel[0] = float(ser_data['ax']) #- 0.7848
+            #self.fsm.accel[1] = float(ser_data['ay'])
+            #self.fsm.accel[2] = float(ser_data['az'])
+            #self.fsm.omega[0] = float(ser_data['ox'])
+            #self.fsm.omega[1] = float(ser_data['oy'])
+            self.fsm.omega[2] = float(ser_data['oz']) - 0.17
         except SerialException:
             self.get_logger().debug('No serial port is connected. Try setting a new port or give the port ')
 

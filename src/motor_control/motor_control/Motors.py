@@ -104,20 +104,20 @@ class MotorHandler():
         self.left_pwm.ChangeDutyCycle(abs(self.left_cmd))
         self.right_pwm.ChangeDutyCycle(abs(self.right_cmd))
 
-    def auto_mode(self, time_ms, ir_left, ir_right, ir_center, fwd_cmd=60, turn_cmd=40):
+    def auto_mode(self, time_ms, ir_left, ir_right, ir_center, fwd_cmd=40, turn_cmd=30):
 
         # Update wheel speed
         self.left_wheel.update_rotational_speed(time_ms)
         self.right_wheel.update_rotational_speed(time_ms)
 
         # Check if its too close to a wall
-        if((ir_left < 30 or ir_right < 30 or ir_center < 30) and not self.isTurning):
+        if((ir_left < 25 or ir_right < 25 or ir_center < 25) and not self.isTurning):
             # Stop Wheels
             self.voltage_mode(0, 0, time_ms)
 
             # Random turn time
             timeMulti = random.randint(2, 8)
-            self.turningTime = timeMulti*1000
+            self.turningTime = timeMulti*200
 
             self.auto_t_last = time_ms
             self.isTurning = True

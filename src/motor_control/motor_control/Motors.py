@@ -117,7 +117,7 @@ class MotorHandler():
 
             # Random turn time
             timeMulti = random.randint(2, 8)
-            self.turningTime = timeMulti*200
+            self.turningTime = timeMulti*500
 
             self.auto_t_last = time_ms
             self.isTurning = True

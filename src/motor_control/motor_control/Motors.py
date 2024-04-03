@@ -2,6 +2,7 @@
 import RPi.GPIO as GPIO
 import math
 import time
+import random
 
 HIGH = True
 LOW = False
@@ -73,6 +74,7 @@ class MotorHandler():
         # Set Time variables
         self.t_now = 0
         self.t_last = 0
+        self.auto_t_last = 0
 
 
     def PID_mode(self, left_vel_d, right_vel_d, current_time, kp=KP, ki=KI, pwm=PWM):
@@ -100,6 +102,51 @@ class MotorHandler():
         self.left_pwm.ChangeDutyCycle(abs(self.left_cmd))
         self.right_pwm.ChangeDutyCycle(abs(self.right_cmd))
 
+    def auto_mode(self, time_ms, ir_left, ir_right, ir_center, fwd_cmd=100, turn_cmd=60):
+
+        # Update wheel speed
+        self.left_wheel.update_rotational_speed(time_ms)
+        self.right_wheel.update_rotational_speed(time_ms)
+
+        # Check if its too close to a wall
+        if((ir_left < 20 or ir_right < 20 or ir_center < 20) and not self.isTurning):
+            # Stop Wheels
+            self.left_pwm.ChangeDutyCycle(abs(0))
+            self.right_pwm.ChangeDutyCycle(abs(0))
+
+            # Random turn time
+            timeMulti = random.randint(2, 8)
+            self.turningTime = timeMulti*1000
+
+            self.auto_t_last = time_ms
+            self.isTurning = True
+
+        if(self.isTurning):
+            dt = time_ms - self.auto_t_last
+            if (dt > self.turningTime):
+                left_cmd = 0
+                right_cmd = 0
+                self.isTurning = False
+            else:
+                # Stop and wait for a sec
+                if(dt > 1000):
+                    left_cmd = turn_cmd
+                    right_cmd = -turn_cmd
+                else:
+                    left_cmd = 0
+                    right_cmd = 0
+        else:
+            left_cmd = fwd_cmd
+            right_cmd = fwd_cmd       
+
+        # max pwm and direction checks
+        left_cmd, right_cmd = self.check_max(left_cmd, right_cmd)
+        left_cmd, right_cmd = self.direction(left_cmd, right_cmd)
+
+        # Change PWM duty cycle (aka speed)
+        self.left_pwm.ChangeDutyCycle(abs(left_cmd))
+        self.right_pwm.ChangeDutyCycle(abs(right_cmd))
+
 
     def calculate_odom(self, current_time, seperation=TRACK_LENGTH):
         self.right_wheel.update_rotational_speed(current_time)
@@ -111,6 +158,31 @@ class MotorHandler():
         # Update Twist (Velocity + Angular Vel)
         self.twist["xyz"][0] = (self.right_wheel.speed + self.left_wheel.speed) / 2
         self.twist["rpy"][2] = (self.right_wheel.speed - self.left_wheel.speed) / seperation
+
+        # Calculate the deltas
+        delta_x = (self.twist["xyz"][0] * math.cos(self.twist["rpy"][2])) * (dt/1000)
+        delta_y = (self.twist["xyz"][0] * math.sin(self.twist["rpy"][2])) * (dt/1000)
+        delta_yaw = self.twist["rpy"][2] * (dt/1000)
+
+        # Update Pose (Position + Rotation)
+        self.pose["xyz"][0] += delta_x
+        self.pose["xyz"][1] += delta_y
+        self.pose["rpy"][2] += delta_yaw
+
+        self.t_last = self.t_now
+
+        return self.pose, self.twist
+    
+
+    def calculate_odom_from_imu(self, current_time, accel=[0, 0, 0], omega=[0, 0, 0]):
+
+        # Calcluate time step
+        self.t_now = current_time
+        dt = (self.t_now - self.t_last)
+
+        # Update Twist
+        self.twist["xyz"][0] += accel[0] * (dt/1000)
+        self.twist["rpy"][2] = omega[0]
 
         # Calculate the deltas
         delta_x = (self.twist["xyz"][0] * math.cos(self.twist["rpy"][2])) * (dt/1000)

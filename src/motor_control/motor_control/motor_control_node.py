@@ -11,10 +11,10 @@ from scipy.spatial.transform import Rotation
 
 # Message Imports
 from std_msgs.msg import Bool
-from sensor_msgs.msg import Joy, JointState
+from sensor_msgs.msg import Joy, JointState, Imu
 from geometry_msgs.msg import TwistStamped, TwistWithCovariance, PoseWithCovariance, Pose, Quaternion, Twist, TransformStamped
 from nav_msgs.msg import Odometry
-from steve_msgs.msg import ControlUI, SetPoints, MotorData
+from steve_msgs.msg import ControlUI, SetPoints, MotorData, SensorData
 
 MAX_VOLT_SPEED = 150    # PWM Duty Cycle
 MAX_PID_SPEED = 0.50    # Meters per second
@@ -34,11 +34,27 @@ class MotorSubscriber(Node):
             10
         )
 
+        # IMU Subscriber
+        self.subscription = self.create_subscription(
+            Imu,
+            'imu/data',
+            self.update_imu,
+            10
+        )
+
         # Setpoint Subscriber
         self.sp_sub = self.create_subscription(
             SetPoints,
             "setpoints",
             self.sp_callback,
+            10
+        )
+
+        # Serial data Subscriber
+        self.subscription = self.create_subscription(
+            SensorData,
+            'sensor_data',
+            self.ir_callback,
             10
         )
 
@@ -108,6 +124,15 @@ class MotorSubscriber(Node):
         self.isStopped = False
         self.isAuto = False
 
+        # initialize serial sensor data variables
+        self.ir_left = 0
+        self.ir_right = 0
+        self.ir_center = 0
+
+        # IMU Data
+        self.accel = [0.0, 0.0, 0.0]
+        self.omega = [0.0, 0.0, 0.0]
+
         self.kp_param = 0
         self.ki_param = 0
         self.pwm = 100
@@ -166,6 +191,17 @@ class MotorSubscriber(Node):
     def poi_callback(self, msg):
         pass
 
+    def ir_callback(self, msg):
+        self.ir_left = msg.ir_left
+        self.ir_right = msg.ir_right
+        self.ir_center = msg.ir_center
+
+    def update_imu(self, msg):
+        self.accel[0] = msg.linear_acceleration.x
+        self.omega[0] = msg.angular_velocity.x
+        self.omega[1] = msg.angular_velocity.y
+        self.omega[2] = msg.angular_velocity.z
+
 
     def callaback_loop(self):
         """
@@ -178,11 +214,16 @@ class MotorSubscriber(Node):
         self.time_ms = self.get_clock().now().nanoseconds*(1e-6)
         if self.isStopped:
             self.motors.voltage_mode(0, 0, self.time_ms)
-        elif not self.isVoltageMode:
+        elif not self.isVoltageMode and not self.isAuto:
             self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms, kp=self.kp_param, ki=self.ki_param, pwm=self.pwm)
+        else:
+            if self.isAuto:
+                self.motors.auto_mode(self.time_ms, self.ir_left, self.ir_right, self.ir_center)
 
         
-        pose, twist = self.motors.calculate_odom(self.time_ms)
+        # Do Odom calculations
+        #pose, twist = self.motors.calculate_odom(self.time_ms)
+        pose, twist = self.motors.calculate_odom_from_imu(self.time_ms, accel=self.accel, omega=self.omega)
 
         # Create odom message with proper frame ids
         odom_msg = Odometry()
@@ -286,7 +327,7 @@ class MotorSubscriber(Node):
 
 
         # Handle the control mode
-        if self.isVoltageMode:
+        if self.isVoltageMode and not self.isAuto:
             # Joystick Controller
             left_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) - left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)
             right_wheel = left_y_axis*(MAX_VOLT_SPEED*sqrt(2)/2) + left_x_axis*(MAX_VOLT_SPEED*sqrt(2)/2)

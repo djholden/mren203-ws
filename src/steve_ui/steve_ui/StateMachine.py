@@ -36,6 +36,7 @@ class StateMachine():
         self.t_last = 0         # In milliseconds
         self.t_now = 0.00001    # In milliseconds
         self.current_state = 0 
+        self.pub_e_stop = False
 
     def toggle_value(self, value):
         if value:
@@ -45,11 +46,9 @@ class StateMachine():
         return value
     
     def ir_sensor_check(self):
-        if(self.ir_left < 12 or self.ir_right < 12 or self.ir_center < 12):
-            self.e_stop = True 
-        else:
-            self.e_stop = False
-
+        if((self.ir_left < 12 or self.ir_right < 12 or self.ir_center < 12) and not self.e_stop):
+            self.e_stop = True
+            self.pub_e_stop = True
     
     def calculate_imu(self):
         dt = self.t_now - self.t_last   # Ensure that t_now is updated

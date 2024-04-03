@@ -71,6 +71,8 @@ class MotorHandler():
             "rpy": [0.0, 0.0, 0.0]
         }
 
+        self.isTurning = False
+
         # Set Time variables
         self.t_now = 0
         self.t_last = 0
@@ -102,7 +104,7 @@ class MotorHandler():
         self.left_pwm.ChangeDutyCycle(abs(self.left_cmd))
         self.right_pwm.ChangeDutyCycle(abs(self.right_cmd))
 
-    def auto_mode(self, time_ms, ir_left, ir_right, ir_center, fwd_cmd=150, turn_cmd=60):
+    def auto_mode(self, time_ms, ir_left, ir_right, ir_center, fwd_cmd=70, turn_cmd=50):
 
         # Update wheel speed
         self.left_wheel.update_rotational_speed(time_ms)

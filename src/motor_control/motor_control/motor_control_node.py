@@ -219,8 +219,8 @@ class MotorSubscriber(Node):
             self.motors.PID_mode(self.left_cmd, self.right_cmd, self.time_ms, kp=self.kp_param, ki=self.ki_param, pwm=self.pwm)
 
         if self.isAuto:
-            self.motors.voltage_mode(MAX_VOLT_SPEED, MAX_VOLT_SPEED, self.time_ms)
-            # self.motors.auto_mode(self.time_ms, self.ir_left, self.ir_right, self.ir_center)
+            #self.motors.voltage_mode(MAX_VOLT_SPEED, MAX_VOLT_SPEED, self.time_ms)
+            self.motors.auto_mode(self.time_ms, self.ir_left, self.ir_right, self.ir_center)
             self.get_logger().debug('Control Mode: Auto')
 
         

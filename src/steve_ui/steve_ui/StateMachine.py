@@ -134,7 +134,7 @@ class StateMachine():
                 
     def state_1(self):
         # Manual Control Mode
-        #self.e_stop = False
+        # self.e_stop = False
 
         # Send to next state for auto activation
         if(self.auto_mode == True):

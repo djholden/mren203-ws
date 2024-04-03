@@ -111,13 +111,13 @@ class MotorHandler():
         self.right_wheel.update_rotational_speed(time_ms)
 
         # Check if its too close to a wall
-        if((ir_left < 28 or ir_right < 28 or ir_center < 28) and not self.isTurning):
+        if((ir_left < 30 or ir_right < 30 or ir_center < 30) and not self.isTurning):
             # Stop Wheels
             self.voltage_mode(0, 0, time_ms)
 
             # Random turn time
-            timeMulti = random.randint(2, 8)
-            self.turningTime = timeMulti*500
+            timeMulti = random.randint(3, 6)
+            self.turningTime = timeMulti*400
 
             self.auto_t_last = time_ms
             self.isTurning = True

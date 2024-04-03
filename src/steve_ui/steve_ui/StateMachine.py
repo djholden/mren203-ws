@@ -122,6 +122,7 @@ class StateMachine():
     def state_0(self):
         # Do activation checks
         if self.safety_checks == False:
+            self.e_stop = False
             self.pub_e_stop = True
             return
 
@@ -142,6 +143,7 @@ class StateMachine():
     def state_2(self):
         # Do the safety checks before entering autonomous mode
         if self.safety_checks == False:
+            self.e_stop = False
             self.pub_e_stop = True
             return
 
@@ -152,6 +154,7 @@ class StateMachine():
         # Autonomous Mode (Explore)
 
         if self.safety_checks == False:
+            self.e_stop = False
             self.current_state = 1
             self.auto_mode = False
             self.pub_e_stop = True
@@ -161,6 +164,7 @@ class StateMachine():
         if(self.e_stop == True):
             self.current_state = 1
             self.auto_mode = False
+            self.e_stop = False
             self.pub_e_stop = True
             return
 

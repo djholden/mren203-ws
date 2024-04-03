@@ -68,21 +68,21 @@ class StateMachine():
     
     def safety_checks(self):
         # Check for Sensor Data
-        if self.temp > 0:
-            print("FSM: Sensor Fault\n")
-            return False
+        # if self.temp == 0:
+        #     print("FSM: Sensor Fault\n")
+        #     return False
         
-        if self.h2 > 0:
-            print("FSM: Sensor Fault\n")
-            return False
+        # if self.h2 == 0:
+        #     print("FSM: Sensor Fault\n")
+        #     return False
         
-        if self.co2 > 0:
-            print("FSM: Sensor Fault\n")
-            return False
+        # if self.co2 == 0:
+        #     print("FSM: Sensor Fault\n")
+        #     return False
         
-        if self.tvok > 0:
-            print("FSM: Sensor Fault\n")
-            return False
+        # if self.tvok == 0:
+        #     print("FSM: Sensor Fault\n")
+        #     return False
 
         # Check for E-Stop
         self.ir_sensor_check()

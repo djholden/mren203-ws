@@ -119,7 +119,11 @@ class SteveUI(Node, StateMachine):
             self.fsm.ir_center = float(ser_data['front range'])
 
             # Accelerometer
-            self.fsm.accel[0] = float(ser_data['ax']) #- 0.7848
+            if (float(ser_data['ax']) > 1 or float(ser_data['ax']) < 0.1):
+                self.fsm.accel[0] = 0 #- 0.7848
+            else:
+                self.fsm.accel[0] = float(ser_data['ax']) #- 0.7848
+
             #self.fsm.accel[1] = float(ser_data['ay'])
             #self.fsm.accel[2] = float(ser_data['az'])
             #self.fsm.omega[0] = float(ser_data['ox'])
